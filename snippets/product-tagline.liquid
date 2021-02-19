@@ -1,0 +1,18 @@
+<section class="section section--padding">
+    <div class="grid__container">
+        <div class="grid__row">          
+            <!-- Content -->    
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                {% render 'element-tagline', 
+                    tagline__logo: 'tagline__logo'
+                    tagline__bg: 'tagline__bg',
+                    tagline__desc: 'tagline__desc--product'
+                    tagline__desc_text: section.settings.product_tagline,
+                    tagline__button: true,
+                    tagline__url: section.settings.product_slider_btn_url,
+                    tagline__buttonText: section.settings.product_slider_btn_text,
+                    tagline__btn: 'tagline__btn--product' %}
+            </div>
+        </div>
+    </div>
+</section>

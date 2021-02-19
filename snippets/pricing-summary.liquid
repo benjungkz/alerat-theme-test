@@ -1,0 +1,35 @@
+<!-- Pricing Summary Section -->
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row grid__row--center">
+            <!-- Blank -->   
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--5 grid__col-md--0 grid__col-xs--0 grid__col--flex-col grid__col--product">
+                   
+            </div>
+
+            <!-- Summary -->
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--7 grid__col-md--10 grid__col-xs--10 grid__col--flex-col">    
+                <div class="pricing__container">
+                    <h2 class="pricing__title">Summary:</h2>
+                    <div class="pricing__tags js-pricing__tags">
+                        <div class="pricing__tag">
+                            <h3 class="pricing__label pricing__label--tag">{{defalutTagProductName}}</h3>
+                            <h3 class="pricing__label pricing__label--tag">{{defalutTagPrice}}</h3>
+                        </div>
+                        {% if secondTagProductName != nil %}
+                        <div class="pricing__tag">
+                            <h3 class="pricing__label pricing__label--tag">{{secondTagProductName}}</h3>
+                            <h3 class="pricing__label pricing__label--tag">{{secondTagPrice}}</h3>
+                        </div>
+                        {% endif %}
+                    </div>     
+                    
+                    <div class="pricing__total">
+                        <h3 class="pricing__label pricing__label--total">Total</h3>
+                        <h3 class="pricing__label pricing__label--total js-pricing__label--total">{{defaultTotalPrice}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

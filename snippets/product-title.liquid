@@ -1,0 +1,21 @@
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row ">
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--0 grid__col-md--0 grid__col-xs--0 grid__col--flex-col">
+            </div>
+
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <h1 class="product__title">{{section.settings.product_title}}</h1>
+                {% if section.settings.product_price != "" %}
+                <h2 class="product__price">{{section.settings.product_price}}</h2>  
+                {% endif %}
+                <div class="bar bar--normal">
+                    <a class="btn btn--bar" href="{{section.settings.product_slider_btn_url}}">
+                        <h5 class="bar__btn">Get Pricing</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+
+ 

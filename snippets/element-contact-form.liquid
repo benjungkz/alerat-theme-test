@@ -1,0 +1,91 @@
+{% form 'contact', class: "form form--contact" %}
+
+    <!-- Success Message -->
+    {% if form.posted_successfully? %}
+        <p class="form-success">
+        {{ 'contact.form.post_success' | t }}
+        </p>
+    {% endif %}
+
+    <!-- Error Message -->
+    {{ form.errors | default_errors }}
+
+    <!-- Contact Form  -->
+    <div class="form__content form__content--row">
+        <div class="form__content form__content--half">
+            <label class="form__label" for="ContactFormFirstName">First Name</label>
+            <input class="form__input form__input--firstName" 
+                type="text"
+                name="contact[first_name]"
+                id="ContactFormFirstName"
+                value="{% if customer %}{{ customer.first_name }}{% endif %}">
+        </div>
+        <div class="form__content form__content--half">
+            <label class="form__label" for="ContactFormLastName">Last Name</label>
+            <input class="form__input form__input--lastName" 
+                type="text"
+                name="contact[last_name]"
+                id="ContactFormLastName"
+                value="{% if customer %}{{ customer.last_name }}{% endif %}">
+        </div>
+    </div>
+      
+    <div class="form__content">
+        <label class="form__label" for="ContactFormEmail">Email Address</label>
+        <input class="form__input form__input--email" 
+            type="email"
+            name="contact[email]"
+            id="ContactFormEmail"
+            value="{% if customer %}{{ customer.email }}{% endif %}"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off">
+    </div>
+
+    <div class="form__content">
+        <label class="form__label" for="ContactFormPhone">Phone Number</label>
+        <input class="form__input form__input--phone" type="tel"
+            name="contact[phone]"
+            id="ContactFormPhone"
+            value="{% if customer %}{{ customer.phone }}{% endif %}"
+            pattern="[0-9\-]*">
+    </div>
+
+    <div class="from__option">
+        <div class="form__content">
+            <label class="form__label"  for="ContactFormCompany">Compony Name</label>
+            <input class="form__input form__input--companyName"
+                type="text"
+                name="contact[company]"
+                id="ContactFormCompany"
+                value="">
+        </div>  
+        <div class="form__content">
+            <label class="form__label" for="ContactForVehicles">Amount of Vehicles</label>
+            <select class="form__input form__input--vehicles" id="ContactForVehicles" name="contact[vehicles]">
+                <option class="option__default">Choose Number</option>
+                <option class="option__selected">0 - 10</option>
+                <option class="option__selected">11 - 20</option>
+                <option class="option__selected">21 - 30</option>
+                <option class="option__selected">More than 31</option>
+            </select>
+        </div>
+
+        
+        <div class="form__content form">
+            <label class="form__label"  for="ContactFormMessage">Message</label>
+            <textarea class="form__input form__input--textarea"
+                rows="10"
+                name="contact[body]"
+                id="ContactFormMessage">
+            </textarea>
+        </div>
+    </div>
+
+    
+    <div class="form__action">
+        <div class="form__msg">1000</div>
+        <input class="btn form__button form__button--secondary form__button--biz" type="submit" value="{{section.settings.contact_us_button}}">
+    </div>
+
+{% endform %}

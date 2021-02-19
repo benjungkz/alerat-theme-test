@@ -1,0 +1,59 @@
+{% comment %} {% assign product_battery = all_products['replacement-alerta-wedge-battery'] %} {% endcomment %}
+
+<!-- Pricing Option Section-->
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row grid__row--center">
+            <!-- Blank -->   
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--5 grid__col-md--0 grid__col-xs--0 grid__col--flex-col grid__col--product">
+                   
+            </div>
+
+            <!-- Kit Pricing -->
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--7 grid__col-md--10 grid__col-xs--10 grid__col--flex-col">
+                <div class="pricing__container">
+                    <!-- Title -->
+                    <h2 class="pricing__title">{{ productTitle }}</h2>
+                   
+                    <!-- Options -->
+                    <div class="pricing__content pricing__content--single">
+                        {% if singleProduct.available %}
+                            <!-- Radio button -->
+                            <div class="pricing__action">     
+                                <input class="pricing__radio {{ radioButtonClass }}" 
+                                    type="radio" 
+                                    name="{{ singleProductHandle }}" 
+                                    value="{{ singleProduct.variants[0].id }}"
+                                    number="{{ subscriptionDuration }}"
+                                    price="{{ singleProduct.variants[0].price}}"
+                                    product-name ="{{singleProduct.title}}"
+                                    group="{{ singleProduct.variants[0].metafields.bold_rp.rp_group_id }}"
+                                    subscription="{{ isSubscription }}"
+                                    sku="{{singleProduct.variants[0].sku}}"
+                                    tag1="{{singleProduct.tags[0]}}"
+                                    tag2="{{singleProduct.tags[1]}}"
+                                    {{ ischecked }}>
+                                <h3 class="pricing__label {{ productOptionTitleClass }}">{{ productOptionTitle }}</h3>
+                            </div>
+                        {% endif %}
+                    </div> 
+
+                    <!-- Descirption -->
+                    {% if isPricingDesc %}
+                    <div class="pricing__content pricing__content--desc">
+                        <h3 class="pricing__label pricing__label--desc">{{ pricingDesc }}</h3>
+                    </div>
+                    {% endif %}  
+
+                                      
+                </div>
+
+                <div class="pricing__container">
+                    {% render 'icon-divider' %}
+                <div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

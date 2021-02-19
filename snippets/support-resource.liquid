@@ -1,0 +1,32 @@
+{% for block in blocks %}
+    {% if block.type == "product" and block.settings.support_product == product_handle %}
+    <div class="support__header">
+        <h5 class="support__title">{{block.settings.support_product_resource_title}}</h5> 
+        {% render 'icon-dropdown' %}
+    </div>
+    {% endif %}
+{% endfor %}
+
+    <div class="support__body">
+    {% for block in blocks %}
+        {% if block.type == "resource" and block.settings.support_product_for_resource == product_handle %}
+            {% case block.settings.support_resource_only_image %}
+                {% when false %}
+                    {% if block.settings.support_resource_primary == true %}
+                    <a class="btn btn--support" href="{{block.settings.support_resource_url}}">
+                    {% else %}
+                    <a class="btn btn--support btn--sub " href="{{block.settings.support_resource_url}}">       
+                    {% endif %}
+                        <img class="btn__icon btn__icon--support" src="{{block.settings.support_resource_image | img_url : 'master'}}" alt="">
+                        <h6 class="btn__text btn__text--support">{{block.settings.support_resource_button_text}}</h6>
+                     </a>
+                {% when true %}
+                    <a class="btn btn--support-only-image" href="{{block.settings.support_resource_url}}">               
+                     <img class="btn__icon btn__icon--support" src="{{block.settings.support_resource_image | img_url : 'master'}}" alt="">
+                  </a>
+            {% endcase %}
+        {% endif %}
+    {% endfor %}
+    </div>
+
+        

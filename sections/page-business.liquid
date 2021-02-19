@@ -1,0 +1,285 @@
+<!-- Intro Section  -->
+<section class="section section--row">
+    <div class="grid__container grid__container--wide hero">
+        
+        <!-- Hero Content -->
+        <div class="grid__row hero--row hero--row--detail">    
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank"></div>
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--6 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank"></div>
+            <div class="grid__col-xxl--4 grid__col-xl--4 grid__col-lg--4 grid__col-md--12 grid__col-xs--12 grid__col--flex-row ">
+                <div class="hero__content">
+                    <div class="hero__wrapper">
+                        <img class="hero__logo hero__logo--detail lazyload" src="{{section.settings.intro_icon | img_url: 'x50'}}" alt="Alerta patch & Wedge Logo">
+                        <h3 class="hero__title-dev hero__title-dev--business">{{ section.settings.intro_title }}</h3>
+                    </div>
+                    <p class="hero__description">{{ section.settings.intro_subtitle }}</p>
+                    <p class="hero__description">{{ section.settings.intro_description }}</p>
+                    <div class="hero__btn btn">
+                        <a class="btn__link btn__link--detail-find" href="#contact-business">
+                            <p class="btn__title">{{ section.settings.button_text }}</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank"></div>
+        </div>
+        
+        <!-- Hero BG -->
+        <div class="grid__row hero--row--detail">        
+            <div class="grid__col-xxl--10 grid__col-xl--10 grid__col-lg--10 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <div class="hero__image hero__image--feature lazyload" style="background-image: url({{ section.settings.intro_image | img_url: 'master' }});
+                                                                     background-position-y: {{ section.settings.intro_image_offset | prepend:'-' | append: 'px'}};
+                                                                     background-position-x: center;">
+                </div>
+            </div>    
+        </div> 
+    
+    </div>
+</section>
+
+<!-- Feature Section  -->
+<section class="section">
+    <div class="grid__container grid__container--wide">
+        <div class="grid__row grid__row--bottom feature__wrapper">
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank grid__col--white"">
+            </div>
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank"">
+            </div>
+            {% for block in section.blocks %}
+                {% if block.type == "feature" %}
+                <div class="grid__col-xxl--2 grid__col-xl--2 grid__col-lg--2 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                    <div class="feature feature--business">
+                        <div class="feature__icon">
+                            {% comment %} Render() doesn't support to use variable inside. {% endcomment %}
+                            {% include {{block.settings.feature_icon}} %}
+                        </div>
+                        <h3 class="feature__title feature__title--business">{{block.settings.feature_title}}</h3>
+                        <p class="feature__description feature__description--business">{{block.settings.feature__description}}</p>
+                    </div>
+                </div>
+                {% if forloop.last == true %}
+                <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank""> 
+                </div> 
+                <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank grid__col--white""> 
+                </div> 
+                {% else %}
+                <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank""> 
+                </div>   
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+          
+        </div>
+    </div>
+</section>
+
+<!-- Solution Message  -->
+<section class="section section--row section--ws">
+    <div class="grid__container grid__container--wide">
+        <div class="grid__row message__row--reverse">
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank">
+            </div>
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row message__col--accent">
+                <div class="message__container message__container--business">
+                    <div class="message__content">
+                        <h2 class="message__title message__title--textarea">{{section.settings.solution_title}}</h2>
+                        <p class="message__description">{{section.settings.solution_description}}</p>
+                    </div>
+                    <a class="btn btn--center" href="#contact-business">
+                        <p class="btn__title">{{section.settings.button_text}}</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <div class="message__image">
+                    <img src="{{ 'business-solution-section.jpg' | asset_url }}" alt="">
+                </div>
+            </div>
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial Message  -->
+<section class="section section--row section--ws">
+    <div class="grid__container grid__container--wide">
+        <div class="grid__row">
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank">
+            </div>
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <div class="message__image">
+                    <img src="{{ 'business-testimonial-section.jpg' | asset_url }}" alt="">
+                </div>
+            </div>
+
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <div class="message__container message__container--testimonial">
+                    <div class="message__content">
+                        <h4 class="message__description message__description--textarea message__description--testimonial">{{section.settings.testimonial_description}}</h4>
+                        <h5 class="message__description message__description--textarea">{{section.settings.testimonial_name}}</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Form  -->
+<section id="contact-business" class="section section--row section--ws">
+    <div class="grid__container grid__container--wide">
+        <div class="grid__row message__row--reverse">
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank">
+            </div>
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row message__col--accent">
+                <div class="message__container message__container--form message__container--business">
+                     <div class="message__content">
+                        <h2 class="message__title">{{section.settings.contact_us_title}}</h2>
+                        <p class="message__description message__description--textarea message__description--info">{{section.settings.contact_us_subtitle}}</p>
+                    </div>
+                    {% render 'element-contact-form' %}
+                </div>
+            </div>
+
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <div class="message__image">
+                    <img src="{{ 'business-contact-section.jpg' | asset_url }}" alt="">
+                </div>
+            </div>
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--blank">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {   
+        "blocks": [
+            {
+                "type": "faq",
+                "name": "FAQ",
+                "settings": [
+                    {
+                       "id": "faq_question",
+                       "type": "text",
+                       "label": "Question"
+                    },
+                    {
+                       "id": "faq_answer",
+                       "type": "textarea",
+                       "label": "Answer"
+                    }
+                ]
+            },
+            {
+                "type": "feature",
+                "name": "Features",
+                "limit": 3,
+                "settings": [
+                    {
+                       "id": "feature_title",
+                       "type": "text",
+                       "label": "Title"
+                    },
+                    {
+                       "id": "feature__description",
+                       "type": "textarea",
+                       "label": "Description"
+                    },
+                    {
+                       "id": "feature_icon",
+                       "type": "text",
+                       "label": "Icon SVG File Name"
+                    }
+                    
+                ]
+            }
+        ],
+
+        "name" : "Alerta Find(Busniness)",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "intro_image",
+                "label": "Intro Backgroud",
+                "info": "(Recommended size : 1920 X 1080)"
+            },
+            {
+                "type": "range",
+                "id": "intro_image_offset",
+                "label": "Intro Background Offset (vertical)",
+                "min": 0,
+                "max": 200,
+                "step": 20,
+                "unit": "px",
+                "default": 0
+            },
+            {
+                "type": "text",
+                "id": "intro_title",
+                "label": "Intro Section Title"
+            },
+            {
+                "id": "intro_icon",
+                "type": "image_picker",
+                "label": "Intro Section Title",
+                "info": "(Recommended size / Type : 30 X 30 / PNG) [Learn more](https://www.google.com)"
+            },
+            {
+                "type": "text",
+                "id": "intro_subtitle",
+                "label": "Intro Section Subtitle"
+            },
+            {
+                "type": "textarea",
+                "id": "intro_description",
+                "label": "Intro Section Description"
+            },
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "Action Button Text"
+            },
+            {
+                "type": "textarea",
+                "id": "solution_title",
+                "label": "Solution Section Title"
+            },
+            {
+                "type": "textarea",
+                "id": "solution_description",
+                "label": "Solution Section Description"
+            },
+            {
+                "type": "textarea",
+                "id": "testimonial_name",
+                "label": "Testimonial Name"
+            },
+            {
+                "type": "textarea",
+                "id": "testimonial_description",
+                "label": "Testimonial Description"
+            },
+            {
+                "type": "text",
+                "id": "contact_us_title",
+                "label": "Contact Us Title"
+            },
+            {
+                "type": "textarea",
+                "id": "contact_us_subtitle",
+                "label": "Contact Us Subtitle"
+            },
+            {
+                "type": "text",
+                "id": "contact_us_button",
+                "label": "Contact Us Button Text"
+            }
+        ]
+    }
+{% endschema %}

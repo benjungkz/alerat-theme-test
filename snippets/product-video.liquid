@@ -1,0 +1,21 @@
+{% if section.settings.product_section_video %}
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--product">
+                <div class="product__content product__content--video">
+                    <div class="plyr__video-embed js-player">
+                        <iframe
+                            src="{{section.settings.product_section_video_url}}"
+                            allowfullscreen
+                            allowtransparency
+                            allow="autoplay"
+                            data-poster="{{ section.settings.product_section_video_poster | img_url: 'master' }}"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

@@ -1,0 +1,15 @@
+<section class="section section--bg">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-a">
+                <div class="list__wrap list__wrap--review">
+                    {% render 'icon-up' %}
+                    <h2 class="list__title list__title--review">Review</h2>
+                </div>
+                <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
+            </div>
+        </div>
+    </div>    
+</section>
+
+

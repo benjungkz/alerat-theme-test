@@ -1,0 +1,69 @@
+<section class="section section--bg">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--product">
+                <div class="product__content product__content--benefit-single">
+                    {% for block in section.blocks %}
+                        {% if block.type == "benefit" %}
+                        <div class="product__wrap product__wrap--single">
+                            {% render 'icon-up' %}
+                            <h3 class="list__title list__title--product">{{block.settings.benefit_title}}</h3>
+                            
+                            {% if block.settings.benefit_desc_1 != "" %}
+                            <div class="list">
+                                <div class="list__dot">
+                                    {% render 'icon-dot' %}
+                                </div> 
+                                <h4 class="list__description">{{block.settings.benefit_desc_1}}</h4>                                        
+                            
+                            </div>
+                            {% endif %}
+
+                            {% if block.settings.benefit_desc_2 != "" %}
+                            <div class="list">
+                                <div class="list__dot">
+                                    {% render 'icon-dot' %}
+                                </div> 
+                                <h4 class="list__description">{{block.settings.benefit_desc_2}}</h4>                                        
+                            </div>
+                            {% endif %}
+
+                            {% if block.settings.benefit_desc_3 != "" %}
+                            <div class="list">
+                                <div class="list__dot">
+                                    {% render 'icon-dot' %}
+                                </div> 
+                                <h4 class="list__description">{{block.settings.benefit_desc_3}}</h4>                                        
+                            </div>
+                            {% endif %}
+
+                            {% if block.settings.benefit_desc_4 != "" %}
+                            <div class="list">
+                                <div class="list__dot">
+                                    {% render 'icon-dot' %}
+                                </div> 
+                                <h4 class="list__description">{{block.settings.benefit_desc_4}}</h4>                                        
+                            </div>
+                            {% endif %}
+                            
+                            {% if block.settings.benefit_is_video %}
+                            <div class="plyr__video-embed js-player">
+                            <iframe
+                                src="{{block.settings.benefit_video}}"
+                                allowfullscreen
+                                allowtransparency
+                                allow="autoplay"
+                            ></iframe>
+                            </div>
+                            {% endif %}
+                            
+    
+                        </div>                        
+                        {% endif %}          
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

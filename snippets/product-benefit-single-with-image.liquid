@@ -1,0 +1,77 @@
+{% if block.settings.benefit_is_image != '' %}
+    {% assign isImage = true %}
+{% else %}
+    {% assign isImage = false %}    
+{% endif %}
+<section class="section section--bg">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--product">
+                <div class="product__content--benefit-normal">
+                    {% for block in section.blocks %}
+                        {% if block.type == "benefit" %}
+                        <div class="product__wrap--normal">
+                            <!-- List & Title -->
+                            <div class="list__wrap--normal">
+                                {% render 'icon-up' %}
+                                <h3 class="list__title list__title--product">{{block.settings.benefit_title}}</h3>
+                                
+                                {% if block.settings.benefit_desc_1 != "" %}
+                                <div class="list">
+                                    <div class="list__dot">
+                                        {% render 'icon-dot' %}
+                                    </div> 
+                                    <h4 class="list__description">{{block.settings.benefit_desc_1}}</h4>                                        
+                                </div>
+                                {% endif %}
+                                {% if block.settings.benefit_desc_2 != "" %}
+                                <div class="list">
+                                    <div class="list__dot">
+                                        {% render 'icon-dot' %}
+                                    </div> 
+                                    <h4 class="list__description">{{block.settings.benefit_desc_2}}</h4>                                        
+                                </div>
+                                {% endif %}
+                                {% if block.settings.benefit_desc_3 != "" %}
+                                <div class="list">
+                                    <div class="list__dot">
+                                        {% render 'icon-dot' %}
+                                    </div> 
+                                    <h4 class="list__description">{{block.settings.benefit_desc_3}}</h4>                                        
+                                </div>
+                                {% endif %}
+                                {% if block.settings.benefit_desc_4 != "" %}
+                                <div class="list">
+                                    <div class="list__dot">
+                                        {% render 'icon-dot' %}
+                                    </div> 
+                                    <h4 class="list__description">{{block.settings.benefit_desc_4}}</h4>                                        
+                                </div>
+                                {% endif %}
+                                {% if block.settings.benefit_desc_5 != "" %}
+                                <div class="list">
+                                    <div class="list__dot">
+                                        {% render 'icon-dot' %}
+                                    </div> 
+                                    <h4 class="list__description">{{block.settings.benefit_desc_5}}</h4>                                        
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Image -->
+                            {% if isImage %}
+                            <img class="list__image" src="{{block.settings.benefit_image | img_url: 'master'}}" alt="">
+                            {% endif %}    
+                        </div>                        
+                        {% endif %}          
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+      
+                            

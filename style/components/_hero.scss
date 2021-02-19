@@ -1,0 +1,34 @@
+.hero{
+    background-color: color(white);
+    padding-bottom: $padding-xlarge;
+    @include breakpoint(md-xl){
+        flex-direction: column-reverse;
+    }
+    @include breakpoint(xs){
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    &--image{
+        padding: 0;
+    }
+    &__content{
+        width: 100%;
+        padding: $padding-xlarge;   
+    }
+    &__desc{
+        color: color(red);
+        font-weight: $font-weight-light;
+        line-height: 1.5em;
+    }
+    &__bold{
+        font-weight: $font-weight-bold;
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+    }
+    &__container{
+        width: 100%;
+        height: 100%;
+    }
+}

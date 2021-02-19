@@ -1,0 +1,98 @@
+<div class="ajax-cart__overlay"></div>
+
+
+
+<form action="/cart" method="post" class="ajax-cart-drawer shadow ajax-cart-drawer--active">
+    <div class="ajax-cart-drawer__image ajax-cart-drawer__image--first">
+    
+    </div>
+    
+    <div class="ajax-cart-drawer__header">
+        <div class="ajax-cart-drawer__button ajax-cart-drawer__button--return">Back to the website</div>
+    </div>
+
+    <div class="ajax-cart-drawer__body">
+{% comment %}     
+        <div class="ajax-cart-drawer__item">
+            <div class="ajax-cart-drawer__img>
+                <img class="ajax-cart-drawer__thumnail" src="" alt="">
+            </div>
+
+            <div class="ajax-cart-drawer__button ajax-cart-drawer__button--cancel">
+            </div> 
+
+            <div class="ajax-cart-drawer__content">
+                <div class="ajax-cart-drawer__product">
+                    <p class="ajax-cart-drawer__title"></p>
+                    <p class="ajax-cart-drawer__desc"></p>
+                </div>
+                
+                <div class="ajax-cart-drawer__order">
+                    
+                    <div class="ajax-cart-drawer__price">
+                        <p class="ajax-cart-drawer__price--original"></p>
+                        <p class="ajax-cart-drawer__price--retail"></p>
+                    </div>
+
+                    <div class="ajax-cart-drawer__qty">
+                        <div class="ajax-cart-drawer__up">+</div>
+                        <p class="ajax-cart-drawer__desc"></p>
+                        <div class="ajax-cart-drawer__down">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ajax-cart-drawer__coupon"><span class="ajax-cart-drawer__icon"></span>
+            </div>
+
+            </div>
+            
+        </div> {% endcomment %}
+    </div>
+    
+    <div class="ajax-cart-drawer-footer">
+        <div class="ajax-cart-drawer__button ajax-cart-drawer__button--checkout flex-col">    
+            <!-- Notification Modal -->
+            <div class="ajax-cart-drawer__modal box-shadow">
+                <div class="flex-row">
+                    <p class="ajax-cart-drawer__title ajax-cart-drawer__title--modal">Disclaimer</p>
+                    {% render 'icon-exit' %}
+                </div>
+                <p class="ajax-cart-drawer__desc ajax-cart-drawer__desc--modal">
+                    The monthly payment shown is an estimate which equals the purchase amount divided by six (excluding taxes and shipping charges) 
+                    rounded to the next lowest cent. <br><br> The payment amount shown may be different than the required payment on your billing statement. 
+                    <br><br> Financing is provided through <span>PayPal<span>.
+                </p>
+            </div>
+
+            <!-- Total Price -->
+            <div class="ajax-cart-drawer__total flex-col">
+                <span class="ajax-cart-drawer__price ajax-cart-drawer__price--originalTotal"></span>
+                <span class="ajax-cart-drawer__price ajax-cart-drawer__price--total"></span>
+            </div>
+
+            <!-- Credit payment notification -->
+            <div class="ajax-cart-drawer__paypal flex-col flex-Aend">
+                <div class="flex-row">
+                    <span class="ajax-cart-drawer__desc ajax-cart-drawer__desc--black">or 6 payments of &nbsp</span>
+                    <span class="ajax-cart-drawer__title ajax-cart-drawer__title--paypal"></span>
+                </div>
+                <span class="ajax-cart-drawer__desc ajax-cart-drawer__desc--black">with PayPal Credit<sup class="ajax-cart__subscripit">*</sup></span>
+            </div>
+
+            <!-- Check out button -->
+            <div class="ajax-cart-drawer__action flex-col">
+                <input class=" flex-row ajax-cart-drawer__checkout ajax-cart-drawer__button shadow" type="submit" name="checkout" value="Checkout">
+            </div>
+
+            <!-- Paypal Credit notification -->
+            <script src="https://www.paypal.com/sdk/js?client-id=AZSyT_tfwKXHAJE_-d7-IpxjsFQF4yXp6eqrHbbJd27yA7rwbKPm_w8BqRIqFCPgLHc-TDuqK6fYlgpa&components=messages" data-namespace="paypal2"></script>
+            <div data-pp-message data-pp-style-layout="text" data-pp-style-text-color="black"
+                 data-pp-style-logo-type="primary" data-pp-style-logo-position="left"
+                 class="ajax-cart__paypal-credit"></div>
+            
+
+        </div>
+    </div>
+</form>
+

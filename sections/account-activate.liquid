@@ -1,0 +1,96 @@
+
+<section class="section">
+  <div class="grid__container grid__container--wide">
+    <div class="grid__row">
+      <!-- Blank -->
+      <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--1 grid__col-xs--0">
+      </div>
+
+      <!-- Login -->
+      <div id="sign-in" class="grid__col-xxl--4 grid__col-xl--4 grid__col-lg--10 grid__col-md--10 grid__col-xs--10 grid__col--flex-col login__container--active">
+        
+        <div class="login__content">
+          <a class="login__link login__link--logo" href="/">
+            {% render 'logo-alerta' %}
+          </a>
+          <h1 class="login__title">{{section.settings.login_activate_title}}</h1>
+          <div class="login__notification">
+            <h5 class="login__message">{{section.settings.login_activate_msg}}</h5>
+          </div>
+        </div>
+
+        <!-- form -->
+        {% form 'activate_customer_password', class: "form form--activate" %}
+
+            <!-- Error msg -->
+            {{ form.errors | default_errors }}
+
+            <!-- Password -->
+            <div class="form__content">
+                <label class="form__label" for="customer_password" >Password</label>
+                <input class="form__input form__input--password" type="password" value="" name="customer[password]"/>
+            </div>
+
+            <!-- Password Confirm -->
+            <div class="form__content">
+                <label class="form__label" for="customer_password_confirm" >Password Confirmation</label>
+                <input class="form__input form__input--password" type="password" value="" name="customer[password_confirmation]"/>
+            </div>
+            
+            <!-- Button -->
+            <div class="form__action">
+                <input class="btn btn--small form__button form__button--size" type="submit" value="{{section.settings.login_activate_button_text}}">
+                <input class="btn btn--sub btn--small form__button form__button--size" type="submit" name="decline" value="{{section.settings.login_decline_button_text}}">
+                   
+            </div>
+
+        {% endform %}
+      </div>
+      
+      <!-- Blank -->
+      <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--1 grid__col-xs--0">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+    {
+        "name": "Activate",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "login_logo_img",
+                "label": "Logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "login_hero_img",
+                "label": "Hero Image"
+            },
+            {
+                "type": "text",
+                "id": "login_activate_title",
+                "label": "Account Activate Title"
+            },
+            {
+                "type": "text",
+                "id": "login_activate_msg",
+                "label": "Account Activate Message"
+            },
+            {
+                "type": "text",
+                "id": "login_activate_button_text",
+                "label": "Account Activate Button Text"
+            },
+             {
+                "type": "text",
+                "id": "login_decline_button_text",
+                "label": "Account Invitation Decline Button Text"
+            }
+        ]       
+    }
+{% endschema %}

@@ -1,0 +1,111 @@
+
+@mixin newsletter-input-style{
+    font-family: $font-primary;
+    font-weight: $font-weight-regular;
+    color: #fff;
+}
+
+.newsletter{
+    &__content{
+        width: 100%;
+        @include flexbox-col;
+        align-items: flex-start;
+    }
+    &__bold{
+        font-weight: $font-weight-regular;
+        color: color(red);
+    }
+    &__subtitle{
+        font-weight: $font-weight-light;
+        padding: 0 $padding-xxlarge $padding-small $padding-xxlarge ;
+        @include breakpoint(xs){
+            padding: 0 $padding-xsmall $padding-small $padding-xsmall;
+            text-align: center;
+        }
+    }
+    &__form{
+        width: 100%;
+        @include flexbox-row;
+        padding: 0 $padding-xxlarge $padding-small $padding-xxlarge ;
+    }
+    &__action{
+        width: 100%;
+        @include flexbox-row;
+        justify-content: flex-start;
+
+        @include breakpoint(xs){
+            flex-direction: column;
+        }
+    }
+    &__input{
+        width: 35vw;
+        background-color: transparent;
+        border: 1px solid color(gray-dark);
+        border-radius: 3px;
+        padding: $padding-xsmall;
+        text-align: center;
+        font-family: $font-secondary;
+        line-height: calc(1.5em - 1px);
+        @include font-size(0.8em);
+        @include breakpoint(xs){
+            width: 100%;
+            margin-bottom: $margin-xsmall;
+        }
+
+        &--email{
+            margin-right: $margin-xsmall;
+            @include breakpoint(xs){
+                margin-right: 0;
+            }
+        }
+    }
+    &__btn{
+        margin-bottom: 0;
+        border: 0;
+
+        @include breakpoint(xs){
+            width: 100%;
+        }
+        
+    }
+
+}
+
+
+
+.newsletter-input{ 
+    width: 100%;
+
+    @mixin newsletter-input {
+        height: 20px;
+        padding: 1em;
+        margin: 1em 0.5em;
+        border-radius: 5px;
+        border: 0px;
+        box-shadow: 2Px 2px 6px 0px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+    
+    .newsletter-input__name{
+        @include newsletter-input;
+        width: 250px;
+    }
+
+    .newsletter-input__email{
+        @include newsletter-input;
+        width: 250px;
+    }
+        
+}
+
+
+.newsletter-submit{
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2Px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+
+.edit_checkout .section--contact-information{
+    color : blue;
+}

@@ -1,0 +1,148 @@
+/* Subscription wedget */
+.ro_widget{
+    width: 100%;
+    @include flexbox-col;
+    align-items: flex-start;
+    
+    @include breakpoint(lg-m){        
+        width: 80vw !important;
+        align-items: center;
+    }
+}
+
+.bold-ro{
+    &__recurring-title{
+        display: none;
+    }
+
+    &__product{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+
+        background-color: transparent !important;
+        border: none !important;
+    }
+
+    &__radio-div{
+        font-size: 1em !important;
+        font-family: din-2014, sans-serif;
+        font-weight: 400;
+        text-align: left;
+        padding: 30px !important;
+        color: #2a2b2f !important;
+    }
+    &__bold-active{
+        color: #2a2b2f !important;
+        border: none !important;
+        border-radius: 25px;
+        box-shadow:  0 8px 8px 0 rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease-in-out;
+    }
+    &__frequency-div{
+        text-align: center;
+        margin: 0.5em;
+    }
+    &__fixed-frequency-text{
+        font-size: 12px;
+        padding: 5px;
+        margin-top: 1rem;
+    }    
+    &__one-time-purchase{
+        font-weight: $font-weight-light !important;
+        opacity: 0.65;
+    }
+    &__recurring{
+        &-text{
+            font-weight: $font-weight-light !important;
+        }
+    }
+   
+
+    &__table-col-3,
+    &__table-col-6,
+    &__table{
+        @include flexbox-col;
+        display: flex !important;
+        width: auto !important;
+    }
+
+    &__table-row{
+        @include flexbox-row;
+        display: flex !important;
+    }
+    &__sub-discount-price{
+        display: none;
+    }
+
+    &__see-details{
+        display: none !important;
+    }
+    &__sub-image{
+        border: 1px solid #E6E5E0 !important;
+    }
+    &__sub-title{
+        font-weight: $font-weight-light !important;
+        font-size: 12px !important;
+    }
+    &__table-col{
+        text-align: unset !important;
+        vertical-align: middle !important;
+    }
+    
+}
+
+
+/* Subscription Button */
+.alerta-product-submit button{
+    width: 390px !important;
+    height: 45px !important;
+    border-radius: 5px !important;
+    box-shadow: 3px 3px 3px rgba(0,0,0,.15);
+
+    background-color: #5FB4EB;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    align-self: center;
+}
+.cart_message-patch-subscription{
+    width: 80%;
+    font-size: 14px;
+    margin: 0.5em 0;
+}
+
+/* Subscription Management Page */
+#manage-subscription-root{
+    margin: 3rem;
+}
+
+.manage-subscription-page{
+    font-family: $font-secondary;
+    h3{
+        font-weight: $font-weight-bold;
+    }
+    p{
+        font-weight: $font-weight-light;
+    }
+}
+
+.no-subscriptions{
+    margin: 1.2rem 0;
+}
+
+.msp__link{
+    display: none;
+}
+
+.subscription-content-block:nth-child(5){
+    display: none;
+}
+
+/* Block <a> tag on dashboard */
+.manage-subscription-page{
+    .text-button{
+        display: none;
+    }
+}

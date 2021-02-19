@@ -1,0 +1,48 @@
+<div class="ajax-cart__overlay"></div>
+
+<form action="/cart" method="post" class="ajax-cart-drawer shadow">
+    <div class="ajax-cart-drawer__image ajax-cart-drawer__image--first"></div>
+    
+    <div class="ajax-cart-drawer__header">
+       <h1 class="ajax-cart-drawer__title">Cart</h1>
+       <img class="ajax-cart-drawer__close" src="https://cdn.shopify.com/s/files/1/1661/6207/files/icon-close-dark.png?v=1607629814" alt="">
+        
+    </div>
+
+    {% render 'icon-divider' %}
+    
+    <div class="ajax-cart-drawer__body">
+        
+    
+    </div>
+    
+    <div class="ajax-cart-drawer-footer">
+        <div class="ajax-cart-drawer__button ajax-cart-drawer__button--checkout flex-col">    
+            
+            {% comment %} <!-- Notification Modal -->
+            <div class="ajax-cart-drawer__modal box-shadow">
+                <div class="flex-row">
+                    <p class="ajax-cart-drawer__title ajax-cart-drawer__title--modal">Disclaimer</p>
+                    {% render 'icon-exit' %}
+                </div>
+                <p class="ajax-cart-drawer__desc ajax-cart-drawer__desc--modal">
+                    The monthly payment shown is an estimate which equals the purchase amount divided by six (excluding taxes and shipping charges) 
+                    rounded to the next lowest cent. <br>The payment amount shown may be different than the required payment on your billing statement. 
+                    <br> <strong>Financing is provided through <span>PayPal<span>.</strong>
+                </p>
+            </div> {% endcomment %}
+    
+            <!-- Check out button -->
+            <div class="ajax-cart-drawer__action">
+                {% if additional_checkout_buttons %} 
+                <div class="product__dynamic">{{ content_for_additional_checkout_buttons }}</div> 
+                {% endif %}
+
+                <input class="btn btn--checkout" type="submit" name="checkout" value="Checkout">   
+            </div>
+
+        </div>
+    </div>
+
+</form>
+

@@ -1,0 +1,170 @@
+.customer{
+    width: 100%;
+
+    &--account{
+        @include flexbox-row;
+        @include breakpoint(lg-m){
+            flex-direction: column;
+        }
+        @include breakpoint(xs){
+            flex-direction: column;
+        }
+        a{
+            font-family: $font-secondary;
+            font-weight: $font-weight-light;
+            color: color(gray-dark);
+            text-decoration: none;
+            align-self: flex-end;
+            margin-bottom: 2.5rem;
+            margin-left: 1rem;
+            text-transform: uppercase;
+           
+            @include breakpoint(lg-m){
+                display: none;
+            }
+        }
+    }
+    &__bedge{
+        font-family: $font-primary;
+        margin-left: 1.5rem;
+        padding: 0.6rem 2rem;
+        border-radius: 25px;
+        margin-bottom: 1rem;
+        @include breakpoint(lg-m){
+            margin-top: 1rem;
+        }
+        &--vendor{
+            color: color(white);
+            background-color: color(gray-light);
+        }
+        &--customer{
+            color: color(white);
+            background-color: color(red);
+        }
+    }
+    &__info{
+        @include flexbox-row;
+        
+        margin-bottom: 2.5rem;
+        margin-top: 2.5rem;
+        padding-bottom: 14px;
+        border-bottom: 3px solid color(gray-light);
+        flex-wrap: wrap;
+        @include breakpoint(lg-m){
+            margin: 2.5rem;
+        }
+        
+    }
+    &__greeting{
+        font-family: $font-primary;
+    }
+    &__name{
+        font-family: $font-primary;
+        text-align: center;
+    }
+    &__menu{
+        font-family: $font-primary;
+        margin-bottom: 1.2rem;
+        align-self: flex-start;
+        color: color(gray-dark);
+        @include breakpoint(lg-m){
+            margin-left: 1rem;
+            align-self: center;
+        }
+    }
+    &__table{
+        font-family: $font-secondary;
+        margin-bottom: 2.5rem;
+        @include breakpoint(lg-m){
+            width: 90%;
+        }
+    }
+    &__card{
+        width: 100%;
+        border: 1px solid rgba(color(gray-dark), 0.2);
+        border-radius: 25px;
+        margin-bottom: 2.5rem;
+        @include flexbox-col;
+        @include breakpoint(lg-m){
+            width: 90%;
+            flex-direction: column;
+        }
+        &--address{
+            @include breakpoint(lg-m){
+                flex-direction: column-reverse; 
+            } 
+        }
+        &-image{
+            width: 100%;
+            object-fit: cover;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+        }
+        &-wrap{
+            @include flexbox-row;
+        }
+        &-info{
+            @include flexbox-col;
+            align-items: flex-start;
+            margin-right: 0.5rem;
+        }
+        &-content{
+            @include flexbox-col;
+            width: 100%;
+            padding: $padding-medium;
+            align-items: flex-start;
+            @include breakpoint(lg-m){
+                width: 100%;
+                padding: 0;
+            }
+            &--image{
+                padding: 0;
+            }
+        }
+    }
+    &__title{
+        font-family: $font-primary;
+        margin-bottom: 0.7rem;
+        margin-left: 1.5rem;
+        @include breakpoint(lg-m){
+            margin-top: 1rem;
+        }
+    }
+    &__subtitle{
+        font-weight: $font-weight-light;
+        opacity: 0.5;
+        margin-bottom: 1.5rem;
+        margin-left: 1.5rem;
+        &--address{
+            margin-bottom: 0.8rem;
+        }
+    }
+    &__content{
+        font-weight: $font-weight-light;
+        margin-bottom: 1rem;
+        margin-left: 1.5rem;
+    }
+    &__link{
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        margin-left: 1.5rem;
+
+        &--subscription{
+            align-self: flex-start;
+        }
+        &--address{
+            margin-bottom: 1rem;
+        }
+    }
+    
+    &__text{
+        font-family: $font-secondary;
+        &--primary{
+            color: color(red);
+        }
+        &--secondary{
+            color: color(gray-dark);
+            opacity: 0.5;
+        }
+    }
+}

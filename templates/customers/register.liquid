@@ -1,0 +1,44 @@
+{% comment %} <section class="alerta-create-account flex-row">
+
+    <div class="alerta-create-account-container flex-col">
+        
+        <!-- Title -->
+        <div id="create-title" class="flex-row">
+            <p class="card-title">CREATE ACCOUNT</p>
+        </div>
+        
+        <!-- Create Customer -->
+        <div id="create-customer" class="flex-row">
+            {% form 'create_customer' , class: "flex-col" %}
+            {{ form.errors | default_errors }}
+
+                <div class="customer_input card-text flex-row">
+                    <label for="first_name" class="login center">First Name</label>
+                    <input type="text" value="" name="customer[first_name]" id="first_name" />
+                </div>
+
+                <div class="customer_input card-text flex-row">
+                    <label for="last_name" class="login center">Last Name</label>
+                    <input type="text" value="" name="customer[last_name]" id="last_name" />
+                </div>
+
+                <div class="customer_input card-text flex-row">
+                    <label for="email" class="login center">Email Address</label>
+                    <input type="email" value="" name="customer[email]" id="email" />
+                </div>
+
+                <div class="customer_input card-text flex-row">
+                    <label for="password" class="login center">Password</label>
+                    <input type="password" value="" name="customer[password]" id="password" class="create-password" />
+                </div>
+
+                <div class="action_button flex-row">
+                    <input class="login-action-button create-button card-title" type="submit" value="Create" />
+                </div>
+            {% endform %}
+        </div><!-- /#create-customer -->
+
+    </div>
+</section> {% endcomment %}
+
+{% section 'account-register' %}

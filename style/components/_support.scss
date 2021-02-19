@@ -1,0 +1,66 @@
+.support{
+    
+    &__videos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: minmax(300px, auto);
+        grid-gap: 15px;
+        margin: $margin-small 0; 
+
+        @include breakpoint(md-lg){
+            grid-template-columns: 1fr;
+        }
+        @include breakpoint(xs){
+            grid-template-columns: 1fr;
+            padding: $padding-small;
+        }
+    }
+    &__content{
+        padding: $padding-xsmall;
+    }
+    &__logo{
+        @include flexbox-col;
+        img{
+            @include breakpoint(xs){
+                width: 100%;
+                padding: 1rem;
+            }
+        }
+    }
+    &__header{
+        @include flexbox-row;
+        margin: $margin-small 0; 
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+    &__body{
+        @include flexbox-col;
+        &--sub{
+            @include flexbox-row;
+        }
+       
+    }
+    &__avator{
+       margin-bottom: $margin-small; 
+    }
+    &__title{
+        margin-right: $margin-xsmall;
+    }
+    &__description{
+        font-family: $font-secondary;
+        font-weight: $font-weight-light;
+        margin: $margin-small 0;
+        padding: $padding-xsmall;
+        text-align: center;
+    
+    }
+    &__bold{
+        font-weight: $font-weight-bold;
+        color:color(red);
+    }
+    &__divider{
+        @include flexbox-row;
+    }
+}

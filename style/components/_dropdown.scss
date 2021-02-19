@@ -1,0 +1,287 @@
+.dropdown{
+  
+    position: relative;
+    @include breakpoint(xs){
+        display: none;
+    }
+
+    &--nav{
+        @include flexbox-col;
+        align-items: flex-start;
+        
+        padding: $padding-xsmall;
+        margin-top: $margin-xsmall;
+        border-radius: 3px;
+    }
+    &__active{
+        display: block;
+        opacity: 1;
+        animation: fadeIn 2s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+    }
+    &__inactive{
+        display: none !important;
+        opacity: 0;
+    }
+    &__container{
+        @include flexbox-col;
+        margin-bottom: $margin-small;
+    }
+    &__card{
+        display: grid;
+        grid-template-rows: 2fr auto auto;
+        align-items: center;
+        justify-items: center;
+        width: 320px;
+        padding: $padding-xsmall;
+        position: relative;
+        
+        
+        @include breakpoint(xs){
+            width: 280px;
+            grid-template-rows: auto auto;
+            border-radius: 3px;
+            background-color: color(gray);
+        }
+
+        @include breakpoint(md){
+            width: 180px;
+        }
+
+        @include breakpoint(lg){
+            width: 200px;
+        }
+        
+        @include breakpoint(xl){
+            width: 250px;
+        }
+
+        @include breakpoint(xxl){
+            width: 350px;
+        }
+
+
+    }
+    &__wrap{
+        @include flexbox-col;
+        width: 100%;
+        height: 250px;
+        background-color: color(gray-light);
+        border-radius: 3px;
+        margin-bottom: $margin-xsmall;
+        position: relative;
+
+        &--nav{
+            padding: $padding-small;
+            margin: 0;
+        }
+       
+        &--bg{
+            background-color: white;
+        }
+
+    }
+    &__image{
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+
+        &--m{
+            width: 180px;
+            height: 180px;
+        }
+    }
+    &__title{
+        font-family: $font-fourth;
+        text-align: center;
+        margin-bottom: $margin-xxsmall;
+        &--nav{
+            font-family: $font-secondary;
+            text-transform: uppercase;
+        }
+        &--m{
+            margin-top: $margin-xxsmall;
+            font-weight: $font-weight-bold;
+        }
+    }
+    &__desc{
+        text-align: center;
+        color: color(gray-dark);
+
+    }
+    &__buttons{
+        &--inactive{
+            display: none;
+            opacity: 0;
+        }
+        &--active{
+            display: flex;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.11);
+            backdrop-filter: blur(10px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        width: 250px;
+        height: 250px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 3px;
+        z-index: 2;
+    }
+    &__tag{
+        position: absolute;
+        top: 20px;
+        left: 80%;
+        color: color(red);
+        font-weight: $font-weight-bold;
+        z-index: 3;
+        &--m{
+            top: 15px;
+            left: 15px;
+        }
+
+    }
+    &__button{
+        margin-bottom: $margin-xxsmall;       
+        &--shop{
+        }
+        &--more{
+        }
+      
+    }
+    &__text{
+        font-family: $font-secondary;
+        font-weight: $font-weight-bold;
+        text-transform: uppercase;
+        &--white{
+            color:color(white);
+        }
+    }
+    &__action{
+        &--nav{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__shadow{
+        @include flexbox-col;
+        box-shadow: $box-shadow-secondary; 
+        width: 100%;
+        margin-bottom: $margin-xsmall;
+        background-color: color(white);
+        border-radius: 3px;
+    }
+    
+    &__back{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        left: 10px;
+        z-index: 1003;
+    }
+    &__slider{
+       width: 100vw;
+       margin-top: $margin-small;
+       @include breakpoint(xs){
+        display: none;
+        }
+
+        &--m{
+            display: none;
+            @include breakpoint(xs){
+                display: block;
+            }
+        
+        }
+    }
+    &__pagination{
+        display: flex;
+        justify-content: center;
+        margin-top: $margin-medium;
+        position: relative !important;
+
+        &--m{
+            margin: $margin-xxsmall 0;
+        }
+    }
+    & .swiper-slide{
+        & > .dropdown__card{
+            opacity: 0.8;
+        }
+       
+    }
+    & .swiper-slide-active {
+        & > .dropdown__card{
+            border:0;
+            transform: scale(1.1);
+            box-shadow: $box-shadow-secondary;
+            opacity: 1.0;
+        }
+    }
+
+    &__header{
+        position: relative;
+        width: 100%;
+        @include flexbox-col;
+        padding: $padding-xxsmall;
+        margin: 0;
+    }
+    &__body{
+        width: 100%;
+        padding: $padding-xxsmall;
+        display: grid;
+        grid-template-rows: 1fr 1.5fr auto auto;
+        justify-items: center;
+        align-items: center;
+    }
+    &__subtitle{
+        font-family: $font-secondary;
+        color: color(black-dark);
+        font-weight: $font-weight-light;
+        opacity: 0.6;
+        margin-bottom: $margin-xsmall;
+        text-align: center;
+    }
+    &__price{
+        font-family: $font-secondary;
+        font-weight: $font-weight-regular;
+        margin-bottom: $margin-xsmall;
+    }
+    &__event{
+        width: 125px;
+        position: absolute;
+        top:-30px;
+        left:-27px;
+        z-index: 3;
+        opacity: 0;
+        &--on{
+            opacity: 1;
+        }
+        &--off{
+            display: none;
+        }
+        @include breakpoint(md-lg){
+            width: 100px;
+            top: -15px;
+            left: -15px;
+        }
+
+        @include breakpoint(xs){
+            width: 100px;
+        }
+    }
+    &__link{
+        width: 100%;
+    }
+}
+.js-dropdown-slider-m{
+    position: relative;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}

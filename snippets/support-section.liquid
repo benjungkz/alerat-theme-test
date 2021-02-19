@@ -1,0 +1,39 @@
+{% if section_bg %}
+<section class="section section--padding section--bg">    
+{% else %}
+<section class="section section--padding">
+{% endif %}
+    <div class="grid__container">
+        <!-- Logo -->
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--support">
+                <div class="support__logo">
+                    {% render 'support-logo' with section.blocks as blocks, product_handle: handle %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Video, Guide & Reusource -->    
+        <div class="grid__row grid__row--support">
+            <div class="grid__col-xxl--8 grid__col-xl--8 grid__col-lg--6 grid__col-md--6 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">
+                <div class="support__videos">
+                    {% render 'support-video' with section.blocks as blocks, product_handle: handle %}
+                </div>
+            </div>
+            <div class="grid__col-xxl--4 grid__col-xl--4 grid__col-lg--6 grid__col-md--6 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">
+               
+                <div class="support__content">
+                    <div class="support__guide">
+                        {% render 'support-guide' with section.blocks as blocks, product_handle: handle %}
+                    </div>
+
+                    <div class="support__resource">
+                        {% render 'support-resource' with section.blocks as blocks, product_handle: handle %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% render 'support-slider' with section.blocks as blocks, product_handle: handle %}

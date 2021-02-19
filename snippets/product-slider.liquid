@@ -1,0 +1,37 @@
+<section class="section section--padding"
+            style="background: -webkit-linear-gradient(top, {{section.settings.product_slider_top_color}} 50%, {{section.settings.product_slider_bottom_color}}  50%);">
+    <div class="grid__container slider--product">
+        {% for block in blocks %}
+            {% if block.type == "slider" %}
+            <div class="grid__row grid__row--shadow slider slider--flex">          
+                <!-- Content -->    
+                <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                    <div class="slider__content slider__content--product">
+                        <div class="slider__container slider__container--product">
+                            <h6 class="slider__subtitle slider__subtitle--product">{{block.settings.product_slider_subtitle}}</h6>
+                            <h1 class="slider__title slider__no-pre slider__title--product">{{block.settings.product_slider_title}}</h1>
+                            <div class="slider__dots"></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Image -->
+                <div class="grid__col-xxl--7 grid__col-xl--7 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                    <div class="slider__image">
+
+                        <picture>
+                            <source data-srcset="{{block.settings.product_slider_image | img_url: 'master'}}" media="(min-width: 1366px)" sizes="1920px">
+                            <source data-srcset="{{block.settings.product_slider_image_tablet | img_url: 'master'}}" media="(min-width: 768px)" sizes="694px">
+                            <source data-srcset="{{block.settings.product_slider_image_mobile | img_url: 'master'}}" media="(min-width: 320px)" sizes="574px">
+                            <img class="lazyload" data-src="{{block.settings.product_slider_image | img_url: 'master'}}" alt="{{block.settings.product_slider_image_alt}}">
+                        </picture>
+
+                       
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+ 

@@ -1,0 +1,44 @@
+<!-- Find amount of videos -->
+{% assign video_amount = 0 %}
+{% for block in blocks %}
+    {% if block.type == "video" %}
+        {% assign video_amount = video_amount | plus: 1 %}
+    {% endif %}
+{% endfor %}
+
+<!-- Render -->
+{% assign video_counter = 0 %}
+{% assign video_flag = video_amount | modulo: 2 %}
+
+{% for block in blocks %}
+    {% if block.type == "video" %}
+        {% assign video_counter = video_counter | plus: 1 %}
+        
+        {% if video_flag == 1 and video_counter == 1 %}
+        <a  class="card card--support card--support-wide" 
+            style="background-image:url({{block.settings.video_poster | img_url: 'master'}})"
+            href="{{block.settings.video_url}}"
+            data-lity>    
+        {% else %}
+        <a  class="card card--support" 
+            style="background-image:url({{block.settings.video_poster | img_url: 'master'}})"
+            href="{{block.settings.video_url}}"
+            data-lity>
+        {% endif %}    
+           <div class="card__container card__container--support">
+                <div class="card__header">
+                    <h1 class="card__index">{{video_counter}}</h1>
+                    <h2 class="card__title card__title--support">TITLe</h2>
+                </div>
+                <div class="card__body">
+                    <div class="card__action">
+                        <h6 class="card__subtitle card__subtitle--support">Watch the video</h6>
+                        {% render 'icon-play' %}
+                    </div>
+                </div>
+            </div>
+        </a>          
+            
+    {% endif %}
+{% endfor %}
+

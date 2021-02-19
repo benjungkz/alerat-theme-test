@@ -1,0 +1,47 @@
+{% for block in section.blocks %}
+    {% if block.type == "faq" %}
+        <h3>{{block.settings.faq_question}}</h3>
+        <p>{{block.settings.faq_answer}}</p>    
+    {% endif %}
+    
+{% endfor %}
+
+
+{% schema %}
+    {
+        "blocks": [
+            {
+                "type": "faq",
+                "name": "FAQ",
+                "settings": [
+                    {
+                       "id": "faq_question",
+                       "type": "text",
+                       "label": "Question"
+                    },
+                    {
+                       "id": "faq_answer",
+                       "type": "textarea",
+                       "label": "Answer"
+                    }
+                ]
+            },
+            {
+                "type": "test",
+                "name": "test",
+                "settings": [
+                    {
+                       "id": "faq_question",
+                       "type": "text",
+                       "label": "Question"
+                    },
+                    {
+                       "id": "faq_answer",
+                       "type": "textarea",
+                       "label": "Answer"
+                    }
+                ]
+            }
+        ]
+    }
+{% endschema %}

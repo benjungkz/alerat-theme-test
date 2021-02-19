@@ -1,0 +1,90 @@
+<!-- Notification Bar -->
+{% if section.settings.alerta_notification %}
+    <div class="header__bar">
+    {% if section.settings.alerta_notification %}
+        {% if section.settings.alerta_notification_link != blank %}
+            <a href="{{ section.settings.alerta_notification_link }}" class="header__bar--link">
+            {{ section.settings.alerta_notification_message_text | escape }}
+        </a>
+        {% else %}
+            {% render 'icon-truck' %}
+            <span class="header__bar--message">{{ section.settings.alerta_notification_message_text | escape }}</span>
+        {% endif %}
+    {% endif %}
+    </div>
+{% endif %}
+{% if template.name == "index" or template.name == "collection" or template.name == "page" %}
+<section class="alerta-menu-section flex-row">
+{% else %}
+<section class="alerta-menu-section alerta-menu-section-block flex-row">                            
+{% endif %}
+
+
+    <!-- Logo -->
+    <div class="alerta-logo-conatiner width">
+        {% if section.settings.alerta_logo %}
+            <a href="/" itemprop="url" class="alerta-logo">
+                    <img src="{{ section.settings.alerta_logo | img_url: '125x' }}"
+                        alt="{{ section.settings.alerta_logo.alt | default: shop.name }}"
+                        itemprop="logo">
+            </a>
+        {% endif %}
+    </div>
+
+    <!-- Primary menu -->
+    <nav class="alerta-menu-container">
+        <ul>
+            {% for link in linklists[section.settings.alerta_primary_menu_linked_list].links %} 
+                <li class="alerta-menu-item-white">
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                </li> 
+            {% endfor %} 
+        </ul>
+        
+    </nav>
+
+    <!-- Action button  -->
+    <div class="header-menu__action flex-row width">
+        <!-- Login -->
+        <div class="haeder-menu__account flex-row">
+        {% if shop.customer_accounts_enabled %}
+            {% if customer %}
+              <a href="/account" class="site-header__account haeder-menu__text">
+                SIGN UP
+              </a>
+            {% else %}
+              <a href="/account/login" class="site-header__account haeder-menu__text">
+                SIGN IN
+              </a>
+            {% endif %}
+          {% endif %}
+        </div>  
+
+        <!-- Cart -->
+        <a href="/cart" class="site-header__cart haeder-menu__cart flex-row">
+            {% render 'icon-new-cart' %}
+            <p class="haeder-menu__text haeder-menu__text--cart">MY CART</p>
+        </a>
+
+        {% comment %} <div class="site-header__cart haeder-menu__cart flex-row">
+            {% render 'icon-new-cart' %}
+            <p class="haeder-menu__text haeder-menu__text--cart">MY CART</p>
+        </div> {% endcomment %}
+
+    </div>
+
+    <!-- Toggle menu -->
+   <div class="alerta_toggle_menu">
+        
+   </div>
+
+    <ul id="toggle_menu" style="display:none;">
+        {% for link in linklists[section.settings.alerta_primary_menu_linked_list].links %} 
+            <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+            </li> 
+        {% endfor %} 
+    </ul>
+       
+    
+</section> 

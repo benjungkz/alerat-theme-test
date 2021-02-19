@@ -1,0 +1,145 @@
+$table-border-style : 1px solid rgba(color(gray-dark), 0.2);
+
+.table{
+    &--orders{
+        width: 100%;
+        text-align: center;
+        border: $table-border-style;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 25px;
+        border-style: hidden;
+        box-shadow: 0 0 0 1px rgba(color(gray-dark), 0.2);
+        ;
+        font-weight: $font-weight-light;
+    }
+    &__row{  
+        &--first{
+            font-weight: $font-weight-light;
+            border-bottom: $table-border-style;
+        }
+    }
+    &__col{
+        &--orders{
+            width: 20%;
+            padding: 0.8rem 0;
+        }
+        &--first{
+            padding: 1rem 0;
+        }
+        &--primary{
+            color:color(red);
+        }
+        &--secondary{
+            color:color(gray-light);
+        }
+        &--no-orders{
+            padding: 1rem 0;
+            opacity: 0.5;
+        }
+        
+    }
+    &__link{
+        &--orders{
+            text-decoration: none;
+            font-weight: $font-weight-regular;
+            color: inherit;
+        }
+    }
+
+    &__container{
+        box-sizing: border-box;
+        background-color: #AFF3D7;
+        padding: 1em;
+    }
+    
+    &__content{
+        
+        &--story{
+            
+            @include flexbox-row;
+            
+        }
+        &--quote{
+            
+            @include flexbox-col;
+            
+        }
+    }
+   
+    &__text{
+        width: 60%;
+        padding-top: 0.5em;
+        
+        
+        &--underline{
+            text-decoration: underline;
+            text-decoration-color: #D12220;
+        }
+        &--quote{
+            font-weight: 300 !important;
+            padding-left: 2em;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    
+        &--quote{
+            width: 10%;
+            height: auto;
+            padding: 2rem;
+            margin-left: -30rem;
+        }
+    }
+    &__test{
+        z-index: 95;
+    }
+}
+
+.scroll{
+    &--fixed{
+        width: calc(50%);
+        height: 100vh;
+    }
+    &--row{
+        position: fixed;
+        top: 30px;
+        left: 0;
+
+        display: flex !important;
+        justify-content: flex-start;
+
+        height: 100vh;
+
+        @include breakpoint(xs){        
+            display: none !important;
+        }
+       
+        
+    }
+}
+
+.js-scroll{
+    &--fixed{
+        width: calc(50%);
+        height: 100vh;
+    }
+    &--row{
+        display: none;
+    }
+    &--block{
+        @media screen and (max-width: 896px){        
+            display: none !important;
+        };
+    }
+
+    
+}
+
+// @media screen and (max-width: 768px) { 
+//     .scroll--row{
+//         display: none;
+//     }
+// }

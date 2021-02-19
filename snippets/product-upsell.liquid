@@ -1,0 +1,42 @@
+{% assign selected_collection = collections[section.settings.product_upsell] %}
+
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <div class="list__wrap list__wrap--box">
+                    {% render 'icon-up' %}
+                    <h2 class="list__title list__title--product">YOU MAY LIKE</h2>
+                </div>
+
+                <div class="upsell">
+                {% for product in selected_collection.products %}
+                    {% if forloop.index <= 4%}
+                        
+                   
+                    <a class="upsell__wrap" href="{{product.url}}">
+                        <img class="lazyload upsell_image" src="{{product.featured_image | img_url: '250x'}}" alt="">
+                        <h5 class="upsell__title">{{product.title}}</h5>
+                        {% if product.compare_at_price_varies %}
+                            {% if product.compare_at_price_min > product.price_min %}
+                                <div class="upsell__price--wrap">
+                                    <h5 class="upsell__price upsell__price--compare">{{ product.compare_at_price_min | money }}</h5>  
+                                    <h5 class="upsell__price">Start {{ product.price_min | money }}</h5>  
+                                </div>
+                            {% else %}
+                                <h5 class="upsell__price">Start {{ product.compare_at_price_min | money }}</h5>
+                            {% endif %}
+                        {% else %}
+                                <h5 class="upsell__price">{{ product.compare_at_price_min | money }}</h5> 
+                        {% endif %}
+                    </a> 
+                    {% endif %}
+                {% endfor %}                  
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+
+
+

@@ -1,0 +1,128 @@
+<header class="section">
+     
+
+    {% render 'header-notification' %}
+   
+    {% render 'header-menu' %}
+
+    {% render 'header-dropdown' %}
+
+    {% render 'header-hambuger' %}
+
+</header>
+
+{% schema %}
+  {
+    "blocks":[
+        {
+            "type": "dropdown",
+            "name": "Product Dropdown",
+            "settings":[
+                {
+                    "id": "dropdown_title",
+                    "type": "text",
+                    "label": "Product Title"
+                },
+                {
+                    "id": "dropdown_sub_title",
+                    "type": "text",
+                    "label": "Product Sub Title"
+                },
+                {
+                    "id": "dropdown_main_button_text",
+                    "type": "text",
+                    "label": "Main Button Text"
+                },
+                {
+                    "id": "dropdown_main_button_url",
+                    "type": "text",
+                    "label": "Main Button URL"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "dropdown_sub_button",
+                    "label": "Need Sub Button?",
+                    "default": false
+                },
+                {
+                    "id": "dropdown_sub_button_text",
+                    "type": "text",
+                    "label": "Sub Button Text"
+                },
+                {
+                    "id": "dropdown_sub_button_url",
+                    "type": "text",
+                    "label": "Sub Button URL"
+                },
+                {
+                    "type": "product",
+                    "id": "dropdown_product",
+                    "label": "Product"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "dropdown_product_image",
+                    "label": "Representive Image",
+                    "info": "Recomend 1:1 ratio picture"
+                },
+                {
+                    "id": "dropdown_product_image_alt",
+                    "type": "text",
+                    "label": "Representive Image Alt"
+                },
+                {
+                    "type": "checkbox",
+                    "id": "dropdown_tag",
+                    "label": "Tag?",
+                    "default": false
+                },
+                {
+                    "id": "dropdown_tag_text",
+                    "type": "text",
+                    "label": "Tag Text"
+                }
+            ]
+        }
+    ],
+    
+    "name": "Header",
+    "settings": [
+        {
+            "type": "link_list",
+            "id": "header_primary_menu",
+            "label": "Primary Menu"
+        },
+        {
+            "type": "link_list",
+            "id": "header_sub_menu",
+            "label": "Sub Menu"
+        },
+        {
+            "type": "link_list",
+            "id": "header_mobile_menu",
+            "label": "Mobile Menu"
+        },
+        {
+            "type": "checkbox",
+            "id": "header_notification",
+            "label": "Show the notification",
+            "default": false
+        },
+        {
+            "type": "textarea",
+            "id": "header_notification_title",
+            "label": "Notifiation Title"
+        },
+        {
+            "type": "text",
+            "id": "header_notification_action",
+            "label": "Notifiation Link Text"
+        },
+        {
+            "type": "text",
+            "id": "header_notification_link",
+            "label": "Notifiation Link URL"
+        }
+    ]
+  }
+{% endschema %}

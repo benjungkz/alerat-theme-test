@@ -1,0 +1,64 @@
+<section class="section section--xs-inactive">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <div class="product__usage {{ custom_class }}">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'usage' %}
+                        <div class="product__usage--container">
+                            <picture>
+                                <source data-srcset="{{block.settings.usage_icon | img_url: '250x250'}}" media="(min-width: 1366px)" sizes="250px">
+                                <source data-srcset="{{block.settings.usage_icon | img_url: '200x200'}}" media="(min-width: 768px)" sizes="200px">
+                                <source data-srcset="{{block.settings.usage_icon | img_url: '150x150'}}" media="(min-width: 320px)" sizes="150px">
+                                <img class="lazyload product__usage--img" data-src="{{block.settings.usage_icon | img_url: '300x300'}}">   
+                            </picture>
+                            <h3 class="product__usage--text">{{block.settings.usage_description}}</h3>
+                        </div>        
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            <div>
+        <div>
+    </div>    
+</section>
+
+<section class="section section--xs-active">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+
+                <div class="swiper__container"> 
+                    <div class="product__usage--slider js-product__usage--slider">
+                        <!-- slides -->
+                        <div class="swiper-wrapper">
+                        {% for block in section.blocks %}
+                        {% if block.type == 'usage' %}
+                            <div class="swiper-slide product__usage--container product__usage--container-slider">
+                                <picture>
+                                    <source data-srcset="{{block.settings.usage_icon | img_url: '250x250'}}" media="(min-width: 1366px)" sizes="250px">
+                                    <source data-srcset="{{block.settings.usage_icon | img_url: '200x200'}}" media="(min-width: 768px)" sizes="200px">
+                                    <source data-srcset="{{block.settings.usage_icon | img_url: '150x150'}}" media="(min-width: 320px)" sizes="150px">
+                                    <img class="lazyload product__usage--img" data-src="{{block.settings.usage_icon | img_url: '300x300'}}">   
+                                </picture>
+                                <h3 class="product__usage--text">{{block.settings.usage_description}}</h3>
+                            </div>        
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+
+                        <!-- pagination -->
+                        <div class="swiper-pagination swiper-pagination-usage"></div>  
+
+                        {% comment %} <!-- pagination -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div> {% endcomment %}
+
+                    </div>
+                </div>             
+            <div>
+        <div>
+    </div>    
+</section>
+
+
+

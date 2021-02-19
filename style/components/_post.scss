@@ -1,0 +1,216 @@
+.post{
+    p{
+        @include font-size(0.75em);
+        font-family: $font-primary;
+        color: color(black-dark);
+        line-height: 2rem;
+    }
+    a{
+        color:#0E48E5 !important;
+    }
+    blockquote{
+        display: grid;
+        grid-template-rows: auto 1ft auto;
+        margin: $margin-small 0;
+        p:nth-child(1){
+            justify-self: start;
+            margin-left: $margin-medium;
+        }
+        p:nth-child(2){
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+            @include font-size(1em);
+            font-weight: 600;
+            line-height: 3rem;
+        
+        }
+        p:nth-child(3){
+            justify-self: end;
+            margin-right: $margin-medium;
+        }
+        img{
+            width: 125px;
+        }
+    }
+    ul{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0 $padding-medium;
+    }
+    li{
+        @include font-size(0.75em);
+        font-family: $font-primary;
+        color: color(black-dark);
+        line-height: 2rem; 
+        
+    }
+    
+    &__body{
+        img{
+            width: 75%;
+            margin : $margin-small 0;
+            @include breakpoint(xs){
+                width: 100%;
+            }
+        }
+    }
+    &__small{
+        width: 60% !important;
+    }
+    &__hero{
+        width: 100% !important;
+    }
+    &__tag{
+        margin-bottom: $margin-small !important;
+        height: auto !important;
+        .MuiChip{
+            &-label{
+                font-family: $font-secondary;
+                text-transform: uppercase;
+                @include font-size(0.8em);
+                padding: $padding-xxsmall $padding-small;
+                font-weight: $font-weight-light;
+            }
+        }
+        
+    }
+    &__title{
+        @include font-size(2.2em);
+        letter-spacing: -2px;
+        font-weight: 1000;
+        margin-bottom: $margin-large;
+    }
+    &__header{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        justify-items: center;
+        align-items: center;
+        margin-bottom: $margin-medium;
+
+        @include breakpoint(xs){
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            justify-items: start;
+        }
+    }
+    &__info{
+        @include flexbox-row;
+        justify-self: start;
+        grid-column: 1;
+        div{
+            p{
+                font-family: $font-secondary !important;
+                @include font-size(0.65em);
+                opacity: 0.8;
+            }
+            @include breakpoint(xs){
+               display: flex;
+
+            }
+        }
+
+        @include breakpoint(xs){
+            grid-row: 1;
+        }
+    }
+    &__author{
+        &--pic{
+            width: 100px !important;
+            height: 100px !important;
+            border-radius: 50%;
+            margin-right : $margin-xsmall;
+            @include breakpoint(xs){
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+        &--name{
+           
+            font-weight: $font-weight-regular;
+            @include breakpoint(xs){
+                @include flexbox-row;
+                margin-right: 0.3rem;
+                line-height: 1em !important;
+            }
+        }
+    }
+    &__footer{
+        padding-bottom : $padding-medium;        
+    }
+    &__divider{
+        margin: $padding-medium 0 !important;
+        &--xs{
+            display: none;
+            @include breakpoint(xs){
+                display: block;
+            }
+        }
+    }
+    &__menu{
+        margin-bottom: $margin-medium ;
+        opacity: 0.5;
+
+        &--xs{
+            display: none;
+            @include breakpoint(xs){
+                display: block;
+            }
+        }
+        
+    }
+    &__share{
+        display: grid;
+        grid-column: 3;
+        grid-template-columns: repeat(4, 50px);
+        column-gap: $margin-xxsmall;
+        justify-items: center;
+        align-items: center;
+
+        @include breakpoint(xs){
+            display: none;
+        }
+        
+        &--xs{
+            display: none;
+            @include breakpoint(xs){
+                display: grid;
+            }
+            img{
+                @include breakpoint(xs){
+                    width: 65%;
+                }
+            }
+        }
+    }
+    &__video{
+        width: 100%;
+        margin: $margin-small 0;
+    }
+    &__tag{
+        padding: $padding-xxsmall $padding-xsmall;
+        border-radius: 3px;
+        background-color: color(gray-light);
+        margin-right: $margin-xxsmall;
+        font-family: $font-secondary !important;
+        font-weight: $font-weight-light !important;
+    }
+    &__wrap{
+        width: 100%;
+        flex-wrap: wrap;
+        @include flexbox-row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    &__date, &__reading{
+        
+        @include breakpoint(xs){
+            @include flexbox-row;
+            line-height: 1rem !important;
+            margin-right: 0.3rem;
+        }
+    }
+    &__loading{
+        @include flexbox-row;
+    }
+}

@@ -1,0 +1,35 @@
+.testimonial{
+    @include flexbox-col;
+
+    &__description{
+        font-weight: $font-weight-light;
+        margin-bottom: $margin-xsmall;
+        width: 80%;
+    }
+    &__info{
+        @include flexbox-row;
+        align-self: flex-end;
+        
+    }
+    &__logo{
+        margin-right: $margin-xsmall;
+
+        img{
+            @include breakpoint(xs){
+                width: 9vh;
+            }
+        }
+    }
+    &__name{
+        white-space: pre;
+        margin-right: 10rem;
+
+        @include breakpoint(xs){
+            margin-right: 0;
+        }
+    }
+    &__svg{
+        width: 95%;
+        height: 100%;
+    }
+}

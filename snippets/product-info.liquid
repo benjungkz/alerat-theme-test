@@ -1,0 +1,48 @@
+<section class="section section--product">
+    <div class="grid__container">
+        <div class="grid__row ">   
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--product">
+                <div class="product__content {{contentClass}}">
+                    <!-- Image-->
+                    <div class="product__image">
+                        {% for image in product.images %}
+                            {% if forloop.first %}
+                                <img src="{{ image.src | img_url: 'master' }}" 
+                                    alt="{{ image.alt | escape }}">        
+                            {% endif %}                         
+                        {% endfor %}
+                    </div>
+
+                    <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0 grid__col--blank"></div>
+
+                    <!-- Video -->
+                    <a  class="card card--product" 
+                        style="background-image:url({{section.settings.product_video_thumbnail | img_url: 'master'}})"
+                        href="{{section.settings.product_video_url}}"
+                        data-lity>
+            
+                        <div class="card__container card__container--support">
+                                <div class="card__header">
+                                    <h1 class="card__index">1</h1>
+                                    <h2 class="card__title card__title--support">{{section.settings.product_video_title}}</h2>
+                                </div>
+                                <div class="card__body">
+                                    <div class="card__action">
+                                        <h6 class="card__subtitle card__subtitle--support">Watch the video</h6>
+                                        {% render 'icon-play' %}
+                                    </div>
+                                </div>
+                            </div>
+                    </a>
+
+                    <!-- Support Link -->
+                    <a class="product__action product__action--product" href="{{section.settings.product_more_video_btn_url}}">
+                        <h6>{{section.settings.product_more_video_btn_text}}</h6>
+                    </a>          
+                </div>
+            </div>
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--0 grid__col-md--0 grid__col-xs--0 grid__col--flex-col">
+            </div>
+        </div>
+    </div>
+</section>

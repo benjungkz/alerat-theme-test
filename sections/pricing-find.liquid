@@ -1,0 +1,111 @@
+{% assign product_kit_option_1 = all_products["alerta-find"] %}
+{% assign product_kit_option_2 = all_products["alerta-find-subscription"] %}
+
+<div class="pricing__wrap">
+    {% render 'pricing-title', pricingTitle : section.settings.pricing_main_title %}
+    {% render 'pricing-info', productImage: section.settings.pricing_find_image %}
+    {% render 'pricing-single', singleProduct: product_kit_option_2,
+                                singleProductHandle: "find",
+                                isSubscription: true,   
+                                subscriptionDuration: 1,
+                                isPricingDesc: true,
+                                ischecked: 'checked',
+                                radioButtonClass: 'pricing__radio--find',
+                                pricingDesc : section.settings.option_description_2,
+                                productTitle: section.settings.pricing_title_1,
+                                productOptionTitle: section.settings.option_radio_button_text_2
+                                productOptionTitleClass: "pricing__label--bold" %}
+
+     {% render 'pricing-single', singleProduct: product_kit_option_1,
+                                singleProductHandle: "find",
+                                isSubscription: false,  
+                                isPricingDesc: true,
+                                radioButtonClass: 'pricing__radio--find',
+                                pricingDesc : section.settings.option_description_1,
+                                productTitle: section.settings.pricing_title_2,
+                                productOptionTitle: section.settings.option_radio_button_text_1,
+                                productOptionTitleClass: "pricing__label--bold" %}                            
+    
+    {% render 'pricing-summary',defalutTagProductName: section.settings.pricing_summary_title_1,
+                                defalutTagPrice: section.settings.pricing_summary_price_1,
+                                secondTagProductName: section.settings.pricing_summary_title_2,
+                                secondTagPrice: section.settings.pricing_summary_price_2,
+                                defaultTotalPrice: section.settings.pricing_summary_total_price,
+                                %}
+
+    {% render 'pricing-button' %}
+    {% render 'page-help' %}
+</div>
+    
+{% schema %}
+    {   
+        "name" : "Alerta Find Pricing",
+        "settings": [
+            {
+                "type": "text",
+                "id": "pricing_main_title",
+                "label": "Pricing Section Title"
+            },
+            {
+                "type": "text",
+                "id": "pricing_title_1",
+                "label": "Payment Option Title - 1"
+            },
+            {
+                "type": "text",
+                "id": "pricing_title_2",
+                "label": "Payment Option Title - 2"
+            },
+            {
+                "type": "text",
+                "id": "option_radio_button_text_1",
+                "label": "Payment Radio Button Title - 1"
+            },
+            {
+                "type": "text",
+                "id": "option_radio_button_text_2",
+                "label": "Payment Radio Button Title - 2"
+            },
+            {
+                "type": "textarea",
+                "id": "option_description_1",
+                "label": "Payment Option Description - 1"
+            },
+            {
+                "type": "textarea",
+                "id": "option_description_2",
+                "label": "Payment Option Description - 2"
+            },
+            {
+                "type": "text",
+                "id": "pricing_summary_title_1",
+                "label": "Summary Default Title"
+            },
+            {
+                "type": "text",
+                "id": "pricing_summary_price_1",
+                "label": "Summary Default price"
+            },
+            {
+                "type": "text",
+                "id": "pricing_summary_title_2",
+                "label": "Summary Second Title"
+            },
+            {
+                "type": "text",
+                "id": "pricing_summary_price_2",
+                "label": "Summary Second Price"
+            },
+            {
+                "type": "text",
+                "id": "pricing_summary_total_price",
+                "label": "Summary total Price"
+            },
+            {
+                "type": "image_picker",
+                "id": "pricing_find_image",
+                "label": "Find(default) Image"
+            }
+        ]
+    }
+{% endschema %}

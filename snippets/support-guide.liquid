@@ -1,0 +1,26 @@
+{% for block in blocks %}
+    {% if block.type == "product" and block.settings.support_product == product_handle %}    
+        <div class="support__header">
+            <h5 class="support__title">{{block.settings.support_product_guide_title}}</h5> 
+            {% render 'icon-dropdown' %}
+        </div>
+
+        <div class="support__body">
+            <img class="support__avator" src="{{block.settings.support_product_representitive | img_url: 'master'}}" alt="">
+            {% render 'svg-testimonial-long-up' %}
+            <h3 class="support__description">{{block.settings.support_product_guide_desc_1}}</h3>
+            
+            {% assign guide_desc_2 = block.settings.support_product_guide_desc_2 %}
+            {% if guide_desc_2 != "" %}
+            <div class="support__divider">
+                <p>OR</p>
+            </div>
+            <h3 class="support__description">{{guide_desc_2}}</h3>
+            {% endif %}
+
+            {% render 'svg-testimonial-long-down' %}
+        </div>     
+    {% endif %}
+{% endfor %}
+
+

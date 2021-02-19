@@ -1,0 +1,26 @@
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <div class="list__wrap list__wrap--box">
+                    {% render 'icon-up' %}
+                    <h2 class="list__title list__title--product">Specifications</h2>
+                </div>
+                <div class="product__specs">
+                    {% for block in section.blocks %}
+                        {% if block.type == 'spec' %}
+                        <div class="list">
+                            <div class="list__dot list__dot--small">
+                                {% render 'icon-dot' %}
+                            </div> 
+                            <h6 class="list__description">{{block.settings.spec_desc}}</h6>                                        
+                        </div>
+                        {% endif %}
+                     {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+    </div>    
+</section>
+

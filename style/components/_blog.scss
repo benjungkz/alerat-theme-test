@@ -1,0 +1,64 @@
+.Blog{
+    display: grid;
+
+    &__all{
+        margin: $margin-medium 0;
+        opacity: 0.5;
+    }
+    &__chips{
+        margin-bottom: $margin-small;
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        margin: $margin-small 0;
+    }
+    &__chip{
+        margin-bottom: $margin-small !important;
+        margin-right: $margin-xxsmall !important;
+        height: auto !important;
+        .MuiChip{
+            &-label{
+                font-family: $font-secondary;
+                text-transform: uppercase;
+                @include font-size(0.8em);
+                padding: $padding-xxsmall $padding-small;
+                font-weight: $font-weight-light;
+            }
+        }
+    }
+    &__card{
+        display: grid;
+        grid-template-columns: 1.618fr 1fr;
+        img{
+            height: 100%;
+            @include breakpoint(xs){
+                height: auto;
+            }
+        }
+        @include breakpoint(xs){
+            grid-template-rows: auto auto;
+            grid-template-columns: auto;
+        }
+        &--hero{
+            margin: $margin-medium 0;
+        }
+        &--content{
+            display: grid;
+            height: 100%;
+            grid-template-rows: 1.618fr 1fr;
+        }
+        &--image{
+            img{
+                width: 100%;
+            }
+        }
+        &--container{
+            display: grid;
+            grid-template-rows: auto auto;
+            align-items: center;
+            padding: $padding-small;
+
+        }
+    }
+}

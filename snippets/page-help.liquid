@@ -1,0 +1,31 @@
+<section class="section section--margin {{ sectionClass }} ">
+    <div class="grid__container ">
+        <div class="grid__row grid__row--shadow grid__row--padding grid__row--tagline">    
+            {% render 'grid-blank' %}
+            {% render 'grid-blank' %}
+
+            <!-- Tagline (Help) -->
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <div class="tagline tagline--help">
+                    <h1 class="tagline__desc tagline__desc--help">{{settings.help_tagline_desc}}</h1>
+                    <div class="tagline__help-center">
+                        
+                        <img class="lazyload" data-src="{{settings.help_tagline_representative_1| img_url: 'master'}}" alt="Alerta Representative">
+                        <img class="lazyload" data-src="{{settings.help_tagline_representative_2| img_url: 'master'}}" alt="Alerta Representative">
+                        <img class="lazyload" data-src="{{settings.help_tagline_representative_3| img_url: 'master'}}" alt="Alerta Representative">
+                        <img class="lazyload" data-src="{{settings.help_tagline_representative_4| img_url: 'master'}}" alt="Alerta Representative">
+                     
+                    </div>
+                    <a class="btn tagline__btn {{ btnClass }}" href>
+                        <h5 class="btn__text tagline__btn-text">{{settings.help_tagline_button_text}}</h5>
+                        <div class="btn__icon">
+                           {% render 'icon-chat' %}
+                        </div>
+
+                    </a>
+                </div>
+            </div> 
+
+            {% render 'grid-blank' %}
+            {% render 'grid-blank' %}       
+</section>      

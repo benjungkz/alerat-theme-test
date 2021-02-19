@@ -1,0 +1,79 @@
+.faq{
+    min-height: 100vh;
+    @include flexbox-col;    
+
+    &__title{
+        padding: 5rem;
+    }
+    &__tabs{
+        width: 90%;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        border: 1px solid blue;
+    }
+    &__tab{
+        width: 100%;
+        overflow: hidden;
+
+        input{
+            display: none;
+        }
+       
+        &-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        cursor: pointer;
+        /* Icon */
+            &:hover {
+                background: color(red);
+                color: #fff;
+                
+            }
+            &::after {
+                content: "\276F";
+                width: 1em;
+                height: 1em;
+                color:blue;
+                text-align: center;
+                transition: all .35s;
+            }
+        }
+        &-content {
+        max-height: 0;
+        padding: 0 1em;
+        background: white;
+        transition: all .35s;
+        }
+        &-close {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+        font-size: 0.75em;
+        background: color(red);
+        cursor: pointer;
+            &:hover {
+                background: darken(color(red), 10%);
+            }
+        }
+    }
+
+    // :checked
+    input:checked {
+        + .faq__tab-label {
+        background: color(red);
+        color: #fff;
+        border-radius: 0 0 15px 15px;
+        &::after {
+            transform: rotate(90deg);
+        }
+        }
+        ~ .faq__tab-content {
+        max-height: 100vh;
+        padding: 1.5em;
+        border-radius: 15px 15px 0 0;
+        border-bottom : 1px solid blue;
+        line-height: 2.75rem;
+        }
+    }
+}

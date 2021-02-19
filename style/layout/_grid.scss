@@ -1,0 +1,231 @@
+$grid-cols : 12;
+$gutter-size : 0px;
+
+.grid{
+    &--fluid{
+        max-width: 100%;
+        width: 100vw;
+        margin: 0;
+    }
+    &__container{
+        width: 100vw;
+        margin: 0 auto;
+        
+        &--wide{
+            max-width: 100% !important;
+        }
+        &--none{
+            @include breakpoint(xs){
+                display: none;
+            }
+        }
+        &--video{
+            padding: $padding-medium;
+            width: 80%;
+
+            @include breakpoint(xs){
+                width: 100%;
+            }
+
+        }
+    }
+    &__row{
+        display: flex;
+        // flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        @include flexEdge{
+            flex-wrap: unset;
+        }
+        &--center{
+            @include breakpoint(xs){
+                justify-content: center;
+            }
+            @include breakpoint(md-lg){
+                justify-content: center;
+            }
+        }
+        &--support{
+            @include breakpoint(xs){
+                justify-content: center;
+                flex-direction: column;
+            }
+            &-r{
+                @include breakpoint(xs){
+                    justify-content: center;
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+        &--dashboard{
+            justify-content: center;
+            align-items: flex-start;
+            padding: $padding-small;
+            @include breakpoint(md-lg){
+               flex-wrap: wrap;
+               justify-content: center;
+            }
+            @include breakpoint(xs){
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: $padding-small;
+             }
+        }
+        &--policy{
+            // @include breakpoint(md-lg){
+            //     flex-wrap: wrap-reverse;
+            //     justify-content: center;
+            // }
+            
+            @include breakpoint(xs){
+                flex-wrap: wrap-reverse;
+                justify-content: center;
+            }
+        }
+        &--reverse{
+            flex-wrap: wrap-reverse;
+
+            &-m{
+                @include breakpoint(lg-m){
+                    flex-wrap: wrap-reverse !important;
+                }
+            }
+        }
+        &--unwrap{
+            flex-wrap: unset;
+        }
+        &--bottom{
+            margin-bottom: 4rem;
+        }
+        &--shadow{
+            //box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.16);
+            box-shadow: $box-shadow-secondary;
+            background-color: color(white);
+        }
+        &--padding{
+            padding: calc(4vw) 0;
+        }
+        &--tagline{
+            flex-direction: column;
+            background-color: color(gray);
+        }
+        &--product{
+            position: relative;
+            &-single{
+                @include breakpoint(xs){
+                    flex-direction: column;
+                }
+                @include breakpoint(md-lg){
+                    flex-direction: column;
+                }
+            }
+        }
+        
+
+    }
+    &__col{
+        &--flex{
+            &-row{
+                @include flexbox-row;
+            }
+            &-col{
+                @include flexbox-col;
+            }
+            &-start{
+                align-items: flex-start;
+                justify-content: flex-start;
+                
+                @include breakpoint(xs){        
+                    align-items: center;
+                    justify-content: center;
+                }
+
+            }
+            &-start-a{
+                align-items: flex-start;
+            }
+            &-start-j{
+                justify-content: flex-start;
+                @include breakpoint(xs){        
+                    justify-content: center;
+                }
+            }
+            &-end-a{
+                align-items: flex-end;
+            }
+            &-end-j{
+                justify-content: flex-end;
+            }
+           
+        }
+        &--bg{
+            &-light{
+                 //background-color: #F9F9F9;
+                 background-color: #AFF3D7;
+            }
+            &-dark{
+                background-color:#757575;
+            }
+            &-white{
+                background-color:#ffffff;
+            }
+        }
+        &--position{
+            position: relative;
+        }
+        &--blank{
+            @include breakpoint(lg-m){        
+                display: none;
+            }
+        }
+        &--white{
+            background-color: color(white);
+        }
+        &--team{
+            // display: grid;
+            // grid-template-columns: repeat(3, minmax(300px, 1fr));
+            // grid-template-rows: repeat(2, minmax(300px, 1fr));
+            // grid-gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        &--product{
+            justify-content: flex-start;
+        }
+        &--support{
+            align-items: flex-start;
+            @include breakpoint(xs){
+                align-items: center;
+            }
+        }
+    }
+    &__header{
+        margin-top: $margin-medium;
+    }
+    @each $breakpoint in $break-points{
+        @include breakpoint($breakpoint){
+            @for $i from 1 through $grid-cols{
+                &__col-#{$breakpoint}--#{$i}{
+                    $box-size : (100 / ($grid-cols / $i)) * 1%;
+                    //flex: 0 1 calc(#{$box-size} - #{$gutter-size});
+                    flex-basis: calc(#{$box-size} - #{$gutter-size});
+                } 
+                &__col--#{$breakpoint}--#{$i}-offset{
+                    margin-left: (100 / ($grid-cols / $i)) * 1%;
+                }   
+            }
+
+            &__col-#{$breakpoint}--hidden{
+                display: none !important;
+            }
+
+            &__container{
+                max-width: map-get($container_width, $breakpoint);
+            }
+        }
+    }
+
+   
+
+}

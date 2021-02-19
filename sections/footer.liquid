@@ -1,0 +1,174 @@
+{% assign first_menu_linkedlists = linklists[section.settings.footer_first_menu] %}
+{% assign second_menu_linkedlists = linklists[section.settings.footer_second_menu] %}
+{% assign third_menu_linkedlists = linklists[section.settings.footer_third_menu] %}
+
+<!-- Footer  -->
+<footer class="section footer">
+    <div class="grid__container ">
+        <!-- Body -->
+        <div class="grid__row footer__grid">
+            <!-- Logo -->
+            <div class="grid__col-xxl--2 grid__col-xl--2 grid__col-lg--2 grid__col-md--4 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">
+                <div class="footer__content">
+                    <div class="footer__logo">
+                        {% render 'logo-alerta' %}
+                    </div>
+                    <a href="https://goo.gl/maps/SrmyGGFSJvNpR9jH7" target="_blank">
+                        <h6 class="footer__desc footer__address">{{section.settings.footer_address}}</h6>
+                    </a>
+                    <a href="mailto:alerta@trackpatch.com">
+                        <h6 class="footer__desc footer__email">{{section.settings.footer_email}}</h6>
+                    </a>
+                    <a href="tel:833-325-3782">
+                        <h6 class="footer__desc footer__phone">{{section.settings.footer_phone_number}}</h6>
+                    </a>
+                    
+                    <h6 class="footer__desc footer__help">If you have questions about order, please email or call.</h6>
+                    <br>
+                    <a href="mailto:orders@trackpatch.com">
+                        <h6 class="footer__desc footer__email">orders@trackpatch.com</h6>
+                    </a>
+                    <a href="tel:833-443-5799">
+                        <h6 class="footer__desc footer__email">(833) 443-5799</h6>
+                    </a>
+
+                    <br>
+                    
+                    <div class="footer__social">
+                        <a href="{{section.settings.footer_social_facebook_url}}" target="_blank">{% render 'icon-social-fb' %}</a>
+                        <a href="{{section.settings.footer_social_instagram_url}}" target="_blank">{% render 'icon-social-insta' %}</a>
+                        <a href="{{section.settings.footer_social_youtube_url}}" target="_blank">{% render 'icon-social-youtube' %}</a>
+                        <a href="{{section.settings.footer_social_twitter_url}}" target="_blank">{% render 'icon-social-tw' %}</a>
+                        <a href="{{section.settings.footer_social_linkedin_url}}" target="_blank">{% render 'icon-social-in' %}</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0 grid__col--blank"></div>
+
+            <!-- First Menu -->
+            <div class="grid__col-xxl--2 grid__col-xl--2 grid__col-lg--2 grid__col-md--4 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">  
+                <div class="footer__content">
+                    <h3 class="footer__menu">{{first_menu_linkedlists.title | remove: 'Footer Menu - '}}</h3>
+                    {% for link in first_menu_linkedlists.links %}
+                    <a href="{{link.url}}" class="footer__menu footer__menu--sub">
+                        <h6>{{link.title}} {{link.main.title}}</h6>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <!-- Seocond Menu -->
+            <div class="grid__col-xxl--2 grid__col-xl--2 grid__col-lg--2 grid__col-md--4 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">  
+               <div class="footer__content">
+                    <h3 class="footer__menu">{{second_menu_linkedlists.title | remove: 'Footer Menu - '}}</h3>
+                    {% for link in second_menu_linkedlists.links %}
+                    <a href="{{link.url}}" class="footer__menu footer__menu--sub">
+                        <h6>{{link.title}} {{link.main.title}}</h6>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Third Menu -->
+            <div class="grid__col-xxl--2 grid__col-xl--2 grid__col-lg--2 grid__col-md--4 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">  
+                <div class="footer__content">
+                    <h3 class="footer__menu">{{third_menu_linkedlists.title | remove: 'Footer Menu - '}}</h3>
+                    {% for link in third_menu_linkedlists.links %}
+                    <a href="{{link.url}}" class="footer__menu footer__menu--sub">
+                        <h6>{{link.title}} {{link.main.title}}</h6>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Tagline -->
+            <div class="grid__col-xxl--3 grid__col-xl--3 grid__col-lg--3 grid__col-md--4 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">  
+                <div class="footer__content footer__content--tagline">
+                    <h4 class="footer__tagline">{{settings.general_tagline_desc}}</h4>
+                    <h6 class="footer__tagline footer__tagline--author">{{shop.name}}</h6>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="grid__row footer__grid footer__grid--copyright">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-a">  
+                <p class="footer__copyright">{{section.settings.footer_copyright}}</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "footer_first_menu",
+        "label": "First Menu"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_second_menu",
+        "label": "Second Menu"
+      },
+      {
+        "type": "link_list",
+        "id": "footer_third_menu",
+        "label": "Third Menu"
+      },
+      {
+          "type": "textarea",
+          "id": "footer_address",
+          "label": "Company Address"
+      },
+      {
+          "type": "text",
+          "id": "footer_email",
+          "label": "Company Email address"
+      },
+      {
+          "type": "text",
+          "id": "footer_phone_number",
+          "label": "Company Phone Number"
+      },
+      {
+          "type": "text",
+          "id": "footer_social_facebook_url",
+          "label": "Facebook URL"
+      },
+      {
+          "type": "text",
+          "id": "footer_social_instagram_url",
+          "label": "Instagram URL"
+      },
+      {
+          "type": "text",
+          "id": "footer_social_youtube_url",
+          "label": "Youtube URL"
+      },
+      {
+          "type": "text",
+          "id": "footer_social_twitter_url",
+          "label": "Twitter URL"
+      },
+      {
+          "type": "text",
+          "id": "footer_social_linkedin_url",
+          "label": "Linkedin URL"
+      },
+      {
+          "type": "text",
+          "id": "footer_copyright",
+          "label": "Copyright"
+      }
+    ]
+  }
+
+{% endschema %}

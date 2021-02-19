@@ -1,0 +1,46 @@
+ <!-- Notification Bar -->
+{% if section.settings.header_notification == true %}    
+<div class="grid__container">
+    <div class="grid__row">
+        <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+            <div class="notification__container">
+                {% comment %} <img class="notification__event notification__event--left" src="https://cdn.shopify.com/s/files/1/1661/6207/files/img-firework.png" alt="Happy New Year Firework 2021">    {% endcomment %}
+           
+                <div class="notification">
+                      
+                        
+                    
+                    <div class="notification__wrap">
+                        <h6 class='notification__title'>{{section.settings.header_notification_title}}</h6>
+                        
+                        <a class="notification__link" href="{{section.settings.header_notification_link}}">
+                            <h6 class="notification__button">{{section.settings.header_notification_action}}</h6>
+                        </a>                
+                    </div>
+
+                    {% comment %} <div class="notification__box">
+                        <img class="notification__event--m" src="https://cdn.shopify.com/s/files/1/1661/6207/files/img-firework.png" alt="christmas wreath">
+                        <h6 class='notification__title--m'>{{section.settings.header_notification_title}}</h6>
+                    </div>
+                    {% endcomment %}
+                    
+                <!-- Event Image-->               
+                </div>
+                <div class="notification__cs">
+                    <h6 class='notification__title'>Need help purchasing a product?</h6>
+                    <h6 class='notification__title'>Our experts are standing by.</h6>
+                    <br>
+                    <a href="mailto:orders@trackpatch.com">
+                        <h6 class='notification__title notification__title--bold'>orders@trackpatch.com</h6>
+                    </a>
+                    <a href="tel:833-443-5799">
+                        <h6 class='notification__title notification__title--bold'>(833) 443-5799</h6>
+                    </a>
+                </div>
+                {% comment %} <img class="notification__event notification__event--right" src="https://cdn.shopify.com/s/files/1/1661/6207/files/img-firework.png" alt="firework 2021">
+                <img class="notification__close" src="https://cdn.shopify.com/s/files/1/1661/6207/files/icon-close-white.png?v=1607629814" alt="Notification close button">    {% endcomment %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,35 @@
+<!-- Chat us section -->
+<section class='section section--bg'>
+    <div class="grid__container">
+        <div class="grid__row grid__row--shadow"">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <div class="Intro">
+                    <h2 class="Intro__title">How can we help you today?</h2>
+                    <h6 class="Intro__subtitle">Customer Service Center</h6>
+                    <div class="Intro__service">
+                        <div class="MemberList">
+                            <img class="MemberList__avator" src="{{ 'service-center-member-1.jpg' || asset_url}}" alt="">
+                            <img class="MemberList__avator" src="{{ 'service-center-member-2.jpg' || asset_url}}" alt="">
+                            <img class="MemberList__avator" src="{{ 'service-center-member-3.jpg' || asset_url}}" alt="">
+                            <img class="MemberList__avator" src="{{ 'service-center-member-4.jpg' || asset_url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="btn--container">
+                        {% comment %} <div class="btn btn--chat">
+                            <a class="btn__action" href="https://www.trackpatch.com/pages/customer-service-center">
+                                <p class="btn__title">Customer Center</p>
+                            </a>
+                        </div> {% endcomment %}
+                        <div class="btn btn--chat btn--action">
+                            <a class="btn__link" href="">
+                                <p class="btn__title btn__title--action">Chat with us</p>
+                                <div class="btn__icon btn__icon--action">{% render 'icon-chat' %}</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</section>

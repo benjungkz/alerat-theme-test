@@ -1,0 +1,28 @@
+<section class="section section--bg">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--0 grid__col-md--0 grid__col-xs--0 grid__col--flex-col">
+            </div>
+
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--product">
+                <div class="product__content product__content--benefit">
+                    {% render 'svg-list-up' %}
+                    {% for block in section.blocks %}
+                        {% if block.type == "benefit-title" %}
+                        <h3 class="list__title list__title--product">{{block.settings.product_benefit_title}}</h3>
+                        {% endif %}
+                        {% if block.type == "benefit-desc" %}
+                        <div class="list">
+                            <div class="list__dot">
+                                {% render 'icon-dot' %}
+                            </div> 
+                            <h4 class="list__description">{{block.settings.product_benefit_discription}}</h4>
+                        </div>
+                        {% endif %}           
+                    {% endfor %}
+                    {% render 'svg-list-down' %} 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

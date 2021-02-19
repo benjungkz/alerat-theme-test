@@ -1,0 +1,108 @@
+
+<section class="section">
+  <div class="grid__container">
+    <div class="grid__row">
+      <!-- Product Image -->
+      <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--0 grid__col-md--10 grid__col-xs--10 login__container--inactive">
+          <img class="login__img" src="{{section.settings.login_hero_img | img_url: 'master'}}" alt="Alerta Find">
+      </div>
+
+      <!-- Blank -->
+      <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--0 grid__col-md--0 grid__col-xs--0">
+      </div>
+
+      <!-- Login -->
+      <div id="sign-in" class="grid__col-xxl--4 grid__col-xl--4 grid__col-lg--10 grid__col-md--10 grid__col-xs--10 grid__col--flex-col login__container--active">
+        
+        <div class="login__content">
+        <a class="login__link login__link--logo" href="/">
+            {% render 'logo-alerta' %}
+          </a>
+          <h1 class="login__title">{{section.settings.login_sign_up_title}}</h1>
+          <div class="login__notification">
+            <h6 class="login__message">{{section.settings.login_sign_up_msg}}</h6>
+          </div>
+        </div>
+
+        <!-- form -->
+        {% form 'create_customer', class: "form form--register" %}
+
+            <!-- Error msg -->
+            {{ form.errors | default_errors }}
+
+            <!-- First Name -->
+            <div class="form__content form__content--row">
+                <div class="form__content form__content--half">
+                    <label class="form__label" for="customer_first_name">First Name</label>
+                    <input class="form__input" type="text" value="" name="customer[first_name]"/>
+                </div>
+
+                <!-- Last Name -->
+                <div class="form__content form__content--half">
+                    <label class="form__label" for="customer_last_name">Last Name</label>
+                    <input class="form__input" type="text" value="" name="customer[last_name]"/>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form__content">
+                <label class="form__label" for="customer_email">Email Address</label>
+                <input class="form__input" type="email" value="" name="customer[email]"/>
+            </div>
+
+            <!-- Password -->
+            <div class="form__content">
+                <label class="form__label" for="customer_password" >Password</label>
+                <input class="form__input form__input--password" type="password" value="" name="customer[password]"/>
+            </div>
+            
+            <!-- Button -->
+            <div class="form__action">
+                <input class="btn btn--small form__button form__button--size" type="submit" value="{{section.settings.login_sign_up_button_text}}">
+            </div>
+
+        {% endform %}
+      </div>
+      
+      <!-- Blank -->
+      <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--0 grid__col-md--0 grid__col-xs--0">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+    {
+        "name": "Register",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "login_logo_img",
+                "label": "Logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "login_hero_img",
+                "label": "Hero Image"
+            },
+            {
+                "type": "text",
+                "id": "login_sign_up_title",
+                "label": "Sign Up Title"
+            },
+            {
+                "type": "text",
+                "id": "login_sign_up_msg",
+                "label": "Sign Up Message"
+            },
+            {
+                "type": "text",
+                "id": "login_sign_up_button_text",
+                "label": "Sign Up button Text"
+            }
+        ]       
+    }
+{% endschema %}

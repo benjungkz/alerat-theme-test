@@ -1,0 +1,37 @@
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                 <div class="list__wrap list__wrap--box">
+                    {% render 'icon-up' %}
+                    <h2 class="list__title list__title--product">What's in the box</h2>
+                </div>
+                <div class="product__boxs">
+                    {% for block in section.blocks %}
+                        {% if block.type == "box" %}
+                            {% if block.settings.box_primary %}
+                            <div class="product__box product__box--primary">
+                                <picture> 
+                                    <source data-srcset="{{block.settings.box_image | img_url: '500x'}}" media="(min-width: 1366px)" sizes="500px">
+                                    <source data-srcset="{{block.settings.box_image | img_url: '350x'}}" media="(min-width: 768px)" sizes="350px">
+                                    <source data-srcset="{{block.settings.box_image | img_url: '250x'}}" media="(min-width: 320px)" sizes="250px">
+                                    <img class="lazyload product__box--image" src="{{block.settings.box_image | img_url: '500x'}}" alt="">
+                                </picture>
+                                <h5 class="product__box--title">{{block.settings.box_title}}</h5>
+                            </div> 
+                            {% else %}
+                            <div class="product__box"> 
+                                <img class="lazyload product__box--image" src="{{block.settings.box_image | img_url: '250x'}}" alt="">
+                                <h6 class="product__box--title">{{block.settings.box_title}}</h6>
+                            </div> 
+                            {% endif %}                                    
+                        {% endif %}
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </div>
+    </div>    
+</section>
+
+

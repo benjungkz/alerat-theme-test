@@ -1,0 +1,48 @@
+<!-- Product rich result-->
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{ product.title | escape }}",
+      "image": [
+        "https:{{product.featured_image | img_url : 'master'}}"
+       ],
+      "description": "{{ product.description | strip_html | escape }}",
+      {% if current_variant.sku != blank %}
+      "sku": "{{ current_variant.sku}}",    
+      {% endif %}
+      "brand": {
+        "@type": "Brand",
+        "name": "{{ product.vendor | escape }}"
+      }, 
+      {% if priority_coupon_name %}
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ shop.url }}{{ product.url }}&code={{ priority_coupon_name }}",
+        "priceCurrency": "{{ shop.currency }}",
+        "price": "{{ current_variant.price | minus: priority_coupon_price | divided_by: 100 }}",
+        "priceValidUntil": "{{ priority_coupon_end_date }}",
+        "itemCondition": "NewCondition",
+        "availability": "InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "{{ shop.name }}"
+        }
+      }    
+      {% else %}
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ shop.url }}{{ product.url }}",
+        "priceCurrency": "{{ shop.currency }}",
+        "price": "{{ current_variant.price | divided_by: 100  }}",
+        "priceValidUntil": "",      
+        "itemCondition": "NewCondition",
+        "availability": "InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "{{ shop.name }}"
+        }
+      }        
+      {% endif %}
+    }
+</script>

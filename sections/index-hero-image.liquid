@@ -1,0 +1,42 @@
+<section class="section section--bg section--padding">
+    <div class="grid__container">
+        <div class="grid__row grid__row--shadow hero hero--image">    
+            
+            <!-- Content -->
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <picture class="hero__container">
+                    <source srcset="{{section.settings.hero_image | img_url: 'master'}}" media="(min-width: 1366px)" sizes="1920px">
+                    <source srcset="{{section.settings.hero_image_tablet | img_url: 'master'}}" media="(min-width: 768px)" sizes="694px">
+                    <source srcset="{{section.settings.hero_image_mobile | img_url: 'master'}}" media="(min-width: 320px)" sizes="574px">
+                    <img class="hero__image lazyload" data-src="{{ section.settings.hero_image | img_url: 'master'}}" alt="{{settings.general_tagline_desc}}">
+                </picture>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {   
+        
+        "name" : "Hero Section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "hero_image",
+                "label": "Hero Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "hero_image_tablet",
+                "label": "Hero Image (Tablet)"
+            },
+            {
+                "type": "image_picker",
+                "id": "hero_image_mobile",
+                "label": "Hero Image (Mobile)"
+            }
+        ] 
+    }
+{% endschema %}
+
+

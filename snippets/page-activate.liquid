@@ -1,0 +1,33 @@
+<section class="alerta-activate-account flex-row">
+    <div class="alerta-activate-account-container flex-col" id="template">
+        
+        <!-- Title -->
+        <div id="activate-title" class="flex-col">
+            <p class="">ACTIVATE ACCOUNT</p>
+            <p class="">Create your password to activate your account</p>
+        </div>
+
+        <!-- Activate Form -->
+        <div id="activate-customer" class="flex-row">
+            {% form 'activate_customer_password', class:"flex-col" %}
+                {{ form.errors | default_errors }}
+
+                <div id="password" class="customer_input  flex-row">
+                    <label class="login center" for="password">Password</label>
+                    <input class="login center password" type="password" value="" name="customer[password]" id="customer_password"  size="16" />
+                </div>
+
+                <div id="password_confirm" class="customer_input  flex-row">
+                    <label class="login center" for="password_confirmation">Password Confirmation</label>
+                    <input class="login center password" type="password" value="" name="customer[password_confirmation]" id="customer_password_confirmation"  size="16" />
+                </div>
+
+                <div class="action_button flex-row">
+                    <input class="login-action-button create-button " type="submit" id="customer_activate" value="Activate Account" />
+                    <span class="">or</span>
+                    <input class="login-action-button back-to-shop-button "  type="submit" name="decline" id="customer_decline" value="Decline Invitation" />
+                </div>
+            {% endform %}
+        </div>
+    </div>
+</section>

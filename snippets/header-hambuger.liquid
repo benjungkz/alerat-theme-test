@@ -1,0 +1,82 @@
+ <!-- Menu -->
+<div class="grid__container header__mobile">
+    <div class="grid__row">
+        <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+            <div class="haeder__wrap header__wrap--nav">    
+                <h5 class="header__button--nav">MENU</h5>
+                <a class="header__logo header__logo--nav" href="/">
+                    {% render 'logo-alerta' %}
+                </a>
+                {% render 'icon-cart' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+ <!-- Dropdown -->
+<div class="grid__container header__navbar">
+    <div class="grid__row">
+        <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+           <nav class="header__list header__list--nav">
+                <ul>
+                        <li>
+                            <h4 class="header__menu header__menu--nav header__menu--close">CLOSE</h4>
+                        </li>
+                    {% for link in linklists[section.settings.header_mobile_menu].links %} 
+                        <li>
+                            <a href="{{ link.url }}">
+                                {% assign menu_title = link.title | downcase %}
+
+                                <h1 class="header__menu header__menu--nav js-header__menu--{{link.title | downcase }}">
+                                    {{ link.title }}
+                                    {% if menu_title == 'products' %}
+                                        <span class="header__icon header__icon--nav">
+                                            {% render 'icon-dropdown' %}
+                                        </span>
+                                    {% endif %}    
+                                </h1>
+                            </a>
+                        </li> 
+                    {% endfor %} 
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div> 
+
+<!-- Product List -->
+<div class="grid__container header__navbar header__navbar--products js-header__navbar--products">
+    <div class="grid__row">
+        <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+            <div class="dropdown dropdown--nav">
+                <!-- Back -->   
+                <div class="dropdown__header">
+                    <div class="dropdown__back js-dropdown__back">
+                        <h4 class="header__menu header__menu--nav header__menu--back">BACK</h4>
+                    </div>
+                    <h3 class="dropdown__title dropdown__title--nav">Alerta Products</h3>
+                </div>
+                <!-- Product List -->
+                {% for block in section.blocks %}
+                    {% if block.type == "dropdown" %}
+                        <div class="dropdown__shadow">
+                            <a class="dropdown__action dropdown__action--nav" href="{{ shop.secure_url }}/products/{{block.settings.dropdown_product}}">
+                                
+                                <div class="dropdown__wrap dropdown__wrap--nav dropdown__wrap--bg">
+                                    <img class="dropdown__image lazyload" 
+                                        data-src="{{block.settings.dropdown_product_image | img_url: 'master' }}" 
+                                        alt="{{block.settings.dropdown_product_image_alt}}">       
+                                </div>
+                                
+                                <div class="dropdown__wrap dropdown__wrap--nav">
+                                    <h4 class="dropdown__title">{{block.settings.dropdown_title}}</h4>
+                                    <h6 class="dropdown__desc">{{block.settings.dropdown_sub_title}}</h6>  
+                                </div> 
+                            </a>
+                        </div>
+                    {% endif %} 
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>  

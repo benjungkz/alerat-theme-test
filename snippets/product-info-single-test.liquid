@@ -1,0 +1,208 @@
+{% assign is_custom_option = section.settings.product_option %}
+
+<!-- Select Options Template -->
+{% if is_custom_option != true %}
+    {% if product.variants.size > 1 %}
+        {% assign is_single_variant = "" %}    
+    {% else %}
+        {% assign is_single_variant = "product__wrap--hidden" %}    
+    {% endif %}    
+{% endif %}
+
+
+<!-- Product Infomation -->
+<div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 
+            grid__col--flex-row grid__col--flex-start-a js-product-info">
+    <div class="product__content--single">
+        <!-- Reveiw Bedge  -->       
+        <div class="product__reviews">
+            <h6 class="product__bedge">{{section.settings.product_bedge}}</h6>
+            <div class="shopify-product-reviews-badge" data-id="{{ product.id }}"></div>
+        </div>
+        
+        <!-- Logo  -->       
+        <img class="product__logo" src="{{section.settings.product_logo | img_url: 'master' }}" alt="Logo of {{product.title}}">    
+        
+        <!-- Title -->
+        {% if section.settings.product_title != '' %}
+            <h1 class="product__title product__title--single">{{section.settings.product_title}}</h1>
+        {% else %}
+            <h1 class="product__title product__title--single">{{product.title}}</h1>
+        {% endif %}
+
+        <!-- Description or Summary -->
+        {% if section.settings.product_summary_col %}
+            {% assign has_col =  'summary--col'%}    
+        {% else %}
+            {% assign has_col =  '' %}
+        {% endif %}
+
+        {% if section.settings.product_summary %}
+            <!-- Description -->
+            {% if section.settings.product_desc != '' %}
+            <h5 class="product__description">{{section.settings.product_desc}}</h5>
+            {% else %}
+            <h5 class="product__description">{{product.description}}</h5>  
+            {% endif %}
+            
+            <!-- Summary -->
+            <div class="summary {{ has_col }}">
+                {% for block in section.blocks %}
+                    {% if block.type == "summary" %}
+                    <div class="list list--small">
+                        <div class="list__dot">
+                            {% render 'icon-dot' %}
+                        </div> 
+                        <h5 class="list__description">{{block.settings.summary}}</h5>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% else %}
+            {% if section.settings.product_desc != '' %}
+                <h5 class="product__description">{{section.settings.product_desc}}</h5>
+                {% else %}
+                <h5 class="product__description">{{product.description}}</h5>  
+            {% endif %}    
+        {% endif %}
+
+        <!-- Price -->
+        <h1 class="product__price">{{ product.price | money }}</h1>
+        
+        <!-- Options -->
+        <div class="product__selection">
+           
+            <div class="produc__wrap {{ is_single_variant }}">
+                <h6 class="product__label">
+                {% if is_custom_option %}
+                    {{ section.settings.product_option_name}}
+                {% else %}
+                    {{ product.options[0]}}
+                {% endif %}
+                </h6>
+
+                <div class="product__options">
+                
+                <!-- Normal variants -->
+                {% if is_custom_option == false %}
+                    {% for variant in product.variants %}
+                       
+                        {% if variant.inventory_quantity != 0 %}
+
+                         
+                            <!-- Button -->
+                            <div class="product__option single-variant">     
+                                <div class="product__variant product__variant--single" 
+                                name="{{ product.handle}}" 
+                                value="{{ variant.id }}" 
+                                index="{{ forloop.index }}"
+                                price="{{ variant.price }}"
+                                product-name="{{product.title}}({{variant.title}})"
+                                sku="{{ variant.sku }}"
+                                variant="{{ variant.title }}"
+                                style="background-color: {{ variant.title | downcase }}"
+                                option="false"
+                                group="{{ product.variants[0].metafields.bold_rp.rp_group_id }}"
+                                test="test"
+                                >
+                                </div>
+                                <h6 class="product__label product__label--option">{{ variant.title }}</h6>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                <!-- Custom variants -->
+                {% else %}
+                    {% for block in section.blocks %}
+                        {% if block.type == 'option' %}
+                            {% assign product_handle = block.settings.option_product %}
+                            {% assign select_product = all_products[product_handle] %}
+                            
+                            <!-- Selected Option-->   
+                            {% if product_handle == product.handle %}
+                                {% assign product_option_for_cart = "true" %}
+                            {% else %}
+                                {% assign product_option_for_cart = "false" %}   
+                            {% endif %}
+
+                            <!-- Frequency numder (If a product is subscription) -->
+                            {% for tag_name in select_product.tags %}
+                                {% if tag_name contains "Frequency" %}
+                                    {% assign product_frequency_number = tag_name | slice: 0 %}
+                                {% endif %}          
+                            {% endfor %}
+                            
+
+                            {% assign subscription_group = product.variants[0].metafields.bold_rp.rp_group_id %}
+                        
+                            <!-- Vriant Button -->
+                            <a href="{{block.settings.option_url}}" 
+                                class="product__variant product__option product__variant--custom
+                                {% if product_option_for_cart == 'true' %}
+                                        product__variant--active
+                                {% endif %}  
+                                "
+                                name="{{ select_product.handle}}" 
+                                value="{{ select_product.variants[0].id }}" 
+                                price="{{ select_product.variants[0].price }}"
+                                product-name="{{select_product.title}}"
+                                sku="{{ select_product.variants[0].sku }}"
+                                option="{{product_option_for_cart}}"
+                                group="{{ subscription_group }}"
+                                number="{{product_frequency_number}}"
+                                custom="true">     
+                                <h6 class="product__label product__label--custom">{{ block.settings.option_name }}</h6>
+                            </a>
+
+                            {% assign product_frequency_number = '' %}
+
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                </div>
+            </div>
+
+            <!-- QTY -->
+            <div class="product__wrap">
+                <h6 class="product__label">QTY</h6>
+                <div class="product__qty">
+                    <div class="qty">   
+                        <div class="qty__content qty__content--symbol qty__content--minus js-qty__content--minus">
+                            <h6 class="qty__symbol">-</h6>
+                        </div>
+
+                        <div class="qty__content qty__content--number"> 
+                            <h6 class="qty__number js-qty__number">1</h6>
+                        </div>
+
+                        <div class="qty__content qty__content--symbol qty__content--plus js-qty__content--plus">
+                            <h6 class="qty__symbol">+</h6>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+        
+        <!-- Button -->
+        <a class="btn btn--pricing product__button" href="#"> 
+            <h5 class="btn__text btn__text--pricing ">ADD TO CART</h5>
+        </a>
+
+        <!-- Event -->
+        <div class="product__event">
+            {% for block in section.blocks %}
+                {% if block.type == 'event' %}
+                    <div class="product__event--container">
+                        <img class="lazyload product__event--img" data-src="{{block.settings.event_image | img_url: '70x'}}">    
+                        <h6 class="product__event--text">{{block.settings.event_name}}</h6>
+                    </div>        
+                {% endif %}
+            {% endfor %}
+            
+        </div>
+        
+    </div>
+</div>
+ 

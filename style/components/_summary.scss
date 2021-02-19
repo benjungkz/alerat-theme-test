@@ -1,0 +1,13 @@
+.summary{
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &--col{
+        grid-template-columns: 1fr 1fr;
+        column-gap: $margin-xsmall;
+
+        @include breakpoint(xs){
+            grid-template-columns: 1fr;    
+        }
+    }
+}

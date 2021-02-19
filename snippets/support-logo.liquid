@@ -1,0 +1,5 @@
+{% for block in blocks %}
+    {% if block.type == "product" and block.settings.support_product == product_handle %}
+    <img src="{{block.settings.support_product_logo | img_url: 'master'}}" alt="">
+    {% endif %}
+{% endfor %}

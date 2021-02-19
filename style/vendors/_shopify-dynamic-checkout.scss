@@ -1,0 +1,29 @@
+.dynamic-checkout__content{
+    width: 100%; 
+
+    >div{
+        width: 100%;
+        @include flexbox-row;
+    }
+    .shopify-cleanslate:last-child{
+        width: 100%;
+
+        >div>div>div{
+            flex-grow: 1 !important;
+        }
+    }
+  
+}
+
+.shopify-payment-button{
+    width: 100%;
+    @include breakpoint(lg-m){        
+        width: 80vw;
+    }
+    .shopify-cleanslate{
+        
+        >div{
+            border-radius: 5px !important;
+        }
+    }
+}

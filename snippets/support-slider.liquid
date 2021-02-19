@@ -1,0 +1,48 @@
+{% for block in blocks %}
+    {% if block.type == "product" and block.settings.support_product == product_handle %}
+        {% if block.settings.support_product_slider %}
+            {% assign slider = true %}
+        {% else %}
+            {% assign slider = false %}    
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+{% if slider %}    
+    {% for block in blocks %}
+        {% if block.type == "slider" and block.settings.support_product_for_slider == product_handle %}
+        <section class="section section--padding"
+                 style="background: -webkit-linear-gradient(top, {{block.settings.support_slider_top_color}} 50%, {{block.settings.support_slider_bottom_color}}  50%);">
+            <div class="grid__container">
+                <div class="grid__row grid__row--shadow grid__row--support-r slider">          
+                    <!-- Content -->    
+                    <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                        <div class="slider__content slider__content--support">
+                            <h2 class="slider__title">{{block.settings.support_slider_title}}</h2>
+                            
+                            <a class="slider__container">
+                                <img class="slider__icon" src="{{ block.settings.support_slider_icon_1 | img_url: 'master'}}" alt="">
+                                <h5 class="slider__description">{{block.settings.support_slider_desc_1}}</h5>
+                            </a>
+
+                            {% if block.settings.support_slider_desc_2 != '' %}
+                            <a href="mailto:{{block.settings.support_slider_desc_2}}" class="slider__container">
+                                <img class="slider__icon" src="{{ block.settings.support_slider_icon_2 | img_url: 'master'}}" alt="">
+                                <h5 class="slider__description">{{block.settings.support_slider_desc_2}}</h5>
+                            </a>     
+                            {% endif %}    
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="grid__col-xxl--7 grid__col-xl--7 grid__col-lg--7 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                        <div class="slider__image">
+                            <img src="{{block.settings.support_slider_image | img_url: 'master'}}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+    {% endfor %}
+{% endif %}

@@ -1,0 +1,133 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="canonical" href="{{ canonical_url }}">
+  
+  {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+  {%- endif -%}
+
+  {%- capture seo_title -%}
+    {{ page_title }}
+    {%- if current_tags -%}
+      {%- assign meta_tags = current_tags | join: ', ' -%} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags -}}
+    {%- endif -%}
+    {%- if current_page != 1 -%}
+      &ndash; {{ 'general.meta.page' | t: page: current_page }}
+    {%- endif -%}
+    {%- assign escaped_page_title = page_title | escape -%}
+    {%- unless escaped_page_title contains shop.name -%}
+      &ndash; {{ shop.name }}
+    {%- endunless -%}
+  {%- endcapture -%}
+
+  <title>{{ seo_title | strip }}</title>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  <!-- Jquery -->
+  {{ 'jquery-3.5.1.min.js'| asset_url | script_tag }}
+
+  <!-- SEO & Tracking -->
+  {% render 'seo-init' %}
+  {% render 'seo-google-analytics' %}
+  {% render 'seo-google-tag-script' %}
+  {% render 'seo-structured-data' %}
+  {% render 'seo-flexoffers-script' %}
+  {% render 'seo-hotjar' %}
+
+  <!-- URL-->
+  {% if product.url != "" %}
+    {% render 'seo-google-sd-product' %} 
+  {% endif %}
+    
+
+  <!-- Chat box -->
+  {% comment %} {% render 'element-chatbox' %}  {% endcomment %}
+  
+  {{ content_for_header }}
+  
+  <!-- JS -->
+
+  <script type="text/javascript" src="{{ 'lazysizes.min.js'| asset_url }}" defer></script> 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.min.js" defer></script>
+  {{ 'bold-subscriptions-js.min.js'| asset_url | script_tag }}
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  {{ 'slick.min.js'| asset_url | script_tag }}
+
+  
+  <!-- CSS -->
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+  {{ 'adobe.font.css' | asset_url | stylesheet_tag }}
+  {{ 'animate.min.css' | asset_url | stylesheet_tag }}  
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+  {% if template.name != 'index' %}
+  
+  <script type="text/javascript" src="{{ 'lity.min.js'| asset_url }}" defer></script>
+  
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.css"></noscript>
+  
+  <link rel="preload" href="{{ 'lity.min.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="{{ 'lity.min.css' | asset_url }}"></noscript>
+
+  {{ 'slick.min.css' | asset_url | stylesheet_tag }}
+
+  {% endif %}
+  
+
+  
+  <!-- Bold subscirption -->  
+  {% render 'bold-common' %}
+  {% render 'bold-ro-init' %}
+  
+  <!-- noindex -->
+  {% if handle contains 'dev' %}
+    <meta name="robots" content="noindex">
+  {% endif %}
+  
+  {% if product and product.type contains 'dev' %}
+    <meta name="robots" content="noindex">
+  {% endif %}
+
+  <meta name="google-site-verification" content="-N2eCusqfbzOgr6MlpKp9PWbpNpz5IxEpGbzRTdkGvk" />
+
+</head>
+
+<body class="body">
+  
+
+  {% render 'ajax-cart' %}
+  {% render 'seo-google-tag-noscript' %}
+
+  {% section 'header' %}
+
+  {{ content_for_layout }}
+
+  {{ 'theme.js' | asset_url | script_tag }}
+  {{ 'page-util.js' | asset_url | script_tag }}
+  {{ 'ajax-cart.js' | asset_url | script_tag }}
+  
+  {% section 'footer' %}
+  
+  {% comment %} {% if handle contains 'dev' %}
+  {% else %}
+      {% section 'footer' %}      
+  {% endif %}
+
+   {% endcomment %}
+
+  
+</body>
+</html>

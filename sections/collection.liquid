@@ -1,0 +1,279 @@
+{% for block in section.blocks %}
+    {% if block.type == 'collection-left' %} {% assign collectionLeft = forloop.index0 %}
+    {% elsif block.type == 'collection-right' %} {% assign collectionRight = forloop.index0 %}
+    {% elsif block.type == 'collection-left-benefit' %} {% assign collectionLeftBenefit = forloop.index0 %}
+    {% elsif block.type == 'collection-right-benefit' %} {% assign collectionRightBenefit = forloop.index0 %}
+    {% endif %}    
+{% endfor %}
+
+<section class="section section--col section--bg section--p">
+    <div class="grid__container">
+       
+        <div class="grid__row collection">    
+            
+            <!-- Home Collection ( Left Side ) -->
+            <div class="grid__col-xxl--5 grid__col-xl--6 grid__col-lg--6 grid__col-md--6 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">
+                
+                <div class="collection__logo">
+                    <img class="lazyload" data-src="{{section.blocks[collectionLeft].settings.collection_product_logo | img_url: 'master'}}" alt="{{section.blocks[collectionLeft].settings.collection_button_link}}">
+                </div>
+
+                <h3 class="collection__title">{{section.blocks[collectionLeft].settings.collection_product_title}}</h3>
+
+                <div class="collection__image">
+                    <img class="lazyload" data-src="{{section.blocks[collectionLeft].settings.collection_product_image | img_url: 'master'}}" alt="{{section.blocks[collectionLeft].settings.collection_button_link}}">
+                </div>
+
+                <a class="btn collection__btn" href="{{section.blocks[collectionLeft].settings.collection_button_link}}" >
+                    <h5 class="btn__text">{{section.blocks[collectionLeft].settings.collection_button_text}}</h5>
+                </a>
+            
+                <div class="collection__benefit">
+                    {% render 'svg-list-up' %}
+                    {% for block in section.blocks %}
+                        {% if block.type == 'collection-left-benefit' %}       
+                            <div class="list">
+                                <div class="list__dot">{% render 'icon-dot' %}</div>
+                                <h5 class="list__description">{{block.settings.collection_left_benefit_desc}}</h5>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    {% render 'svg-list-down' %}
+                </div>
+
+                <div class="collection__testimonial animated zoomIn delay-1s">
+                    {% comment %} {% render 'icon-quote-mark-up' %}
+                    <h4 class="collection__title collection__title--home">{{section.blocks[collectionLeft].settings.collection_testimonial}}</h4>
+                    <div class="collection__organization">
+                        {% assign orgainzation_logo = section.blocks[collectionLeft].settings.collection_testimonial_organization_logo %}
+                        {% if orgainzation_logo %}
+                            <img class="collection__organization-logo" src="{{ orgainzation_logo | img_url: 'master'}}" alt="">
+                        {% endif %}
+                        <p class="collection__organization-name">{{section.blocks[collectionLeft].settings.collection_testimonial_name}}</p>
+                    </div>
+                    {% render 'icon-quote-mark-down' %} {% endcomment %}
+                </div>
+            </div>
+
+            <div class="grid__col-xxl--2 grid__col-xl--0 grid__col-lg--0 grid__col-md--0 grid__col-xs--0 grid__col--blank">
+            </div>
+
+            <!-- Home Collection ( Right Side ) -->
+            <div class="grid__col-xxl--5 grid__col-xl--6 grid__col-lg--6 grid__col-md--6 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">
+              
+                <div class="collection__logo">
+                    <img class="lazyload" data-src="{{section.blocks[collectionRight].settings.collection_product_logo | img_url: 'master'}}" alt="{{section.blocks[collectionRight].settings.collection_button_link}}">
+                </div>
+
+                <h3 class="collection__title">{{section.blocks[collectionRight].settings.collection_product_title}}</h3>
+                
+                
+                <div class="collection__image">
+                    <img class="lazyload" data-src="{{section.blocks[collectionRight].settings.collection_product_image | img_url: 'master'}}" alt="{{section.blocks[collectionRight].settings.collection_button_link}}">
+                </div>
+
+                <a class="btn collection__btn" href="{{section.blocks[collectionRight].settings.collection_button_link}}" >
+                    <h5 class="btn__text">{{section.blocks[collectionRight].settings.collection_button_text}}</h5>
+                </a>
+                
+                <div class="collection__benefit"> 
+                    {% render 'svg-list-up' %}
+                    {% for block in section.blocks %}
+                        {% if block.type == 'collection-right-benefit' %}       
+                            <div class="list">
+                                <div class="list__dot">{% render 'icon-dot' %}</div>
+                                <h5 class="list__description">{{block.settings.collection_right_benefit_desc}}</h5>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    {% render 'svg-list-down' %}
+                </div>
+
+                <div class="collection__testimonial animated zoomIn delay-1s">
+                    {% comment %} {% render 'icon-quote-mark-up' %}
+                    <h4 class="collection__title collection__title--home">{{section.blocks[collectionRight].settings.collection_testimonial}}</h4>
+                    <div class="collection__organization">
+                        {% assign orgainzation_logo = section.blocks[collectionRight].settings.collection_testimonial_organization_logo %}
+                        {% if orgainzation_logo %}
+                            <img class="collection__organization-logo" src="{{ orgainzation_logo | img_url: 'master'}}" alt="">
+                        {% endif %}
+                        <p class="collection__organization-name">{{section.blocks[collectionRight].settings.collection_testimonial_name}}</p>
+                    </div>
+                    {% render 'icon-quote-mark-down' %} {% endcomment %}
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="grid__container">
+       
+        <div class="grid__row">    
+            
+            
+
+            <!-- Testimonial -->
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12">
+                <div class="collection__testimonial">
+                    {% render 'svg-testimonial-long-up' %}
+                    <div class="testimonial">
+                        <h5 class="testimonial__description">{{section.settings.testimonial_desc}}</h5>
+                        <div class="testimonial__info">
+                            <div class="testimonial__logo">
+                                <img class="lazyload" data-src="{{section.settings.testimonial__logo | img_url : 'master'}}" alt="">
+                            </div>
+                            <h6 class="testimonial__name">{{section.settings.testimonial_name}}</h6>
+                        </div>
+                    </div>
+                    {% render 'svg-testimonial-long-down' %}
+                </div>
+            </div>
+
+                     
+        </div>
+    
+    </div>
+</section>
+
+{% schema %}
+    {   
+        "blocks": [
+            {
+                "type": "collection-left",
+                "name": "Collection Left Section",
+                "limit": 1,
+                "settings": [
+                    {
+                        "id": "collection_product_logo",
+                        "type": "image_picker",
+                        "label": "Product Logo"
+                    },
+                    {
+                       "id": "collection_product_image",
+                       "type": "image_picker",
+                       "label": "Product Image"
+                    },
+                    {
+                       "id": "collection_product_title",
+                       "type": "text",
+                       "label": "Product Title" 
+                    },
+                    {
+                       "id": "collection_button_text",
+                       "type": "text",
+                       "label": "Button Text" 
+                    },
+                    {
+                       "id": "collection_button_link",
+                       "type": "text",
+                       "label": "Button link" 
+                    },
+                    {
+                       "id": "collection_testimonial",
+                       "type": "textarea",
+                       "label": "Testimonial"
+                    },
+                    {
+                        "id": "collection_testimonial_organization_logo",
+                        "type": "image_picker",
+                        "label": "Organizaion Logo"
+                    },
+                    {
+                       "id": "collection_testimonial_name",
+                       "type": "text",
+                       "label": "Name (or Organization)" 
+                    }
+                ]
+            },
+            {
+                "type": "collection-left-benefit",
+                "name": "Collection Benefit(L)",
+                "settings": [
+                    {
+                       "id": "collection_left_benefit_desc",
+                       "type": "textarea",
+                       "label": "Benefit Description"
+                    }
+                ]
+            },
+            {
+                "type": "collection-right",
+                "name": "Collection Right Section",
+                "limit": 1,
+                "settings": [
+                    {
+                        "id": "collection_product_logo",
+                        "type": "image_picker",
+                        "label": "Product Logo"
+                    },
+                    {
+                       "id": "collection_product_image",
+                       "type": "image_picker",
+                       "label": "Product Image"
+                    },
+                    {
+                       "id": "collection_product_title",
+                       "type": "text",
+                       "label": "Product Title" 
+                    },
+                    {
+                       "id": "collection_button_text",
+                       "type": "text",
+                       "label": "Button Text" 
+                    },
+                    {
+                       "id": "collection_button_link",
+                       "type": "text",
+                       "label": "Button link" 
+                    },
+                    {
+                       "id": "collection_testimonial",
+                       "type": "textarea",
+                       "label": "Testimonial"
+                    },
+                    {
+                        "id": "collection_testimonial_organization_logo",
+                        "type": "image_picker",
+                        "label": "Organizaion Logo"
+                    },
+                    {
+                       "id": "collection_testimonial_name",
+                       "type": "text",
+                       "label": "Name (or Organization)" 
+                    }
+                ]
+            },
+            {
+                "type": "collection-right-benefit",
+                "name": "Collection Benefit(R)",
+                "settings": [
+                    {
+                       "id": "collection_right_benefit_desc",
+                       "type": "textarea",
+                       "label": "Benefit Description"
+                    }
+                ]
+            }
+        ],
+
+        "name" : "Collection Section",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "testimonial_desc",
+                "label": "Testimonial Description"
+            },
+            {
+                "id": "testimonial__logo",
+                "type": "image_picker",
+                "label": "Testimonial Logo"
+            },
+            {
+                "type": "textarea",
+                "id": "testimonial_name",
+                "label": "Testimonial Title/Name"
+            }
+        ] 
+    }
+{% endschema %}

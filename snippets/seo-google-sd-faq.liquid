@@ -1,0 +1,22 @@
+<!-- Product FAQ rich result-->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "{{product.title}} - FAQ",
+    "mainEntity": [
+    {% for block in section.blocks %}
+        {% if block.type == "faq" %}        
+        {
+            "@type": "Question",
+            "name": "{{block.settings.faq_question | escape }}",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "{{block.settings.faq_answer | escape }}"
+            }
+        {% if forloop.last == true %} } {% else %} }, {% endif %}
+        {% endif %}
+    {% endfor %}
+    ]
+}
+</script>

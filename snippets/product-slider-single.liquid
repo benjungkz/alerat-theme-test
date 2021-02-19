@@ -1,0 +1,29 @@
+<!-- Option 1 -->
+<div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+    <div class="slider__container slider__container--single-product">
+         <div class="slider--main js-slider--main">
+            {% for image in product.images %}    
+                <div class="slider">            
+                    <div class="slider__image slider__image--product">
+                        <picture>
+                            <img src="{{ image.src | img_url: 'master'}}" alt="{{ image.alt }}">
+                        </picture>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class="slider--nav js-slider--nav">
+            {% for image in product.images %}   
+                <div class="slider">            
+                    <div class="slider__image slider__image--nav">
+                        <picture>
+                            <img src="{{ image.src | img_url: '100x100'}}" alt="{{ image.alt }}">
+                        </picture>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>   
+    </div>
+</div>
+ 

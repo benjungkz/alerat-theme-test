@@ -1,0 +1,61 @@
+.chip{
+    padding: 0.5rem 2rem;
+    border: 1px solid color(gray-dark);
+    border-radius: 50px;
+    margin: 0 0.5rem;
+    height: 1.35rem;
+    
+    @include flexbox-row;
+
+    &--deactive{
+        @include breakpoint(md-xs){        
+            display: none;    
+        } 
+    }
+    &--secondary{      
+        border-color: color(gray-light);
+    }
+
+    &--focus{
+        &-primary{
+            background-color: color(red);
+            border-color: color(red);
+        }
+        &-secondary{
+            background-color: color(gray-light);
+            border-color: color(gray-light);
+        }
+    }
+
+    &__container{
+        @include flexbox-row;
+        display: none;
+    }
+    &__icon{
+        svg{
+            width: 1.35rem;
+            height: 1.35rem;
+        }
+        margin-right: 0.5rem;
+    }
+    &__content{
+        @include font-size(0.32em);
+        font-weight: 500;
+        text-align: center;
+
+        &--focus{
+            &-primary{
+                color: color(white);
+             
+            }
+            &-secondary{
+                color: color(gray-dark); 
+            }
+        }
+
+        &--secondary{
+            color: color(gray-light);
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+{% render 'header-dropdown-dev' %} 
+{% section 'index-hero-image' %}
+{% section 'collection' %}
+{% render 'page-help', sectionClass: "section--bg-half-reverse",
+                        btnClass: "tagline__btn--chat" %}
+
+<div id="productinfo"></div>
+<div id="newcart"></div>
+
+{{ "cart.bundle.js" | asset_url | script_tag }}
+{{ "product.bundle.js" | asset_url | script_tag }}
+

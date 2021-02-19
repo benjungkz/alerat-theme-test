@@ -1,0 +1,16 @@
+.bc{
+    &Float{
+        top: 80% !important;
+        transition: all 0.2s cubic-bezier(0.83, 0.09, 0.41, 0.9) !important;
+    }
+    &-frame{
+        &-title{
+            font-family: poynter-oldstyle-display, serif !important;
+        }
+    }
+    &-active{
+        left: calc( 100% - 285px) !important;
+        width: 285px !important;
+        transition: all 0.5s cubic-bezier(0.83, 0.09, 0.41, 0.9) !important;
+    }
+}

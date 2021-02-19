@@ -1,0 +1,2245 @@
+{
+  "current": {
+    "general_tagline_desc": "Caring for your Loved One\nCaring for the Caregiver",
+    "help_tagline_desc": "How can we help you today?",
+    "help_tagline_button_text": "Chat with us",
+    "help_tagline_representative_1": "shopify:\/\/shop_images\/representative-4.png",
+    "help_tagline_representative_2": "shopify:\/\/shop_images\/representative-2.png",
+    "help_tagline_representative_3": "shopify:\/\/shop_images\/representative-3.png",
+    "help_tagline_representative_4": "shopify:\/\/shop_images\/representative-1.png",
+    "share_image": "",
+    "social_sharing_blog": true,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "https:\/\/twitter.com\/alertapatch",
+    "social_facebook_link": "https:\/\/www.facebook.com\/AlertaByTrackPatch",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/alertabytrackpatch\/",
+    "social_snapchat_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCMZ9jCBNkJAoZ1xfoXPhljA",
+    "social_vimeo_link": "",
+    "cart_notes_enable": true,
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "bg_color": "#ffffff",
+    "text_color": "#cccccc",
+    "use_logo": false,
+    "checkout_use_storefront_logo": false,
+    "sections": {
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_first_menu": "footer-menu-shop",
+          "footer_second_menu": "footer-menu-support",
+          "footer_third_menu": "footer-menu-company",
+          "footer_address": "134 N Battlefield Blvd, \nChesapeake, VA 23320",
+          "footer_email": "Alerta@trackpatch.com",
+          "footer_phone_number": "(833) 325-3782",
+          "footer_social_facebook_url": "https:\/\/www.facebook.com\/AlertaByTrackPatch",
+          "footer_social_instagram_url": "https:\/\/www.instagram.com\/alertabytrackpatch\/",
+          "footer_social_youtube_url": "https:\/\/www.youtube.com\/channel\/UCMZ9jCBNkJAoZ1xfoXPhljA",
+          "footer_social_twitter_url": "https:\/\/twitter.com\/alertapatch",
+          "footer_social_linkedin_url": "https:\/\/www.linkedin.com\/company\/track-patch-1-corporation\/",
+          "footer_copyright": "Copyright © 2021 Track Patch 1 Corporation, All Rights Reserved"
+        }
+      },
+      "collection": {
+        "type": "collection",
+        "blocks": {
+          "1598902396503": {
+            "type": "collection-left",
+            "settings": {
+              "collection_product_logo": "shopify:\/\/shop_images\/logo-find-type.png",
+              "collection_product_image": "shopify:\/\/shop_images\/product-image-find-with-phone.png",
+              "collection_product_title": "GPS Vehicle Tracker",
+              "collection_button_text": "Learn More",
+              "collection_button_link": "\/products\/alerta-find-subscription",
+              "collection_testimonial": "",
+              "collection_testimonial_name": ""
+            }
+          },
+          "1598902412234": {
+            "type": "collection-right",
+            "settings": {
+              "collection_product_logo": "shopify:\/\/shop_images\/logo-kit-type.png",
+              "collection_product_image": "shopify:\/\/shop_images\/kit-none-option.png",
+              "collection_product_title": "Wearable Proximity Monitor",
+              "collection_button_text": "Learn More",
+              "collection_button_link": "\/products\/get-started-kit",
+              "collection_testimonial": "",
+              "collection_testimonial_name": ""
+            }
+          },
+          "1598915259778": {
+            "type": "collection-left-benefit",
+            "settings": {
+              "collection_left_benefit_desc": "Keeps your loved one safer; quickly learn your vehicle's location and location history with mobile phone app"
+            }
+          },
+          "1598916036498": {
+            "type": "collection-left-benefit",
+            "settings": {
+              "collection_left_benefit_desc": "Saves the family caregiver time and money: battery lasts for up to two years with no charging"
+            }
+          },
+          "1598916069606": {
+            "type": "collection-left-benefit",
+            "settings": {
+              "collection_left_benefit_desc": "Reduces caregiver stress: easy and flexible to use, easy to conceal inside vehicle, no mobile phone inside vehicle needed"
+            }
+          },
+          "1598919011405": {
+            "type": "collection-right-benefit",
+            "settings": {
+              "collection_right_benefit_desc": "Keeps the care recipient safer; brings peace of mind to family caregiver"
+            }
+          },
+          "1598919023687": {
+            "type": "collection-right-benefit",
+            "settings": {
+              "collection_right_benefit_desc": "Frees the family caregiver to tend to household tasks, while caring for loved one"
+            }
+          },
+          "1598919036101": {
+            "type": "collection-right-benefit",
+            "settings": {
+              "collection_right_benefit_desc": "Allows loved one to do daily activities; no impact or restrictions"
+            }
+          }
+        },
+        "block_order": [
+          "1598902396503",
+          "1598902412234",
+          "1598915259778",
+          "1598916036498",
+          "1598916069606",
+          "1598919011405",
+          "1598919023687",
+          "1598919036101"
+        ],
+        "settings": {
+          "testimonial_desc": "I haven’t seen anything else like this. The Alerta Patch and Wedge makes a lot of sense for caregivers who are at home with their loved ones living with dementia. It’s impossible to keep an eye on someone 24\/7.  So, it’s crucial that a  care partner knows if their loved one leaves the house or goes to an unsafe area, like the top of the basement stairs.",
+          "testimonial__logo": "shopify:\/\/shop_images\/dementia-by-day-logo.png",
+          "testimonial_name": "- Rachael Wonderlin\nFounder, Dementia By Day"
+        }
+      },
+      "page-contact": {
+        "type": "page-contact",
+        "settings": {}
+      },
+      "page-faq-dev": {
+        "type": "page-faq-dev",
+        "settings": {}
+      },
+      "account-login": {
+        "type": "account-login",
+        "settings": {
+          "login_hero_img": "shopify:\/\/shop_images\/about-us-image-mobile.jpg",
+          "login_sign_in_title": "Sign in",
+          "login_sign_up_title": "New User?",
+          "login_sign_up_msg": "Create an Account and Join Alerta Family",
+          "login_reset_button_text": "Reset Password",
+          "login_sign_in_button_text": "Sign in",
+          "login_recover_pw_title": "Reset Password",
+          "login_recover_pw_msg": "We will send you an email to reset your password.",
+          "login_recover_pw_button_text": "Reset Password",
+          "login_recover_pw_cancel_text": "Cancel",
+          "login_guest_title": "Continue as Guest?",
+          "login_guest_submit_button_text": "",
+          "login_error_msg_color": "#d12220"
+        }
+      },
+      "account-register": {
+        "type": "account-register",
+        "settings": {
+          "login_hero_img": "shopify:\/\/shop_images\/product-slider-kit-mobile-3.jpg",
+          "login_sign_up_title": "Sign up",
+          "login_sign_up_msg": "Join Alerta Family and start making sure your loved one's safety",
+          "login_sign_up_button_text": "Sign up"
+        }
+      },
+      "account-activate": {
+        "type": "account-activate",
+        "settings": {
+          "login_logo_img": "",
+          "login_hero_img": "",
+          "login_activate_title": "Activate Account",
+          "login_activate_msg": "Join the Alerta family and you will receive a information about products and promotions.",
+          "login_activate_button_text": "Activate",
+          "login_decline_button_text": "Decline Invitation"
+        }
+      },
+      "account-reset": {
+        "type": "account-reset",
+        "settings": {
+          "login_logo_img": "",
+          "login_hero_img": "",
+          "login_pw_reset_title": "Reset Password",
+          "login_pw_reset_msg": "If you have a issue, Please send a message through the chat-box or call",
+          "login_pw_customer_service_tel": "833-325-3782",
+          "login_pw_reset_button_text": "Reset Password"
+        }
+      },
+      "account-dashboard": {
+        "type": "account-dashboard",
+        "settings": {
+          "customer_greeting": "Welcome,",
+          "customer_bedge_private": "Alerta Famliy Member",
+          "customer_bedge_vendor": "Alerta Vendor Member",
+          "customer_orders_default": "You haven't placed any orders yet.",
+          "customer_shipping_tracking_img_inactive": "shopify:\/\/shop_images\/product-kit-slider-3.jpg",
+          "customer_shipping_tracking_img_inactive_tablet": "shopify:\/\/shop_images\/product-slider-kit-tablet-3.jpg",
+          "customer_shipping_tracking_img_inactive_mobile": "shopify:\/\/shop_images\/product-slider-kit-mobile-3.jpg",
+          "customer_shipping_tracking_title_inactive": "We're waiting your order",
+          "customer_shipping_tracking_subtitle_inactive": "Shipped by USPS, UPS, Fedex",
+          "customer_shipping_tracking_link_inactive": "Shop with Free Shipping",
+          "customer_shipping_tracking_link_product_inactive": "get-started-kit",
+          "customer_shipping_tracking_img_active": "shopify:\/\/shop_images\/product-find-slider-4.jpg",
+          "customer_shipping_tracking_img_active_tablet": "shopify:\/\/shop_images\/product-slider-find-tablet-4.jpg",
+          "customer_shipping_tracking_img_active_mobile": "shopify:\/\/shop_images\/product-slider-find-mobile-4.jpg",
+          "customer_shipping_tracking_title_active": "Order Shipping Now",
+          "customer_shipping_tracking_link_active": "Tracking my shipping",
+          "customer_shipping_tracking_link_page_active": "",
+          "customer_shipping_tracking_sublink_active": "Problem? Call 833-325-3782",
+          "customer_shipping_tracking_sublink_page_active": "",
+          "customer_promotion_img_default": "shopify:\/\/shop_images\/product-kit-slider-1.jpg",
+          "customer_promotion_img_default_tablet": "shopify:\/\/shop_images\/product-slider-kit-tablet-1.jpg",
+          "customer_promotion_img_default_mobile": "shopify:\/\/shop_images\/product-slider-kit-mobile-1.jpg",
+          "customer_promotion_title_default": "Coming Soon",
+          "customer_promotion_subtitle_default": "",
+          "customer_promotion_content_default": "The new promotion will be launched in May.",
+          "customer_promotion_link_default": "What is Get Started Kit?",
+          "customer_promotion_product_link_default": "get-started-kit",
+          "customer_promotion": false,
+          "customer_promotion_img": "",
+          "customer_promotion_img_tablet": "",
+          "customer_promotion_img_mobile": "",
+          "customer_promotion_title": "Stay at Home",
+          "customer_promotion_subtitle": "Apr 06 - Apr 20, 2020",
+          "customer_promotion_content": "We offer 25% Off coupon to Alerta Family members who send a 'stay at home' picture with Alerta Family Product.",
+          "customer_promotion_link": "How to get the coupon?",
+          "customer_promotion_page_link": "",
+          "customer_address_link": "View Addresses"
+        }
+      },
+      "page-business": {
+        "type": "page-business",
+        "blocks": {
+          "1591714282130": {
+            "type": "feature",
+            "settings": {
+              "feature_title": "Lower Costs",
+              "feature__description": "Helps you ensure\nthat your employees are taking\nthe most direct routes to their\nlocations.",
+              "feature_icon": "icon-feature-cost"
+            }
+          },
+          "1591714327081": {
+            "type": "feature",
+            "settings": {
+              "feature_title": "Increase Security",
+              "feature__description": "By having documentation of your employees’ location, you can protect yourself from liability and allegations.",
+              "feature_icon": "icon-feature-security"
+            }
+          },
+          "1591714306518": {
+            "type": "feature",
+            "settings": {
+              "feature_title": "Improve Care",
+              "feature__description": "You can ensure that your employees are where they are supposed to be, providing quality care.",
+              "feature_icon": "icon-feature-care"
+            }
+          }
+        },
+        "block_order": [
+          "1591714282130",
+          "1591714327081",
+          "1591714306518"
+        ],
+        "settings": {
+          "intro_image": "",
+          "intro_image_offset": 160,
+          "intro_title": "for Business",
+          "intro_icon": "",
+          "intro_subtitle": "Alerta Find is a GPS that monitors the car it is placed in.",
+          "intro_description": "It helps you determine if your trainers are traveling the most efficient routes, save money on mileage & employee pay, and confirm the duration of visits.",
+          "button_text": "Contact Us",
+          "solution_title": "Pay once,\nGet 4 years of Battery Life",
+          "solution_description": "Alerta Find has no installation.\nSimply activate it and place it in the vehicle you need to monitor.\n\nAlerta Find’s battery lasts over 4 years without a charge so you never have to worry.",
+          "testimonial_name": "- A Home Health Care Franchise Owner \nVirginia Beach, VA",
+          "testimonial_description": "“I personally see a great potential for this unit to be used to cut cost.\n\nAlerta has a genuine interest in creating and putting out the best products and service possible”",
+          "contact_us_title": "Get the Estimate",
+          "contact_us_subtitle": "For information about Alerta Find and corporate pricing,  \nplease contact us using the form below or by dialing <a href=\"tel:833-392-6337\">833-392-6337<\/a>.",
+          "contact_us_button": "We need info for estimate! &#128516;"
+        }
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "82c76a1b-10a3-440e-97bc-52e219f34021": {
+            "type": "dropdown",
+            "settings": {
+              "dropdown_title": "alerta<br>patch & wedge",
+              "dropdown_sub_title": "Wearable <br>Proximity Monitor",
+              "dropdown_main_button_text": "Shop Now",
+              "dropdown_main_button_url": "\/products\/get-started-kit",
+              "dropdown_sub_button": false,
+              "dropdown_sub_button_text": "",
+              "dropdown_sub_button_url": "",
+              "dropdown_product": "get-started-kit",
+              "dropdown_product_image": "shopify:\/\/shop_images\/kit-none-option.png",
+              "dropdown_product_image_alt": "Alerta Patch & Kit",
+              "dropdown_tag": false,
+              "dropdown_tag_text": ""
+            }
+          },
+          "90a01f55-018b-49ea-871b-0dde8b04dcb8": {
+            "type": "dropdown",
+            "settings": {
+              "dropdown_title": "alerta<br>find",
+              "dropdown_sub_title": "In-Vehicle <br> GPS Tracker",
+              "dropdown_main_button_text": "Shop Now",
+              "dropdown_main_button_url": "\/products\/alerta-find-subscription",
+              "dropdown_sub_button": false,
+              "dropdown_sub_button_text": "",
+              "dropdown_sub_button_url": "",
+              "dropdown_product": "alerta-find-subscription",
+              "dropdown_product_image": "shopify:\/\/shop_images\/product-image-find-with-phone.png",
+              "dropdown_product_image_alt": "Alerta Find : GPS car Tracker for dementia, seniors and Alzheimer's",
+              "dropdown_tag": false,
+              "dropdown_tag_text": ""
+            }
+          },
+          "8aae0962-c88e-48b9-927b-812ecdb4f10a": {
+            "type": "dropdown",
+            "settings": {
+              "dropdown_title": "alerta<br>flash",
+              "dropdown_sub_title": "Talking Touchscreen<br>Calendar Clock",
+              "dropdown_main_button_text": "Shop Now",
+              "dropdown_main_button_url": "\/products\/alerta-flash",
+              "dropdown_sub_button": false,
+              "dropdown_sub_button_text": "",
+              "dropdown_sub_button_url": "",
+              "dropdown_product": "alerta-flash",
+              "dropdown_product_image": "shopify:\/\/shop_images\/alerta-flash-wihte-front.png",
+              "dropdown_product_image_alt": "Talking Touchscreen Calendar Clock",
+              "dropdown_tag": true,
+              "dropdown_tag_text": "New"
+            }
+          },
+          "b8008f88-9173-454a-a518-aceff6a34712": {
+            "type": "dropdown",
+            "settings": {
+              "dropdown_title": "alerta<br>voice",
+              "dropdown_sub_title": "Motion-activated<br>Message Player",
+              "dropdown_main_button_text": "Shop Now",
+              "dropdown_main_button_url": "\/products\/alerta-voice",
+              "dropdown_sub_button": false,
+              "dropdown_sub_button_text": "",
+              "dropdown_sub_button_url": "",
+              "dropdown_product": "alerta-voice",
+              "dropdown_product_image": "shopify:\/\/shop_images\/alerta-voice-front.png",
+              "dropdown_product_image_alt": "",
+              "dropdown_tag": true,
+              "dropdown_tag_text": "New"
+            }
+          },
+          "3684dd99-40fc-4503-94b9-f98cdb17aa10": {
+            "type": "dropdown",
+            "settings": {
+              "dropdown_title": "alerta<br>chime",
+              "dropdown_sub_title": "Door-open<br>alarm",
+              "dropdown_main_button_text": "Shop Now",
+              "dropdown_main_button_url": "\/products\/alerta-chime",
+              "dropdown_sub_button": false,
+              "dropdown_sub_button_text": "",
+              "dropdown_sub_button_url": "",
+              "dropdown_product": "alerta-chime",
+              "dropdown_product_image": "shopify:\/\/shop_images\/product-chime-front.png",
+              "dropdown_product_image_alt": "",
+              "dropdown_tag": true,
+              "dropdown_tag_text": "New"
+            }
+          }
+        },
+        "block_order": [
+          "82c76a1b-10a3-440e-97bc-52e219f34021",
+          "90a01f55-018b-49ea-871b-0dde8b04dcb8",
+          "8aae0962-c88e-48b9-927b-812ecdb4f10a",
+          "b8008f88-9173-454a-a518-aceff6a34712",
+          "3684dd99-40fc-4503-94b9-f98cdb17aa10"
+        ],
+        "settings": {
+          "header_primary_menu": "primary-menu",
+          "header_sub_menu": "sub-menu",
+          "header_mobile_menu": "mobile-menu",
+          "header_notification": true,
+          "header_notification_title": "Alerta Find - Activation Fee :  \t<strike>$19.99<\/strike> $0",
+          "header_notification_action": "SHOP NOW",
+          "header_notification_link": "\/products\/alerta-find-subscription"
+        }
+      },
+      "index-hero": {
+        "type": "index-hero",
+        "settings": {
+          "hero_desc": "Alerta products help to keep people suffering from <span class=\"hero__bold\">dementia comfortable and safe,<\/span> while bringing the <span class=\"hero__bold\">family caregiver peace of mind.<\/span>"
+        }
+      },
+      "support": {
+        "type": "support",
+        "blocks": {
+          "1600289193165": {
+            "type": "product",
+            "settings": {
+              "support_product": "get-started-kit",
+              "support_product_logo": "shopify:\/\/shop_images\/logo-kit-type.png",
+              "support_product_representitive": "shopify:\/\/shop_images\/representative-1.png",
+              "support_product_guide_title": "Need help getting started?",
+              "support_product_guide_desc_1": "To activate the Patch & Wedge, check out the “<span class=\"support__bold\">Get Started<\/span>” card and \n“<span class=\"support__bold\">User Guide<\/span>”.",
+              "support_product_guide_desc_2": "<span class=\"support__bold\">Chat <\/span> or <span class=\"support__bold\">call <\/span>us! We’re here, \nwaiting for you.",
+              "support_product_resource_title": "Download",
+              "support_product_slider": true,
+              "support_product_resource_only_image": false,
+              "support_product_section_bg": false
+            }
+          },
+          "1600259468670": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/VeUz67odeog",
+              "support_video_title": "Why\nAlerta?",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/support-kit-video-thumbnail-1_ce4aac28-800c-4224-bf14-b41b6e2ca266.jpg",
+              "support_product_for_video": "get-started-kit"
+            }
+          },
+          "1600266238010": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/OdLt7oDuoeI",
+              "support_video_title": "Turning-on the \nAlerta Patch & \nWedge",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/support-kit-video-thumbnail-2.jpg",
+              "support_product_for_video": "get-started-kit"
+            }
+          },
+          "1600276157806": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/qJc4t7POKsQ",
+              "support_video_title": "The Alerta \nWedge",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/support-kit-video-thumbnail-3.jpg",
+              "support_product_for_video": "get-started-kit"
+            }
+          },
+          "1600396166541": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/Mqw46bVnbb4",
+              "support_video_title": "Changing the \nAlerta Patch",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/support-kit-video-thumbnail-4.jpg",
+              "support_product_for_video": "get-started-kit"
+            }
+          },
+          "1600292059227": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/icon-pdf.png",
+              "support_resource_only_image": false,
+              "support_resource_primary": true,
+              "support_resource_button_text": "Get Started Card",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Get_Started_Card.pdf?v=1602164340",
+              "support_product_for_resource": "get-started-kit"
+            }
+          },
+          "1600292269718": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/icon-pdf_6cb0d657-3454-4fb2-9814-2a7b13fd13f1.png",
+              "support_resource_only_image": false,
+              "support_resource_primary": false,
+              "support_resource_button_text": "User Guide",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide.pdf?v=1602164340",
+              "support_product_for_resource": "get-started-kit"
+            }
+          },
+          "1600292302793": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/icon-pdf.png",
+              "support_resource_only_image": false,
+              "support_resource_primary": false,
+              "support_resource_button_text": "Safety Warranty",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Booklet_Safety_Warranty.pdf?v=1602164340",
+              "support_product_for_resource": "get-started-kit"
+            }
+          },
+          "1600397946575": {
+            "type": "product",
+            "settings": {
+              "support_product": "alerta-find",
+              "support_product_logo": "shopify:\/\/shop_images\/logo-find-type-no-tm.png",
+              "support_product_representitive": "shopify:\/\/shop_images\/representative-2.png",
+              "support_product_guide_title": "Need help getting started?",
+              "support_product_guide_desc_1": "For help activating your Alerta Find, just give us a call.  \n<br><br>\nWe’re ready <span class=\"support__bold\">to talk to you 24\/7!<\/span>",
+              "support_product_guide_desc_2": "",
+              "support_product_resource_title": "Download",
+              "support_product_slider": false,
+              "support_product_resource_only_image": false,
+              "support_product_section_bg": true
+            }
+          },
+          "1600398055730": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/p7JVXIHwBVw",
+              "support_video_title": "What is Alerta Find?",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/support-find-video-thumbnail-1_224a17eb-b2f3-4c8a-b615-096388e842d3.jpg",
+              "support_product_for_video": "alerta-find"
+            }
+          },
+          "1600398096095": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/Jl3AHZFIGpk",
+              "support_video_title": "Activate Find\nwith the App",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/support-find-video-thumbnail-2.jpg",
+              "support_product_for_video": "alerta-find"
+            }
+          },
+          "1600398136332": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/p7JVXIHwBVw",
+              "support_video_title": "Place \nFind in the car",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/support-find-video-thumbnail-3.jpg",
+              "support_product_for_video": "alerta-find"
+            }
+          },
+          "1600399576148": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/app-store-badge.png",
+              "support_resource_only_image": true,
+              "support_resource_primary": false,
+              "support_resource_button_text": "",
+              "support_resource_url": "https:\/\/apps.apple.com\/us\/app\/alertafind\/id1482777322",
+              "support_product_for_resource": "alerta-find"
+            }
+          },
+          "1600399661889": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/google-play-badge.png",
+              "support_resource_only_image": true,
+              "support_resource_primary": false,
+              "support_resource_button_text": "",
+              "support_resource_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.passtimeusa.AlertaFind&hl=en",
+              "support_product_for_resource": "alerta-find"
+            }
+          },
+          "d32d369c-da14-4336-a5e0-07524870172e": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/icon-pdf_6cb0d657-3454-4fb2-9814-2a7b13fd13f1.png",
+              "support_resource_only_image": false,
+              "support_resource_primary": true,
+              "support_resource_button_text": "User Guide",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Find_User_Guide_R4.pdf?v=1611010688",
+              "support_product_for_resource": "alerta-find"
+            }
+          },
+          "18c68d1b-f27a-4b6c-8161-e3fe6c8df2a0": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/icon-pdf_6cb0d657-3454-4fb2-9814-2a7b13fd13f1.png",
+              "support_resource_only_image": false,
+              "support_resource_primary": false,
+              "support_resource_button_text": "Warranty",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Find_Warranty.pdf?v=1604980804",
+              "support_product_for_resource": "alerta-find"
+            }
+          },
+          "19be0c95-56ef-4b3a-a36d-a44ca47b1961": {
+            "type": "product",
+            "settings": {
+              "support_product": "alerta-flash",
+              "support_product_logo": "shopify:\/\/shop_images\/logo-flash-type.png",
+              "support_product_representitive": "shopify:\/\/shop_images\/representative-3.png",
+              "support_product_guide_title": "Need help getting started?",
+              "support_product_guide_desc_1": "Alerta Flash is easy to use and easy to program. \n<br><br>\nDownload the <span class=\"support__bold\">User Guide<\/span> to learn more.",
+              "support_product_guide_desc_2": "",
+              "support_product_resource_title": "",
+              "support_product_slider": true,
+              "support_product_resource_only_image": false,
+              "support_product_section_bg": false
+            }
+          },
+          "0717a8a9-9941-4d8a-9392-cea34427eb4e": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/icon-pdf_6cb0d657-3454-4fb2-9814-2a7b13fd13f1.png",
+              "support_resource_only_image": false,
+              "support_resource_primary": true,
+              "support_resource_button_text": "User Guide",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide_Alerta_Flash_ClockR3.pdf?v=1605069902",
+              "support_product_for_resource": "alerta-flash"
+            }
+          },
+          "21dcd887-2892-4df7-86f6-465898c5332f": {
+            "type": "video",
+            "settings": {
+              "support_video_url": "https:\/\/youtu.be\/X8oLsZT7JKQ",
+              "support_video_title": "Introducing Alerta Flash",
+              "support_video_thumbnail": "shopify:\/\/shop_images\/alerta-flash-youtube-thumnail_148ba319-e4b1-4956-bd77-53a6035a6dd8.jpg",
+              "support_product_for_video": "alerta-flash"
+            }
+          },
+          "1600310170704": {
+            "type": "slider",
+            "settings": {
+              "support_slider_image": "shopify:\/\/shop_images\/product-find-slider-4.jpg",
+              "support_slider_title": "How can we help you \ntoday?",
+              "support_slider_icon_1": "shopify:\/\/shop_images\/icon-tel.png",
+              "support_slider_desc_1": "833 -325-3782  |  833-392-6337 |\n833-443-5799",
+              "support_slider_icon_2": "shopify:\/\/shop_images\/icon-email.png",
+              "support_slider_desc_2": "alertacustomerservice@trackpatch.com",
+              "support_slider_top_color": "#ffffff",
+              "support_slider_bottom_color": "#ffffff",
+              "support_product_for_slider": "alerta-flash"
+            }
+          }
+        },
+        "block_order": [
+          "1600289193165",
+          "1600259468670",
+          "1600266238010",
+          "1600276157806",
+          "1600396166541",
+          "1600292059227",
+          "1600292269718",
+          "1600292302793",
+          "1600397946575",
+          "1600398055730",
+          "1600398096095",
+          "1600398136332",
+          "1600399576148",
+          "1600399661889",
+          "d32d369c-da14-4336-a5e0-07524870172e",
+          "18c68d1b-f27a-4b6c-8161-e3fe6c8df2a0",
+          "19be0c95-56ef-4b3a-a36d-a44ca47b1961",
+          "0717a8a9-9941-4d8a-9392-cea34427eb4e",
+          "21dcd887-2892-4df7-86f6-465898c5332f",
+          "1600310170704"
+        ],
+        "settings": {
+          "support_products": 2
+        }
+      },
+      "about": {
+        "type": "about",
+        "blocks": {
+          "1600453127197": {
+            "type": "slider",
+            "settings": {
+              "about_slider_image": "shopify:\/\/shop_images\/about-us-image.jpg",
+              "about_slider_image_tablet": "shopify:\/\/shop_images\/about-us-image-tablet.jpg",
+              "about_slider_image_mobile": "shopify:\/\/shop_images\/about-us-image-mobile.jpg",
+              "about_slider_image_alt": "grandmother showing her family album to her granddaughter while they sitting outdoors with Alerta patch",
+              "about_slider_title": "The mission of Track Patch 1\nCorporation is <br> to help enable\naging‑in‑place with dignity.",
+              "about_slider_desc": "We strive to offer innovative products for the family caregiver and for the care recipient suffering from dementia. Our offering allows the caregiver to tend to the demands of family and a busy household, with the assurance that his\/her loved one is safe, nearby, and able to do normal activities.",
+              "about_slider_top_color": "#ffffff",
+              "about_slider_bottom_color": "#ececec"
+            }
+          },
+          "1600710479042": {
+            "type": "team",
+            "settings": {
+              "about_team_piture": "shopify:\/\/shop_images\/ceo-john.jpg",
+              "about_team_title": "Chairman, Founder",
+              "about_team_name": "John Reese"
+            }
+          },
+          "1600715362147": {
+            "type": "team",
+            "settings": {
+              "about_team_piture": "shopify:\/\/shop_images\/team-justin.jpg",
+              "about_team_title": "Chief Executive",
+              "about_team_name": "Justin Beres"
+            }
+          },
+          "1600714023231": {
+            "type": "team",
+            "settings": {
+              "about_team_piture": "shopify:\/\/shop_images\/team-jeff.jpg",
+              "about_team_title": "Operations",
+              "about_team_name": "Jeff Seeley"
+            }
+          },
+          "1600714105115": {
+            "type": "team",
+            "settings": {
+              "about_team_piture": "shopify:\/\/shop_images\/team-ken.jpg",
+              "about_team_title": "Chief Engineer",
+              "about_team_name": "Ken Campbell"
+            }
+          },
+          "1600714162505": {
+            "type": "team",
+            "settings": {
+              "about_team_piture": "shopify:\/\/shop_images\/team-ben.jpg",
+              "about_team_title": "Web Development",
+              "about_team_name": "Ben Jung"
+            }
+          }
+        },
+        "block_order": [
+          "1600453127197",
+          "1600710479042",
+          "1600715362147",
+          "1600714023231",
+          "1600714105115",
+          "1600714162505"
+        ],
+        "settings": {
+          "about-title": "our team"
+        }
+      },
+      "product": {
+        "type": "product",
+        "blocks": {
+          "4d45db7b-2fc1-461e-9637-4f2bb9eadfad": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">EASILY <\/span> \nKNOW THE DATE AND TIME WITH TALKING TOUCHSCREEN",
+              "benefit_desc_1": "Simply tap the screen to hear the weekday, time, and date.",
+              "benefit_desc_2": "Eliminate your loved one’s confusion or frustration about what time it is.",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "1"
+            }
+          },
+          "814af981-2fcb-4d13-91a5-eb0dd49f08ab": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">MANAGE <\/span>YOUR DAILY SCHEDULE WITH MEDICATION REMINDERS AND ALARMS",
+              "benefit_desc_1": "Eight programmable alarm \/ reminder times.",
+              "benefit_desc_2": "For medication reminder, simply turn-on “medication reminder” in set-alarm menu.",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "https:\/\/youtu.be\/dvOEzT8FJ4o",
+              "benefit_order": "2"
+            }
+          },
+          "490c1e1d-b61a-4584-bb1a-47e2818a0100": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">CUSTOMIZABLE<\/span>: PROGRAM ALERTA FLASH FOR YOUR PREFERENCES, WITH EASY TOUCHSCREEN",
+              "benefit_desc_1": "Define periods of day based on time intervals that work for your schedule.",
+              "benefit_desc_2": "Choose from four display colors (black, white, red, blue).",
+              "benefit_desc_3": "Adjust screen brightness, alarm, and voice sound by sliding finger on touchscreen to fit your environment.",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "3"
+            }
+          },
+          "7c6aa914-668f-4db1-9cd0-7b17afa7dda5": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">ENJOY <\/span>IMAGES OF PEOPLE, PLACES, AND THINGS THAT YOU LOVE",
+              "benefit_desc_1": "Alerta Flash is also a digital picture frame.",
+              "benefit_desc_2": "Simply copy your photographs to the mini-USB memory stick (included) and insert into back of device.",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": ""
+            }
+          },
+          "e84380be-2951-46be-83cd-3d228a56900b": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-flash-wihte-front.png",
+              "box_title": "Alerta Find",
+              "box_primary": true
+            }
+          },
+          "2b0fbff0-2e5e-4c3a-b145-f3171dee2f45": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-flash-adaptor_4d3e599e-05b2-464a-9d1f-8e83ad55be5c.png",
+              "box_title": "POWER ADAPTER",
+              "box_primary": false
+            }
+          },
+          "4363a5d1-4530-41b9-8237-8862fe3be616": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-flash-user-guide.jpg",
+              "box_title": "User Guide",
+              "box_primary": false
+            }
+          },
+          "bf87c141-78d9-4885-b4c7-8122b134560f": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-flash-white-support_690a8b0f-49fb-4115-bc92-8d733bce61bb.png",
+              "box_title": "SUPPORT STAND",
+              "box_primary": false
+            }
+          },
+          "d5306beb-ab93-46b0-bb99-bdfd7f731cab": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-flash-usb-new.png",
+              "box_title": "USB MEMORY STICK",
+              "box_primary": false
+            }
+          },
+          "2a90505e-19af-4932-be0b-cce032f0bebb": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Power Input: 110V-240V"
+            }
+          },
+          "66232b4b-78c8-4af9-b3f5-2083f0d11b77": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Weight: 1.8 pounds"
+            }
+          },
+          "d6d18e14-cf6a-4a6e-9a7c-195a9f6aef24": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Display: 8 inches"
+            }
+          },
+          "0b8e1665-1c36-4d74-89f4-3b60677eff29": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Package: 8.7 x 6 x 1.4 (in)"
+            }
+          },
+          "713f0c73-bcc4-43ab-b5dc-f00e217add90": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - User Guide (PDF)",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide_Alerta_Flash_ClockR3.pdf?v=1605069902"
+            }
+          },
+          "48b5c9f1-6182-4008-b7a2-411f062b49ca": {
+            "type": "event",
+            "settings": {
+              "event_name": "Perfect gift for the holidays!",
+              "event_image": "shopify:\/\/shop_images\/gift_box.png"
+            }
+          },
+          "3f254206-df0c-49d2-8546-d685b3a7db73": {
+            "type": "event",
+            "settings": {
+              "event_name": "Shipping from the U.S",
+              "event_image": "shopify:\/\/shop_images\/event_shipping.png"
+            }
+          },
+          "a30c4651-771a-472b-988b-7f184cf5f171": {
+            "type": "event",
+            "settings": {
+              "event_name": "30-day money back guarantee",
+              "event_image": "shopify:\/\/shop_images\/event_money_back.png"
+            }
+          },
+          "f859f583-c048-411b-b7c8-0da39423a808": {
+            "type": "event",
+            "settings": {
+              "event_name": "One-year warranty",
+              "event_image": "shopify:\/\/shop_images\/event_a_year_warranty.png"
+            }
+          },
+          "e1c17591-d1c7-44b9-9e23-4574345b8a1c": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/X8oLsZT7JKQ",
+              "video_poster": "shopify:\/\/shop_images\/alerta-flash-youtube-thumnail_148ba319-e4b1-4956-bd77-53a6035a6dd8.jpg",
+              "video_primary": true
+            }
+          },
+          "8201431b-9203-4f46-ad82-dae0a194a97c": {
+            "type": "summary",
+            "settings": {
+              "summary": "Tap the screen to hear the date, day, and time"
+            }
+          },
+          "f5ff27a7-8cbf-4bf7-b145-aff095c52ed5": {
+            "type": "summary",
+            "settings": {
+              "summary": "Eight programmable alarms or medication time alarms"
+            }
+          },
+          "447c49b3-c6ef-4f3c-8c15-fa6443a8b173": {
+            "type": "summary",
+            "settings": {
+              "summary": "Customize display colors for your preferences"
+            }
+          },
+          "1a34f93e-8c67-4223-bc4d-b298bdcda14c": {
+            "type": "summary",
+            "settings": {
+              "summary": "Free 512 MB memory stick for auto-scrolling your favorite photos"
+            }
+          }
+        },
+        "block_order": [
+          "4d45db7b-2fc1-461e-9637-4f2bb9eadfad",
+          "814af981-2fcb-4d13-91a5-eb0dd49f08ab",
+          "490c1e1d-b61a-4584-bb1a-47e2818a0100",
+          "7c6aa914-668f-4db1-9cd0-7b17afa7dda5",
+          "e84380be-2951-46be-83cd-3d228a56900b",
+          "2b0fbff0-2e5e-4c3a-b145-f3171dee2f45",
+          "4363a5d1-4530-41b9-8237-8862fe3be616",
+          "bf87c141-78d9-4885-b4c7-8122b134560f",
+          "d5306beb-ab93-46b0-bb99-bdfd7f731cab",
+          "2a90505e-19af-4932-be0b-cce032f0bebb",
+          "66232b4b-78c8-4af9-b3f5-2083f0d11b77",
+          "d6d18e14-cf6a-4a6e-9a7c-195a9f6aef24",
+          "0b8e1665-1c36-4d74-89f4-3b60677eff29",
+          "713f0c73-bcc4-43ab-b5dc-f00e217add90",
+          "48b5c9f1-6182-4008-b7a2-411f062b49ca",
+          "3f254206-df0c-49d2-8546-d685b3a7db73",
+          "a30c4651-771a-472b-988b-7f184cf5f171",
+          "f859f583-c048-411b-b7c8-0da39423a808",
+          "e1c17591-d1c7-44b9-9e23-4574345b8a1c",
+          "8201431b-9203-4f46-ad82-dae0a194a97c",
+          "f5ff27a7-8cbf-4bf7-b145-aff095c52ed5",
+          "447c49b3-c6ef-4f3c-8c15-fa6443a8b173",
+          "1a34f93e-8c67-4223-bc4d-b298bdcda14c"
+        ],
+        "settings": {
+          "product_bedge": "New!",
+          "product_logo": "shopify:\/\/shop_images\/alerta-flash-logo_2x_8e51c43b-fd7f-4555-a074-91c5669a61f3.png",
+          "product_title": "TALKING TOUCHSCREEN<br>\nCALENDAR CLOCK",
+          "product_desc": "The friendly clock that helps manage your day.  It’s a clock and a digital frame to auto-scroll photos.",
+          "product_summary": true,
+          "product_summary_col": false,
+          "product_option": false,
+          "product_option_name": "Payment Options",
+          "product_section_video": true,
+          "product_section_newsletter": false,
+          "product_newsletter_title": "",
+          "product_newsletter_sub_title": "",
+          "product_newsletter_button_text": "",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "pricing-kit": {
+        "type": "pricing-kit",
+        "settings": {
+          "pricing_main_title": "ALERTA PATCH AND WEDGE PRICING",
+          "pricing_kit_title": "Get Started Kit Includes:",
+          "pricing_kit_image": "shopify:\/\/shop_images\/kit-none-option_5cffc350-6cf4-43b6-abbd-a2284d6e4d82.png",
+          "pricing_kit_wedge_image": "shopify:\/\/shop_images\/product-image-kit-wedge.png",
+          "pricing_kit_patch_image": "shopify:\/\/shop_images\/patch-1-qty.png",
+          "pricing_refill_title": "Patch Refill Kit Subscription:",
+          "pricing_refill_subtitle": "Monthly Alerta Patch Supply",
+          "pricing_refill_desc": "(Receive Patch Refill Kit every month \/ quarter \/ half-year)",
+          "pricing_battery_title": "Wedge Battery :"
+        }
+      },
+      "pricing-find": {
+        "type": "pricing-find",
+        "settings": {
+          "pricing_main_title": "ALERTA FIND<br>PRICING",
+          "pricing_title_1": "Payment Option 1:",
+          "pricing_title_2": "Payment Option 2:",
+          "option_radio_button_text_1": "2-Year Service",
+          "option_radio_button_text_2": "Monthly Service",
+          "option_description_1": "$219.00 due at check-out\n(One-time payment)",
+          "option_description_2": "$12.99 due every month",
+          "pricing_summary_title_1": "",
+          "pricing_summary_price_1": "",
+          "pricing_summary_title_2": "Alerta Find(Monthly Service)",
+          "pricing_summary_price_2": "$12.99",
+          "pricing_summary_total_price": "$12.99",
+          "pricing_find_image": "shopify:\/\/shop_images\/product-image-find.png"
+        }
+      },
+      "product-kit": {
+        "type": "product-kit",
+        "blocks": {
+          "1601921065089": {
+            "type": "benefit-title",
+            "settings": {
+              "product_benefit_title": "Safety for the care recipient; peace of mind for the caregiver.",
+              "product_benefit_order": "1"
+            }
+          },
+          "1601921080553": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Passive device; no manual trigger needed to alarm."
+            }
+          },
+          "1601921087427": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Patch is always comfortable on body; cannot be removed like lanyards or wristbands."
+            }
+          },
+          "1601921098131": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Radio-frequency technology, no dependency on cellular towers or satellites; works inside the house."
+            }
+          },
+          "1601921105540": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Reliable, strong continuous signal in any position."
+            }
+          },
+          "1601921109060": {
+            "type": "benefit-title",
+            "settings": {
+              "product_benefit_title": "Freedom for family caregiver to tend to household tasks, while caring for loved one.",
+              "product_benefit_order": ""
+            }
+          },
+          "1601921119421": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Range of 65 to 95 feet is optimal for house or apartment, enabling aging-in-place at home."
+            }
+          },
+          "1601921126757": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Loud alarm, so direct line-of-sight to care recipient is not needed."
+            }
+          },
+          "1601921132658": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Alerta is self-contained; it’s easy to use and there is no extra cost for additional devices, or cellular or Wi-Fi service."
+            }
+          },
+          "1601921140060": {
+            "type": "benefit-title",
+            "settings": {
+              "product_benefit_title": "No impact to daily activities for loved one.",
+              "product_benefit_order": ""
+            }
+          },
+          "1601921146877": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Patch is light, small, with gentle adhesive– “you don’t even know it’s there.”"
+            }
+          },
+          "1601921154381": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Patch is water-resistant, so it’s Ok to bathe or shower."
+            }
+          },
+          "1601921162166": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Patch is discreet; no “self-conscious” feelings."
+            }
+          },
+          "1601921169088": {
+            "type": "benefit-desc",
+            "settings": {
+              "product_benefit_discription": "Wedge is handheld and movable– Alerta goes wherever the caregiver and care recipient need to go."
+            }
+          },
+          "1601921183634": {
+            "type": "slider",
+            "settings": {
+              "product_slider_image": "shopify:\/\/shop_images\/product-kit-slider-1.jpg",
+              "product_slider_image_tablet": "shopify:\/\/shop_images\/product-slider-kit-tablet-1.jpg",
+              "product_slider_image_mobile": "shopify:\/\/shop_images\/product-slider-kit-mobile-1.jpg",
+              "product_slider_image_alt": "",
+              "product_slider_title": "Safety for the care recipient; peace of mind for the caregiver",
+              "product_slider_subtitle": "Strong signal, passive device"
+            }
+          },
+          "1601921291452": {
+            "type": "slider",
+            "settings": {
+              "product_slider_image": "shopify:\/\/shop_images\/product-kit-slider-2.jpg",
+              "product_slider_image_tablet": "shopify:\/\/shop_images\/product-slider-kit-tablet-2.jpg",
+              "product_slider_image_mobile": "shopify:\/\/shop_images\/product-slider-kit-mobile-2.jpg",
+              "product_slider_image_alt": "",
+              "product_slider_title": "Freedom for family caregiver to tend to household tasks, while caring for loved one.",
+              "product_slider_subtitle": "Line of sight to care recipient not needed"
+            }
+          },
+          "1601921360096": {
+            "type": "slider",
+            "settings": {
+              "product_slider_image": "shopify:\/\/shop_images\/product-kit-slider-3.jpg",
+              "product_slider_image_tablet": "shopify:\/\/shop_images\/product-slider-kit-tablet-3.jpg",
+              "product_slider_image_mobile": "shopify:\/\/shop_images\/product-slider-kit-mobile-3.jpg",
+              "product_slider_image_alt": "",
+              "product_slider_title": "Alerta does not stop your loved one from living life.",
+              "product_slider_subtitle": "Alerta Patch is light, small, discreet, comfortable"
+            }
+          }
+        },
+        "block_order": [
+          "1601921065089",
+          "1601921080553",
+          "1601921087427",
+          "1601921098131",
+          "1601921105540",
+          "1601921109060",
+          "1601921119421",
+          "1601921126757",
+          "1601921132658",
+          "1601921140060",
+          "1601921146877",
+          "1601921154381",
+          "1601921162166",
+          "1601921169088",
+          "1601921183634",
+          "1601921291452",
+          "1601921360096"
+        ],
+        "settings": {
+          "product_title": "Alerta Patch & Wedge: the most effective wearable proximity monitor",
+          "product_video_url": "https:\/\/youtu.be\/VeUz67odeog",
+          "product_video_title": "Why\nAlerta?",
+          "product_video_thumbnail": "shopify:\/\/shop_images\/support-kit-video-thumbnail-1.jpg",
+          "product_more_video_btn_text": "See MORE VIDEOS",
+          "product_more_video_btn_url": "\/pages\/support",
+          "product_tagline": "Caring for Your Loved One<br>Caring for the Caregiver",
+          "product_slider_btn_url": "\/pages\/pricing-kit",
+          "product_slider_btn_text": "Get Pricing",
+          "product_slider_top_color": "#ececec",
+          "product_slider_bottom_color": "#ffffff"
+        }
+      },
+      "product-find": {
+        "type": "product-find",
+        "blocks": {
+          "2caa2b8f-352b-4dad-b03f-aedf939cf97f": {
+            "type": "option",
+            "settings": {
+              "option_name": "Monthly",
+              "option_product": "alerta-find-subscription",
+              "option_url": "\/products\/alerta-find-subscription"
+            }
+          },
+          "375d45e5-41c6-4942-a77b-fe33b865520a": {
+            "type": "option",
+            "settings": {
+              "option_name": "2-year<br>Service",
+              "option_product": "alerta-find",
+              "option_url": "\/products\/alerta-find"
+            }
+          },
+          "2e9e491e-3a6a-4dfb-a263-23bcec882c5b": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">QUICKLY LEARN <\/span> YOUR VEHICLE’S LOCATION & HISTORY",
+              "benefit_desc_1": "Reliable continuous GPS technology; wireless solution with no range limitation.",
+              "benefit_desc_2": "Indicates vehicle location to within three feet.",
+              "benefit_desc_3": "Easy to use mobile app displays location history and location in-transit or parked.",
+              "benefit_desc_4": "“Find” key shows vehicle position and speed on map.",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "1"
+            }
+          },
+          "42580abe-81e4-4b62-a199-48795ff31347": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">Saves<\/span> TIME & MONEY",
+              "benefit_desc_1": "No worries about or time wasted charging battery: Find's battery lasts for up to two years.",
+              "benefit_desc_2": "No expense on special tools or technician time to install– just place the Find where you want it.",
+              "benefit_desc_3": "No maintenance costs.",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "2"
+            }
+          },
+          "c104fe28-967a-47a8-bce3-2408cef4ad15": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">You’re never alone<\/span>: support always available",
+              "benefit_desc_1": "Customer service 24\/7 by dedicated national support team",
+              "benefit_desc_2": "",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "4"
+            }
+          },
+          "16cec393-b835-4911-a5c6-a1e561f4c9f9": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">Reduce<\/span> STRESS: EASY AND FLEXIBLE TO USE",
+              "benefit_desc_1": "Alerta Find is easily hidden in vehicle.  It is smaller than a credit card.",
+              "benefit_desc_2": "Alerta Find weighs less than three pennies. It can be placed anywhere in vehicle and used in different vehicles.",
+              "benefit_desc_3": "Alerta Find is ready to use out of the box– just turn it on.",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "3"
+            }
+          },
+          "767d1d5a-cefa-40e3-ad7b-6c3e207cad0f": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/product-image-find.png",
+              "box_title": "Alerta Find",
+              "box_primary": true
+            }
+          },
+          "91e4ba5f-cfcb-48cb-9bed-79c375b8aec0": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-find-resouce-user-guide.jpg",
+              "box_title": "User Guide",
+              "box_primary": false
+            }
+          },
+          "c915b1cd-2354-4424-bb64-426328dfee08": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-find-resouce-warranty.jpg",
+              "box_title": "Warranty",
+              "box_primary": false
+            }
+          },
+          "461e4a82-6931-40e7-9c77-28d6b187712e": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Weight: 0.16 lb"
+            }
+          },
+          "507f31ef-cc70-4be5-9f2e-027d8c20033d": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Package: 5 x 2.8 x 1.5 (in)"
+            }
+          },
+          "77a80cfc-9dc9-473e-8ec5-d897d9c6fca9": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - User Guide (PDF)",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Find_User_Guide_R4.pdf?v=1611010688"
+            }
+          },
+          "3ccc6a5b-b366-4dab-9c5d-375fd763e032": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - Warranty (PDF)",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Find_Warranty_R3.pdf?v=1605028788"
+            }
+          },
+          "13ab3162-415c-4e69-9a09-42a368e85621": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - Alerta Find App (iOS)",
+              "resource_link": "https:\/\/apps.apple.com\/us\/app\/alertafind\/id1482777322"
+            }
+          },
+          "785f9355-9e2e-4989-899a-7b4237ea3ff9": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - Alerta Find App (Android)",
+              "resource_link": "https:\/\/play.google.com\/store\/apps\/details?id=com.passtimeusa.AlertaFind&hl=en_US&gl=US"
+            }
+          },
+          "192fd713-be98-4454-8d37-ee388390b353": {
+            "type": "event",
+            "settings": {
+              "event_name": "Perfect gift for the holidays!",
+              "event_image": "shopify:\/\/shop_images\/gift_box.png"
+            }
+          },
+          "042dcbc0-af8f-440a-8fd8-b618e760eaca": {
+            "type": "event",
+            "settings": {
+              "event_name": "Shipping from the U.S",
+              "event_image": "shopify:\/\/shop_images\/event_shipping.png"
+            }
+          },
+          "7f94b2b5-1720-4ba3-bff2-8643cdb47b23": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/p7JVXIHwBVw",
+              "video_poster": "shopify:\/\/shop_images\/alerta-find-video-section-poster.jpg",
+              "video_primary": true
+            }
+          },
+          "78a2dfdf-16ca-43a3-a8a6-381b193b1f8c": {
+            "type": "summary",
+            "settings": {
+              "summary": "Lowest cost"
+            }
+          },
+          "d3d82e95-c688-450e-87fa-8d8433fb41b3": {
+            "type": "summary",
+            "settings": {
+              "summary": "No battery recharging"
+            }
+          },
+          "7f2fa139-f85c-4754-86bb-a7f6b6547bc7": {
+            "type": "summary",
+            "settings": {
+              "summary": "Longest battery life"
+            }
+          },
+          "89484437-81ab-4623-b2c8-b7afb20d81a0": {
+            "type": "summary",
+            "settings": {
+              "summary": "No additional fees"
+            }
+          },
+          "a7fd03ac-bd23-4d19-aadc-0aba01178896": {
+            "type": "summary",
+            "settings": {
+              "summary": "Concealable device"
+            }
+          },
+          "acf5682d-b671-4a20-829c-e7ec91f2609f": {
+            "type": "summary",
+            "settings": {
+              "summary": "See position on map"
+            }
+          },
+          "4bde3e2f-f1aa-4459-8855-03002ee7d5f8": {
+            "type": "summary",
+            "settings": {
+              "summary": "Easiest to install"
+            }
+          },
+          "51e77cdb-4c85-4f9e-8463-f3bd35ea814d": {
+            "type": "summary",
+            "settings": {
+              "summary": "No set-up"
+            }
+          },
+          "dc87bd3a-040f-44ea-abeb-acbcb2bddb72": {
+            "type": "summary",
+            "settings": {
+              "summary": "Tracking reports via text message or email"
+            }
+          }
+        },
+        "block_order": [
+          "2caa2b8f-352b-4dad-b03f-aedf939cf97f",
+          "375d45e5-41c6-4942-a77b-fe33b865520a",
+          "2e9e491e-3a6a-4dfb-a263-23bcec882c5b",
+          "42580abe-81e4-4b62-a199-48795ff31347",
+          "c104fe28-967a-47a8-bce3-2408cef4ad15",
+          "16cec393-b835-4911-a5c6-a1e561f4c9f9",
+          "767d1d5a-cefa-40e3-ad7b-6c3e207cad0f",
+          "91e4ba5f-cfcb-48cb-9bed-79c375b8aec0",
+          "c915b1cd-2354-4424-bb64-426328dfee08",
+          "461e4a82-6931-40e7-9c77-28d6b187712e",
+          "507f31ef-cc70-4be5-9f2e-027d8c20033d",
+          "77a80cfc-9dc9-473e-8ec5-d897d9c6fca9",
+          "3ccc6a5b-b366-4dab-9c5d-375fd763e032",
+          "13ab3162-415c-4e69-9a09-42a368e85621",
+          "785f9355-9e2e-4989-899a-7b4237ea3ff9",
+          "192fd713-be98-4454-8d37-ee388390b353",
+          "042dcbc0-af8f-440a-8fd8-b618e760eaca",
+          "7f94b2b5-1720-4ba3-bff2-8643cdb47b23",
+          "78a2dfdf-16ca-43a3-a8a6-381b193b1f8c",
+          "d3d82e95-c688-450e-87fa-8d8433fb41b3",
+          "7f2fa139-f85c-4754-86bb-a7f6b6547bc7",
+          "89484437-81ab-4623-b2c8-b7afb20d81a0",
+          "a7fd03ac-bd23-4d19-aadc-0aba01178896",
+          "acf5682d-b671-4a20-829c-e7ec91f2609f",
+          "4bde3e2f-f1aa-4459-8855-03002ee7d5f8",
+          "51e77cdb-4c85-4f9e-8463-f3bd35ea814d",
+          "dc87bd3a-040f-44ea-abeb-acbcb2bddb72"
+        ],
+        "settings": {
+          "product_bedge": "HOT",
+          "product_logo": "shopify:\/\/shop_images\/alerta-find-logo_2x_11a36dbc-dc3a-4cfd-bb65-c3cad7fde96b.png",
+          "product_title": "STAY SAFE WITH REVOLUTIONARY VEHICLE TRACKING",
+          "product_desc": "GPS Car Tracker",
+          "product_summary": true,
+          "product_summary_col": true,
+          "product_option": true,
+          "product_option_name": "Payment Option",
+          "product_section_video": true,
+          "product_section_video_url": "https:\/\/youtu.be\/p7JVXIHwBVw",
+          "product_section_video_poster": "shopify:\/\/shop_images\/alerta-find-video-section-poster.jpg",
+          "product_section_newsletter": false,
+          "product_newsletter_title": "",
+          "product_newsletter_sub_title": "",
+          "product_newsletter_button_text": "",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "product-voice": {
+        "type": "product-voice",
+        "blocks": {
+          "31309f62-9853-473e-b7b9-9e6d5a039500": {
+            "type": "usage",
+            "settings": {
+              "usage_icon": "shopify:\/\/shop_images\/alerta-voice-usage-stair_1.png",
+              "usage_description": "Reminder: <br><span class=\"product__usage--bold\">\"Hold the handrail!\"<\/span>"
+            }
+          },
+          "631376b9-da60-4670-a31a-a7c649aaac90": {
+            "type": "usage",
+            "settings": {
+              "usage_icon": "shopify:\/\/shop_images\/alerta-voice-usage-water_1.png",
+              "usage_description": "Reminder: <br><span class=\"product__usage--bold\">\"Healthy! Drink water!\"<\/span>"
+            }
+          },
+          "3faa5b91-e59b-45cb-909c-5d760c2b9d9c": {
+            "type": "usage",
+            "settings": {
+              "usage_icon": "shopify:\/\/shop_images\/Alerta-voice-usage-good_1.png",
+              "usage_description": "Good morning:<br><span class=\"product__usage--bold\">\"Watch your step!\"<\/span>"
+            }
+          },
+          "995fc4cb-3872-4657-8fa1-bd5694c4ba0c": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">FLEXIBLE<\/span>: CUSTOMIZE FOR ANY SITUATION",
+              "benefit_desc_1": "Portable: move from location to location depending on your needs.",
+              "benefit_desc_2": "Easily record voice message (max two minutes) for any environment with built-in microphone and the push of a button.",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "1"
+            }
+          },
+          "62b40c12-5fa3-49b8-a870-b528c4e400bc": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">PERFORMANCE<\/span>: IMPROVE QUALITY OF LIFE AND SAFETY FOR YOUR LOVED ONE",
+              "benefit_desc_1": "Broadcast safety messages near staircases; record reminders for daily life in friendly voice that is known to your loved one.",
+              "benefit_desc_2": "Perfect motion-sensing range for home,  up to 13-feet, 120-degrees.",
+              "benefit_desc_3": "Ball-and-socket installation mounting allows for 360-degree rotation.",
+              "benefit_desc_4": "Clearly hear message play-back: speaker power 1 Watt.",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": ""
+            }
+          },
+          "6579317f-be40-4112-b09e-80271cce05c2": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">SAVE<\/span> TIME & MONEY",
+              "benefit_desc_1": "Easy to install with screws or double-sided tape; no expensive tools or technicians.",
+              "benefit_desc_2": "Low power consumption (three AAA batteries included!).",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": ""
+            }
+          },
+          "65cd1114-48b2-4b11-a0e8-34329108d863": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">DISCREET<\/span>: SMALL SIZE",
+              "benefit_desc_1": "Fits anywhere, without being noticed.",
+              "benefit_desc_2": "",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": ""
+            }
+          },
+          "f6768632-b5d3-4b3e-b8a6-6ef191b98f01": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-voice-front.png",
+              "box_title": "Alerta Voice",
+              "box_primary": true
+            }
+          },
+          "690654c5-d06f-4187-b4fb-652adb0b90f1": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-voice-mount.png",
+              "box_title": "Mount",
+              "box_primary": false
+            }
+          },
+          "60a951e5-d818-46e9-92f8-c3fcd69d7123": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-voice-battery_dad63062-191f-4a50-aa3d-aa1ac7dbf354.png",
+              "box_title": "AAA Battery x 3",
+              "box_primary": false
+            }
+          },
+          "89c0b38e-a474-413f-ade9-fcc6434caaf7": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-voice-user-voice.png",
+              "box_title": "User Guide",
+              "box_primary": false
+            }
+          },
+          "da15a0e7-8c91-45d0-89e5-dfbc566476d2": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Power Supply: DC3V-5V or three AAA batteries"
+            }
+          },
+          "a37d8183-a079-4b7c-86f1-85296f9c45dc": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Current: standby <90 microamps; recording <40 milliamps; playing <200 milliamps"
+            }
+          },
+          "d5be84a1-0206-4e97-bd24-a50e5edfc427": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Detection Range: up to 4 meters or 13 feet, 120° angle"
+            }
+          },
+          "43163a9b-239d-45b4-ab55-99af3b1a432b": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Volume: up to 90 decibels"
+            }
+          },
+          "a8f23e25-c7b3-42ef-b104-f331b51436e4": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Audio Output: 8ohm\/1Watt"
+            }
+          },
+          "0423df9b-89df-4edc-9497-7fe7263c46ce": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Certification: CE.ROH"
+            }
+          },
+          "5fb2a02f-a565-4bc0-b730-5de2f0e19454": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Single package size: 6x9x2.7 in"
+            }
+          },
+          "6340a284-c2e6-426d-865d-8c4e5f7a03a5": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Single gross weight: 0.21 lbs"
+            }
+          },
+          "26a70d92-6eca-4998-be1b-ae73637eb9f8": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - User Guide (PDF)",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide_Alerta_Voice_1.pdf?v=1607566750"
+            }
+          },
+          "cc9a004e-b17e-48b9-9adf-aefb1eb00dda": {
+            "type": "event",
+            "settings": {
+              "event_name": "Perfect gift for the holidays!",
+              "event_image": "shopify:\/\/shop_images\/gift_box.png"
+            }
+          },
+          "0ac4f3a4-9817-4d87-9420-f82010cc4844": {
+            "type": "event",
+            "settings": {
+              "event_name": "Shipping from the U.S",
+              "event_image": "shopify:\/\/shop_images\/event_shipping.png"
+            }
+          },
+          "06a7bd25-d20d-45f7-8250-399dca2d1285": {
+            "type": "event",
+            "settings": {
+              "event_name": "30-day money back guarantee",
+              "event_image": "shopify:\/\/shop_images\/event_money_back.png"
+            }
+          },
+          "d10339e2-e4e1-4b96-805c-8c2bc0fb8cae": {
+            "type": "summary",
+            "settings": {
+              "summary": "Broadcast safety reminders, friendly messages, or “stay healthy” prompts"
+            }
+          },
+          "71ecdeef-2f5f-45f4-a2f6-4abe17571324": {
+            "type": "summary",
+            "settings": {
+              "summary": "Easily record voice messages with the push of a button."
+            }
+          },
+          "98710ef0-b667-4b67-be01-ec0c13bc83af": {
+            "type": "summary",
+            "settings": {
+              "summary": "Optimized range to sense distance: 13 feet, 120-degress."
+            }
+          },
+          "13a0d09b-2509-4fb6-af15-4e6b92561e42": {
+            "type": "summary",
+            "settings": {
+              "summary": "Easy to install"
+            }
+          },
+          "7c25c308-8288-4ecd-987d-3f6814f422fd": {
+            "type": "summary",
+            "settings": {
+              "summary": "Fits anywhere: small and discreet"
+            }
+          }
+        },
+        "block_order": [
+          "31309f62-9853-473e-b7b9-9e6d5a039500",
+          "631376b9-da60-4670-a31a-a7c649aaac90",
+          "3faa5b91-e59b-45cb-909c-5d760c2b9d9c",
+          "995fc4cb-3872-4657-8fa1-bd5694c4ba0c",
+          "62b40c12-5fa3-49b8-a870-b528c4e400bc",
+          "6579317f-be40-4112-b09e-80271cce05c2",
+          "65cd1114-48b2-4b11-a0e8-34329108d863",
+          "f6768632-b5d3-4b3e-b8a6-6ef191b98f01",
+          "690654c5-d06f-4187-b4fb-652adb0b90f1",
+          "60a951e5-d818-46e9-92f8-c3fcd69d7123",
+          "89c0b38e-a474-413f-ade9-fcc6434caaf7",
+          "da15a0e7-8c91-45d0-89e5-dfbc566476d2",
+          "a37d8183-a079-4b7c-86f1-85296f9c45dc",
+          "d5be84a1-0206-4e97-bd24-a50e5edfc427",
+          "43163a9b-239d-45b4-ab55-99af3b1a432b",
+          "a8f23e25-c7b3-42ef-b104-f331b51436e4",
+          "0423df9b-89df-4edc-9497-7fe7263c46ce",
+          "5fb2a02f-a565-4bc0-b730-5de2f0e19454",
+          "6340a284-c2e6-426d-865d-8c4e5f7a03a5",
+          "26a70d92-6eca-4998-be1b-ae73637eb9f8",
+          "cc9a004e-b17e-48b9-9adf-aefb1eb00dda",
+          "0ac4f3a4-9817-4d87-9420-f82010cc4844",
+          "06a7bd25-d20d-45f7-8250-399dca2d1285",
+          "d10339e2-e4e1-4b96-805c-8c2bc0fb8cae",
+          "71ecdeef-2f5f-45f4-a2f6-4abe17571324",
+          "98710ef0-b667-4b67-be01-ec0c13bc83af",
+          "13a0d09b-2509-4fb6-af15-4e6b92561e42",
+          "7c25c308-8288-4ecd-987d-3f6814f422fd"
+        ],
+        "settings": {
+          "product_bedge": "NEW!!",
+          "product_logo": "shopify:\/\/shop_images\/alerta-voice-logo_2x_4e30580f-48d9-41de-8611-48bb387be546.png",
+          "product_title": "MOTION-ACTIVATED <br>VOICE MESSAGE SPEAKER",
+          "product_desc": "Alerta Voice records and plays-back your messages, so you can always say the right thing to your loved one, if you're not there.",
+          "product_summary": true,
+          "product_summary_col": false,
+          "product_option": false,
+          "product_option_name": "",
+          "product_section_video": true,
+          "product_section_newsletter": false,
+          "product_newsletter_title": "",
+          "product_newsletter_sub_title": "",
+          "product_newsletter_button_text": "",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "product-chime": {
+        "type": "product-chime",
+        "blocks": {
+          "4924e4e3-3af7-459b-9b5d-9eca4560f0cc": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">FLEXIBLE<\/span>: CUSTOMIZE FOR ANY SITUATION",
+              "benefit_desc_1": "Portable: move from location to location depending on your needs.",
+              "benefit_desc_2": "Change and manage sound or voice message audio files for different environments.",
+              "benefit_desc_3": "Adjustable volume (seven levels; max 105 dB): hear chime across many rooms.",
+              "benefit_desc_4": "Two power modes: batteries or direct Micro USB.",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": ""
+            }
+          },
+          "5074f551-8c53-42ae-ba80-95ad8037bb0c": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">SAVE<\/span> TIME & MONEY",
+              "benefit_desc_1": "Easy to install with screws or double-sided tape; no expensive tools or technicians.",
+              "benefit_desc_2": "Low power consumption (three AAA batteries included).",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": ""
+            }
+          },
+          "eb82797c-1505-4078-92cb-0cbae42c93f4": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">DISCREET<\/span>: SMALL SIZE",
+              "benefit_desc_1": "Fits anywhere, on small or large doors or cupboards",
+              "benefit_desc_2": "",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": ""
+            }
+          },
+          "89f66941-c38d-477a-9967-c776e506c287": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/product-chime-front_0dd946d0-df14-4e6f-a5e7-4c038b6adf9e.png",
+              "box_title": "Alerta Chime",
+              "box_primary": true
+            }
+          },
+          "84c8077a-7157-4d89-93db-f7f3adaa3e20": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-voice-mount.png",
+              "box_title": "Mount",
+              "box_primary": false
+            }
+          },
+          "c1572398-ab11-4d6b-8aff-5a98e36958a0": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/product-chime-user-guide.png",
+              "box_title": "User Guide",
+              "box_primary": false
+            }
+          },
+          "2fbd0f10-3548-4442-b679-263d564e15bb": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-voice-battery_dad63062-191f-4a50-aa3d-aa1ac7dbf354.png",
+              "box_title": "AAA Battery x 3",
+              "box_primary": false
+            }
+          },
+          "4795edc6-8b36-4d7b-b6ae-b6c256aa716d": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Audio Format: MP3, 8~224Kbps"
+            }
+          },
+          "3eacc9b1-819e-4cac-879a-ac5dccfe0349": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Power Supply: three AAA batteries or micro - USB (DC 3V - 5V)"
+            }
+          },
+          "218ec0a1-97a3-46a1-8966-ef6b23bfca74": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Current: standby door closed <1 uA ; standby door open <23 mA; playing <120 mA (VDC 4.5)"
+            }
+          },
+          "4040d42d-17c0-43ec-bb3b-951e75d5f32a": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Volume: up to 100 decibels"
+            }
+          },
+          "54b8ecfd-efea-4885-a5e1-41c119ffde6b": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Audio Output: 8ohm\/1Watt"
+            }
+          },
+          "12e9ccbb-c6ad-4b30-b371-e95f2fb30d25": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Certification: CE.ROH"
+            }
+          },
+          "f2d43865-4c3a-4465-8c78-39ca03f08ace": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Single unit size: 6x9x2.7 in"
+            }
+          },
+          "6324cbde-1d83-440e-a275-21a024765d07": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Single gross weight: 0.20 lbs"
+            }
+          },
+          "4a223125-3038-4ab8-bdc8-9f8fea95e009": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - User Guide (PDF)",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide_Alerta_Chime_DOS.pdf?v=1605942060"
+            }
+          },
+          "6d275a48-3159-4031-a653-95f6fa40ec13": {
+            "type": "usage",
+            "settings": {
+              "usage_icon": "shopify:\/\/shop_images\/alerta-chime-usage-door_1.png",
+              "usage_description": "Signal movement through <br><span class=\"product__usage--bold\">opened doors<\/span>"
+            }
+          },
+          "c7aa8f98-5b5f-4658-823e-08fabff76699": {
+            "type": "usage",
+            "settings": {
+              "usage_icon": "shopify:\/\/shop_images\/alerta-chime-usage-cabenet_1.png",
+              "usage_description": "Signal opening on <br> <span class=\"product__usage--bold\">high-risk closets or cabinets<\/span>"
+            }
+          },
+          "94997700-a708-437c-a4ff-73410cc3a1b4": {
+            "type": "event",
+            "settings": {
+              "event_name": "Perfect gift for the holidays!",
+              "event_image": "shopify:\/\/shop_images\/gift_box.png"
+            }
+          },
+          "94f93901-2fb2-4557-8ff1-ca3d5b168afc": {
+            "type": "event",
+            "settings": {
+              "event_name": "Shipping from the U.S",
+              "event_image": "shopify:\/\/shop_images\/event_shipping.png"
+            }
+          },
+          "126e8906-8231-494d-b43f-06de1702bd2b": {
+            "type": "event",
+            "settings": {
+              "event_name": "30-day money back guarantee",
+              "event_image": "shopify:\/\/shop_images\/event_money_back.png"
+            }
+          },
+          "30ee1841-6775-4a64-85c8-877f80764828": {
+            "type": "summary",
+            "settings": {
+              "summary": "Customizable for different voice messages or alarm notification sounds.  Just copy audio files to device memory."
+            }
+          },
+          "917c42f6-0774-4af6-bc3e-adda0ff580be": {
+            "type": "summary",
+            "settings": {
+              "summary": "Adjustable volume: seven settings.  Speaker can be heard across the entire house."
+            }
+          },
+          "e0652f1a-29d7-4f9d-9bae-5dd26e616c83": {
+            "type": "summary",
+            "settings": {
+              "summary": "Easy to install"
+            }
+          },
+          "32c90b5d-95d7-4af4-a638-1e4bc9578ef6": {
+            "type": "summary",
+            "settings": {
+              "summary": "Fits anywhere: small and discreet"
+            }
+          },
+          "267ddffa-7e47-488d-9312-1017bb359bd7": {
+            "type": "summary",
+            "settings": {
+              "summary": "Low-cost home safety solution"
+            }
+          }
+        },
+        "block_order": [
+          "4924e4e3-3af7-459b-9b5d-9eca4560f0cc",
+          "5074f551-8c53-42ae-ba80-95ad8037bb0c",
+          "eb82797c-1505-4078-92cb-0cbae42c93f4",
+          "89f66941-c38d-477a-9967-c776e506c287",
+          "84c8077a-7157-4d89-93db-f7f3adaa3e20",
+          "c1572398-ab11-4d6b-8aff-5a98e36958a0",
+          "2fbd0f10-3548-4442-b679-263d564e15bb",
+          "4795edc6-8b36-4d7b-b6ae-b6c256aa716d",
+          "3eacc9b1-819e-4cac-879a-ac5dccfe0349",
+          "218ec0a1-97a3-46a1-8966-ef6b23bfca74",
+          "4040d42d-17c0-43ec-bb3b-951e75d5f32a",
+          "54b8ecfd-efea-4885-a5e1-41c119ffde6b",
+          "12e9ccbb-c6ad-4b30-b371-e95f2fb30d25",
+          "f2d43865-4c3a-4465-8c78-39ca03f08ace",
+          "6324cbde-1d83-440e-a275-21a024765d07",
+          "4a223125-3038-4ab8-bdc8-9f8fea95e009",
+          "6d275a48-3159-4031-a653-95f6fa40ec13",
+          "c7aa8f98-5b5f-4658-823e-08fabff76699",
+          "94997700-a708-437c-a4ff-73410cc3a1b4",
+          "94f93901-2fb2-4557-8ff1-ca3d5b168afc",
+          "126e8906-8231-494d-b43f-06de1702bd2b",
+          "30ee1841-6775-4a64-85c8-877f80764828",
+          "917c42f6-0774-4af6-bc3e-adda0ff580be",
+          "e0652f1a-29d7-4f9d-9bae-5dd26e616c83",
+          "32c90b5d-95d7-4af4-a638-1e4bc9578ef6",
+          "267ddffa-7e47-488d-9312-1017bb359bd7"
+        ],
+        "settings": {
+          "product_bedge": "NEW!!",
+          "product_logo": "shopify:\/\/shop_images\/alerta-chime-logo_2x_9b932ef5-dc9e-4264-970c-c80ae78c22ce.png",
+          "product_title": "DOOR-OPEN ALARM",
+          "product_desc": "Alerta Chime is a door-open sensor, so you’ll always know your loved one’s “ins-and-outs.”",
+          "product_summary": true,
+          "product_summary_col": false,
+          "product_option": false,
+          "product_option_name": "",
+          "product_section_video": true,
+          "product_section_newsletter": false,
+          "product_newsletter_title": "",
+          "product_newsletter_sub_title": "",
+          "product_newsletter_button_text": "",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "product-kit-dev": {
+        "type": "product-kit-dev",
+        "blocks": {
+          "4a3a3152-522b-41a0-be0b-6f8eedd460da": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">SAFETY<\/span> FOR THE CARE RECIPIENT; <span class=\"list__bold\">PEACE OF MIND<\/span> FOR THE CAREGIVER.",
+              "benefit_desc_1": "Patch is always comfortable on body; cannot be removed like lanyards or wristbands.",
+              "benefit_desc_2": "Passive device; no manual trigger needed to alarm.",
+              "benefit_desc_3": "Radio-frequency technology, no dependency on cellular towers or satellites; works inside the house.",
+              "benefit_desc_4": "Reliable, strong continuous signal in any position.",
+              "benefit_desc_5": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_is_image": true,
+              "benefit_image": "shopify:\/\/shop_images\/product-slider-kit-tablet-1.jpg",
+              "benefit_order": ""
+            }
+          },
+          "ee2bbb08-15ec-4a26-bf9f-1f58a3d5588c": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">FREEDOM<\/span> FOR FAMILY CAREGIVER TO TEND TO HOUSEHOLD TASKS, WHILE CARING FOR LOVED ONE.",
+              "benefit_desc_1": "Range of 65 to 95 feet is optimal for house or apartment, enabling aging-in-place at home.",
+              "benefit_desc_2": "Loud alarm, so direct line-of-sight to care recipient is not needed.",
+              "benefit_desc_3": "Alerta is self-contained; it’s easy to use and there is no extra cost for additional devices, or cellular or Wi-Fi service.",
+              "benefit_desc_4": "",
+              "benefit_desc_5": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_is_image": true,
+              "benefit_image": "shopify:\/\/shop_images\/product-slider-kit-tablet-2.jpg",
+              "benefit_order": ""
+            }
+          },
+          "b8e73da8-70e5-4f25-aa8c-965b7f798cc2": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">NO IMPACT<\/span> TO DAILY ACTIVITIES FOR LOVED ONE.",
+              "benefit_desc_1": "Wedge is handheld and movable– Alerta goes wherever the caregiver and care recipient go.",
+              "benefit_desc_2": "Patch is light, small, with gentle adhesive– “you don’t even know it’s there.”",
+              "benefit_desc_3": "Patch is water-resistant, so it’s Ok to bathe or shower.",
+              "benefit_desc_4": "Patch is discreet; no “self-conscious” feelings.",
+              "benefit_desc_5": "Reliable performance during any activity: sitting, sleeping, bathing, moving, walking.",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_is_image": false,
+              "benefit_image": "shopify:\/\/shop_images\/product-slider-kit-tablet-4.jpg",
+              "benefit_order": ""
+            }
+          },
+          "6ddaa56f-8fa3-48b5-94a8-7a77bc73279d": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "<span class=\"list__bold\">Low cost<\/span> solution to prevent wandering danger",
+              "benefit_desc_1": "No subscription or service contract; just apply Patches when needed.",
+              "benefit_desc_2": "One Patch devices lasts for 30 days, with cover refresh every ten days.",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_desc_5": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_is_image": true,
+              "benefit_image": "shopify:\/\/shop_images\/product-slider-kit-tablet-3.jpg",
+              "benefit_order": ""
+            }
+          },
+          "db8b7711-a11e-44c0-a75b-356eee48d3d0": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - Get Started Card",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Get_Started_Card.pdf?v=1602164340"
+            }
+          },
+          "bbbd0998-9b1b-40af-896c-96cbfb809193": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - User Guide",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide.pdf?v=1602164340"
+            }
+          },
+          "c6c8e13b-ce9a-4f79-8168-9b4fade323da": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - Safety & Warranty",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Booklet_Safety_Warranty.pdf?v=1602164340"
+            }
+          },
+          "5d9a93ad-cc5c-47aa-9d5d-1689a5d62951": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Frequency band: 915 MHz max RF"
+            }
+          },
+          "a390c4ac-29de-4b10-8c12-520071161200": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Electrical Rating: 3.0 V Battery Powered"
+            }
+          },
+          "8103ad62-40fa-4ad0-9234-b2778b08e850": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Batteries: Wedge has two AA-size lithium cells; Patch has one lithium coin cell."
+            }
+          },
+          "d4a51ba6-a43b-49c1-ba02-3f354a9170e1": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Operating temperature: 0° to 35°C."
+            }
+          },
+          "8fbf4a1e-9101-4eb1-9df9-7796aa72fc08": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-kit-wedge-box.png",
+              "box_title": "Alerta Wedge(RECEIVER)",
+              "box_primary": true
+            }
+          },
+          "5b8a0210-c394-407a-aeb2-bc779eb9fde0": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/product-image-kit-patch-box.png",
+              "box_title": "Alerta Patch",
+              "box_primary": false
+            }
+          },
+          "be45a09e-af4a-41eb-8e6d-1a4f94f16fcf": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/patch-product-kit-pathcover.png",
+              "box_title": "Patch Cover",
+              "box_primary": false
+            }
+          },
+          "3ca5e288-4127-4f2a-bc81-972b6e6386d3": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-product-kit-userguide.png",
+              "box_title": "User Guide & Get Started Card",
+              "box_primary": false
+            }
+          },
+          "07f4af8b-bac1-4cd8-9081-5378200cb679": {
+            "type": "box",
+            "settings": {
+              "box_image": "shopify:\/\/shop_images\/alerta-product-kit-safty-box.png",
+              "box_title": "Safety & Warranty",
+              "box_primary": false
+            }
+          },
+          "5e57bbd0-cc41-49bb-b52b-cfe49ab588e7": {
+            "type": "event",
+            "settings": {
+              "event_name": "30-day money back guarantee",
+              "event_image": "shopify:\/\/shop_images\/event_money_back.png"
+            }
+          },
+          "04bf3387-d508-49ed-9bd2-7434ce8c3993": {
+            "type": "event",
+            "settings": {
+              "event_name": "Shipping from the U.S",
+              "event_image": "shopify:\/\/shop_images\/event_shipping.png"
+            }
+          },
+          "d01d7fb4-1bb9-4b64-894e-d1cdf57f5f35": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/VeUz67odeog",
+              "video_primary": true
+            }
+          },
+          "b0dfa11a-e028-484a-98fb-59b2aa5ba315": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/OdLt7oDuoeI",
+              "video_primary": false
+            }
+          },
+          "70582c2e-9e0d-4e0a-9c60-1fb0c9a98cde": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/qJc4t7POKsQ",
+              "video_primary": false
+            }
+          },
+          "3c853ef7-1637-47fa-b06d-d8dd48613c11": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/Mqw46bVnbb4",
+              "video_primary": false
+            }
+          },
+          "8e76476f-3ba0-4891-84ce-82f5fcac5c68": {
+            "type": "summary",
+            "settings": {
+              "summary": "Stay safe with reliable 24\/7 monitoring."
+            }
+          },
+          "3a635ee5-078a-4488-b7b7-3e361a1a4c66": {
+            "type": "summary",
+            "settings": {
+              "summary": "Comfortable wearable Patch: not a removable bracelet, lanyard, or shoe insert."
+            }
+          },
+          "cda6cf9b-7c28-4797-bb3d-3d3f2f45d01b": {
+            "type": "summary",
+            "settings": {
+              "summary": "Loud alarm instantly notifies if loved one wanders too far."
+            }
+          },
+          "36403cba-ac2e-4b03-a37e-20086ead1bb2": {
+            "type": "summary",
+            "settings": {
+              "summary": "Works in-home or on-the-go."
+            }
+          },
+          "fd2d68f8-4676-490a-8442-cd67edcb638d": {
+            "type": "summary",
+            "settings": {
+              "summary": "No impact to daily activities: discreet & waterproof."
+            }
+          },
+          "ba1cb17f-ae3c-4b70-ad20-0948cbab452b": {
+            "type": "summary",
+            "settings": {
+              "summary": "Low cost: no Wi-Fi, no phone, no contract, no monthly service."
+            }
+          }
+        },
+        "block_order": [
+          "4a3a3152-522b-41a0-be0b-6f8eedd460da",
+          "ee2bbb08-15ec-4a26-bf9f-1f58a3d5588c",
+          "b8e73da8-70e5-4f25-aa8c-965b7f798cc2",
+          "6ddaa56f-8fa3-48b5-94a8-7a77bc73279d",
+          "db8b7711-a11e-44c0-a75b-356eee48d3d0",
+          "bbbd0998-9b1b-40af-896c-96cbfb809193",
+          "c6c8e13b-ce9a-4f79-8168-9b4fade323da",
+          "5d9a93ad-cc5c-47aa-9d5d-1689a5d62951",
+          "a390c4ac-29de-4b10-8c12-520071161200",
+          "8103ad62-40fa-4ad0-9234-b2778b08e850",
+          "d4a51ba6-a43b-49c1-ba02-3f354a9170e1",
+          "8fbf4a1e-9101-4eb1-9df9-7796aa72fc08",
+          "5b8a0210-c394-407a-aeb2-bc779eb9fde0",
+          "be45a09e-af4a-41eb-8e6d-1a4f94f16fcf",
+          "3ca5e288-4127-4f2a-bc81-972b6e6386d3",
+          "07f4af8b-bac1-4cd8-9081-5378200cb679",
+          "5e57bbd0-cc41-49bb-b52b-cfe49ab588e7",
+          "04bf3387-d508-49ed-9bd2-7434ce8c3993",
+          "d01d7fb4-1bb9-4b64-894e-d1cdf57f5f35",
+          "b0dfa11a-e028-484a-98fb-59b2aa5ba315",
+          "70582c2e-9e0d-4e0a-9c60-1fb0c9a98cde",
+          "3c853ef7-1637-47fa-b06d-d8dd48613c11",
+          "8e76476f-3ba0-4891-84ce-82f5fcac5c68",
+          "3a635ee5-078a-4488-b7b7-3e361a1a4c66",
+          "cda6cf9b-7c28-4797-bb3d-3d3f2f45d01b",
+          "36403cba-ac2e-4b03-a37e-20086ead1bb2",
+          "fd2d68f8-4676-490a-8442-cd67edcb638d",
+          "ba1cb17f-ae3c-4b70-ad20-0948cbab452b"
+        ],
+        "settings": {
+          "product_bedge": "HIT",
+          "product_logo": "shopify:\/\/shop_images\/Asset_7_2x_9adc2768-62e8-4800-92e1-ec92a996ab14.png",
+          "product_title": "THE WEARABLE FOR MONITORING WANDERING",
+          "product_desc": "Alerta Get Started Kit includes wearable “Alerta Patch” (1-, 3-, or 6-month supply) and a handheld receiver, “Alerta Wedge.”  Patch is worn on upper back; Wedge alarms when Patch is out-of-range of Wedge.",
+          "product_upsell": "kit-upsell",
+          "product_summary": true,
+          "product_option_image_change": true,
+          "product_option": false,
+          "product_option_name": "",
+          "product_section_video": true,
+          "product_section_video_url": "",
+          "product_section_newsletter": false,
+          "product_newsletter_title": "",
+          "product_newsletter_sub_title": "",
+          "product_newsletter_button_text": "",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "product-prk": {
+        "type": "product-prk",
+        "settings": {
+          "product_bedge": "Subscription",
+          "product_logo": "shopify:\/\/shop_images\/Asset_5_2x_4f4f8e48-6cdf-40ce-a67e-c8e6ae3161cd.png",
+          "product_title": "",
+          "product_desc": "",
+          "product_upsell": "best-selling-products",
+          "product_option_image_change": false,
+          "product_option": false,
+          "product_option_name": "",
+          "product_section_video": false,
+          "product_section_video_url": "",
+          "product_section_newsletter": false,
+          "product_newsletter_title": "",
+          "product_newsletter_sub_title": "",
+          "product_newsletter_button_text": "",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "product-option": {
+        "type": "product-option",
+        "settings": {
+          "product_bedge": "Replacement",
+          "product_logo": "shopify:\/\/shop_images\/Asset_5_2x_4f4f8e48-6cdf-40ce-a67e-c8e6ae3161cd.png",
+          "product_title": "",
+          "product_desc": "",
+          "product_upsell": "best-selling-products",
+          "product_option_image_change": false,
+          "product_option": false,
+          "product_option_name": "",
+          "product_section_video": false,
+          "product_section_video_url": "",
+          "product_section_newsletter": false,
+          "product_newsletter_title": "",
+          "product_newsletter_sub_title": "",
+          "product_newsletter_button_text": "",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "index-hero-image": {
+        "type": "index-hero-image",
+        "settings": {
+          "hero_image": "shopify:\/\/shop_images\/tagline-desktop.jpg",
+          "hero_image_tablet": "shopify:\/\/shop_images\/tagline-tablet.jpg",
+          "hero_image_mobile": "shopify:\/\/shop_images\/tagline-mobile.jpg"
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}

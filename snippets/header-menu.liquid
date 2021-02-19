@@ -1,0 +1,65 @@
+ <!-- Menu -->
+<div class="grid__container grid__container--none ">
+    <div class="grid__row grid__header">
+
+        <!-- Logo -->
+        <div class="grid__col-xxl--2 grid__col-xl--2 grid__col-lg--2 grid__col-md--2 grid__col-xs--12 grid__col--flex-row">  
+            <a class="header__logo" href="/">
+                {% render 'logo-alerta' %}
+            </a>
+        </div> 
+
+        <!-- Primary menu -->
+        <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--6 grid__col-md--7 grid__col-xs--12 grid__col--flex-row">  
+            <div class="header__wrap header__wrap--start">
+                <!-- Menu -->
+                <nav class="header__list">
+                    <ul>
+                        {% for link in linklists[section.settings.header_primary_menu].links %} 
+                            <li>
+                                <a href="{{ link.url }}">
+                                    {% assign menu_title = link.title | downcase %}
+
+                                    <h5 class="header__menu js-{{ menu_title }}">
+                                        {{ link.title }}
+                                        {% if menu_title == 'products' %}
+                                            <span class="header__icon">
+                                                {% render 'icon-dropdown' %}
+                                            </span>
+                                        {% endif %}    
+                                    </h5>
+                                </a>
+                            </li> 
+                        {% endfor %} 
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Sub Menu -->
+        <div class="grid__col-xxl--4 grid__col-xl--4 grid__col-lg--4 grid__col-md--3 grid__col-xs--12 grid__col--flex-row">  
+            <div class="header__wrap header__wrap--end">
+                <!-- Menu List -->
+                <nav class="header__list">
+                    <ul>
+                        {% for link in linklists[section.settings.header_sub_menu].links %} 
+                            <li class="header__menu">
+                                {% if link.title == "Cart" %}
+                                <div class="header__menu--{{link.title | downcase }}">
+                                    {% render 'icon-cart' %}
+                                    <h5 class="header__menu">{{ link.title }}</h5>
+                                </div>
+                                {% else %} 
+                                <a class="header__menu--{{link.title | downcase }}" href="{{ link.url }}">
+                                    <h5 class="header__menu">{{ link.title }}</h5>
+                                </a>
+                                {% endif %}
+                            </li> 
+                        {% endfor %} 
+                    </ul>
+                </nav>
+            </div>
+        </div> 
+
+    </div>
+</div> 

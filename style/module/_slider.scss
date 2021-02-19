@@ -1,0 +1,213 @@
+.slider{
+
+    flex-wrap: unset;
+    &--flex{
+        display: flex !important;
+        @include breakpoint(md-lg-p){
+            flex-direction: column-reverse;
+        }
+        @include breakpoint(xs){
+            flex-direction: column-reverse;
+        }
+    }
+    &--about{
+        @include breakpoint(xs-xl){
+            flex-direction: column-reverse;
+        }
+    }
+    &--main{
+        padding: $padding-small;
+        grid-row: 1;
+
+        @include breakpoint(xs){
+            padding: 0 $padding-small;
+        }
+  
+    }
+    &--nav{
+        // Parameter for space between slides #582
+        // https://github.com/kenwheeler/slick/issues/582
+        .slick-slide{
+            margin: 0 10px;
+        }
+        .slick-list {
+            margin: 0 -10px;
+        }
+        .slick-slider{
+            overflow: hidden;
+        }
+
+        padding: 0 $padding-small;
+    }
+    &__container{
+        display: grid;
+        grid-template-columns: 45px 1fr;
+        grid-template-rows: 1fr;
+        margin-bottom: $margin-small;
+        &--about{
+            grid-template-columns: 1fr;
+        }
+        &--product{
+            @include flexbox-col;
+            position: relative;
+            margin-bottom: 0;            
+        }
+        &--single-product{
+            grid-template-rows: 1fr minmax(50px, 0.3fr);
+            grid-template-columns: minmax(300px, 1fr);
+
+            @include breakpoint(xs){
+                grid-template-rows: 1fr minmax(50px, auto);
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__content{
+        width: 100%;
+        height: 100%;
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 15px;
+        padding: $padding-xxlarge;
+
+        &--about{
+            @include breakpoint(md-lg){
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include breakpoint(xs){
+                grid-template-columns: 1;
+                grid-template-rows: 0.5fr 1fr;
+            }
+        }
+        &--product{
+            height: 100%;
+            padding: $padding-large;
+            // Portatdit
+           
+            @include breakpoint(md-lg-p){
+                height: 25vh;
+            }
+
+            @include breakpoint(xs){
+                height: 45vh;
+            }
+            // Slick Slider needs specific height size
+            // height: 30vh;
+            // @include breakpoint(lg){
+            //     height: 35vh;
+            // }
+        
+        }
+        &--support{
+            @include breakpoint(md-lg){
+                padding: $padding-large;
+            }
+            @include breakpoint(xs){
+                padding: $padding-large;
+            }
+        }
+    }
+    &__title{
+        white-space: pre;
+        margin-bottom: $margin-medium;
+        &--product{
+            width: 100%;
+            font-family: $font-primary;
+            margin-bottom: 0;
+        }
+    }
+    &__subtitle{
+        &--product{
+            width: 100%;
+            color: color(red);
+            font-weight: $font-weight-regular;
+        }
+    }
+    
+    &__icon{
+        grid-column: 1;
+        width: 30px;
+        margin-top: $margin-xxsmall;
+      
+    }
+    &__description{
+        grid-column: 2;
+        font-family: $font-secondary;
+        font-weight: $font-weight-light;
+        white-space: pre;
+        &--about{
+            grid-column: 1;
+            color: color(red);     
+        }
+       
+    }
+    &__no-pre{
+        white-space: unset;
+    }
+    &__dots{
+        width: 100%;
+        position: absolute;
+        top: 95%;
+        ul{
+            @include flexbox-row;
+            justify-content: flex-end;
+            list-style-type: none;
+        }
+        li{
+            width: 25px !important;
+            margin-right: $margin-xsmall;
+        }
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+
+        img{
+            object-fit: cover;
+            object-position: 50% 50%;
+            height: 100%;
+            width: 100%;
+        }
+        
+        &--about{
+            object-position: 40% 50%;
+        }
+        &--product{
+            img{
+                border-radius: 3px;
+            }
+            iframe{
+                width: 500;
+                height: 350;
+            }
+        }
+        &--nav{
+            img{
+                opacity: 0.55;
+                cursor: pointer;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        &--active{
+            img{
+                opacity: 1;
+                border: 1px solid color(gray-dark);
+            }
+        }
+        
+    }
+    &__none{
+        display: none;
+    }
+    &__hidden{
+        visibility: hidden;
+    }
+    &__animation{
+        
+    }
+}
+

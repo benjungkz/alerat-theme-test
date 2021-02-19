@@ -1,0 +1,38 @@
+.qty{
+    @include flexbox-row;
+    &--variant{
+        justify-content: flex-start;
+    }
+    &__content{
+        @include flexbox-col;
+        height: 50px;
+        
+        &--number{
+            width: 225px;
+            border: 1px solid color(gray-dark);
+
+            @include breakpoint(xs){
+                width: 100%;
+            }
+            
+        }
+        &--symbol{
+            width: 50px;
+            background-color: color(gray-dark);
+            cursor: pointer;
+        }
+        &--plus{
+            border-radius: 0 3px 3px 0;
+        }
+        &--minus{
+            border-radius: 3px 0 0 3px;
+        }
+    }
+
+    &__symbol{
+        color: color(white);
+        
+    }
+
+
+}

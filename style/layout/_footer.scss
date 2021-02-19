@@ -1,0 +1,94 @@
+/* footer */
+.footer{
+    margin: $margin-xlarge 0 $margin-xsmall;
+    &__grid{
+        border-top: 1px solid color(gray-light);
+        border-bottom: 1px solid color(gray-light);
+        padding: $padding-large 0 $padding-xlarge 0;
+        
+        @include breakpoint(xs){
+            @include flexbox-col;
+            align-items: flex-start;
+        }
+
+        &--copyright{
+            border-top: 0;
+            padding: 0;
+            border-bottom: 0;
+            margin: $margin-xsmall 0;
+
+            @include breakpoint(xs){
+                margin: $margin-xsmall $margin-medium;
+            }
+
+        }
+    }
+    &__logo{
+        svg{
+            width: 100%;
+            @include breakpoint(xs){
+                width: 150px;
+            }
+        }
+        margin-bottom: $margin-small;
+
+    }
+    &__content{
+        @include flexbox-col;
+        align-items: flex-start;
+        justify-items: flex-start;
+        padding: 0 $padding-xsmall;
+
+        @include breakpoint(xs){
+           padding: $padding-medium;
+        }
+
+        &--tagline{
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__address{
+        margin-bottom: $margin-xsmall;
+    }
+    &__phone{
+        margin-bottom: $margin-small;
+    }
+    &__social{
+        @include flexbox-row;
+        svg{
+            width: 80%;
+            @include breakpoint(xs){
+                width: 50px;
+            }
+            path{
+                fill:color(red);
+            }
+        }
+    }
+    &__menu{
+        opacity: 0.6;
+        margin-bottom: $margin-small;
+        text-transform: uppercase;
+
+        &--sub{
+            opacity: 1;
+            margin-bottom: $margin-xsmall;
+            text-transform: none;
+        }
+    }
+    &__tagline{
+        font-family: $font-third;
+        text-align: center;
+        margin-bottom: $margin-xsmall;
+
+        &--author{
+            align-self: flex-end;
+            margin-right: $margin-xsmall;
+        }
+
+    }
+    &__help{
+        font-weight: $font-weight-bold;
+    }
+}

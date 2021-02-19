@@ -1,0 +1,120 @@
+/* Typograph */
+*{
+    margin: 0;
+    padding: 0;
+        
+    section{
+        height:100vh;
+    }
+
+    .section{
+        width: 100vw;
+        height: auto;       
+        &--row{
+            @include flexbox-row;
+        }
+        &--col{
+            @include flexbox-col;
+        }
+        &--margin{
+            margin-bottom: $margin-xxlarge;
+        }
+        &--padding{
+            padding-top: $padding-xxlarge;
+            padding-bottom: $padding-xxlarge;
+        }
+      
+        &--intro{
+            background-color: color(gray-light);
+            border-radius: 0 0 15px 15px;
+            &-member{
+                background-color: #F8F9FE;
+            }
+        }
+        &--collection{
+            height: 90vh;
+            @include breakpoint(lg-m){ 
+                height: auto;            
+            }
+    
+        }
+        &--product{
+            position: absolute;
+            top: 0;
+
+            @include breakpoint(md-lg){
+                position: static;
+                margin-bottom: 1rem;
+            }
+            @include breakpoint(xs){
+                position: static;
+                margin-bottom: 1rem;
+            }
+        }
+        &--bar{
+            display: none;
+            @include breakpoint(xl){
+                display: block;
+                position: sticky;
+                bottom: 0;
+                z-index: 95;
+            }
+            @include breakpoint(md-lg){
+                display: block;
+                position: sticky;
+                bottom: 0;
+                z-index: 95;
+            }
+            @include breakpoint(xs){
+                display: block;
+                position: sticky;
+                bottom: 0;
+                z-index: 95;
+            }
+        }
+        &--pricing{
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            @include breakpoint(xs-md){
+                position: static;
+                z-index: 0;
+            }
+            @include breakpoint(xs){
+                position: static;
+                z-index: 0;
+            }
+        }
+        &--ws{
+            margin-bottom: 2rem;
+        }
+        &--bg{
+            background-color: color(gray-light);
+
+            &-half{
+                background: linear-gradient(top, color(white) 50%, color(gray-light) 50%);
+            }
+            &-half-reverse{
+                background: linear-gradient(top, color(gray-light) 50%, color(white) 50%);
+            }
+            
+
+        }
+        &--p{
+            padding: 3rem 0;
+        }
+        &--xs{
+            &-active{
+                @include breakpoint(md){
+                    display: none;
+                }
+            }
+            &-inactive{
+                @include breakpoint(xs){
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

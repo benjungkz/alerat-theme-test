@@ -1,0 +1,24 @@
+.bar{
+    @include flexbox-row;
+    width: 100vw;
+    height: 10vh;
+    background-color: color(gray-light);
+    z-index: 97;
+    
+    &--normal{
+        width: auto;
+        background-color: transparent;
+    }
+
+    &__btn{
+        font-family: $font-secondary;
+        font-weight: $font-weight-bold;
+        color: color(white);
+        text-transform: uppercase;
+
+    }
+
+    &__inactive{
+        display: none;
+    }
+}

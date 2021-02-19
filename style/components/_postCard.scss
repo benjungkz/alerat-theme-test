@@ -1,0 +1,32 @@
+.PostCard{
+    &__info{
+        display: grid;
+        grid-template-rows: 0.5fr 2.5fr 0.5fr;
+        padding: $padding-xsmall;
+    }
+    &__title{
+        align-self: center;
+        font-family: $font-primary;
+        line-height: 2.5rem;
+        color:color(black-dark);
+        &--hero{
+            align-self: start;
+            line-height: 4rem;
+            @include font-size(1.8em);
+        }
+    }
+    &__tag{
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        font-weight: $font-weight-light;
+    }
+    &__button{
+        align-self: end;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    &__content{
+        margin-bottom: $margin-xsmall;
+    }
+}

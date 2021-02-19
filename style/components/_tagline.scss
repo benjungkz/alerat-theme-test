@@ -1,0 +1,82 @@
+.tagline{       
+    @include flexbox-col;
+    width: 100%;
+    border-radius: 3px;
+    padding: $padding-large;
+    &--hero{
+        @include breakpoint(md-xl){
+            flex-direction: row;
+        }
+    }
+    
+
+    &--help{
+        @include breakpoint(md-xl){
+            flex-direction: column;
+        }
+    }
+
+    &__bg{
+        background-color: color(gray);
+    }
+    &__margin{
+        margin-bottom: $margin-xxlarge;
+    }
+    &__logo{
+        @include flexbox-row;
+        width:100%;
+        svg{
+            width: 15%;
+            height: auto;
+
+            @include breakpoint(xs){
+                width: 30%;
+            }
+        }
+
+        &--index{
+            @include flexbox-row;
+            width:100%;
+            svg{
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
+    &__desc{
+        font-family: $font-secondary;
+        text-align: center;
+        padding: $padding-xsmall;
+
+        &--help{
+            font-weight: $font-weight-regular;
+            padding:0;
+            margin-bottom: $margin-medium;
+        }
+        &--product{
+            margin-top: 0;
+            margin-bottom: $margin-medium;
+        }
+    }
+    &__help-center{
+        @include flexbox-row;
+        margin-bottom: $margin-small;
+        img{
+            width: 7vw;
+            
+            @include breakpoint(md-xl){
+                width: 10vw;
+            }
+            @include breakpoint(xs){
+                width: 17vw;
+            }
+        }
+    }
+    &__btn-text{
+        font-family: $font-secondary;    
+    }
+}
+
+.product__info__description{
+    font-family: $font-secondary;
+}

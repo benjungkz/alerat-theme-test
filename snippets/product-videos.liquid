@@ -1,0 +1,34 @@
+{% if section.settings.product_section_video %}
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">
+            
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col grid__col--product">
+                <!-- Primary -->
+                
+                <div class="product__content product__content--video">
+                    {% for block in section.blocks %}
+                    {% if block.type == "video" %}
+                        {% if block.settings.video_primary %}
+                            <div class="product__video product__video--primary">
+                        {% else %}
+                           <div class="product__video">
+                        {% endif %}
+                                <div class="plyr__video-embed js-player">
+                                    <iframe
+                                        src="{{block.settings.video_url}}"
+                                        allowfullscreen
+                                        allowtransparency
+                                        allow="autoplay"
+                                        data-poster="{{ block.settings.video_poster | img_url: 'master' }}"
+                                    ></iframe>
+                                </div>
+                            </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}

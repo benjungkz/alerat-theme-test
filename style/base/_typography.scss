@@ -1,0 +1,94 @@
+/****** Typography ******/
+/* Alerta UI/UX 2.0, Rivised Sep. 2020 */
+$font-primary : ivypresto-headline, serif;
+$font-secondary : marine, sans-serif;
+$font-third : dolce, sans-serif;
+$font-fourth : lato, sans-serif;
+
+$font-weight-light : 300;
+$font-weight-regular: 600;
+$font-weight-bold: 800;
+
+$color: (
+    red : #D12220,
+    gray-light : #ECECEC,
+    gray-dark : #949090,
+    gray : #f8f8f8,
+    black-dark : #000000,
+    black-light : #525252,
+    white: #ffffff
+);
+
+/* Responsive image size */
+@mixin image-size($base-size){
+    // Break point
+    @each $point in $break-points{
+        // Font size
+        @include breakpoint($point){             
+           width: calc( #{$base-size} * #{map-get($type_scale, $point)}) !important;
+        }    
+    }
+}
+
+
+/* Responsive font size */
+@mixin font-size($base-size){
+    // Break point
+    @each $point in $break-points{
+        // Font size
+        @include breakpoint($point){             
+           font-size: calc( #{$base-size} * #{map-get($type_scale, $point)}) !important;
+        }    
+    }
+}
+
+
+/* Heading */ 
+h1{ 
+    @include font-size(1.45em); 
+    font-weight: $font-weight-bold;
+    line-height: 1.5em;
+}
+
+h2{ 
+    @include font-size(1.2em); 
+    font-family: $font-primary; 
+    font-weight: $font-weight-bold; 
+    line-height: 1.5em
+}
+
+h3{ 
+    @include font-size(1.0em);
+    font-family: $font-primary; 
+    font-weight: $font-weight-bold; 
+    line-height: 1.5em;
+}
+h4{ 
+    @include font-size(0.9em); 
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    letter-spacing: 0.03em;
+    line-height: 1.5em;
+}
+h5{ 
+    @include font-size(0.8em); 
+    font-family: $font-primary;
+    font-weight: $font-weight-regular;
+    letter-spacing: 0.03em;
+    line-height: 1.5em;
+    color: color(black-dark);
+}
+h6{ 
+    @include font-size(0.6em); 
+    font-family: $font-secondary; 
+    font-weight: $font-weight-light;
+    letter-spacing: 0.05em;
+    color: color(black-light);
+}
+p{ 
+    @include font-size(0.5em); 
+    font-family: $font-secondary; 
+    color: color(black-light);
+    $font-weight-regular: 600;
+}
+

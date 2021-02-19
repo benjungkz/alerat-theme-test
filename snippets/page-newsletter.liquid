@@ -1,0 +1,51 @@
+<!-- Newsletter  -->
+<section class="section section--bg">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+
+                <div class="newsletter__content">
+                     <div class="list__wrap list__wrap--box">
+                        {% render 'icon-up' %}
+                        <h2 class="list__title list__title--product">{{news_title}}</h2>
+                    </div>                 
+                    <h2 class="newsletter__subtitle">{{news_subtitle}}</h2>
+                        {% form 'customer', class: "newsletter__form" %}
+
+                            <!-- Form Check -->
+                            {{ form.errors | default_errors }}
+
+                            <!-- Sucess Message -->
+                            {% if form.posted_successfully? %}
+                                <p class="form--success newsletter__success">Thank you!</p>
+                            {% else %}
+                            <!-- Newsletter Form -->
+                            <div class="newsletter__action">
+
+                                <input type="hidden" name="contact[tags]" value="newsletter">
+                                
+                                <!-- Email Field -->
+                                <input type="email"
+                                name="contact[email]"
+                                id="Email"
+                                class="newsletter__input newsletter__input--email"
+                                value="{% if customer %}{{ customer.email }}{% endif %}"
+                                placeholder="Email address"
+                                autocorrect="off"
+                                autocapitalize="off"
+                                autocomplete="off">
+                                
+                                <!-- Newsletter Submit Button -->
+                                <button type="submit" class="btn btn-small newsletter__btn" name="commit" id="Subscribe">
+                                    <h5 class="btn__text">{{ news_button_text }}</h5>
+                                </button>
+
+                            </div>
+                            {% endif %}
+                        {% endform %}     
+                    </div>               
+                </div>
+            </div>    
+        </div>
+    </div>
+</section>

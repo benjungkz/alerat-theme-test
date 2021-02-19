@@ -1,0 +1,89 @@
+<!-- Assignment -->
+{% assign product_kit = all_products["get-started-kit"] %}
+{% assign product_battery = all_products["replacement-alerta-wedge-battery"] %}
+{% assign product_refill_1m = all_products["copy-of-alerta-patch-refill-kit-subscription-1-months"] %}
+{% assign product_refill_3m = all_products["alerta-patch"] %}
+{% assign product_refill_6m = all_products["copy-of-alerta-patch-9"] %}
+
+<div class="pricing__wrap">
+    {% render 'pricing-title', pricingTitle : section.settings.pricing_main_title %}
+    {% render 'pricing-info', productImage: section.settings.pricing_kit_image %}
+    
+    <!-- Only for Kit -->
+    {% render 'pricing-option', product_kit: product_kit %}
+    {% render 'pricing-subscription' product_refill_1m: product_refill_1m,
+                                    product_refill_3m: product_refill_3m,
+                                    product_refill_6m: product_refill_6m  %}
+
+    <!-- End -->
+
+    {% render 'pricing-single', singleProduct: product_battery,
+                                singleProductHandle: "kit-battery",
+                                radioButtonClass: 'pricing__radio--kit', 
+                                isPricingDesc: false,
+                                isSubscription: false,
+                                pricingDesc : '',
+                                productTitle: section.settings.pricing_battery_title,
+                                productOptionTitle: product_battery.title %}
+
+    {% render 'pricing-summary',defalutTagProductName: "Get Started Kit (1-Month supply)",
+                                defalutTagPrice: "$159.00",
+                                defaultTotalPrice: "$159.00" %}
+
+    {% render 'pricing-button' %}
+    {% render 'page-help' %}
+</div>
+    
+
+{% schema %}
+    {   
+        "name" : "Alerta Kit Pricing",
+        "settings": [
+            {
+                "type": "text",
+                "id": "pricing_main_title",
+                "label": "Pricing Section Title"
+            },
+            {
+                "type": "text",
+                "id": "pricing_kit_title",
+                "label": "Kit Section Title"
+            },
+            {
+                "type": "image_picker",
+                "id": "pricing_kit_image",
+                "label": "Kit(default) Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "pricing_kit_wedge_image",
+                "label": "Wedge Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "pricing_kit_patch_image",
+                "label": "A Patch Image"
+            },
+            {
+                "type": "text",
+                "id": "pricing_refill_title",
+                "label": "Refill Section Title"
+            },
+            {
+                "type": "text",
+                "id": "pricing_refill_subtitle",
+                "label": "Refill Subtitle"
+            },
+            {
+                "type": "text",
+                "id": "pricing_refill_desc",
+                "label": "Refill Description"
+            },
+            {
+                "type": "text",
+                "id": "pricing_battery_title",
+                "label": "Battery Section Title"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,84 @@
+{% assign product_refill_1m = all_products["alerta-patch-refill-kit-subscription-1-months"] %}
+{% assign product_refill_3m = all_products["alerta-patch-refill-kit-subscription-3-months"] %}
+{% assign product_refill_6m = all_products["alerta-patch-refill-kit-subscription-6-months"] %}
+
+
+
+<!-- Pricing Sigle Product Section-->
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row grid__row--center">
+            <!-- Blank -->   
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--5 grid__col-md--0 grid__col-xs--0 grid__col--flex-col grid__col--product">
+                   
+            </div>
+
+            <!-- Kit Pricing -->
+            <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--7 grid__col-md--10 grid__col-xs--10 grid__col--flex-col">
+                <div class="pricing__container">
+                    <!-- Title -->
+                    <h2 class="pricing__title">{{section.settings.pricing_refill_title}}</h2>
+                    <h3 class="pricing__subtitle">{{section.settings.pricing_refill_subtitle}}</h3>
+                    <h6 class="pricing__desc pricing__desc--note">{{section.settings.pricing_refill_desc}}</h6>
+                   
+                    <!-- Options -->
+                    <div class="pricing__content pricing__content--sub">
+                            {% if product_refill_1m.available %}
+                            <!-- Radio button -->
+                            <div class="pricing__action">     
+                                <input class="pricing__radio pricing__radio--kit" type="radio" name="kit-prk" 
+                                value="{{ product_refill_1m.variants[0].id }}" 
+                                group="{{ product_refill_1m.variants[0].metafields.bold_rp.rp_group_id }}"
+                                number="1"
+                                price="{{ product_refill_1m.variants[0].price}}"
+                                product-name ="{{product_refill_1m.title}}">
+                                <div class="pricing__label--add">
+                                        <h3 class="pricing__label">{{ product_refill_1m.tags[0] }}</h3>
+                                        <h6 class="pricing__label">({{ product_refill_1m.tags[1] }})</h6></h3>
+                                </div>
+                            </div>
+                            {% endif %}
+
+                            {% if product_refill_3m.available %}
+                            <!-- Radio button -->
+                            <div class="pricing__action">     
+                                <input class="pricing__radio pricing__radio--kit" type="radio" name="kit-prk" 
+                                value="{{ product_refill_3m.variants[0].id }}"
+                                group="{{ product_refill_3m.variants[0].metafields.bold_rp.rp_group_id }}"
+                                number="3"
+                                price="{{ product_refill_3m.variants[0].price}}"
+                                product-name ="{{product_refill_3m.title}}">
+                                <div class="pricing__label--add">
+                                    <h3 class="pricing__label">{{ product_refill_3m.tags[0] }}</h3>
+                                    <h6 class="pricing__label">({{ product_refill_3m.tags[1] }})</h6></h3>
+                                </div>
+                            </div>
+                            {% endif %}
+
+                            
+                            <!-- Radio button -->
+                            <div class="pricing__action">     
+                                <input class="pricing__radio pricing__radio--kit" type="radio" name="kit-prk" 
+                                value="{{ product_refill_6m.variants[0].id }}"
+                                group="{{ product_refill_6m.variants[0].metafields.bold_rp.rp_group_id }}"
+                                number="6",
+                                price="{{ product_refill_6m.variants[0].price}}"
+                                product-name ="{{product_refill_6m.title}}">
+                                <div class="pricing__label--add">
+                                    <h3 class="pricing__label">{{ product_refill_6m.tags[0] }}</h3>
+                                    <h6 class="pricing__label">({{ product_refill_6m.tags[1] }})</h6></h3>
+                                </div>
+                            </div>
+                          
+                    </div>  
+
+                                      
+                </div>
+
+                <div class="pricing__container">
+                    {% render 'icon-divider' %}
+                <div>
+            </div>
+        </div>
+    </div>
+</section>

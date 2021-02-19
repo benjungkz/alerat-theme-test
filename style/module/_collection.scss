@@ -1,0 +1,71 @@
+.collection{
+    @include breakpoint(xs){
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    &--deactive{
+        @include breakpoint(md-xs){        
+            display: none;    
+        }
+    }
+    &__image{
+        @include flexbox-row;
+        margin-bottom: $margin-small;
+        img{
+            @include image-size(35%);
+        }
+    }
+    &__logo{
+        @include flexbox-row;
+        margin-bottom: $margin-small;
+        img{
+            width: 100%;
+            height: 10vh;
+            object-fit: contain;
+
+            @include breakpoint(md-xl){
+                height: 5vh;
+            }
+            @include breakpoint(xs){
+                width: 90%;
+            }
+        }
+    }
+    &__title{
+        font-family: $font-secondary;
+        color: color(gray-dark);
+        font-weight: $font-weight-regular;
+        margin-bottom: $margin-small;
+        width: 100%;
+        text-align: center;
+    }
+    &__benefit{
+        width: 80%;
+        padding: $padding-xsmall;
+        @include flexbox-col;
+    }
+    &__testimonial{
+        width: 100%;
+        padding: $padding-xsmall;
+        @include flexbox-col;
+    }
+    &__organization{
+        @include flexbox-row;
+        align-self: flex-end;
+        &-name{
+            align-self: flex-end;
+            margin-right: 0.5rem;
+            color: color(gray-dark);
+        }
+
+    }
+    &__btn{
+        width: 60%;
+    }
+
+}
+
+
+
+

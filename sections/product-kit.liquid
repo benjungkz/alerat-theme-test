@@ -1,0 +1,152 @@
+<div class="product__container">
+    <!-- Product Title -->
+    {% render 'product-title' %} 
+
+    <!-- Product Content -->
+    {% render 'product-info' %}
+
+    <!-- Product Benefit Description -->
+    {% render 'product-benefit' with section.blocks as blocks %}
+</div>
+
+<!-- Product Benefit Slider -->
+{% render 'product-slider' with section.blocks as blocks %}
+
+{% render 'product-tagline' %}
+
+{% render 'product-bar' %}
+
+
+{% schema %}
+    {   
+        "blocks": [
+            {
+                "type": "slider",
+                "name": "Slider",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "product_slider_image",
+                        "label": "Slider Image",
+                        "info": "Recommend Size : 1920 X 1080 (16:9 ratio)"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "product_slider_image_tablet",
+                        "label": "Slider Image (for tablet)",
+                        "info": "Recommend Size : 694 X 521 (4:3 ratio) Need to upload a image with 4:3 ratio for tablet devices."
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "product_slider_image_mobile",
+                        "label": "Slider Image (for mobile)",
+                        "info": "Recommend Size : 574 X 574 (1:1 ratio) Need to upload a image with 1:1 ratio for moblie devices."
+                    },
+                    {
+                       "id": "product_slider_image_alt",
+                       "type": "text",
+                       "label": "Slider Image Description"
+                    },
+                    {
+                       "id": "product_slider_title",
+                       "type": "textarea",
+                       "label": "Slider Title"
+                    },
+                    {
+                       "id": "product_slider_subtitle",
+                       "type": "textarea",
+                       "label": "Slider Sub Title"
+                    }
+                ]
+            },
+            {
+                "type": "benefit-title",
+                "name": "Benefit Title",
+                "settings": [
+                    {
+                       "id": "product_benefit_title",
+                       "type": "textarea",
+                       "label": "Product Benefit Title"
+                    },
+                    {
+                       "id": "product_benefit_order",
+                       "type": "text",
+                       "label": "Product Benefit Order"
+                    }
+                ]
+            },
+            {
+                "type": "benefit-desc",
+                "name": "Benefit Discription",
+                "settings": [
+                    {
+                       "id": "product_benefit_discription",
+                       "type": "textarea",
+                       "label": "Product Benefit Title"
+                    }
+                ]
+            }
+        ],
+
+        "name" : "Product Page",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "product_title",
+                "label": "Product Title"
+            },
+            {
+                "type": "video_url",
+                "id": "product_video_url",
+                "label": "Video URL",
+                "accept": ["youtube", "vimeo"],
+                "info": "Recommend Youtube"
+            },
+            {
+                "id": "product_video_title",
+                "type": "textarea",
+                "label": "Video Title" 
+            },
+            {
+                "type": "image_picker",
+                "id": "product_video_thumbnail",
+                "label": "Video Thumbnail"
+            },
+            {
+                "type": "text",
+                "id": "product_more_video_btn_text",
+                "label": "More video Button Text"
+            },
+            {
+                "type": "text",
+                "id": "product_more_video_btn_url",
+                "label": "More video Button URL"
+            },
+            {
+                "type": "text",
+                "id": "product_tagline",
+                "label": "Tagline Text"
+            },
+            {
+                "type": "text",
+                "id": "product_slider_btn_url",
+                "label": "Slider button URL"
+            },
+            {
+                "type": "text",
+                "id": "product_slider_btn_text",
+                "label": "Slider Button text"
+            },
+            {
+                "type": "color",
+                "id": "product_slider_top_color",
+                "label": "Slider Top Color"
+            },
+            {
+                "type": "color",
+                "id": "product_slider_bottom_color",
+                "label": "Slider Bottom Color"
+            }
+        ] 
+    }
+{% endschema %}

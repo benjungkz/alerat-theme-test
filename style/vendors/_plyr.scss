@@ -1,0 +1,14 @@
+:root{
+    --plyr-color-main: #D1232A;
+}
+.plyr{
+    width: 100% !important;
+    border-radius: 3px;
+    &__controls{
+        opacity: 0;
+
+        &--active{
+            opacity: 1;
+        }
+    }
+}

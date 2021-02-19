@@ -1,0 +1,206 @@
+
+
+{% for block in section.blocks %}
+    {% if block.type == 'product' %}
+        {% render 'support-section', 
+            handle: block.settings.support_product,
+            section_bg: block.settings.support_product_section_bg  %}
+    {% endif %}
+{% endfor %}
+
+{% schema %}
+    {   
+        "blocks": [
+            {
+                "type": "product",
+                "name": "Support Product",
+                "settings": [
+                    {
+                        "type": "product",
+                        "id": "support_product",
+                        "label": "Product for section"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "support_product_logo",
+                        "label": "Support Logo"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "support_product_representitive",
+                        "label": "Support Representitive Avator"
+                    },
+                    {
+                        "type": "text",
+                        "id": "support_product_guide_title",
+                        "label": "Support Guide Title" 
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "support_product_guide_desc_1",
+                        "label": "Support Guide Description 1" 
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "support_product_guide_desc_2",
+                        "label": "Support Guide Description 2" 
+                    },
+                    {
+                        "type": "text",
+                        "id": "support_product_resource_title",
+                        "label": "Support Resource(Download) Title" 
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "support_product_slider",
+                        "label": "Add Slider Section?",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "support_product_resource_only_image",
+                        "label": "Resource layout is only image?",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "support_product_section_bg",
+                        "label": "Fill Background?",
+                        "default": false
+                    }
+                ]
+            },
+            {
+                "type": "resource",
+                "name": "Support Resource",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "support_resource_image",
+                        "label": "Support Resource Button Icon/Image"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "support_resource_only_image",
+                        "label": "Only Image(or Icon)?",
+                        "default": false
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "support_resource_primary",
+                        "label": "Primary Button?",
+                        "default": false
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "support_resource_button_text",
+                        "label": "Support Resource Button Text",
+                        "info": "If you upload Button Icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "support_resource_url",
+                        "label": "Support Resource URL"
+                    },
+                    {
+                        "type": "product",
+                        "id": "support_product_for_resource",
+                        "label": "Product for section"
+                    }
+                ]
+            },
+            {
+                "type": "video",
+                "name": "Support Video",
+                "settings": [
+                    {
+                        "type": "video_url",
+                        "id": "support_video_url",
+                        "label": "Video URL",
+                        "accept": ["youtube", "vimeo"],
+                        "info": "Recommend Youtube"
+                    },
+                    {
+                       "id": "support_video_title",
+                       "type": "textarea",
+                       "label": "Video Title" 
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "support_video_thumbnail",
+                        "label": "Video Thumbnail"
+                    },
+                    {
+                       "id": "support_product_for_video",
+                       "type": "product",
+                       "label": "Product for Video"
+                    }
+                ]
+            },
+            {
+                "type": "slider",
+                "name": "Support Slider",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "support_slider_image",
+                        "label": "Slider Image"
+                    },
+                    {
+                       "id": "support_slider_title",
+                       "type": "textarea",
+                       "label": "Slider Title"
+                    },
+                    {
+                       "id": "support_slider_icon_1",
+                       "type": "image_picker",
+                       "label": "Slider Icon 1"
+                    },
+                    {
+                       "id": "support_slider_desc_1",
+                       "type": "textarea",
+                       "label": "Slider Description 1"
+                    },
+                    {
+                       "id": "support_slider_icon_2",
+                       "type": "image_picker",
+                       "label": "Slider Icon 2"
+                    },
+                    {
+                       "id": "support_slider_desc_2",
+                       "type": "textarea",
+                       "label": "Slider Description 2"
+                    },
+                    {
+                        "type": "color",
+                        "id": "support_slider_top_color",
+                        "label": "Slider Top Color"
+                    },
+                    {
+                        "type": "color",
+                        "id": "support_slider_bottom_color",
+                        "label": "Slider Bottom Color"
+                    },
+                    {
+                        "type": "product",
+                        "id": "support_product_for_slider",
+                        "label": "Product for slider"
+                    }
+                ]
+            }
+        ],
+
+        "name" : "Support Page",
+        "settings": [
+            {
+                "type": "range",
+                "id": "support_products",
+                "min": 2,
+                "max": 10,
+                "step": 1,
+                "label": "Amount of products to show support page",
+                "default": 2
+            }
+        ] 
+    }
+{% endschema %}

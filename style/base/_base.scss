@@ -1,0 +1,133 @@
+$break-points: xs, md, lg, xl, xxl;
+
+/* Type scale base*/
+$text-base-size : 1em;
+$text-scale-ratio: 1.15;
+
+/* Type scale with screen size */
+$text-xxs : 0.5;
+$text-xs: $text-scale-ratio * $text-scale-ratio;
+$text-md: $text-scale-ratio * $text-scale-ratio;
+$text-lg: $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+$text-xl: $text-scale-ratio * $text-scale-ratio * $text-scale-ratio * $text-scale-ratio;
+$text-xxl: $text-scale-ratio * $text-scale-ratio * $text-scale-ratio *$text-scale-ratio * $text-scale-ratio;
+
+/* Type scale map */
+$type_scale: (
+    xxs: $text-xxs,
+    xs : $text-xs,
+    md : $text-md,
+    lg : $text-lg,
+    xl : $text-xl,
+    xxl : $text-xxl
+);
+
+/* Flex layout */
+@mixin flexbox-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexbox-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Container width */
+$container_width: (
+    xxs: 320px,
+    xs: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1200px,
+    xxl: 1650px
+);
+
+/* Margin */
+$margin-xxsmall : 0.5rem;
+$margin-xsmall : 1rem;
+$margin-small : 1.5rem;
+$margin-medium : 2rem;
+$margin-large : 2.5rem;
+$margin-xlarge : 3rem;
+$margin-xxlarge : 5rem;
+
+
+/* Padding */
+$padding-xxsmall : 0.5rem;
+$padding-xsmall : 1rem;
+$padding-small : 1.5rem;
+$padding-medium : 2rem;
+$padding-large : 2.5rem;
+$padding-xlarge : 3rem;
+$padding-xxlarge : 5rem;
+
+/* Viewpoint Padding */
+
+$padding-vp-xxlarge: calc(4vw);
+
+/* border radius */
+$border-radius-default : 3px;
+
+/* Break Point */
+@mixin breakpoint($class) {
+    
+    @if $class == xs {
+        @media screen and (max-width: 767px) { @content; }
+    }
+    @else if $class == md {
+        // iPad 
+        @media screen and (min-width: 768px) { @content; }
+    }
+    @else if $class == lg {
+        // iPad Pro(1024), iPad(Landscape/1024)
+        @media screen and (min-width: 1024px) { @content; }
+    }
+    @else if $class == xl {
+        // iPad Pro(Landscape/1366), 15'/13' Laptop
+        @media screen and (min-width: 1366px) { @content; }
+    }
+    @else if $class == xxl {
+        // Desktop
+        @media screen and (min-width: 1920px) { @content; }
+    }
+    @else if $class == xs-md {
+        // iPad 
+        @media screen and (min-width: 768px) and (max-width: 1023px) { @content; }
+    }
+    @else if $class == md-lg {
+        @media screen and (min-width: 768px) and (max-width: 1365px) { @content; }
+    }
+    @else if $class == md-lg-p {
+        // Tablet (Portrait)
+        @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation : portrait) { @content; }
+    }
+    @else if $class == md-xl {
+        @media screen and (min-width: 768px) and (max-width: 1366px) { @content; }
+    }
+    @else if $class == xs-xl {
+        @media screen and (max-width: 1920px) { @content; }
+    }
+    @else {
+        @warn "Breakpoint mixin supports : xs, md, lg, xl, xxl";
+    }
+}
+
+/* Box Shadow */
+$box-shadow-primary: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$box-shadow-secondary : 0 50px 100px -20px rgba(50, 50, 93, 0.25), 0 30px 60px -30px rgba(0, 0, 0, 0.3);
+
+@mixin flexEdge{
+    @supports (-ms-ime-align: auto) { @content}
+}
+
+.body{
+    overflow-x:hidden !important; 
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
+}

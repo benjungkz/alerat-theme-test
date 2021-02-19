@@ -1,0 +1,38 @@
+<section class="section section--bg section--padding">
+    <div class="grid__container">
+        <div class="grid__row grid__row--shadow hero">    
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0 grid__col--blank"></div>
+            
+            <!-- Content -->
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                <div class="hero__content">
+                    <h1 class="hero__desc">{{section.settings.hero_desc}}</h1>
+                </div>
+            </div>
+
+            <!-- tagline -->
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                {% render 'element-tagline', 
+                    tagline__desc_text: settings.general_tagline_desc,
+                    tagline__logo: "tagline__logo--index",
+                    tagline__class: 'tagline--hero' %}
+            </div>
+
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0 grid__col--blank"></div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+    {   
+        
+        "name" : "Hero Section",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "hero_desc",
+                "label": "Hero Description"
+            }
+        ] 
+    }
+{% endschema %}

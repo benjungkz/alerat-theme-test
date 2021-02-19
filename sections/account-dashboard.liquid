@@ -1,0 +1,462 @@
+
+{% comment %} Set Tracking Order {% endcomment %}
+{% for order in customer.orders %}
+  {% if order.fulfillment_status == 'fulfilled' %}
+    {% assign tracking_order = order %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+
+
+
+<section class="section">
+  <div class="grid__container">
+    <div class="grid__row grid__row--dashboard">
+      <!-- Blank -->
+       <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0 grid__col--flex-col"></div>
+      
+      <!-- Customer -->
+      <div class="grid__col-xxl--11 grid__col-xl--11 grid__col-lg--11 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+        <div class="customer customer--account">
+        
+
+          <div class="customer__info">
+            <h1 class="customer__greeting">{{section.settings.customer_greeting}}&nbsp</h1>
+            <h1 class="customer__name">{{ customer.first_name | capitalize }} {{ customer.last_name | capitalize }}</h1>
+          </div>
+
+          {{ 'Log out' | customer_logout_link }}
+          
+        </div>
+      </div>
+
+    
+    </div>
+
+  </div>
+</section>
+
+<section class="section section--bg">
+    <div class="grid__container">
+        <div class="grid__row grid__row--dashboard">
+           
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--10 grid__col-xs--12 grid__col--flex-col">
+                  <h2 class="customer__menu">Orders</h2>
+                <table class="table table--orders customer__table"> 
+                  <!-- First Row -->
+                  <tr class="table__row table__row--orders table__row--first">
+                    <td class="table__col table__col--orders table__col--first"><p>Number</p></td>
+                    <td class="table__col table__col--orders table__col--first"><p>Date</p></td>
+                    <td class="table__col table__col--orders table__col--first"><p>Payment Status</p></td>
+                    <td class="table__col table__col--orders table__col--first"><p>Fulfillment Status</p></td>
+                    <td class="table__col table__col--orders table__col--first"><p>Total</p></td>
+                  </tr>
+
+                  <!-- Info, Last Row -->
+                  {% if customer.orders != blank %} 
+                    {% for order in customer.orders %}
+                      {% if forloop.last == true %}
+                        <tr class="table__row table__row--orders table__row--last">
+                      {% else %}
+                        <tr class="table__row table__row--orders">    
+                      {% endif %}
+                          <td class="table__col table__col--orders">
+                            <a class="table__link table__link--orders" href="{{ order.order_status_url }}">#{{ order.order_number }}</a>
+                          </td>
+                          <td class="table__col table__col--orders">{{ order.created_at | date: "%b %d, %Y"}}</td>
+                          {% if order.financial_status == 'pending' or  order.financial_status == 'refunded'%}
+                          <td class="table__col table__col--orders table__col--secondary">{{ order.financial_status | capitalize }}</td>
+                          {% elsif order.financial_status == 'paid' or order.financial_status == 'partially_paid' or  order.financial_status == 'authorized' %}
+                          <td class="table__col table__col--orders table__col--primary">{{ order.financial_status | capitalize }}</td>
+                          {% else %}
+                          <td class="table__col table__col--orders">{{ order.financial_status | capitalize }}</td>
+                          {% endif %}
+                          <td class="table__col table__col--orders">{{ order.fulfillment_status | capitalize }}</td>
+                          <td class="table__col table__col--orders">{{ order.total_price | money }}</td>
+                        </tr>   
+                    {% endfor %}
+                  {% else %}
+                    <tr class="table__row table__row--orders table__row--last">
+                      <td class="table__col table__col--no-orders" colspan="5"><p>{{ section.settings.customer_orders_default }}<p></td>
+                    </tr>
+                  {% endif %}
+
+                </table>
+
+                <a class="customer__link customer__link--primary customer__link--subscription"
+                    href="{{shop.secure_url}}/tools/checkout/front_end/login">
+                  <h5 class="customer__text customer__text--primary">Go To Manage Subscription Page</h5>
+                </a>
+
+            </div>
+            <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0 grid__col--flex-col"></div>
+              
+      
+            <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--4 grid__col-md--10 grid__col-xs--12 grid__col--flex-col">
+                <h2 class="customer__menu">Shipping Tracking</h2>
+                <div class="customer__card">
+                    {% if tracking_order %}
+                    <div class="customer__card-content customer__card-content--image">
+                        <picture>
+                          <source srcset="{{section.settings.customer_shipping_tracking_img_active  | img_url: 'master'}}" media="(min-width: 1366px)" sizes="1920px">
+                          <source srcset="{{section.settings.customer_shipping_tracking_img_active_tablet | img_url: 'master'}}" media="(min-width: 768px)" sizes="694px">
+                          <source srcset="{{section.settings.customer_shipping_tracking_img_active_mobile | img_url: 'master'}}" media="(min-width: 320px)" sizes="574px">
+                          <img class="customer__card-image customer__card-image--active lazyload" 
+                              scrset="{{section.settings.customer_shipping_tracking_img_active  | img_url: 'master'}}"
+                              alt="">
+                        </picture>
+                    </div>
+                    <div class="customer__card-content">
+                      <h2 class="customer__title">{{ tracking_order.order_number | prepend: "#"}} {{ section.settings.customer_shipping_tracking_title_active }}</h2>
+                      <h5 class="customer__subtitle">{{ tracking_order.created_at | date: "%b %d"}}</h5>
+                      <a class="customer__link customer__link--primary" 
+                        href="{{ tracking_order.order_status_url }}">
+                          <h5 class="customer__text customer__text--primary">{{ section.settings.customer_shipping_tracking_link_active }}</h5>
+                      </a>
+                      <a class="customer__link customer__link--secondary" 
+                        href="tel:833-325-3782">
+                          <h5 class="customer__text customer__text--primary">{{ section.settings.customer_shipping_tracking_sublink_active}}</h5>
+                      </a>
+                    </div>
+                  {% else %}
+                    <div class="customer__card-content customer__card-content--image">
+                      <picture>
+                          <source srcset="{{section.settings.customer_shipping_tracking_img_inactive  | img_url: 'master'}}" media="(min-width: 1366px)" sizes="1920px">
+                          <source srcset="{{section.settings.customer_shipping_tracking_img_inactive_tablet | img_url: 'master'}}" media="(min-width: 768px)" sizes="694px">
+                          <source srcset="{{section.settings.customer_shipping_tracking_img_inactive_mobile | img_url: 'master'}}" media="(min-width: 320px)" sizes="574px">
+                          <img class="customer__card-image customer__card-image--active lazyload" 
+                              scrset="{{section.settings.customer_shipping_tracking_img_inactive  | img_url: 'master'}}"
+                              alt="">
+                        </picture>
+                    </div>
+
+                    <div class="customer__card-content">
+                      <h2 class="customer__title">{{ section.settings.customer_shipping_tracking_title_inactive}}</h2>
+                      <h5 class="customer__subtitle">{{ section.settings.customer_shipping_tracking_subtitle_inactive}}</h5>
+                      <a class="customer__link customer__link--primary" 
+                        href="{{ section.settings.customer_shipping_tracking_link_product_inactive | prepend: '/products/' }}">
+                          <h5 class="customer__text customer__text--primary">
+                          {{ section.settings.customer_shipping_tracking_link_inactive}}</h5>
+                      </a>
+                    </div>
+
+                  {% endif %}
+                </div>  
+            </div>
+
+         
+        </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="grid__container">  
+
+    <div class="grid__row grid__row--dashboard">
+      <!-- Blank -->
+      
+      <!-- Promotion -->
+      <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--10 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">
+        
+        <h2 class="customer__menu">Recent Promotion</h2>
+        <div class="customer__card">
+            <div class="customer__card-content customer__card-content--image">
+                {% if section.settings.customer_promotion == true %}
+                <picture>
+                  <source srcset="{{section.settings.customer_promotion_img  | img_url: 'master'}}" media="(min-width: 1366px)" sizes="1920px">
+                  <source srcset="{{section.settings.customer_promotion_img_tablet | img_url: 'master'}}" media="(min-width: 768px)" sizes="694px">
+                  <source srcset="{{section.settings.customer_promotion_img_mobile | img_url: 'master'}}" media="(min-width: 320px)" sizes="574px">
+                  <img class="customer__card-image customer__card-image--active lazyload" 
+                      scrset="{{section.settings.customer_promotion_img  | img_url: 'master'}}"
+                      alt="">
+                </picture>
+                {% else %}
+                <picture>
+                  <source srcset="{{section.settings.customer_promotion_img_default  | img_url: 'master'}}" media="(min-width: 1366px)" sizes="1920px">
+                  <source srcset="{{section.settings.customer_promotion_img_default_tablet | img_url: 'master'}}" media="(min-width: 768px)" sizes="694px">
+                  <source srcset="{{section.settings.customer_promotion_img_default_mobile | img_url: 'master'}}" media="(min-width: 320px)" sizes="574px">
+                  <img class="customer__card-image customer__card-image--active lazyload" 
+                      scrset="{{section.settings.customer_promotion_img_default  | img_url: 'master'}}"
+                      alt="">
+                </picture>
+                {% endif %}
+            </div>
+            <div class="customer__card-content customer__card-content--promotion">
+            {% if section.settings.customer_promotion == true %}
+              <h2 class="customer__title">{{ section.settings.customer_promotion_title }}</h2>
+              <h5 class="customer__subtitle">{{ section.settings.customer_promotion_subtitle }}</h5>
+              <h5 class="customer__content">{{ section.settings.customer_promotion_content }}</h5>            
+              <h5 class="customer__link customer__link--primary" href="{{ section.settings.customer_promotion_page_link }}">{{ section.settings.customer_promotion_link }}</h5>
+            {% else %}
+              <h2 class="customer__title">Coming Soon</h2>
+              <h5 class="customer__subtitle">{{ section.settings.customer_promotion_subtitle_default }}</h5>
+              <a class="customer__link customer__link--primary" href="{{ section.settings.customer_promotion_product_link_default | prepend: '/products/'}}">
+                <h5 class="customer__text customer__text--primary">{{ section.settings.customer_promotion_link_default }}</h5>
+              </a>
+            {% endif %}
+            </div>            
+        </div> 
+        
+      </div>
+
+      <!-- Blank -->
+      <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0"></div>
+
+      <!-- Address -->
+      <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--10 grid__col-xs--12 grid__col--flex-col grid__col--flex-start-j">
+        <h2 class="customer__menu">Address Detail</h2>
+        <div class="customer__card customer__card--address">
+            <div class="customer__card-content customer__card-content--address">
+              <h2 class="customer__title">{{ customer.first_name | capitalize }} {{ customer.last_name | capitalize }}</h2>
+              {% if customer.tags contains 'Vendor' %}
+              <h5 class="customer__bedge customer__bedge--vendor">{{section.settings.customer_bedge_vendor}}</h5>   
+              {% else %}
+              <h5 class="customer__bedge customer__bedge--customer">{{section.settings.customer_bedge_private}}</h5>
+              {% endif %}
+              {% if customer.default_address %}
+              <div class="customer__card-wrap">
+                <div class="customer__card-info">
+                  <h6 class="customer__subtitle customer__subtitle--address">Email</h6>
+                  <h6 class="customer__content">{{ customer.email }}</h6>
+                </div>
+                
+              </div>   
+              {% if customer.default_address.phone != nil %}
+              <div class="customer__card-wrap">
+                <div class="customer__card-info">
+                  <h6 class="customer__subtitle customer__subtitle--address">Phone Number</h6>  
+                  <h6 class="customer__content">{{ customer.default_address.phone }}</h6>
+                </div>
+              </div>
+              {% endif %}
+                    
+              <div class="customer__card-wrap">
+                <div class="customer__card-info">
+                  <h6 class="customer__subtitle customer__subtitle--address">Main Address</h6>
+                  <h6 class="customer__content">{{ customer.default_address.address1 }},
+                                              {% if customer.default_address.address2 != "" %}{{ customer.default_address.address2 }}, {% endif %}               
+                                              {{ customer.default_address.city}}, 
+                                              {% if address.province_code %}{{ customer.default_address.province_code }}, {% endif %}
+                                              {{ customer.default_address.country }}, 
+                                              {{ customer.default_address.zip }}</h6>
+                </div>
+              </div>
+              {% endif %}       
+              <a class="customer__link customer__link--primary customer__link--address" href="/account/addresses">
+                <h5 class="customer__text customer__text--primary">{{section.settings.customer_address_link}}</h5>
+              </a>    
+            </div>
+            
+            
+        </div> 
+        
+      </div>
+     
+    </div> 
+
+  </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Account Dashboard",
+        "settings": [
+            {
+              "type": "text",
+              "id": "customer_greeting",
+              "label": "Greeting Text"
+            },
+            {
+              "type": "text",
+              "id": "customer_bedge_private",
+              "label": "Private Member Bedge Title"
+            },
+            {
+              "type": "text",
+              "id": "customer_bedge_vendor",
+              "label": "Vendor Member Bedge Title"
+            },
+            {
+              "type": "text",
+              "id": "customer_orders_default",
+              "label": "Orders Message"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_shipping_tracking_img_inactive",
+              "label": "Shipping Tracking Image (default)",
+              "info": "(If there is no orders)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_shipping_tracking_img_inactive_tablet",
+              "label": "Shipping Tracking Image (tablet)",
+              "info": "(If there is no orders)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_shipping_tracking_img_inactive_mobile",
+              "label": "Shipping Tracking Image (mobile)",
+              "info": "(If there is no orders)"
+            },
+            {
+              "type": "text",
+              "id": "customer_shipping_tracking_title_inactive",
+              "label": "Shipping Tracking Title (default)",
+              "info": "(If there is no orders)"
+            },
+            {
+              "type": "text",
+              "id": "customer_shipping_tracking_subtitle_inactive",
+              "label": "Shipping Tracking Subtitle (default)",
+              "info": "(If there is no orders)"
+            },
+            {
+              "type": "text",
+              "id": "customer_shipping_tracking_link_inactive",
+              "label": "Shipping Tracking Link Text (default)",
+              "info": "(If there is no orders)"
+            },
+            {
+              "type": "product",
+              "id": "customer_shipping_tracking_link_product_inactive",
+              "label": "Shipping Tracking Link Product (default)",
+              "info": "(If there is no orders)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_shipping_tracking_img_active",
+              "label": "Shipping Tracking Image (Active)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_shipping_tracking_img_active_tablet",
+              "label": "Shipping Tracking Image (Active/tablet)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_shipping_tracking_img_active_mobile",
+              "label": "Shipping Tracking Image (Active/mobile)"
+            },
+            {
+              "type": "text",
+              "id": "customer_shipping_tracking_title_active",
+              "label": "Shipping Tracking Title (Active)"
+            },
+            {
+              "type": "text",
+              "id": "customer_shipping_tracking_link_active",
+              "label": "Shipping Tracking Link Text (Active)"
+            },
+            {
+              "type": "page",
+              "id": "customer_shipping_tracking_link_page_active",
+              "label": "Shipping Tracking link Page (Active)"
+            },
+            {
+              "type": "text",
+              "id": "customer_shipping_tracking_sublink_active",
+              "label": "Shipping Tracking Sublink Text (Active)"
+            },
+            {
+              "type": "page",
+              "id": "customer_shipping_tracking_sublink_page_active",
+              "label": "Shipping Tracking Sublink Page (Active)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_promotion_img_default",
+              "label": "Promotion Image (default)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_promotion_img_default_tablet",
+              "label": "Promotion Image (Tablet)"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_promotion_img_default_mobile",
+              "label": "Promotion Image (Mobile)"
+            },
+            {
+              "type": "text",
+              "id": "customer_promotion_title_default",
+              "label": "Promotion Title (default)"
+            },
+            {
+              "type": "text",
+              "id": "customer_promotion_subtitle_default",
+              "label": "Promotion Subtitle (default)"
+            },
+            {
+              "type": "textarea",
+              "id": "customer_promotion_content_default",
+              "label": "Promotion content (default)"
+            },
+            {
+              "type": "text",
+              "id": "customer_promotion_link_default",
+              "label": "Promotion Subtitle Link Text (default)"
+            },
+            {
+              "type": "product",
+              "id": "customer_promotion_product_link_default",
+              "label": "Promotion Subtitle Link page (default)"
+            },
+            {
+              "type": "checkbox",
+              "id": "customer_promotion",
+              "default": false,
+              "label": "Enable Recent Promotion"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_promotion_img",
+              "label": "Promotion Image"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_promotion_img_tablet",
+              "label": "Promotion Image"
+            },
+            {
+              "type": "image_picker",
+              "id": "customer_promotion_img_mobile",
+              "label": "Promotion Image"
+            },
+            {
+              "type": "text",
+              "id": "customer_promotion_title",
+              "label": "Promotion Title"
+            },
+            {
+              "type": "text",
+              "id": "customer_promotion_subtitle",
+              "label": "Promotion Subtitle"
+            },
+             {
+              "type": "textarea",
+              "id": "customer_promotion_content",
+              "label": "Promotion content"
+            },
+            {
+              "type": "text",
+              "id": "customer_promotion_link",
+              "label": "Promotion Subtitle Link Text"
+            },
+            {
+              "type": "page",
+              "id": "customer_promotion_page_link",
+              "label": "Promotion Subtitle Link page"
+            },
+            {
+              "type": "text",
+              "id": "customer_address_link",
+              "label": "Address Link Text"
+            }
+        ]       
+    }
+{% endschema %}

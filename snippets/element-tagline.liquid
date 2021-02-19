@@ -1,0 +1,10 @@
+<div class="tagline {{ tagline__bg }} {{ tagline__margin }} {{ tagline__class }}">
+    <div class="{{ tagline__logo }}">{% render 'logo-alerta' %}</div>
+    <h1 class="tagline__desc {{ tagline__desc }}">{{ tagline__desc_text }}</h1>
+    {% if tagline__button %}
+    <a class="btn tagline__btn {{ tagline__btn }}" href="{{tagline__url}}">
+        <h5 class="btn__text">{{tagline__buttonText}}</h5>
+    </a>    
+    {% endif %}
+    
+</div>

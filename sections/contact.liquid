@@ -1,0 +1,76 @@
+{% form 'contact', class: "form form--contact" %}
+
+    <!-- Success Message -->
+    {% if form.posted_successfully? %}
+        <p class="form-success">
+        {{ 'contact.form.post_success' | t }}
+        </p>
+    {% endif %}
+
+    <!-- Error Message -->
+    {{ form.errors | default_errors }}
+
+    <!-- Contact Form  -->
+    <div class="form__content form__content--row">
+        <div class="form__content form__content--half">
+            <label class="form__label" for="ContactFormFirstName">First Name</label>
+            <input class="form__input" 
+                type="text"
+                name="contact[first_name]"
+                id="ContactFormFirstName"
+                value="{% if customer %}{{ customer.first_name }}{% endif %}">
+        </div>
+        <div class="form__content form__content--half">
+            <label class="form__label" for="ContactFormLastName">Last Name</label>
+            <input class="form__input" 
+                type="text"
+                name="contact[last_name]"
+                id="ContactFormLastName"
+                value="{% if customer %}{{ customer.last_name }}{% endif %}">
+        </div>
+    </div>
+      
+    <div class="form__content">
+        <label class="form__label" for="ContactFormEmail">Email Address</label>
+        <input class="form__input" 
+            type="email"
+            name="contact[email]"
+            id="ContactFormEmail"
+            value="{% if customer %}{{ customer.email }}{% endif %}"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off">
+    </div>
+
+    <div class="form__content">
+        <label class="form__label" for="ContactFormPhone">Phone Number</label>
+        <input class="form__input" type="tel"
+            name="contact[phone]"
+            id="ContactFormPhone"
+            value="{% if customer %}{{ customer.phone }}{% endif %}"
+            pattern="[0-9\-]*">
+    </div>
+
+    <div class="form__content">
+        <label class="form__label"  for="ContactFormCompany">Compony Name</label>
+        <input class="form__input"
+            type="text"
+            name="contact[company]"
+            id="ContactFormCompany"
+            value="">
+    </div>
+
+    <div class="form__content">
+        <label class="form__label"  for="ContactFormMessage">Message</label>
+        <textarea class="form__input"
+            rows="10"
+            name="contact[body]"
+            id="ContactFormMessage">
+        </textarea>
+    </div>
+
+    <div class="form__action">
+        <input class="btn btn--small form__button form__button--primary" type="submit" value="Send">
+    </div>
+
+{% endform %}

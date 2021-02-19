@@ -1,0 +1,22 @@
+.shopify-challenge{
+    &__container{
+        height: 50vh !important;
+    }
+    &__message{
+        font-family: $font-secondary;
+        @include font-size(0.8em);
+    }
+    &__button{
+        @include font-size(0.8em);
+        width: 35vw;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        border: 0;
+        cursor: pointer;
+        padding: $padding-small;
+        @include breakpoint(xs){
+            width: 100%;
+        }
+    }
+}

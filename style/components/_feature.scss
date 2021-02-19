@@ -1,0 +1,77 @@
+.feature{
+    padding: 1rem;
+
+    @include breakpoint(lg-m){        
+        text-align: center;
+    }
+
+    &--business{
+        height: 100%;
+        padding: 0;
+        background-color: color(white);
+        box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s cubic-bezier(0.06, 0.8, 0.57, 0.96);
+        @include flexbox-col;
+        &:hover{
+            border-bottom: 10px solid color(red);
+            border-radius: 0 0 5px 5px;
+            transform: scale(1.03);
+            transition: transform 0.5s cubic-bezier(0.06, 0.8, 0.57, 0.96);
+            
+        }
+        
+        @include breakpoint(lg-m){        
+            margin: 1rem;
+            height: auto;
+        }
+    }
+
+    
+    &__container{
+        min-height: 30vh;
+        width: 100%;
+        background-color: blue;
+        box-sizing: border-box;
+        @include flexbox-row;
+    }
+
+    &__wrapper{
+        height: 100%;
+        padding: 3rem 0;
+    }
+
+    &__title{
+        
+        font-weight: $font-weight-regular;
+        padding: 1rem;
+
+        &--business{
+            padding: 0;
+            margin: 1.25rem 0.5rem;
+            text-align: center;
+            color: black;
+        }
+        
+    }
+
+    &__description{
+        font-weight: $font-weight-light !important;
+        padding: 1rem;
+        
+        &--business{
+            padding: 0;
+            margin: 3rem 1rem;
+            text-align: center;
+            font-size: 1rem !important;
+        }
+
+        @include breakpoint(lg-m){        
+            padding: 1rem 2.5rem;
+        }
+    }
+
+    &__icon{
+        @include flexbox-row;
+        margin: 2rem 0;
+    }
+}

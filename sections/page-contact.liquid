@@ -1,0 +1,130 @@
+
+<section class="alerta-contact-us-section flex-row small-col-r width height"> 
+    <div class="alerta-media-container flex-row">
+        {% comment %} {% render 'page-background' %}     {% endcomment %}
+        
+        <!-- Contact form (Shopify)-->
+        {% form 'contact' %}
+
+            <!-- Sceess Message -->
+            {% if form.posted_successfully? %}
+                <p class="form-success">{{ 'contact.form.post_success' | t }}</p>
+            {% endif %}
+
+            <!-- Error Message -->
+            {{ form.errors | default_errors }}
+
+
+
+            <div class="contact-us-label flex-row contact-margin">
+                <label class="contact-label" for="ContactFormName">{{ 'contact.form.name' | t }}</label>
+                <label class="contact-label" for="ContactFormPhone">{{ 'contact.form.phone' | t }}</label>
+            </div>
+
+            <div class="contact-us-input flex-row contact-margin">
+                <!-- Name -->
+                <input type="text"
+                name="contact[name]"
+                id="ContactFormName"
+                value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+                
+                <!-- Phone --> 
+                <input type="tel"
+                name="contact[phone]"
+                id="ContactFormPhone"
+                value="{% if form[phone] %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                pattern="[0-9\-]*">
+            </div>
+
+            <!-- EMAIL -->
+            <label class="contact-label contact-margin" for="ContactFormEmail">{{ 'contact.form.email' | t }}</label>
+            <input type="email"
+            name="contact[email]"
+            id="ContactFormEmail"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            class="contact-margin">
+
+            
+
+            <!-- Message -->
+            <label class="contact-label contact-margin" for="ContactFormMessage">{{ 'contact.form.message' | t }}</label>
+            <textarea rows="10"
+            name="contact[body]"
+            id="ContactFormMessage"
+            class="contact-margin">
+            {%- if form.body -%}
+            {{- form.body -}}
+            {%- endif -%}
+            </textarea>
+
+            <!-- Submit -->
+            <input type="submit" class="contact-us-submit contact-label shadow" value="{{ 'contact.form.send' | t }}">
+
+        {% endform %}
+
+    </div>
+
+    <div class="alerta-desc-container flex-row width" data-aos="fade-up" data-aos-easing="ease-in-out-cubic" data-aos-duration="500">
+        
+        <div class="alerta-contact-us-title flex b_margin">
+            <p class="section__title section__title--white">Contact Us</p>
+        </div>
+
+        <div class="alerta-contact-us-content flex-col">
+            
+            <p class="alerta-contact-desc">
+            At Track Patch, we believe customer service is critical to keeping our customers satisfied. If you have any questions or comments you would like to share with us, please do not hesitate to use the contact information on this page! 
+            We are constantly looking for ways to improve our business and make caregiving a little easier!
+            </p>
+
+            <div class="alerta-contact-info flex-col">
+
+                <div class="info-card alerta-phone flex-row">
+                    {% render 'icon-phone' %}
+                    <a class="info-link" href="tel:833-325-3782">
+                        <p class="">(833)-3ALERTA</p>
+                    </a>
+                    <span> / </span>
+                    <a class="info-link" href="tel:833-325-3782">
+                        <p class="">833-325-3782</p>
+                    </a>
+                </div>
+
+                <div class="info-card alerta-email flex-row">
+                    {% render 'icon-email' %}
+                    <a href="mailto:alerta@trackpatch.com" class="info-link">
+                        <p class="">alerta@trackpatch.com</p>
+                    </a>
+                </div>
+
+                <div class="info-card alerta-address flex-row">
+                    {% render 'icon-location' %}
+                    <a href="#alerta-map" class="info-link">
+                        <p class="">134 N Battlefield Blvd, Chesapeake, VA 23320</p>
+                    </a>
+                </div>
+
+                <div class="info-card alerta-social flex-row">
+                    <a href="{{settings.social_facebook_link}}" class="info-link">{% render 'icon-alerta-facebook' %}</a>
+                    <a href="{{settings.social_instagram_link}}" class="info-link">{% render 'icon-alerta-instagram' %}</a>
+                    <a href="{{settings.social_twitter_link}}" class="info-link"> {% render 'icon-alerta-twitter' %}</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</section>
+
+{% comment %} <section id="alerta-map" class="alerta-map-section flex-row">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.979233202467!2d-76.24324348442855!3d36.72305997973737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89babba044dc0011%3A0xd1c55dec1dbc7bac!2sTrack+Patch+1+Corporation!5e0!3m2!1sen!2sus!4v1561660114250!5m2!1sen!2sus" 
+    width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+</section> {% endcomment %}

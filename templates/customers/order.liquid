@@ -1,0 +1,119 @@
+<section class="alerta-order-detail-container flex-col">
+
+    <div class="alerta-order-detail felx-col">
+        <div id="admin_header" class="flex-col">
+            <p class="order_title card-title">Order {{ order.name }}</p>
+            <div class="order_date card-text">Placed on {{ order.created_at | date: "%B %d, %Y %I:%M%p" }}</div> 
+        </div>
+
+        {% if order.cancelled %}
+        <div id="order_cancelled" class="flex-row card-title small-col">
+            <p id="order_cancelled_title">Order Cancelled <span class="note">on {{ order.cancelled_at | date: "%B %d, %Y %I:%M%p" }}</span></p>
+            <p class="order_cancelled_note"> ({{ order.cancel_reason }})</p>
+        </div>
+        {% endif %}
+
+    
+        <div id="order_address" class="flex-row">
+            <!-- Billing address -->
+            <div id="order_payment" class="address flex-col card-text">
+                <p class="order_section_title card-title">Billing Address</p>
+                <p class="flex-col"><span class="note">Payment Status:</span> <span class="status_{{ order.financial_status }}">{{ order.financial_status }}</span></p>
+                <p>{{ order.billing_address.name }}</p>
+                <p>{{ order.billing_address.company }}</p>
+                <p>{{ order.billing_address.street }}</p>
+                <p>{{ order.billing_address.city }}, {{ order.billing_address.province }}</p>
+                <p>{{ order.billing_address.country }} {{ order.billing_address.zip }}</p>
+                <p>{{ order.billing_address.phone }}</p>
+            </div>
+
+            {% if order.shipping_address %}
+            <div id="order_shipping" class="address flex-col card-text">
+                <p class="order_section_title card-title">Shipping Address</p>
+                <p class="flex-col"><span class="note">Fulfillment Status:</span> <span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status }}</span></p>
+                <div class="address note">
+                    <p>{{ order.shipping_address.name }}</p>
+                    <p>{{ order.shipping_address.company }}</p>
+                    <p>{{ order.shipping_address.street }}</p>
+                    <p>{{ order.shipping_address.city }}, {{ order.shipping_address.province }}</p>
+                    <p>{{ order.shipping_address.country }} {{ order.shipping_address.zip }}</p>
+                    <p>{{ order.shipping_address.phone }}</p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <table id="order_details">
+
+            <thead>
+                <tr class="card-title">
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for line_item in order.line_items %}
+                <tr id="{{ line_item.id }}" class="{% cycle 'odd', 'even' %} card-text">
+                    <td class="flex-col">
+                        {{ line_item.title | link_to: line_item.product.url }} 
+                        
+                        {% if line_item.fulfillment %}
+                        <div class="shipping_status flex-col">
+                            <p>- Fulfilled {{ line_item.fulfillment.created_at | date: "%b %d" }}</p>
+                            
+                            {% if line_item.fulfillment.tracking_number %}
+                            <div class="shipping_tracking flex-row small-col">
+                                <p class="tracking_title">- Tracking Number :</p>
+                                <a class="trcaking_number" href="{{ line_item.fulfillment.tracking_url }}">{{ line_item.fulfillment.tracking_company }} #{{ line_item.fulfillment.tracking_number}}</a>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </td>
+                    <td class="sku note">{{ line_item.sku }}</td>
+                    <td class="money">{{ line_item.price | money }}</td>
+                    <td class="quantity cente">{{ line_item.quantity }}</td>
+                    <td class="total money">{{ line_item.quantity | times: line_item.price | money }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+
+            <tfoot> 
+                <tr class="order_summary note card-text">
+                    <td class="label" colspan="3">Subtotal:</td>
+                    <td class="total money">{{ order.subtotal_price | money }}</td>
+                    </tr>
+
+                    {% for discount in order.discounts %}
+                    <tr class="order_summary discount card-text">
+                        <td class="label" colspan="3">{{ discount.code }} Discount:</td>
+                        <td class="total money">{{ discount.savings | money }}</td>
+                    </tr>
+                    {% endfor %}
+
+                    {% for shipping_method in order.shipping_methods %}
+                    <tr class="order_summary note card-text">
+                        <td class="label" colspan="3">Shipping ({{ shipping_method.title }}):</td>
+                        <td class="total money">{{ shipping_method.price | money }}</td>
+                    </tr>
+                    {% endfor %}
+
+                    {% for tax_line in order.tax_lines %}
+                    <tr class="order_summary note card-text">
+                        <td class="label" colspan="3">Tax ({{ tax_line.title }} {{ tax_line.rate | times: 100 }}%):</td>
+                        <td class="total money">{{ tax_line.price | money }}</td>
+                    </tr>
+                    {% endfor %}
+
+                    <tr class="order_summary order_total card-text">
+                        <td class="label" colspan="3">Total:</td>
+                        <td class="total money">{{ order.total_price | money }}</td>
+                    </tr>
+            </tfoot>
+
+        </table>
+    </div>
+</section>

@@ -1,0 +1,154 @@
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+.FaqList{
+    width: 100%;
+    &__row{
+        margin: 5rem 0;
+    }
+    &__display{
+        min-height: 30vh;
+        border-radius: 5px;
+        @include flexbox-col;
+        @include breakpoint(lg-m){        
+            padding: 1rem;
+        }
+    }
+    &__init{
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        background-color: color(red);
+        @include flexbox-col;
+        ;
+
+        &--deactivate{
+            display: none;
+        }
+        
+    }
+    &__list{
+        width: 100%;
+        border-radius: 5px;
+        display: none;
+        opacity: 0;
+        padding: 1rem;
+        
+
+        &--activate{
+            @include flexbox-col;    
+            opacity: 1;
+            animation: fadeIn 2s;
+        }
+
+        &--detail{
+            padding: 0;
+            margin-top: 1.5rem;
+        }
+    }
+    &__content{
+        width: 100%;
+    }
+    &__container{
+        @include flexbox-row;
+        justify-content: flex-start;
+    } 
+    &__question{
+        margin: 1rem 0;
+        letter-spacing: 0.1rem;
+ 
+        &--detail{
+            @include flexbox-row;
+           
+        }
+    }
+    &__answer{
+ 
+        &--detail{
+            font-weight: 100 !important;
+            @include font-size(0.4em);
+        }
+    }
+    &__solution{
+        display: none;
+        opacity: 0;
+        width: 62%;
+        border-radius: 5px;
+        
+        
+        &--activate{
+            @include flexbox-col;    
+            opacity: 1;
+        }
+    }
+    &__message{
+        margin-bottom: 1rem;
+    }
+    &__navigation{
+        @include flexbox-row;
+        text-align: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top : 1rem;
+
+        @include breakpoint(lg-m){        
+            justify-content: space-evenly;
+        }
+    }
+    &__menu{
+        position: relative;
+        min-width: 28%;
+        min-height: 8rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid color(gray-light);
+        border-radius: 5px;
+        cursor: pointer;
+        @include flexbox-col;
+        @include breakpoint(lg-m){        
+            min-width: 35%;
+        }
+
+        &--selected{
+            border: 1.5px solid color(red);
+            
+        }
+    }
+    &__icon{
+        margin: 0 1rem;
+        svg{
+            width: 55px !important;
+        }
+        &--detail{
+            width: 1.5rem;
+            height: 1.5rem;
+            object-fit: contain;
+            margin: 0 1rem 0 0;
+        }
+    }
+    &__title{
+        text-align: center;        ;
+        @include font-size(0.6em);
+    
+        &--selected{
+            opacity: 1;
+        }
+
+        &--detail{
+            display: inline;
+            letter-spacing: 0.05rem;
+        }
+        &--detail-selected{
+            background-color: color(red);
+            color: color(white);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+    }
+}

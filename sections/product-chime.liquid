@@ -1,0 +1,287 @@
+<section class="section js-product-single">
+    <div class="grid__container">
+        <div class="grid__row grid__row--product-single">
+            {% render 'product-slider-single' %}                 
+            {% render 'product-info-single' %}
+        </div>
+</section>
+
+
+{% render 'video-chime' %}
+
+{% render 'product-usage', custom_class: 'product__usage--small'%}
+
+{% render 'product-benefit-single' %}
+
+{% render 'product-box' %}
+
+{% render 'product-review' %}
+
+{% render 'product-spec' %}
+
+{% render 'product-resource' %}
+
+{% render 'page-help' %}
+
+
+{% schema %}
+    {   
+         "blocks": [
+            {
+                "type": "benefit",
+                "name": "Benefit",
+                "settings": [
+                    {
+                       "id": "benefit_title",
+                       "type": "textarea",
+                       "label": "Title"
+                    },
+                    {
+                       "id": "benefit_desc_1",
+                       "type": "textarea",
+                       "label": "Benefit(1)"
+                    },
+                    {
+                       "id": "benefit_desc_2",
+                       "type": "textarea",
+                       "label": "Benefit(2)"
+                    },
+                    {
+                       "id": "benefit_desc_3",
+                       "type": "textarea",
+                       "label": "Benefit(3)"
+                    },
+                    {
+                       "id": "benefit_desc_4",
+                       "type": "textarea",
+                       "label": "Benefit(4)"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "benefit_is_video",
+                        "label": "Video?",
+                        "default": false,
+                        "info": "(Youtube Video)"
+                    },
+                    {
+                        "type": "video_url",
+                        "id": "benefit_video",
+                        "label": "Video URL",
+                        "accept": ["youtube"]
+                    },
+                    {
+                       "id": "benefit_order",
+                       "type": "text",
+                       "label": "Order"
+                    }
+                ]
+            },
+            {
+                "type": "box",
+                "name": "Box",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "box_image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "box_title",
+                        "label": "Title"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "box_primary",
+                        "label": "Primary?",
+                        "default": false
+                    }
+                ]
+            },
+            {
+                "type": "spec",
+                "name": "Specifications",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "spec_desc",
+                        "label": "Spec Desc"
+                    }
+                ]
+            },
+            {
+                "type": "resource",
+                "name": "Resource",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "resource_desc",
+                        "label": "Resource Desription"
+                    },
+                    {
+                        "type": "text",
+                        "id": "resource_link",
+                        "label": "Resource link(URL)"
+                    }
+                ]
+            },
+            {
+                "type": "event",
+                "name": "Event",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "event_name",
+                        "label": "Event name"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "event_image",
+                        "label": "Event icon/image"
+                    }
+                ]
+            },
+            {
+                "type": "video",
+                "name": "Video",
+                "settings": [
+                    {
+                        "type": "video_url",
+                        "id": "video_url",
+                        "label": "Section Video URL",
+                        "accept": ["youtube"]
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "video_poster",
+                        "label": "Poster Image"
+                    },
+                    {
+                        "type": "checkbox",
+                        "id": "video_primary",
+                        "label": "Primary Video?",
+                        "default": false
+                    }
+                ]
+            },
+            {
+                "type": "usage",
+                "name": "Actual Usage",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "usage_icon",
+                        "label": "Usage Icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "usage_description",
+                        "label": "Usage Description"
+                    }
+                ]
+            },
+            {
+                "type": "summary",
+                "name": "Summary",
+                "settings": [
+                   {
+                       "type": "text",
+                       "id": "summary",
+                       "label": "Summary"
+                   }
+                ]
+            }
+        ],
+
+        "name" : "Product Page",
+        "settings": [
+            {
+                "type": "text",
+                "id": "product_bedge",
+                "label": "Bedge"
+            },
+            {
+                "type": "image_picker",
+                "id": "product_logo",
+                "label": "Logo"
+            },
+            {
+                "type": "textarea",
+                "id": "product_title",
+                "label": "Title"
+            },
+            {
+                "type": "textarea",
+                "id": "product_desc",
+                "label": "Description"
+            },
+            {
+                "type": "checkbox",
+                "id": "product_summary",
+                "label": "Summary?",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "product_summary_col",
+                "label": "2 colum in summary?",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "product_option",
+                "label": "Option?",
+                "info": "If product have different product pages by option, please check the box and add option block",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "product_option_name",
+                "label": "Option name",
+                "info": "If it's neccessary."
+            },
+            {
+                "type": "checkbox",
+                "id": "product_section_video",
+                "label": "Section Video?",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "product_section_newsletter",
+                "label": "Section Newsletter?",
+                "default": false
+            },
+            {
+                "type": "text",
+                "id": "product_newsletter_title",
+                "label": "Newsletter Title"
+            },
+            {
+                "type": "text",
+                "id": "product_newsletter_sub_title",
+                "label": "Newsletter Sub Title"
+            },
+            {
+                "type": "text",
+                "id": "product_newsletter_button_text",
+                "label": "Newsletter Button Text"
+            },
+            {
+                "type": "textarea",
+                "id": "product_tagline",
+                "label": "Tagline Description"
+            },
+            {
+                "type": "text",
+                "id": "product_slider_btn_url",
+                "label": "Tagline Button URL"
+            },
+            {
+                "type": "text",
+                "id": "product_slider_btn_text",
+                "label": "Tagline Button Text"
+            }
+        ] 
+    }
+{% endschema %}

@@ -1,0 +1,33 @@
+{% for block in blocks %}
+    {% if block.type == "slider" %}
+    <section class="section section--padding"
+                style="background: -webkit-linear-gradient(top, {{block.settings.about_slider_top_color}} 50%, {{block.settings.about_slider_bottom_color}}  50%);">
+        <div class="grid__container">
+            <div class="grid__row grid__row--shadow slider slider--about">          
+                <!-- Content -->    
+                <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                    <div class="slider__content slider__content--about">
+                        <h2 class="slider__title slider__no-pre">{{block.settings.about_slider_title}}</h2>
+                        <a class="slider__container slider__container--about">
+                            <h3 class="slider__description slider__description--about slider__no-pre">{{block.settings.about_slider_desc}}</h3>
+                        </a>  
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="grid__col-xxl--7 grid__col-xl--7 grid__col-lg--7 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
+                    <div class="slider__image slider__image--about">
+                        <picture>
+                            <source srcset="{{block.settings.about_slider_image | img_url: 'master'}}" media="(min-width: 1366px)" sizes="1920px">
+                            <source srcset="{{block.settings.about_slider_image_tablet | img_url: 'master'}}" media="(min-width: 768px)" sizes="694px">
+                            <source srcset="{{block.settings.about_slider_image_mobile | img_url: 'master'}}" media="(min-width: 320px)" sizes="574px">
+                            <img scrset="{{block.settings.about_slider_image | img_url: 'master'}}" alt="{{block.settings.about_slider_image_alt}}">
+                        </picture>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+{% endfor %}

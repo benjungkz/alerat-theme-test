@@ -1,0 +1,97 @@
+.btn{
+    width: 35vw;
+    padding: $padding-xsmall;
+    border-radius: $border-radius-default;
+    background-color: color(red);
+    color: color(white);
+    margin-bottom: $margin-xsmall;
+    @include flexbox-row;
+
+    @include breakpoint(xs){
+        width: 80vw;
+    }
+    &--small{
+        width: 15vw;
+    }
+    &--flexible{
+        width: 90%;
+    }
+    &--upsell{
+        width: 100%;
+    }
+    &--checkout{
+        width: 100%;
+        color: color(white);
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0.03em;
+        line-height: 1.5em;
+        border: 0;
+        @include font-size(0.8em);
+        cursor: pointer;
+
+        &:after{
+            border: 0;
+        }
+    }
+    &--bar{
+        margin:0;
+
+    }
+    &--sub{
+        background-color: color(white);
+        border: 1px solid color(gray-light);
+        color: color(black-light);
+    }
+
+    &--cart{
+        color: color(white);
+        font-family: $font-secondary;
+        text-transform: uppercase;
+    }
+
+    &--support{
+        justify-content: flex-start;
+        width: 100%;
+        &-only-image{
+            padding: 0;
+            width: 100%;
+            background: transparent;
+            justify-self: center;
+            @include flexbox-row;
+        }
+    }
+
+    &__text{
+        color:inherit;
+        text-align: center;
+        font-family: $font-secondary;
+        text-transform: uppercase;
+
+        &--support{
+            width: 100%;
+            font-family: $font-secondary;
+            font-weight: $font-weight-light;
+            white-space: pre;
+        }
+
+        &--pricing{
+            width: 100%;
+            font-family: $font-secondary;
+        }
+    }
+
+    &__icon{
+        margin-left: $margin-xxsmall;
+        
+        &--support{
+            margin-left: $margin-small;
+        }
+    }
+    &__group{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1.5fr 0.3fr 1fr;
+    }
+}

@@ -1,0 +1,221 @@
+
+<section class="section">
+  <div class="grid__container">
+    <div class="grid__row">
+      <!-- Hero Image -->
+      <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--6 grid__col-md--12 grid__col-xs--12 login__container--inactive">
+          <img class="login__img" src="{{section.settings.login_hero_img | img_url: 'master'}}" alt="Alerta Find">
+      </div>
+
+      <!-- Blank -->
+      <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0">
+      </div>
+
+      <!-- Login -->
+      <div id="sign-in" class="grid__col-xxl--4 grid__col-xl--4 grid__col-lg--6 grid__col-md--10 grid__col-xs--12 grid__col--flex-col login__container--active">
+        
+        <div class="login__content">
+          <a class="login__link login__link--logo" href="/">
+            {% render 'logo-alerta' %}
+          </a>
+          <h1 class="login__title">{{section.settings.login_sign_in_title}}</h1>
+          <div class="login__notification">
+            <h6 class="login__message">{{section.settings.login_sign_up_title}}</h6>
+            <a class="login__link" href="/account/register"><h6>{{section.settings.login_sign_up_msg}}</h6></a>
+          </div>
+        </div>
+
+        <!-- form -->
+        {% form 'customer_login', class: "form form--login" %}
+
+          <!-- Error msg -->
+          {{ form.errors | default_errors }}
+      
+          <!-- Email -->
+          <div class="form__content">
+            <label class="form__label" for="customer_email">Email Address</label>
+            <input class="form__input" type="email" value="" name="customer[email]"/>
+          </div>
+
+          <!-- Password -->
+          {% if form.password_needed %}
+            <div class="form__content">
+              <label class="form__label" for="customer_password" >Password</label>
+              <input class="form__input form__input--password" type="password" value="" name="customer[password]"/>
+            </div>
+          {% endif %}
+
+          <!-- Button -->
+          <div class="form__action">
+            
+            <input class="btn form__button" type="submit" value="{{section.settings.login_sign_in_button_text}}">
+            <a class="btn btn--sub form__button" onclick="showRecoverPasswordForm();return false;">{{section.settings.login_reset_button_text}}</a>
+          </div>
+
+        {% endform %}
+
+        <div class="login__social">
+
+          <!-- Divider -->
+          <hr class="login__divider">
+                        
+        </div>
+
+        <!-- Social Login -->
+        <div class="one-click-social-login"></div>
+        
+        <!-- Guest Login -->
+        {% if shop.checkout.guest_login %}
+        <div class="login__guest">
+          <h6 class="login__title login__title--guest">{{section.settings.login_guest_title}}</h6>
+          {% form 'guest_login', class: "form form--guest" %}
+          <input class="btn btn--small form__button form__button--secondary" type="submit" value="Continue" />
+          {% endform %}
+        </div>
+        {% endif %}
+      
+      </div>
+      
+      <!-- Reset Password -->
+      <div id="recover-password" class="grid__col-xxl--4 grid__col-xl--4 grid__col-lg--4 grid__col-md--10 grid__col-xs--12 grid__col--flex-col login__container--active" style='display:none;'>
+        
+        <div class="login__content">
+          <a class="login__link" href="/">
+            {% render 'logo-alerta' %}
+          </a>
+          <h1 class="login__title">{{section.settings.login_recover_pw_title}}</h1>
+          <div class="login__notification">
+            <h5 class="login__message">{{section.settings.login_recover_pw_msg}}</h5>
+          </div>
+        </div>
+
+        <!-- form -->
+        {% form 'recover_customer_password', class: "form form--recover" %}
+
+          <!-- Error msg -->
+          {{ form.errors | default_errors }}
+      
+          <!-- Email -->
+          <div class="form__content">
+            <label class="form__label" for="customer_email">Email Address</label>
+            <input class="form__input" type="email" value="" name="email" id="recover-email"/>
+          </div>
+
+          <!-- Button -->
+          <div class="form__action">
+            <input class="btn form__button" type="submit" value="{{section.settings.login_recover_pw_button_text}}">
+             <a class="btn btn--sub form__button" onclick="hideRecoverPasswordForm();return false;">{{section.settings.login_recover_pw_cancel_text}}</a>
+          </div>
+
+        {% endform %}
+
+      </div>
+
+      <!-- Blank -->
+      <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Login Flow -->
+<script type="text/javascript">
+  function showRecoverPasswordForm() {
+    console.log("Show password Recover Form");
+    document.getElementById('recover-password').style.display = 'flex';
+    //document.getElementById('customer').style.display='none';
+    document.getElementById('sign-in').style.display='none';
+    
+  }
+
+  function hideRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'none';
+    //document.getElementById('customer').style.display = 'block';
+    document.getElementById('sign-in').style.display='flex';
+  }
+
+  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+</script>
+
+
+{% schema %}
+    {
+        "name": "Login",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "login_logo_img",
+                "label": "Logo"
+            },
+            {
+                "type": "image_picker",
+                "id": "login_hero_img",
+                "label": "Hero Image"
+            },
+            {
+                "type": "text",
+                "id": "login_sign_in_title",
+                "label": "Sign in Title",
+                "info": "(Login Page Title)"
+            },
+            {
+                "type": "text",
+                "id": "login_sign_up_title",
+                "label": "Sign Up Title"
+            },
+            {
+                "type": "text",
+                "id": "login_sign_up_msg",
+                "label": "Sign Up Message"
+            },
+            {
+                "type": "text",
+                "id": "login_reset_button_text",
+                "label": "Reset Password Button Text"
+            },
+            {
+                "type": "text",
+                "id": "login_sign_in_button_text",
+                "label": "Sign In button Text"
+            },
+            {
+                "type": "text",
+                "id": "login_recover_pw_title",
+                "label": "Reset Password Title"
+            },
+            {
+                "type": "text",
+                "id": "login_recover_pw_msg",
+                "label": "Reset Password Message"
+            },
+            {
+                "type": "text",
+                "id": "login_recover_pw_button_text",
+                "label": "Reset Password Submit button Text"
+            },
+            {
+                "type": "text",
+                "id": "login_recover_pw_cancel_text",
+                "label": "Reset Password Cancel button Text"
+            },
+            {
+                "type": "text",
+                "id": "login_guest_title",
+                "label": "Guest Login Title"
+            },
+            {
+                "type": "text",
+                "id": "login_guest_submit_button_text",
+                "label": "Guest Login Submit button Text"
+            },
+            {
+                "type": "color",
+                "id": "login_error_msg_color",
+                "label": "Login Error Message Color",
+                "default": "#D12220"
+            }
+        ]       
+    }
+{% endschema %}

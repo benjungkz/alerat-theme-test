@@ -1,0 +1,101 @@
+
+{% assign selected_collection = collections['alerta-all-product'] %}
+{% assign exceptional_product_name = 'Get Started Kit' %}
+
+<!-- Dropdown -->
+
+<div class="grid__container">
+    <div class="grid__row">
+        <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">  
+
+            <div class="swiper__container dropdown__slider--m">
+                 <!-- Dropdown -->
+                <div class="js-dropdown-slider-m">
+
+                
+                    <!-- pagination -->
+                    <div class="swiper-pagination dropdown__pagination dropdown__pagination--m"></div>  
+
+                    <div class="swiper-wrapper">
+                    {% for product in selected_collection.products %}
+                        <div class="swiper-slide dropdown__container">
+                            <div class="dropdown__card dropdown__card--m">
+                                
+                                <a href="{{product.url}}" class="dropdown__header">
+                                    <!-- Image -->
+                                    <img class="dropdown__image dropdown__image--m" 
+                                        src="{{product.featured_image | img_url: 'master' }}" 
+                                        alt="{{product.description | strip_html | strip_newlines }}">       
+                                    
+                                  
+                                    
+                                    <!-- bedge -->   
+                                    {% for tag in product.tags %}
+                                        {% if tag contains 'bedge' %}
+                                            {% assign tag_words = tag | split: ' ' %}
+                                            <h6 class="dropdown__tag dropdown__tag--m">{{ tag_words[1] | upcase }}</h6>        
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                   
+                                </a>
+
+                                <a href="{{product.url}}" class="dropdown__body">
+                                     
+                                    <!-- Title -->   
+                                    {% if product.title contains 'Alerta' %}
+                                        {% assign title_words = product.title | split: ' ' %}
+                                        <h2 class="dropdown__title dropdown__title--m">{{ title_words[1] | downcase }}</h2>
+                                    {% elsif product.title == exceptional_product_name %}
+                                        <h2 class="dropdown__title dropdown__title--m">patch & wedge</h2>
+                                    {% endif %}
+                               
+                                    <!-- Sub title -->
+                                    {% for tag in product.tags %}
+                                        {% if tag contains 'subtitle' %}
+                                            {% assign tag_words = tag | split: ':' %}
+                                            <h4 class="dropdown__subtitle">{{tag_words[1] | lstrip }}</h4>            
+                                        {% endif %}
+                                    {% endfor %}
+                                   
+
+                                    <!-- Price -->
+                                    {% if product.compare_at_price_varies %}
+                                        {% if product.compare_at_price_min > product.price_min %}
+                                            <div class="dropdown__price--wrap">
+                                                <h5 class="dropdown__price dropdown__price--compare">{{ product.compare_at_price_min | money }}</h5>  
+                                                <h5 class="dropdown__price">Start {{ product.price_min | money }}{{ price_affix }}</h5>  
+                                            </div>
+                                        {% else %}
+                                            <h5 class="dropdown__price">Start {{ product.compare_at_price_min | money }}{{ price_affix }}</h5>
+                                        {% endif %}
+                                    {% else %}
+                                            <h5 class="dropdown__price">{{ product.compare_at_price_min | money }}{{ price_affix }}</h5> 
+                                    {% endif %}
+                                    
+
+                                    <!-- Button -->
+                                    <a class="btn btn--flexible dropdown__button dropdown__button--more" 
+                                        href="{{product.url}}">
+                                        <h5 class="dropdown__text dropdown__text--white">SHOP</h5>
+                                    </a>  
+
+                                </a>
+                                
+                                {% comment %} <img class="dropdown__event" 
+                                    src="https://cdn.shopify.com/s/files/1/1661/6207/files/img-happy-new-year.png" alt="Happy new year 2021"> {% endcomment %}
+                                    
+                            </div>   
+                        </div>
+                    {% endfor %}
+                    </div>
+
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-next dropdown__navigation"></div>
+                    <div class="swiper-button-prev dropdown__navigation"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

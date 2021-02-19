@@ -1,0 +1,98 @@
+<!-- Slider -->
+{% render 'about-slider' with section.blocks as blocks %}
+
+
+<!-- Team -->
+<section class="section section--bg section--padding">
+    <div class="grid__container">
+        <div class="grid__row">    
+            <div class="grid__col-xxl--8 grid__col-xl--8 grid__col-lg--8 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--team">
+                {% render 'about-member' with section.blocks as blocks %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {   
+        "blocks": [
+            {
+                "type": "team",
+                "name": "Team",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "about_team_piture",
+                        "label": "Team Picture"
+                    },
+                    {
+                        "type": "text",
+                        "id": "about_team_title",
+                        "label": "Position Title" 
+                    },
+                    {
+                        "type": "text",
+                        "id": "about_team_name",
+                        "label": "Name" 
+                    }
+                ]
+            },
+            {
+                "type": "slider",
+                "name": "About Slider",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "about_slider_image",
+                        "label": "Slider Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "about_slider_image_tablet",
+                        "label": "Slider Image (for tablet)"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "about_slider_image_mobile",
+                        "label": "Slider Image (for Mobile)"
+                    },
+                    {
+                       "id": "about_slider_image_alt",
+                       "type": "text",
+                       "label": "Slider Image Alt"
+                    },
+                    {
+                       "id": "about_slider_title",
+                       "type": "textarea",
+                       "label": "Slider Title"
+                    },
+                    {
+                       "id": "about_slider_desc",
+                       "type": "textarea",
+                       "label": "Slider Description"
+                    },
+                    {
+                        "type": "color",
+                        "id": "about_slider_top_color",
+                        "label": "Slider Top Color"
+                    },
+                    {
+                        "type": "color",
+                        "id": "about_slider_bottom_color",
+                        "label": "Slider Bottom Color"
+                    }
+                ]
+            }
+        ],
+
+        "name" : "About Us Page",
+        "settings": [
+          {
+              "type": "text",
+              "id": "about-title",
+              "label": "Team Section Title"
+          }
+        ] 
+    }
+{% endschema %}

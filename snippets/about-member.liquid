@@ -1,0 +1,17 @@
+{% for block in blocks %}
+    {% if block.type == "team" %}
+        <div class="card card--team">
+           <img class="card__image card__image--team" src="{{block.settings.about_team_piture | img_url: 'master'}}" alt="">
+           <div class="card__container card__container--team">
+                <div class="card__header card__header--team">
+                    <h4 class="card__title">{{block.settings.about_team_name}}</h4>
+                </div>
+                <div class="card__body card__body--team">
+                    <h6 class="card__subtitle">{{block.settings.about_team_title}} </h6>
+                </div>
+            </div>
+        </div>          
+    {% endif %}
+{% endfor %}
+
+

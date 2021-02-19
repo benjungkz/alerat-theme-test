@@ -1,0 +1,6 @@
+{% for t in tags %}{% if t == 'recurring_order' %}{% assign iro = true %}{% endif %}{% if tag == 'Initial Subscription' %}{% assign iio = true %}{% endif %}{% endfor %}
+{% if iro and iio != true and shipping_method.title == 'Shipping not required' %}
+<h1 style="padding: 1rem !important; font-weight: 800; font-size: 30px; background-color:yellow; text-align: center">SHIPPING NOT REQUIRED</h1>
+{% endif %}
+
+{% if iro and iio != true and shipping_method.title == 'Shipping not required' %}P{% else %}#{% endif %}

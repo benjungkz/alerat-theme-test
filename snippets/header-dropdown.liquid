@@ -1,0 +1,73 @@
+<!-- Dropdown -->
+<div class="grid__container grid__container--none dropdown__inactive js-dropdown">
+    <div class="grid__row">
+        <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">  
+
+            <div class="swiper__container dropdown__slider">
+                 <!-- Dropdown -->
+                <div class="dropdown js-dropdown-slider">
+                    <div class="swiper-wrapper">
+                    {% for block in section.blocks %}
+                        {% if block.type == "dropdown" %}
+                        
+                            <div class="swiper-slide dropdown__container animate__animated animate__pulse">
+                                
+                                <div class="dropdown__card">
+                                    
+                                    <a href="{{block.settings.dropdown_main_button_url}}" class="dropdown__wrap js-dropdown__wrap">
+                                        <!-- Image -->
+                                        <img class="dropdown__image" 
+                                            src="{{block.settings.dropdown_product_image | img_url: 'master' }}" 
+                                            alt="{{block.settings.dropdown_product_image_alt}}">       
+                                        
+                                        {% comment %} <!-- Button -->
+                                        <div class="dropdown__buttons dropdown__buttons--inactive js-dropdown__buttons">
+                                             <a class="btn btn--flexible dropdown__button dropdown__button--more" 
+                                                href="{{block.settings.dropdown_main_button_url}}">
+                                                <p class="dropdown__text dropdown__text--white">{{block.settings.dropdown_main_button_text}}</p>
+                                            </a>
+                                            {% if block.settings.dropdown_sub_button %}
+                                            <a class="btn btn--flexible btn--sub dropdown__button dropdown__button--shop" 
+                                                href="{{block.settings.dropdown_sub_button_url}}">
+                                                <p class="dropdown__text">{{block.settings.dropdown_sub_button_text}}</p>
+                                            </a>
+                                            {% endif %}       
+                                        </div> 
+                                         {% endcomment %}
+
+                                        <!-- Tag -->   
+                                        {% if block.settings.dropdown_tag %}
+                                            <p class="dropdown__tag">{{block.settings.dropdown_tag_text}}</p>
+                                        {% endif %}
+
+                                    </a>
+
+                                    <a class="dropdown__link" href="{{block.settings.dropdown_main_button_url}}">
+                                        <h5 class="dropdown__title">{{block.settings.dropdown_title}}</h5>
+                                    </a>
+                                    <a class="dropdown__link" href="{{block.settings.dropdown_main_button_url}}">
+                                        <h6 class="dropdown__desc">{{block.settings.dropdown_sub_title}}</h6>  
+                                    </a>  
+                                    
+                                        {% comment %} <!-- Hoilday Event -->
+                                    <img class="dropdown__event" 
+                                    src="https://cdn.shopify.com/s/files/1/1661/6207/files/img-happy-new-year.png" alt="santa red hat"> {% endcomment %}
+                                </div>
+                                
+                            </div>
+                      
+                        {% endif %} 
+                    {% endfor %}
+                    </div>
+
+                    <!-- pagination -->
+                    <div class="swiper-pagination dropdown__pagination"></div>  
+
+                    <!-- pagination -->
+                    <div class="swiper-button-next dropdown__navigation"></div>
+                    <div class="swiper-button-prev dropdown__navigation"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

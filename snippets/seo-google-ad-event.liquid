@@ -1,0 +1,11 @@
+<!-- Event snippet for Purchase conversion page -->
+{% if first_time_accessed %}
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-704012748/o557CLiO7MsBEMzD2c8C',
+      'transaction_id': '{{ order_number  }}',
+      'currency' : '{{ shop.currency }}',
+      'value' : {{ checkout.subtotal_price | money_without_currency }}
+  });
+</script>
+{% endif %}

@@ -1,0 +1,48 @@
+.ac{
+    border-radius: 5px;
+    &--detail{
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid color(gray-light);
+    }
+}
+.ac>.ac-q{
+    padding: 1rem 2rem;
+    @include font-size(0.6em);
+    color: color(red);
+
+    &--detail{
+        padding: 1rem 0;
+    }
+  
+}
+.ac>.ac-a{
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    white-space: pre-wrap;
+    @include font-size(0.45em);  
+}
+
+.ac.is-active>.ac-q{
+    border-radius: 0 0 15px 15px;
+}
+.ac.is-active>.ac-a{
+    height: auto !important;
+    margin: 1rem 2rem;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    @include font-size(0.45em);  
+
+    &--detail{
+        line-height: 22px;
+    }
+    
+
+    //transition: height 2s ease !important;
+
+}
+
+.ac-n{
+    @include font-size(0.23em);
+    font-weight: 100;  
+}
