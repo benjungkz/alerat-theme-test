@@ -9,20 +9,20 @@ const ProductRelation = {
                 isExtraItem: true,
                 isAdditionalItmes: true,
                 hasIcon: true,
-                variantId: null,
+                variantId: 34238005379212,
                 handle: 'alerta-find-subscription',
                 properties:{
-                    'frequency_num': null,
+                    'frequency_num': 1,
                     'frequency_type': 3,
                     'frequency_type_text': 'Month(s)',
-                    'group_id': null
+                    'group_id': 167286
                 },
                 name: 'Monthly',
                 price: 999,
                 priceSuffix: '/mo',
                 description :'Find Device + Mobile App Activation Service 7/24 Customer Center Access 24 months contract',
                 extraItem: {
-                    variantId: null,
+                    variantId: 34444280889484,
                     name: 'Activation Fee',
                     price: 9900,
                     description: '(one-time)'
@@ -42,7 +42,7 @@ const ProductRelation = {
                 isExtraItem: false,
                 isAdditionalItmes: true,
                 hasIcon: false,
-                variantId: null,
+                variantId: 34209197031564,
                 handle: '',
                 properties: null,
                 name: '2-Year Service',

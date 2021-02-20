@@ -14,8 +14,10 @@ const GetCartAPI = ({ cartCardList, getItems }) => {
             .then( res => res.json())
             .then(
                 (result)=>{
+                    console.log(result.items);
                     // State(redux)
                     getItems(result.items)
+
                 },
                 (error)=>{
                     console.log(error)
@@ -35,7 +37,7 @@ const GetCartAPI = ({ cartCardList, getItems }) => {
 }
 
 // Map redux state to componet props
-const mapStateToProps = state =>( { cartCardList: state.cartItem } )
+const mapStateToProps = state =>( { cartCardList: state } )
 
 
 // Map 'new redux state by dispath' to componet props 

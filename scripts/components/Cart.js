@@ -14,8 +14,7 @@ const Cart = () => {
                 <GetCartAPI/>
             </div>
             <div className="cart__footer">
-                <input type="submit" name="checkout" value="Checkout"/>
-                    
+                <input className="cart__checkout" type="submit" name="checkout" value="Checkout"/>
             </div>
 
         </form>

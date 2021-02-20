@@ -37,6 +37,7 @@ const ProductInfoForOptionItem = ({handle}) =>{
                         {option.hasIcon ? <h3>STAR</h3> : null}
                         <h3>{option.name}</h3>
                     </div>
+
                     <div className="productOption__body">
                         <h1>{MoneyFilter(option.price)}</h1>
                         <span>{option.priceSuffix}</span>
@@ -51,6 +52,7 @@ const ProductInfoForOptionItem = ({handle}) =>{
                         }
                         <p>{option.description}</p>
                     </div>
+
                     <div className="productOption__footer">
                         {option.isTermAndCondtions?
                             <p>Term And Conditions</p>
@@ -58,6 +60,7 @@ const ProductInfoForOptionItem = ({handle}) =>{
                             null
                         }
                     </div>
+                    
                 </div>
 
                

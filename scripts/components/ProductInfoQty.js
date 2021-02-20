@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from 'react'
-import { addItem, removeItem, updateItem } from '../store/CartStore'
+import ProductRelation from '../static/ProductRelation';
+import { addItem, updateItem } from '../store/ProductStore'
 import { connect } from "react-redux"
 
-const ProductQty = ({id, quantity, addItem, removeItem, updateItem }) => {
-    const [ qty, setQty ] = useState(0);  
-
+const ProductQty = ({ handle, addItem, updateItem }) => {
+    const [ qty, setQty ] = useState(1);
+    
     useEffect(()=>{
-        console.log(quantity);
-        setQty(quantity)
+        addItemToCartHandelr();
     },[])
 
     // Plus handler
     const plusHandler = () => {
         // Change qty
         setQty(qty + 1) 
-        
-        console.log(qty)
-
-        // Update Cart
-        updateItemFromCartHandelr(true);
-
+        updateItemToCartHandler(qty + 1)
     }
 
     // Minus handler
@@ -27,19 +22,75 @@ const ProductQty = ({id, quantity, addItem, removeItem, updateItem }) => {
         if( qty > 1){
             // Minus qty
             setQty(qty - 1)
-            updateItemFromCartHandelr(false);
+            updateItemToCartHandler(qty - 1)
         }
+
     }
 
     // Cart Handler
-    const updateItemFromCartHandelr = (isPlus)=>{
-        let quantity;
-        isPlus ?  quantity = qty + 1 : quantity = qty - 1
-        const setItem = {
-            id: id,
-            quantity: quantity
+    const addItemToCartHandelr = ()=>{
+
+        const { variantId, properties, extraItem, isSubscription, isExtraItem } = ProductRelation[handle].options.filter(option=>option.handle == handle)[0]
+        
+        const productStage = 
+        
+        isSubscription? 
+        {
+            id: variantId,
+            quantity: qty,
+            properties: properties
         }
-        updateItem(setItem);
+        :
+        {
+            id: variantId,
+            quantity: qty
+        }
+
+        const extraItemStage = 
+
+        isExtraItem?
+        {
+            id: extraItem.variantId,
+            quantity: qty,
+        }
+        :
+        null
+
+        addItem([productStage, extraItemStage])
+    }
+
+    const updateItemToCartHandler = (qty) => {
+           
+        const { variantId, properties, extraItem, isSubscription, isExtraItem } = ProductRelation[handle].options.filter(option=>option.handle == handle)[0]
+        
+        const productStage = 
+        
+        isSubscription? 
+        {
+            id: variantId,
+            quantity: qty,
+            properties: properties
+        }
+        :
+        {
+            id: variantId,
+            quantity: qty
+        }
+
+        const extraItemStage = 
+
+        isExtraItem?
+        {
+            id: extraItem.variantId,
+            quantity: qty,
+        }
+        :
+        null
+
+        console.log(productStage);
+
+        updateItem(productStage)
+        updateItem(extraItemStage)
     }
   
     return(
@@ -55,7 +106,6 @@ const ProductQty = ({id, quantity, addItem, removeItem, updateItem }) => {
 function mapDispatchToProps( dispatch ){
     return{
         addItem: (item)=>dispatch(addItem(item)),
-        removeItem: (id)=>dispatch(removeItem(id)),
         updateItem: (item)=>dispatch(updateItem(item))
     }
 }

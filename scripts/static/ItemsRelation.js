@@ -5,6 +5,7 @@ const ItemsRelation = {
     {
         isSubscription: false,
         subscriptionType: null,
+        isExtraItem: false,
         hasExtraItem: false,
         hasMessage: false,
         message: null,
@@ -24,12 +25,14 @@ const ItemsRelation = {
     'alerta-find-subscription':
     {
         isSubscription: true,
+        isExtraItem:false,
         subscriptionType: 'normal',
         priceSuffix: '/month',
         hasMessage: true,
         message : "This is for the next 23 months.  No charge first month.",
         hasExtraItem: true,
         extraItem : {
+            variantId : 34444280889484,
             handle: 'alerta-find-montnly-fee',
             priceSuffix: '(one-time charge)'
         },
@@ -41,7 +44,28 @@ const ItemsRelation = {
             expansion: "expansion"
         },
         
-    }
+    },
+    'find-activation-fee': 
+    {
+        isSubscription: false,
+        subscriptionType: null,
+        isExtraItem:true,
+        hasExtraItem: false,
+        hasMessage: false,
+        message: null,
+        extraItem : {
+            id: null,
+            priceSuffix: null
+        },
+        hasNote: false,
+        note : {
+            title: null,
+            description: null,
+            hasExpansion: null,
+            expansion: null,
+        },
+        priceSuffix: null
+    },
 
 }
 

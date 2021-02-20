@@ -18,14 +18,14 @@ const CartCardList = ({cartCardList}) => {
                 <div key={index} className="cart__group">
                     <CartCardForItem item={item}/>            
                       
-                    {
+                    {/* {
                         ItemsRelation[item.handle].hasExtraItem ?
                         <CartCardForExtraItem 
                             mainItemHandle={item.handle}
                             extraItemHandle={ItemsRelation[item.handle].extraItem.handle} />
                         :
                         null
-                    }   
+                    }    */}
                     {
                         ItemsRelation[item.handle].hasNote ?
                         <CartCardForNote

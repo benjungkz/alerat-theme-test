@@ -5,7 +5,7 @@ import { get } from '../store/CartStore';
 
 const UPDATE_URL = "/cart/update.js"
 
-const UpdateCartAPI = ({ getItems, id, qty}) => {
+const UpdateCartAPI = ({ getItems, itemStage}) => {
 
     
     // Update Handelr
@@ -14,9 +14,7 @@ const UpdateCartAPI = ({ getItems, id, qty}) => {
             method: 'POST',
             headers: { 'Content-Type' : 'application/json'},
             body: JSON.stringify({
-               updates: {
-                   [id] : qty
-               }
+               updates: itemStage
             })
         }    
     
@@ -27,7 +25,8 @@ const UpdateCartAPI = ({ getItems, id, qty}) => {
                     console.log(result.items);
                     
                     // State(redux)
-                    getItems([...result.items])
+                    getItems(result.items)
+
                 },
 
                 (error)=>{
@@ -39,7 +38,7 @@ const UpdateCartAPI = ({ getItems, id, qty}) => {
     // init
     useEffect(()=>{
         updateCartHandler();
-    }, [qty])
+    }, [itemStage])
 
     return(
       null

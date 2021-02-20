@@ -7,14 +7,22 @@ import UpdateCartAPI from '../api/UpdateCartAPI'
 import { connect } from "react-redux";
 import { remove } from '../store/CartStore';
 
-const CardCardForItem = ({item, onRemoveBtnClick}) => {
+const CardCardForItem = ({item}) => {
     const [ update, setUpdate ] = useState(false)
-
+    const [ itemStage, setItemStage ] = useState({})
 
     // Delete Handler
-    const DeleteCartItemHandler = () => {
-       
-        setUpdate(true)    
+    const DeleteCartItemHandler = (id, handle) => {
+        let stage = {}
+        stage = {...stage, [id]: 0}
+        
+        ItemsRelation[handle].hasExtraItem ? 
+        stage = {...stage, [ItemsRelation[handle].extraItem.variantId]: 0}
+        :
+        null
+
+        setUpdate(true)   
+        setItemStage(stage)
         //console.log("update : " + update)    
 
     } 
@@ -28,7 +36,7 @@ const CardCardForItem = ({item, onRemoveBtnClick}) => {
             <div>
                 <h1>{item.title}</h1>
                 <h3>
-                    {MoneyFilter(item.price)}
+                    {MoneyFilter(item.price * item.quantity)}
                     {PriceSuffixFilter(ItemsRelation[item.handle].priceSuffix)}
                 </h3>
                 {
@@ -37,35 +45,37 @@ const CardCardForItem = ({item, onRemoveBtnClick}) => {
                     :
                     null
                 }
-                <CartQty 
-                    quantity={item.quantity}
-                    id = {item.id}
-                />
-                <button onClick={ ()=>{ DeleteCartItemHandler() } }>[Delete]</button>
                 
+                {
+                    !ItemsRelation[item.handle].isExtraItem?
+                    <CartQty 
+                        quantity={item.quantity}
+                        id = {item.id}
+                        hasExtraItem={ItemsRelation[item.handle].hasExtraItem}
+                        handle = {item.handle}
+                    />
+                    : null
+                }
 
+                {
+                    !ItemsRelation[item.handle].isExtraItem?
+                    <div  onClick={ ()=>{ DeleteCartItemHandler(item.id, item.handle) } }>[Delete]</div>
+                    :
+                    null
+                }
             </div>
         </div>
     
         { update? 
                 <UpdateCartAPI 
-                    id={item.id} 
-                    qty={0} 
-                            /> 
-                : null }
+                    itemStage={itemStage} 
+                    /> 
+                : null 
+        }
     
         </>
         
     )
 }
-
-// // It's not neceesary to have state on redux
-// function mapDispatchToProps( dispath, ownProps){
-//     return{
-//         onRemoveBtnClick : () => dispath(remove(ownProps.item.id))
-//     }
-// }
-
-//export default connect(null, mapDispatchToProps) (CardCardForItem);
 
 export default CardCardForItem

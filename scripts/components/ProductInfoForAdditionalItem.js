@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import ProductInfoQty from './ProductInfoQty';
+import ProductInfoExtraQty from './ProductInfoExtraQty';
 import MoneyFilter from '../utils/MoneyFilter'
-import { addItem, removeItem } from '../store/CartStore'
+import { addItem, removeItem } from '../store/ProductStore'
 import { connect } from "react-redux"
 
 const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
@@ -42,7 +42,7 @@ const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
             <p>{MoneyFilter(item.price)}</p>
             {
                 checked?
-                <ProductInfoQty
+                <ProductInfoExtraQty
                     id={item.variantId}
                     quantity={1}
                 />

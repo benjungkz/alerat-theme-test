@@ -4,6 +4,7 @@ const path = require("path")
 module.exports = {
   entry: {
     'cart': "./scripts/index.js",
+    'product': "./scripts/product.js",
   },
   module: {
     rules: [

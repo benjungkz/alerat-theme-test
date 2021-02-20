@@ -32,7 +32,9 @@ $(document).ready(function(){
   
   const players = Plyr.setup('.js-player');
 
- 
+  $('.addCartBtn').on('click', ()=>{
+    console.log("click checkout button");
+  })
 
 
   $('.plyr__poster').hover(
