@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import ProductRelation from '../static/ProductRelation';
-
+import React, { useState } from 'react'
+import ProductRelation from '../static/ProductRelation'
 import MoneyFilter from '../utils/MoneyFilter'
 
 // Needs change
 const PRODUCT_URL = 'alerta-find-subscription';
+const PRODUCT_PAGE_URL = 'https://benkzdevshop.myshopify.com/products/'
 
 
 const ProductInfoForOptionItem = ({handle}) =>{
     const [option, setOption ] = useState({})
-    
 
     // Temp Style
     const style = (optionHandle)=>{
@@ -23,49 +22,44 @@ const ProductInfoForOptionItem = ({handle}) =>{
         )
     }
 
-
-
     return(
         ProductRelation[PRODUCT_URL].options.map((option, index)=>{
             return(
-            
-                <div key={index} 
-                    className="productOption" 
-                    style={style(option.handle)}>
+                <a href={ PRODUCT_PAGE_URL + option.handle}>
+                    <div key={index} 
+                        className="productOption" 
+                        style={style(option.handle)}>
 
-                    <div className="productOption__header">
-                        {option.hasIcon ? <h3>STAR</h3> : null}
-                        <h3>{option.name}</h3>
+                        <div className="productOption__header">
+                            {option.hasIcon ? <img className="productOption__bedge" href="/"/> : null}
+                            <h3 className="productOption__name">{option.name}</h3>
+                        </div>
+
+                        <div className="productOption__body">
+                            <h1 className="productOption__price">{MoneyFilter(option.price)}</h1>
+                            <span className="productOption__suffix">{option.priceSuffix}</span>
+                            {option.isExtraItem ?
+                                <div>
+                                    <p className="productOption__extra--name">+{option.extraItem.name}</p>
+                                    <p className="productOption__extra--price">{MoneyFilter(option.extraItem.price)}</p>
+                                    <p className="productOption__extra--description">{option.extraItem.description}</p>
+                                </div>
+                                :
+                                null
+                            }
+                            <p className="productOption__description">{option.description}</p>
+                        </div>
+
+                        <div className="productOption__footer">
+                            {option.isTermAndCondtions?
+                                <p className="productOption__term">Term And Conditions</p>
+                                :
+                                null
+                            }
+                        </div>
+                        
                     </div>
-
-                    <div className="productOption__body">
-                        <h1>{MoneyFilter(option.price)}</h1>
-                        <span>{option.priceSuffix}</span>
-                        {option.isExtraItem ?
-                            <div>
-                                <p>+{option.extraItem.name}</p>
-                                <p>{MoneyFilter(option.extraItem.price)}</p>
-                                <p>{option.extraItem.description}</p>
-                            </div>
-                            :
-                            null
-                        }
-                        <p>{option.description}</p>
-                    </div>
-
-                    <div className="productOption__footer">
-                        {option.isTermAndCondtions?
-                            <p>Term And Conditions</p>
-                            :
-                            null
-                        }
-                    </div>
-                    
-                </div>
-
-               
-                
-                
+                </a>
             )
         })
     )    

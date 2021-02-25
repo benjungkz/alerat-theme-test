@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { updateItem } from '../store/ProductStore'
+import { updateItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
 const ProductInfoExtraQty = ({id, quantity, updateItem }) => {
@@ -43,10 +43,10 @@ const ProductInfoExtraQty = ({id, quantity, updateItem }) => {
     }
   
     return(
-        <div className="cart__input">
-            <div className="cart__minus" onClick={()=>{minusHandler()}}>-</div>    
-             <p className="cart__qty">{qty}</p>
-            <div className="cart__plus" onClick={()=>{plusHandler()}}>+</div>
+        <div className="cart__input cart__input--small">
+            <div className="cart__minus cart__minus--small" onClick={()=>{minusHandler()}}>-</div>    
+             <p className="cart__qty cart__qty--small">{qty}</p>
+            <div className="cart__plus cart__plus--small" onClick={()=>{plusHandler()}}>+</div>
         </div>
 
     )

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ProductRelation from '../static/ProductRelation';
-import { addItem, updateItem } from '../store/ProductStore'
+import { addItem, updateItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
 const ProductQty = ({ handle, addItem, updateItem }) => {

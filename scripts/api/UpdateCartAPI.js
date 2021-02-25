@@ -7,7 +7,6 @@ const UPDATE_URL = "/cart/update.js"
 
 const UpdateCartAPI = ({ getItems, itemStage}) => {
 
-    
     // Update Handelr
     const updateCartHandler = () =>{
         const updateCartOption ={
@@ -26,6 +25,7 @@ const UpdateCartAPI = ({ getItems, itemStage}) => {
                     
                     // State(redux)
                     getItems(result.items)
+                   
 
                 },
 
@@ -41,7 +41,7 @@ const UpdateCartAPI = ({ getItems, itemStage}) => {
     }, [itemStage])
 
     return(
-      null
+        null
     )
 
 
@@ -54,4 +54,4 @@ function mapDispatchToProps( dispatch ){
     }
 }
 
-export default connect( null ,mapDispatchToProps ) (UpdateCartAPI);
+export default connect( null ,mapDispatchToProps) (UpdateCartAPI);

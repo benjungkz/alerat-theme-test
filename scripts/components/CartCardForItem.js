@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import CartQty from './CartQty';
 import ItemsRelation from '../static/ItemsRelation';
 import MoneyFilter from '../utils/MoneyFilter';
 import PriceSuffixFilter from '../utils/PriceSuffixFilter';
 import UpdateCartAPI from '../api/UpdateCartAPI'
-import { connect } from "react-redux";
-import { remove } from '../store/CartStore';
 
 const CardCardForItem = ({item}) => {
     const [ update, setUpdate ] = useState(false)
@@ -40,6 +38,7 @@ const CardCardForItem = ({item}) => {
                     {PriceSuffixFilter(ItemsRelation[item.handle].priceSuffix)}
                 </h3>
                 {
+                    // Message
                     ItemsRelation[item.handle].hasMessage?
                     <p>{ItemsRelation[item.handle].message}</p>
                     :
@@ -47,6 +46,7 @@ const CardCardForItem = ({item}) => {
                 }
                 
                 {
+                    // Main Item
                     !ItemsRelation[item.handle].isExtraItem?
                     <CartQty 
                         quantity={item.quantity}
@@ -58,6 +58,7 @@ const CardCardForItem = ({item}) => {
                 }
 
                 {
+                    // Extra Item
                     !ItemsRelation[item.handle].isExtraItem?
                     <div  onClick={ ()=>{ DeleteCartItemHandler(item.id, item.handle) } }>[Delete]</div>
                     :

@@ -67,6 +67,28 @@ const ItemsRelation = {
         priceSuffix: null
     },
 
+    'battery-replacement': 
+    {
+        isSubscription: false,
+        subscriptionType: null,
+        isExtraItem:false,
+        hasExtraItem: false,
+        hasMessage: false,
+        message: null,
+        extraItem : {
+            id: null,
+            priceSuffix: null
+        },
+        hasNote: false,
+        note : {
+            title: null,
+            description: null,
+            hasExpansion: null,
+            expansion: null,
+        },
+        priceSuffix: null
+    },
+
 }
 
 

@@ -1,23 +1,30 @@
 import React, { useState, useEffect } from 'react'
 import ProductInfoExtraQty from './ProductInfoExtraQty';
 import MoneyFilter from '../utils/MoneyFilter'
-import { addItem, removeItem } from '../store/ProductStore'
+import { addItem, removeItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
 const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
 
     const [checked, setChecked] = useState(false)
+   
+
+    useEffect(()=>{
+        checked?
+        addItemToCartHandler(item)
+        :
+        removeItemFromCartHandler(item)
+    },[checked])
 
 
     //Handeler
     const checkedHandler= (e) => {
         setChecked(e.target.checked)
-        console.log('checkedHandler')
     }
 
-    const addItemToCartHandler = (variantId)=>{
+    const addItemToCartHandler = (item)=>{
         const additionalItem = {
-            id: variantId,
+            id: item.variantId,
             quantity: 1
         }
 
@@ -25,8 +32,8 @@ const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
         
     }
 
-    const removeItemFromCartHandler = (variantId)=>{
-        removeItem(variantId);
+    const removeItemFromCartHandler = (item)=>{
+        removeItem(item.variantId);
     }
 
     return(
@@ -37,25 +44,22 @@ const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
                 value={item.name}
                 checked={checked}
                 onChange={checkedHandler}
+                className="productOption__checkbox"
                 />
-            <label htmlFor={item.type}>{item.name}</label>
-            <p>{MoneyFilter(item.price)}</p>
-            {
+            <label className="productOption__label" htmlFor={item.type}>{item.name}</label>
+            <p className="productOption__price productOption__price--small">{MoneyFilter(item.price)}</p>
+            <ProductInfoExtraQty
+                id={item.variantId}
+                quantity={1}
+            />
+          
+            {/* { 
                 checked?
-                <ProductInfoExtraQty
-                    id={item.variantId}
-                    quantity={1}
-                />
+                addItemToCartHandler(item)
                 :
-                null
-            }
-            { 
-                checked?
-                addItemToCartHandler(item.variantId)
-                :
-                removeItemFromCartHandler(item.variantId)
+                removeItemFromCartHandler(item)
                 
-            }
+            } */}
        </div>
     )
 }

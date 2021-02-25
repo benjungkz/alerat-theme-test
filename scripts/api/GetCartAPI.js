@@ -1,21 +1,19 @@
 import React, { useEffect } from 'react'
-import CartCardList from '../components/CartCardList';
 import { connect } from "react-redux"
 import { get } from '../store/CartStore';
 
 
 const GET_URL = "/cart.js"
 
-const GetCartAPI = ({ cartCardList, getItems }) => {
-   
+const GetCartAPI = ({ getItems }) => {
+    
     // Fetch Handler
     const getCartHandler = () =>{
         fetch(GET_URL)
             .then( res => res.json())
             .then(
                 (result)=>{
-                    console.log(result.items);
-                    // State(redux)
+                    console.log(result.items)
                     getItems(result.items)
 
                 },
@@ -27,22 +25,17 @@ const GetCartAPI = ({ cartCardList, getItems }) => {
 
     //componenDidMount (one-time)
     useEffect(()=>{
-        getCartHandler();
-    }, [])
+        getCartHandler()
+    }, [getItems])
     
     return(
-        <CartCardList 
-            cartCardList={cartCardList}/>
+        null
     )
 }
 
-// Map redux state to componet props
-const mapStateToProps = state =>( { cartCardList: state } )
-
-
-// Map 'new redux state by dispath' to componet props 
 const mapDispatchToProps = dispatch => ({
     getItems: (items)=>dispatch(get(items))
 })
 
-export default connect( mapStateToProps, mapDispatchToProps ) (GetCartAPI);
+
+export default connect(null, mapDispatchToProps)(GetCartAPI)

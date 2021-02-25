@@ -29,7 +29,7 @@ const ProductRelation = {
                 },
                 additionalItems:[
                     {
-                        variantId: "gid://shopify/ProductVariant/34452252754060",
+                        variantId: 34452252754060,
                         name: 'Battery Replacement',
                         price: 25999,
                         handle: 'battery-replacement'
@@ -43,7 +43,7 @@ const ProductRelation = {
                 isAdditionalItmes: true,
                 hasIcon: false,
                 variantId: 34209197031564,
-                handle: '',
+                handle: 'alerta-find',
                 properties: null,
                 name: '2-Year Service',
                 price: 25900,

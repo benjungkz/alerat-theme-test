@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { connect } from "react-redux"
-import { remove } from '../store/CartStore'
 import ItemsRelation from '../static/ItemsRelation'
 import UpdateCartAPI from '../api/UpdateCartAPI'
 
@@ -12,8 +10,7 @@ const CartQty = ({id, quantity, handle, hasExtraItem}) => {
     useEffect(()=>{
         console.log(quantity);
         setQty(quantity)
-        
-    },[])
+    },[quantity])
 
     // Plus handler
     const plusHandler = () => {
@@ -37,9 +34,20 @@ const CartQty = ({id, quantity, handle, hasExtraItem}) => {
     // Minus handler
     const minusHandler = () => {
         if( qty == 1){
-            // Delelte Cart
-            setUpdate(true);
             setQty(0);
+            // Delelte Cart
+             // Update Stage & Cart
+             let stage = {}
+             stage = {...stage, [id]: 0}
+             
+             hasExtraItem ? 
+             stage = {...stage, [ItemsRelation[handle].extraItem.variantId]: 0 }
+             :
+             null
+ 
+            setItemStage(stage)
+            setUpdate(true);
+          
         }else{
             // Minus qty
             setQty(qty - 1)
@@ -77,14 +85,4 @@ const CartQty = ({id, quantity, handle, hasExtraItem}) => {
     )
 }
 
-// function mapDispatchToProps( dispath, ownProps ){
-//     return{
-//         isQtyZero : () => dispath(remove(ownProps.id))
-//     }
-// }
-
-//export default connect(null, mapDispatchToProps)  (CartQty)
-
 export default CartQty
-
-// product와 extra 로직 필요

@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react'
 import GetCartAPI from '../api/GetCartAPI';
+import CartCardList from '../components/CartCardList';
+import CartAddButton from '../components/CartAddButton'
 
 const Cart = () => {
     useEffect(()=>{
@@ -12,9 +14,10 @@ const Cart = () => {
             </div>
             <div className="cart__body">
                 <GetCartAPI/>
+                <CartCardList />
             </div>
             <div className="cart__footer">
-                <input className="cart__checkout" type="submit" name="checkout" value="Checkout"/>
+                <CartAddButton />
             </div>
 
         </form>

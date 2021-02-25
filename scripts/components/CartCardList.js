@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import CartCardForItem from '../components/CartCardForItem';
 import ItemsRelation from '../static/ItemsRelation';
-import CartCardForExtraItem from '../components/CartCardForExtraItem';
 import CartCardForNote from '../components/CartCardForNote';
+import { connect } from "react-redux"
 
+const CartCardList = ({cartItem}) => {
 
-const CartCardList = ({cartCardList}) => {
     useEffect(()=>{
-        console.log(cartCardList)
-    })
+        
+        //getItems(cartCardList)
+        console.log(cartItem)
+    },[])
     return(
         
-        cartCardList.map( (item, index) => {
+        cartItem.map( (item, index) => {
+            console.log(item);
             return(
-            
                 // Need flag for <CartCardForItem>
                 <div key={index} className="cart__group">
                     <CartCardForItem item={item}/>            
@@ -37,12 +39,20 @@ const CartCardList = ({cartCardList}) => {
                        
                     
                 </div>
-                   
             )
-        })
-        
+        })        
     )
 }
 
 
-export default CartCardList;
+// // Map redux state to componet props
+const mapStateToProps = state =>( { cartItem : state.cartItem } )
+
+
+// // Map 'new redux state by dispath' to componet props 
+// const mapDispatchToProps = dispatch => ({
+//     getItems: (items)=>dispatch(get(items))
+// })
+
+export default connect(mapStateToProps,null)(CartCardList);
+//export default CartCardList
