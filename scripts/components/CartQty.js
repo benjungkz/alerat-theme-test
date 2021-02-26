@@ -8,7 +8,6 @@ const CartQty = ({id, quantity, handle, hasExtraItem}) => {
     const [ itemStage, setItemStage ] = useState({})
 
     useEffect(()=>{
-        console.log(quantity);
         setQty(quantity)
     },[quantity])
 
@@ -69,7 +68,7 @@ const CartQty = ({id, quantity, handle, hasExtraItem}) => {
   
     return(
         <div className='cart__input'>
-            <div className="cart__minus" onClick={()=>{minusHandler()}}>-</div>    
+            <p className="cart__minus" onClick={()=>{minusHandler()}}>-</p>    
             
             { update? 
                 <UpdateCartAPI 
@@ -78,8 +77,10 @@ const CartQty = ({id, quantity, handle, hasExtraItem}) => {
                 : null 
             }
              
-             <p className="cart__qty">{qty}</p>
-            <div className="cart__plus" onClick={()=>{plusHandler()}}>+</div>
+            <div className="cart__qty">
+                <p>{qty}</p>
+            </div>
+            <p className="cart__plus" onClick={()=>{plusHandler()}}>+</p>
         </div>
 
     )

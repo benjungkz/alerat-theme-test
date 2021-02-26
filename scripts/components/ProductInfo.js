@@ -2,22 +2,13 @@ import React, { useState, useEffect } from 'react'
 import ProductInfoForOptionItem from './ProductInfoForOptionItem'
 import ProductInfoForAdditional from './ProductInfoForAdditional'
 import ProductInfoQty from './ProductInfoQty';
-import AddCartAPI from '../api/AddCartAPI'
-import { connect } from 'react-redux';
+import ProductInfoAddToCart from './ProductInfoAddToCart';
 
 // Needs change and it depends on product page url
 const PRODUCT_URL = 'alerta-find-subscription';
 
-const ProductInfo = ({addCartItems}) => {
-    const [checkout, setCheckout] = useState(false)
+const ProductInfo = () => {
     
-    useEffect(()=>{
-        setCheckout(false)
-    },[checkout])
-
-    const checkoutHandler = ()=>{
-        setCheckout(true)
-    }
     return(
             <>
                 <div className="productInfo__menu">Payment Option</div>
@@ -26,22 +17,9 @@ const ProductInfo = ({addCartItems}) => {
 
                 <div className="productInfo__menu">Additional &amp; Service </div>
                 <ProductInfoForAdditional handle={PRODUCT_URL}/>
-                <button 
-                    className="productInfo__add" 
-                    onClick={checkoutHandler}
-                    >Add Cart </button>
-                    {
-                        checkout?
-                        <AddCartAPI
-                            itemStage={addCartItems}/>
-                        :
-                        null
-                    }
-                
+                <ProductInfoAddToCart/>
             </>
     )   
 }
 
-const mapStateToProps = state => ({addCartItems: state.addCartItem})
-
-export default connect(mapStateToProps, null) (ProductInfo);
+export default ProductInfo;

@@ -40,15 +40,19 @@ const CartCardForExtraItem  = ({ mainItemHandle, extraItemHandle}) => {
         extraItemInfo != null ? 
         <div className="cart__card cart__card--extra">
             <div>
-                <img src={extraItemInfo.images} alt={extraItemInfo.title}/>
+                <img className="cart__image" src={extraItemInfo.images} alt={extraItemInfo.title}/>
             </div>
             <div>
-                <h1>{extraItemInfo.title}</h1>
-                <h3>
+                <h2 className="cart__title">{extraItemInfo.title}</h2>
+                <h3 className="cart__price">
                     {MoneyFilter(extraItemInfo.price)}
                     {PriceSuffixFilter(ItemsRelation[mainItemHandle].extraItem.priceSuffix)}
                 </h3>
             </div>
+            <img 
+                className="cart__connecter"
+                src="https://cdn.shopify.com/s/files/1/1661/6207/files/cart-connecter-normal.png" 
+                alt="Subsciption Extra Item"/>
         </div>
         :
         null

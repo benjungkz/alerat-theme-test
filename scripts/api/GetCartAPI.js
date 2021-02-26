@@ -13,7 +13,6 @@ const GetCartAPI = ({ getItems }) => {
             .then( res => res.json())
             .then(
                 (result)=>{
-                    console.log(result.items)
                     getItems(result.items)
 
                 },

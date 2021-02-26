@@ -17,14 +17,13 @@ const CartAddButton = ({cartItem}) =>{
             if(item.handle != EXCEPTOIN_ITEM_HANDLE)
             total = total + (item.quantity * item.price);
         });
-        console.log(total);
         
         setTotal(MoneyFilter(total))
     }
 
     return(
         <input 
-            className="cart__checkout" 
+            className="cart__checkout btn btn--checkout" 
             type="submit" 
             name="checkout" 
             value={

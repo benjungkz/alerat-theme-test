@@ -4,14 +4,8 @@ const cartItems = createSlice({
     name: 'cartItemsReducer',
     initialState: [],
     reducers:{
-        // Priolity!
         get: (state, action) => action.payload,
         remove: (state, action ) => state.filter( item => item.id != action.payload),
-        // update: (state, action) => action.payload.map((payload)=>{
-        //     const index = state.findIndex(payload.id)
-        //     return state[index] = payload
-        // })
-        
     }
 })
 
@@ -37,6 +31,5 @@ const store = configureStore({reducer:rootReducer})
 
 export const { get, remove } = cartItems.actions;
 export const { addItem, updateItem, removeItem } = addCartItems.actions;
-
 
 export default store

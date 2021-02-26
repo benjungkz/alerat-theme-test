@@ -25,8 +25,10 @@ const ProductInfoForOptionItem = ({handle}) =>{
     return(
         ProductRelation[PRODUCT_URL].options.map((option, index)=>{
             return(
-                <a href={ PRODUCT_PAGE_URL + option.handle}>
-                    <div key={index} 
+                <a 
+                    href={ PRODUCT_PAGE_URL + option.handle}
+                    key={index}>
+                    <div  
                         className="productOption" 
                         style={style(option.handle)}>
 

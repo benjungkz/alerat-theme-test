@@ -6,7 +6,6 @@ const ProductInfoExtraQty = ({id, quantity, updateItem }) => {
     const [ qty, setQty ] = useState(0);  
 
     useEffect(()=>{
-        console.log(quantity);
         setQty(quantity)
     },[])
 

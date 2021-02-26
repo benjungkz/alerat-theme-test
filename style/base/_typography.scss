@@ -4,6 +4,7 @@ $font-primary : ivypresto-headline, serif;
 $font-secondary : marine, sans-serif;
 $font-third : dolce, sans-serif;
 $font-fourth : lato, sans-serif;
+$font-fifth : franklin-gothic-atf, sans-serif;
 
 $font-weight-light : 300;
 $font-weight-regular: 600;
@@ -13,10 +14,11 @@ $color: (
     red : #D12220,
     gray-light : #ECECEC,
     gray-dark : #949090,
-    gray : #f8f8f8,
+    gray : #F1F1EF,
     black-dark : #000000,
     black-light : #525252,
-    white: #ffffff
+    white: #ffffff,
+    white-dark: #FAF9F7
 );
 
 /* Responsive image size */
@@ -86,7 +88,8 @@ h6{
     color: color(black-light);
 }
 p{ 
-    @include font-size(0.5em); 
+    //@include font-size(0.5em);
+    font-size: 18px; 
     font-family: $font-secondary; 
     color: color(black-light);
     $font-weight-regular: 600;
