@@ -4,16 +4,21 @@ import MoneyFilter from '../utils/MoneyFilter'
 import { addItem, removeItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
+const GET_PRODUCT_URL = '/products/'
+
 const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
 
     const [checked, setChecked] = useState(false)
-   
+    const [imgURL, setImgURL] = useState('');   
 
     useEffect(()=>{
         checked?
         addItemToCartHandler(item)
         :
         removeItemFromCartHandler(item)
+
+        getProductHandler(item.handle)
+
     },[checked])
 
 
@@ -36,8 +41,28 @@ const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
         removeItem(item.variantId);
     }
 
+
+    const getProductHandler = (handle) =>{
+
+        fetch( GET_PRODUCT_URL + handle + '.js' )
+            .then( res => res.json())
+            .then(
+                (result)=>{
+                    console.log("Get API is success!")      
+                    console.log(result)    
+                    setImgURL(result.featured_image) 
+                },
+                (error)=>{
+                    console.log(error)
+                }
+            
+            )
+    }
+
+    
+
     return(
-       <div>
+       <div className="productOption__additional">
             <input 
                 type="checkbox" 
                 name={item.type} 
@@ -46,6 +71,13 @@ const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
                 onChange={checkedHandler}
                 className="productOption__checkbox"
                 />
+              
+            <img className="productOption__image productOption__image--small lazyload" 
+                src={imgURL} 
+                alt=""
+
+            />
+            
             <label className="productOption__label" htmlFor={item.type}>{item.name}</label>
             <p className="productOption__price productOption__price--small">{MoneyFilter(item.price)}</p>
             <ProductInfoExtraQty

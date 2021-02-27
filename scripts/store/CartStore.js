@@ -22,14 +22,26 @@ const addCartItems = createSlice({
     }
 })
 
+const openCarts = createSlice({
+    name: 'openCartReducer',
+    initialState: '',
+    reducers:{
+        openCart: (state, action) => action.payload,
+        closeCart : (state, action) => action.payload
+    }
+})
+
 const rootReducer = combineReducers({
     cartItem: cartItems.reducer,
-    addCartItem: addCartItems.reducer
+    addCartItem: addCartItems.reducer,
+    openCart: openCarts.reducer
 })
 
 const store = configureStore({reducer:rootReducer})
 
 export const { get, remove } = cartItems.actions;
 export const { addItem, updateItem, removeItem } = addCartItems.actions;
+export const { openCart, closeCart  } = openCarts.actions;
+
 
 export default store

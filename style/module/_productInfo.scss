@@ -1,0 +1,11 @@
+.productInfo{
+    &__menu{
+        @include flexbox-row;
+        justify-content: space-between;
+        padding : $padding-xsmall $padding-small;
+        background-color: color(gray);
+        margin-bottom: $margin-xsmall;
+        border-radius: 3px;
+    }
+
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ItemsRelation from '../static/ItemsRelation';
 import parse from 'html-react-parser';
 
-const CART_ARROW_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/cart-arrow-down.png'
+
 const CART_CONNECTER_NOTE_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/cart-connecter-note.png'
 
 const CartCardForNote = ({mainItemHandle}) =>{

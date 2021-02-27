@@ -94,7 +94,7 @@ const ProductQty = ({ handle, addItem, updateItem }) => {
     }
   
     return(
-        <div className="cart__input">
+        <div className="cart__input cart__input--info">
             <div className="cart__minus" onClick={()=>{minusHandler()}}>-</div>    
              <p className="cart__qty">{qty}</p>
             <div className="cart__plus" onClick={()=>{plusHandler()}}>+</div>

@@ -19,8 +19,11 @@ const ProductRelation = {
                 },
                 name: 'Monthly',
                 price: 999,
-                priceSuffix: '/mo',
-                description :'Find Device + Mobile App Activation Service 7/24 Customer Center Access 24 months contract',
+                priceSuffix: '/month',
+                description :'<p class="productOption__description">Find Device and Mobile App</p>'
+                            +'<p class="productOption__description">Activation Service 7/24</p>'
+                            +'<p class="productOption__description">Customer Center Access</p>'
+                            +'<p class="productOption__description">24 months contract</p>',
                 extraItem: {
                     variantId: 34444280889484,
                     name: 'Activation Fee',

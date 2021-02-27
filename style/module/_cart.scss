@@ -1,19 +1,37 @@
 /* ########  New Cart ##### */
-$new-cart-width : 50vw;
 .cart{
     width: 50vw;
-    border: 1px solid blue;
     padding: $padding-small;
     background-color: color(gray);
     position: absolute;
     top: 0;
     left: 100vw;
     z-index: 100;
+    opacity: 0;
+   
+
+    @include breakpoint(md-lg){
+        width: 100vw;
+       
+      
+    }
+    @include breakpoint(xs){
+        width: 100vw;
+        padding: 0.75rem;
+        
+    }    
 
     &--active{
         @include flexbox-col;
-        transform: translateX( calc( -1 * (#{$new-cart-width})));
-        transition: all 1.0s cubic-bezier(.06,.8,.57,.96);
+        transform: translateX( calc( -1 * 50vw));
+        transition: all 0.7s cubic-bezier(.06,.8,.57,.96);
+        opacity: 1;
+        @include breakpoint(md-lg){
+            transform: translateX( calc( -1 * 100vw));
+        }
+        @include breakpoint(xs){
+            transform: translateX( calc( -1 * 100vw));
+        }
     }
     &__header{
         @include flexbox-row;
@@ -38,6 +56,12 @@ $new-cart-width : 50vw;
         border-radius: 25px;
         background-color: color(white-dark);
         margin-bottom: $margin-small;
+        box-shadow: $box-shadow-third;
+
+        @include breakpoint(xs){
+            grid-template-columns: 1fr;
+            padding: 3rem 0.5rem;
+        }
         
         &--note{
             position: relative;
@@ -51,28 +75,51 @@ $new-cart-width : 50vw;
        
     }
     &__image{
-        width: 100%;
+        width: 80%;
+
+        @include breakpoint(xs){
+            width: 50%;
+        }
+
+        @include breakpoint(xxs){
+            width: 35%;
+        }
 
         &--btn{
             width: auto;
             cursor: pointer;
+
+            @include breakpoint(xs){
+                width: auto;
+            }
         }
+
+     
+    
     }
     &__btn{
         &--delete{
-            display: grid;
-            justify-items: right;
+            justify-self: right;
         }
     }
     &__title{
         font-family: $font-fifth;
         font-weight: 600;
         margin-bottom: $margin-xxsmall;
+        @include breakpoint(xs){
+            text-align: center;
+        }
+        
     }
     &__description{
         font-family: $font-fifth;
-        font-weight: 200;
+        font-weight: 300;
         line-height: 1.3em;
+        &--msg{
+            @include breakpoint(xs){
+               text-align: center;
+            }
+        }
     }
     &__price{
         font-family: $font-fifth;
@@ -91,14 +138,22 @@ $new-cart-width : 50vw;
         display: grid;
         align-items: center;
         padding: $padding-xsmall;
+        @include breakpoint(xs){
+           justify-items: center;
+        }
+        
         &--media{
            
         }
         &--normal{
           grid-template-rows: repeat(5, auto); 
+
         }
         &--extra{
           grid-template-rows: repeat(2, auto);
+        }
+        &--first{
+            justify-items: unset;
         }
         &--second{
             display: none;
@@ -124,6 +179,18 @@ $new-cart-width : 50vw;
         grid-template-columns: 50px 150px 50px;
         align-items: center;
         margin-top: $margin-small;
+        justify-items: center;
+
+        &--info{
+            grid-template-columns: 50px 1fr 50px;
+            margin-bottom: $margin-medium;
+            padding: 0 $padding-small
+        }
+
+        &--small{
+            margin-top: 0;
+            grid-template-columns: 25px 35px 25px;
+        }
     }
     &__qty{
         @include flexbox-row;
@@ -131,9 +198,13 @@ $new-cart-width : 50vw;
         border-radius: 25px;
         width: 100%;
         height: 100%;
-        
+
         p{
             text-align: center;
+        }
+
+        &--small{
+        
         }
     }
     &__minus,
@@ -150,6 +221,10 @@ $new-cart-width : 50vw;
         text-align: center;
         cursor: pointer;
         opacity: 0.2;
+        &--small{
+            width: 25px;
+            height: 25px;
+        }
     }
     &__minus{
         margin-right: 10px;
@@ -161,6 +236,22 @@ $new-cart-width : 50vw;
         cursor: pointer;
         margin-top: $margin-medium;
         margin-bottom: $margin-xsmall;
+    }
+    &__overlay{
+        display: none;
+        position: fixed;
+        left:0;
+        top:0;
+        width:100vw;
+        height: 100vh;
+        background-color: hsla(0,0%,7%,.8);
+        backdrop-filter: blur(10px);
+        opacity: 1;   
+        z-index: 98;
+
+        &--active{
+            display: block;
+        }
     }
 }
 
