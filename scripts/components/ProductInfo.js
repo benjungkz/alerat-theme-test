@@ -3,43 +3,62 @@ import ProductInfoForOptionItem from './ProductInfoForOptionItem'
 import ProductInfoForAdditional from './ProductInfoForAdditional'
 import ProductInfoQty from './ProductInfoQty';
 import ProductInfoAddToCart from './ProductInfoAddToCart';
+import ProductRelation from '../static/ProductRelation'
+import ProductInfoForVariantItem from './ProductInfoForVariantItem';
 
-// Needs change and it depends on product page url
-const PRODUCT_URL = 'alerta-find-subscription';
 const CART_ARROW_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/cart-arrow-down.png'
 
-
-
 const ProductInfo = () => {
-   
-    return(
-            <>
-                <div className="productInfo__menu">
-                   <h6 className="productInfo__title"> Payment Option</h6>
-                   <img className="productInfo__image"
-                        src={CART_ARROW_ICON_URL} 
-                        alt="Show Product Options"
-                        />
-                </div>
-                
-                <div className="productOption__container">
-                    <ProductInfoForOptionItem handle={PRODUCT_URL}/>
-                </div>
-                
-                <ProductInfoQty handle={PRODUCT_URL}/>
+    const [ productHandle, setProductHandle ] = useState('')
 
-                <div className="productInfo__menu">
-                    <h6 className="productInfo__title">Additional &amp; Service</h6>
-                    <img className="productInfo__image"
-                        src={CART_ARROW_ICON_URL} 
-                        alt="Show Product Options"
-                    />   
-                </div>
+    useEffect(()=>{
+        productUrlHandler()
+    },[])
+    
+    const productUrlHandler = () =>{
+        let path = window.location.pathname
+        let pathNames = path.split('/')
+        console.log(path.search('products'));
+        console.log(pathNames[2])
+        path.search('products') != -1 ? setProductHandle(pathNames[2]) : null
+    }
 
-                <ProductInfoForAdditional handle={PRODUCT_URL}/>
-                
-                <ProductInfoAddToCart/>
-            </>
+    return( 
+            productHandle!= ''?
+                <>
+                    <div className="productInfo__menu">
+                        <h6 className="productInfo__title"> Payment Option</h6>
+                        <img className="productInfo__image"
+                                src={CART_ARROW_ICON_URL} 
+                                alt="Show Product Options"
+                                />
+                    </div>
+                    
+                    <div className="productOption__container">
+                        {
+                        ProductRelation[productHandle].optionType != 'custom'?
+                        <ProductInfoForVariantItem handle={productHandle}/>
+                        :
+                        <ProductInfoForOptionItem handle={productHandle}/>
+                        }
+                    </div>
+                    
+                    <ProductInfoQty handle={productHandle}/>
+
+                    <div className="productInfo__menu">
+                        <h6 className="productInfo__title">Additional &amp; Service</h6>
+                        <img className="productInfo__image"
+                            src={CART_ARROW_ICON_URL} 
+                            alt="Show Product Options"
+                        />   
+                    </div>
+
+                    {/* <ProductInfoForAdditional handle={productHandle}/> */}
+                    
+                    <ProductInfoAddToCart/>
+                </>
+            :
+                null
     )   
 }
 

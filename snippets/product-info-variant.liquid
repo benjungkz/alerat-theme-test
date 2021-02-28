@@ -78,8 +78,10 @@
                 {% endif %}    
             {% endif %}
             <br>
+            
+            <div id="newcart"></div> 
 
-            <!-- Price -->
+            {% comment %} <!-- Price -->
             <h1 class="product__price">{{ product.price | money }}</h1>
             
             <!-- Option -->
@@ -155,7 +157,7 @@
             <!-- Button -->
             <a class="btn btn--pricing product__button" href="#"> 
                 <h5 class="btn__text btn__text--pricing ">ADD TO CART</h5>
-            </a>
+            </a> {% endcomment %}
 
             <!-- Event -->
             <div class="product__event">
@@ -174,4 +176,4 @@
 
     </div>
 </div>
- 
+ {{ "cart.bundle.js" | asset_url | script_tag }}

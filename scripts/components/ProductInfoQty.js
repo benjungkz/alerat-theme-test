@@ -3,11 +3,14 @@ import ProductRelation from '../static/ProductRelation';
 import { addItem, updateItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
-const ProductQty = ({ handle, addItem, updateItem }) => {
+const ProductQty = ({ handle, addItem, updateItem, selectedVariantItemId }) => {
     const [ qty, setQty ] = useState(1);
     
     useEffect(()=>{
-        addItemToCartHandelr();
+        ProductRelation[handle].optionType == 'custom'?
+            addItemToCartHandelr()
+        :
+            null
     },[])
 
     // Plus handler
@@ -27,7 +30,9 @@ const ProductQty = ({ handle, addItem, updateItem }) => {
 
     }
 
-    // Cart Handler
+    /* Stage Handler: 
+       Set initial value from custom option to stage */
+
     const addItemToCartHandelr = ()=>{
 
         const { variantId, properties, extraItem, isSubscription, isExtraItem } = ProductRelation[handle].options.filter(option=>option.handle == handle)[0]
@@ -60,38 +65,55 @@ const ProductQty = ({ handle, addItem, updateItem }) => {
     }
 
     const updateItemToCartHandler = (qty) => {
-           
-        const { variantId, properties, extraItem, isSubscription, isExtraItem } = ProductRelation[handle].options.filter(option=>option.handle == handle)[0]
-        
-        const productStage = 
-        
-        isSubscription? 
-        {
-            id: variantId,
-            quantity: qty,
-            properties: properties
-        }
-        :
-        {
-            id: variantId,
-            quantity: qty
-        }
+        // Update state with custom option 
+        if( ProductRelation[handle].optionType == 'custom'){
+            const { variantId, properties, extraItem, isSubscription, isExtraItem } = ProductRelation[handle].options.filter(option=>option.handle == handle)[0]
+            
+            const productStage = 
+            
+            isSubscription? 
+            {
+                id: variantId,
+                quantity: qty,
+                properties: properties
+            }
+            :
+            {
+                id: variantId,
+                quantity: qty
+            }
 
-        const extraItemStage = 
+            const extraItemStage = 
 
-        isExtraItem?
+            isExtraItem?
         {
             id: extraItem.variantId,
             quantity: qty,
+            }
+            :
+            null
+
+            console.log(productStage);
+
+            updateItem(productStage)
+            updateItem(extraItemStage)
         }
-        :
-        null
-
-        console.log(productStage);
-
-        updateItem(productStage)
-        updateItem(extraItemStage)
+        // Update state with variant
+        else{
+            updateItem({
+                id: selectedVariantItemId,
+                quantity: qty
+            })
+        }
     }
+
+
+
+    const updateVariantItemToCartHandler = () => {
+
+    }
+
+
   
     return(
         <div className="cart__input cart__input--info">
@@ -103,6 +125,10 @@ const ProductQty = ({ handle, addItem, updateItem }) => {
     )
 }
 
+const mapStateToProps = state => ({ 
+    selectedVariantItemId : state.variantItem
+})
+
 function mapDispatchToProps( dispatch ){
     return{
         addItem: (item)=>dispatch(addItem(item)),
@@ -111,4 +137,4 @@ function mapDispatchToProps( dispatch ){
 }
 
 
-export default  connect(null, mapDispatchToProps) (ProductQty)
+export default  connect(mapStateToProps, mapDispatchToProps) (ProductQty)

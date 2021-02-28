@@ -18,6 +18,13 @@ const addCartItems = createSlice({
             if(item.id === action.payload.id) return action.payload;
             else return item
         }),
+        changeItem: ( state, action ) => state.map((item, index)=>{
+            if(index == 0) return {
+                ...item,
+                id: action.payload
+            }
+            else return item 
+        }),
         removeItem: ( state, action ) => state.filter(item => item.id != action.payload),
     }
 })
@@ -31,17 +38,27 @@ const openCarts = createSlice({
     }
 })
 
+const variantItems = createSlice({
+    name: 'variantItemReducer',
+    initialState: 0,
+    reducers:{
+        selectVriantItem: ( state, action ) => action.payload
+    }
+})
+
 const rootReducer = combineReducers({
     cartItem: cartItems.reducer,
     addCartItem: addCartItems.reducer,
-    openCart: openCarts.reducer
+    openCart: openCarts.reducer,
+    variantItem :variantItems.reducer
 })
 
 const store = configureStore({reducer:rootReducer})
 
 export const { get, remove } = cartItems.actions;
-export const { addItem, updateItem, removeItem } = addCartItems.actions;
+export const { addItem, updateItem, removeItem, changeItem } = addCartItems.actions;
 export const { openCart, closeCart  } = openCarts.actions;
+export const { selectVriantItem } = variantItems.actions;
 
 
 export default store

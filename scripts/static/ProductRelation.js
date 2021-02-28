@@ -78,6 +78,10 @@ const ProductRelation = {
         ],
 
         
+    },
+    'get-started-kit':
+    {
+        optionType: 'normal',
     }
 }
 
