@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import ProductInfoForOptionItem from './ProductInfoForOptionItem'
-import ProductInfoForAdditional from './ProductInfoForAdditional'
+import ProductInfoForCustomAdditionalItem from './ProductInfoForCustomAdditionalItem'
+import ProductInfoForNormalAdditionalItem from './ProductInfoForNormalAdditionalItem'
 import ProductInfoQty from './ProductInfoQty';
 import ProductInfoAddToCart from './ProductInfoAddToCart';
 import ProductRelation from '../static/ProductRelation'
@@ -23,38 +24,73 @@ const ProductInfo = () => {
         path.search('products') != -1 ? setProductHandle(pathNames[2]) : null
     }
 
+    const renderItemInfo = (productHandle) =>{
+        switch(ProductRelation[productHandle].optionType){
+            case 'custom':
+                return <ProductInfoForOptionItem handle={productHandle}/>
+            case 'normal':
+                return <ProductInfoForVariantItem handle={productHandle}/>
+            case 'single':
+                return <h1>single</h1> 
+        }
+    }
+
+    const renderAdditionalItemInfo = (productHandle) =>{
+        switch(ProductRelation[productHandle].optionType){
+            case 'custom':
+                return <ProductInfoForCustomAdditionalItem handle={productHandle}/>
+            case 'normal':
+                return <ProductInfoForNormalAdditionalItem handle={productHandle}/>
+            case 'single':
+                return <ProductInfoForNormalAdditionalItem handle={productHandle}/>
+        }
+    } 
+
     return( 
             productHandle!= ''?
                 <>
-                    <div className="productInfo__menu">
-                        <h6 className="productInfo__title"> Payment Option</h6>
-                        <img className="productInfo__image"
-                                src={CART_ARROW_ICON_URL} 
-                                alt="Show Product Options"
-                                />
-                    </div>
-                    
+                    {
+                        // Option menu
+                        ProductRelation[productHandle].optionType != 'single' ?
+                        <div className="productInfo__menu">
+                            <h6 className="productInfo__title"> Payment Option</h6>
+                            <img className="productInfo__image"
+                                    src={CART_ARROW_ICON_URL} 
+                                    alt="Show Product Options"
+                                    />
+                        </div>
+                        : null
+                    }
+
+
                     <div className="productOption__container">
-                        {
-                        ProductRelation[productHandle].optionType != 'custom'?
-                        <ProductInfoForVariantItem handle={productHandle}/>
-                        :
-                        <ProductInfoForOptionItem handle={productHandle}/>
-                        }
+                    {
+                        // Option Section
+                        renderItemInfo(productHandle)
+                    }
                     </div>
                     
                     <ProductInfoQty handle={productHandle}/>
-
-                    <div className="productInfo__menu">
-                        <h6 className="productInfo__title">Additional &amp; Service</h6>
-                        <img className="productInfo__image"
-                            src={CART_ARROW_ICON_URL} 
-                            alt="Show Product Options"
-                        />   
-                    </div>
-
-                    {/* <ProductInfoForAdditional handle={productHandle}/> */}
                     
+                    {
+                        // Additional item and service menu
+                        ProductRelation[productHandle].hasAdditionalItem ?
+                            <div className="productInfo__menu">
+                                <h6 className="productInfo__title">Additional Item &amp; Service</h6>
+                                <img className="productInfo__image"
+                                    src={CART_ARROW_ICON_URL} 
+                                    alt="Show Product Options"
+                                />   
+                            </div>
+                        : 
+                            null
+                    }
+                    
+                    {
+                         // Additional item and service section
+                        renderAdditionalItemInfo(productHandle)
+                    }
+
                     <ProductInfoAddToCart/>
                 </>
             :

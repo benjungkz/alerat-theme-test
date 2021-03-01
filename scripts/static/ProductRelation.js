@@ -2,6 +2,7 @@ const ProductRelation = {
     'alerta-find-subscription':
     {
         optionType: 'custom',
+        hasAdditionalItem: true,
         options: [
             {
                 isSubscription: true,
@@ -55,23 +56,28 @@ const ProductRelation = {
                 extraItem: null,
                 additionalItems:[
                     {
-                        variantId: 'gid://shopify/ProductVariant/34452248133772',
+                        variantId: '34452248133772',
                         name: '1-Year Service Renewal',
                         handle: '1-year-service-renewal',
-                        price: 25999
+                        price: 25999,
+                        isSubscription: false,
+                        properties: null
                     },
                     {
-                        variantId: 'gid://shopify/ProductVariant/34452252754060',
+                        variantId: '34452252754060',
                         name: 'Battery Replacement',
                         handle: 'battery-replacement',
-                        price: 10900
-
+                        price: 10900,
+                        isSubscription: false,
+                        properties: null
                     },
                     {
-                        variantId: 'gid://shopify/ProductVariant/34452256161932',
+                        variantId: '34452256161932',
                         name: '1-Year Service Renewal + Battery Replacement',
                         handle: '1-year-service-renewal-battery-replacement',
-                        price: 17900
+                        price: 17900,
+                        isSubscription: false,
+                        properties: null
                     }
                 ]
             },
@@ -82,6 +88,78 @@ const ProductRelation = {
     'get-started-kit':
     {
         optionType: 'normal',
+        hasAdditionalItem: true,
+        options: [
+            {
+                isSubscription: false,
+                isTermAndCondtions: true,
+                isExtraItem: true,
+                isAdditionalItmes: true,
+                hasIcon: false,
+                priceSuffix: '',
+                description :'',
+                extraItem: null,
+                additionalItems:[
+                    {
+                        variantId: '34161763647628',
+                        name: 'Patch Refill Kit Subscription (3 Months)',
+                        handle: 'alerta-patch',
+                        price: 5900,
+                        isSubscription: true,
+                        properties:{
+                            'frequency_num': 3,
+                            'frequency_type': 3,
+                            'frequency_type_text': 'Month(s)',
+                            'group_id': 158173
+                        }
+                    },
+                    {
+                        variantId: '34221374668940',
+                        name: 'Patch Refill Kit Subscription (1 Months)',
+                        handle: 'copy-of-alerta-patch-refill-kit-subscription-1-months',
+                        price: 9000,
+                        isSubscription: true,
+                        properties:{
+                            'frequency_num': 1,
+                            'frequency_type': 3,
+                            'frequency_type_text': 'Month(s)',
+                            'group_id': 158530
+                        }
+                    },
+                    {
+                        variantId: '34161762697356',
+                        name: 'Patch Refill Kit Subscription (6 Months)',
+                        handle: 'copy-of-alerta-patch-9',
+                        price: 17700,
+                        isSubscription: true,
+                        properties:{
+                            'frequency_num': 6,
+                            'frequency_type': 3,
+                            'frequency_type_text': 'Month(s)',
+                            'group_id': 158174
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    'alerta-chime':
+    {
+        optionType: 'single',
+        hasAdditionalItem: false,
+        options: [
+            {
+                isSubscription: false,
+                isTermAndCondtions: false,
+                isExtraItem: false,
+                isAdditionalItmes: false,
+                hasIcon: false,
+                priceSuffix: '',
+                description :'',
+                extraItem: null,
+                additionalItems: null
+            }
+        ]
     }
 }
 

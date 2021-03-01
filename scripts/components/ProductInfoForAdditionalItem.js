@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import ProductInfoExtraQty from './ProductInfoExtraQty';
 import MoneyFilter from '../utils/MoneyFilter'
+import ItemsRelation from '../static/ItemsRelation'
 import { addItem, removeItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
 const GET_PRODUCT_URL = '/products/'
 
-const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
+const ProductInfoForAdditionalItem = ({item, properties, addItem, removeItem}) => {
 
     const [checked, setChecked] = useState(false)
     const [imgURL, setImgURL] = useState('');   
@@ -28,12 +29,17 @@ const ProductInfoForAdditionalItem = ({item, addItem, removeItem}) => {
     }
 
     const addItemToCartHandler = (item)=>{
-        const additionalItem = {
+        properties == null ?
+        addItem({
             id: item.variantId,
             quantity: 1
-        }
-
-        addItem(additionalItem);
+        })
+        :
+        addItem({
+            id: item.variantId,
+            quantity: 1,
+            properties: properties
+        });
         
     }
 
