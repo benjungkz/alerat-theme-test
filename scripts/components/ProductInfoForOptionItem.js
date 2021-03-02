@@ -9,7 +9,7 @@ const PRODUCT_URL = 'alerta-find-subscription';
 ///////////////////////////////////////////////
 
 const PRODUCT_PAGE_URL = 'https://benkzdevshop.myshopify.com/products/'
-const PRODUCT_OPTION_BEDGE_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/productinfo-star-bedge.png'
+const PRODUCT_OPTION_BEDGE_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/alerta-best-seller-bedge.png'
 
 const ProductInfoForOptionItem = ({handle}) =>{
     const [option, setOption ] = useState({})
@@ -26,7 +26,7 @@ const ProductInfoForOptionItem = ({handle}) =>{
             }
             :
             {
-                opacity: '0.7'
+                opacity: '0.6'
             }
         )
     }
@@ -48,6 +48,12 @@ const ProductInfoForOptionItem = ({handle}) =>{
                                 {option.hasIcon ? <img className="productOption__bedge" src={PRODUCT_OPTION_BEDGE_ICON_URL}/> : null}
                                 <h3 className="productOption__name">{option.name}</h3>
                             </div>
+                            {/* <div className="productOption__wrap productOption__wrap--image">
+                                <img className="productOption__image" src="" alt=""/>
+                            </div> */}
+                        </div>
+
+                        <div className="productOption__body productOption__body--custom">
                             <div className="productOption__wrap productOption__wrap--price">
                                 <h1 className="productOption__price">
                                     {MoneyFilter(option.price)}
@@ -55,31 +61,26 @@ const ProductInfoForOptionItem = ({handle}) =>{
                                 </h1>
                                 
                                 {option.isExtraItem ?
-                                <>
-                                <p className="productOption__extra">
-                                        + {option.extraItem.name} : {MoneyFilter(option.extraItem.price)} 
-                                </p>
-                                <p className="productOption__extra">{option.extraItem.description}</p>
-                                </>  
-                                :
-                                null
-                                }
-                            </div>
-                        </div>
-
-                        <div className="productOption__body">
-                            
-                            <div className="productOption__wrap productOption__wrap--image">
-                                <img className="productOption__image" src="" alt=""/>
-                            </div>
-
-                            <div className="productOption__wrap productOption__wrap--description">
-                                {parse(option.description)}
-                                {option.isTermAndCondtions?
-                                    <p className="productOption__term">Term And Conditions</p>
+                                    <>
+                                        <p className="productOption__extra">
+                                                + {option.extraItem.name} : {MoneyFilter(option.extraItem.price)} 
+                                        </p>
+                                        <p className="productOption__extra productOption__extra--last">{option.extraItem.description}</p>
+                                    </>  
                                     :
                                     null
                                 }
+
+                                {parse(option.description)}
+{/* 
+                                {option.isTermAndConditions?
+                                    <a 
+                                        className="productOption__term"
+                                        href={option.termAndCondtionsUrl}
+                                        target="_blank">Term And Conditions</a>
+                                    :
+                                    null
+                                } */}
                             </div>
                         </div>
 

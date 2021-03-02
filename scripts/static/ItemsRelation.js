@@ -77,7 +77,27 @@ const ItemsRelation = {
         },
         priceSuffix: null
     },
-
+    'alerta-chime': 
+    {
+        isSubscription: false,
+        subscriptionType: null,
+        isExtraItem:false,
+        hasExtraItem: false,
+        hasMessage: false,
+        message: null,
+        extraItem : {
+            id: null,
+            priceSuffix: null
+        },
+        hasNote: false,
+        note : {
+            title: null,
+            description: null,
+            hasExpansion: null,
+            expansion: null,
+        },
+        priceSuffix: null
+    },
     'battery-replacement': 
     {
         isSubscription: false,
@@ -176,6 +196,69 @@ const ItemsRelation = {
                         +'<p class="cart__description">Purchaser may cancel the agreement before the 24-month period ends, after having paid a $40.00 cancellation fee and returned the product with a return material authorization number, which number can be obtained by calling Track Patch 1 customer service at 1-833-325-3782. Monthly charges will stop during the billing period which follows receipt of returned product.</p>'
         },
         priceSuffix: '/6 months'
+    },
+    '1-year-service-renewal':
+    {
+        isSubscription: false,
+        subscriptionType: null,
+        isExtraItem:false,
+        hasExtraItem: false,
+        hasMessage: false,
+        message: null,
+        extraItem : {
+            id: null,
+            priceSuffix: null
+        },
+        hasNote: false,
+        note : {
+            title: null,
+            description: null,
+            hasExpansion: null,
+            expansion: null,
+        },
+        priceSuffix: null
+    },
+    '1-year-service-renewal-battery-replacement':
+    {
+        isSubscription: false,
+        subscriptionType: null,
+        isExtraItem:false,
+        hasExtraItem: false,
+        hasMessage: false,
+        message: null,
+        extraItem : {
+            id: null,
+            priceSuffix: null
+        },
+        hasNote: false,
+        note : {
+            title: null,
+            description: null,
+            hasExpansion: null,
+            expansion: null,
+        },
+        priceSuffix: null
+    },
+    'alerta-find': 
+    {
+        isSubscription: false,
+        subscriptionType: null,
+        isExtraItem:false,
+        hasExtraItem: false,
+        hasMessage: false,
+        message: null,
+        extraItem : {
+            id: null,
+            priceSuffix: null
+        },
+        hasNote: false,
+        note : {
+            title: null,
+            description: null,
+            hasExpansion: null,
+            expansion: null,
+        },
+        priceSuffix: null
     },
 
 

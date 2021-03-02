@@ -9,6 +9,7 @@ const CartCardList = ({cartItem}) => {
     return(
         
         cartItem.map( (item, index) => {
+            console.log(item)
             return(
                 <div key={index} className="cart__group">
                     <CartCardForItem item={item}/>            

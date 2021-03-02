@@ -1,21 +1,36 @@
 .productOption{
     display: grid;
-    grid-template-rows: repeat(2, auto); 
+    grid-template-columns: 1fr 1.75fr; 
     box-shadow: $box-shadow-third;
     border-radius: 25px;
     margin-bottom: $margin-small;
+    cursor: pointer;
     &__container{
         padding: $padding-small;
+        display: none;
+        &--active{
+            padding: $padding-small;
+            display: block;
+        }
     }
     &__header{
+        position: relative;
         display: grid;
-        grid-template-columns: 1fr 1.75fr;
+        justify-items: center;
+        align-items: center;
+        background-color:color(gray);
+        border-radius: 25px 0 0 25px;
     }
 
     &__body{
         display: grid;
-        grid-template-columns: 1fr 1.75fr;
-        grid-template-rows: repeat(2,auto);
+        grid-template-columns: 1fr 2fr;
+        justify-items: center;
+        align-items: center;
+        border-radius: 0 25px 25px 0;
+        &--custom{
+            grid-template-columns: 1fr;
+        }
     }
 
     &__price{
@@ -32,40 +47,41 @@
     }
     
     &__wrap{
-        padding: $padding-xsmall;
+        
         &--option{
             @include flexbox-row;
             justify-content: space-around;
-            background-color:color(gray);
-            border-radius: 25px 0  0  0;
+            
+            border-radius: 25px 0 0 25px;
         }
         &--price{
             @include flexbox-col;
             align-items: flex-start;
-            border-radius: 0 25px 0 0;
+           
             padding: $padding-medium;
-            padding-bottom: $padding-xsmall;
+            border-radius: 0 25px 25px 0;
         }
         &--image{
-            background-color:color(gray);
-            border-radius: 0 0 0 25px;
+            padding: $padding-xxsmall;
         }
         &--description{
             padding: $padding-medium;
             padding-top: 0;
+        }
+        &--padding{
+            padding-bottom: 0;
         }
     }
     &__term{
         margin-top: $margin-xsmall;
         color: #697EE6 !important;
     }
-
     &__additional{
         display: grid;
         grid-template-columns: auto 70px 1.5fr 1fr 1fr;
-        padding: $padding-small;
         align-items: center;
         justify-items: center;
+        margin-bottom: $margin-small;
     }
     &__label{
         font-family: $font-secondary;
@@ -78,10 +94,25 @@
         text-align: center;
     }
     &__image{
+        width: 75px;
+        height: 75px;
         &--small{
             width: 50px;
             height: 50px;
             border-radius: 50px;
+        }
+    }
+    &__bedge{
+        position: absolute;
+        width: 75px;
+        top: -7px;
+        left: -7px;
+    }
+    &__extra{
+        opacity: 0.8;
+        &--last{
+            margin-bottom: $margin-xsmall;
+            
         }
     }
   

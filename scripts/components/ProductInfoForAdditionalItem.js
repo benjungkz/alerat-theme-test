@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ProductInfoExtraQty from './ProductInfoExtraQty';
 import MoneyFilter from '../utils/MoneyFilter'
-import ItemsRelation from '../static/ItemsRelation'
 import { addItem, removeItem } from '../store/CartStore'
 import { connect } from "react-redux"
 

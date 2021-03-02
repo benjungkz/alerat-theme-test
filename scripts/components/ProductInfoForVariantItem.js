@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import MoneyFilter from '../utils/MoneyFilter'
+import ProductRelation from '../static/ProductRelation'
 import { selectVriantItem, addItem, changeItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
 const GET_PRODUCT_URL = '/products/'
-const PRODUCT_OPTION_BEDGE_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/productinfo-star-bedge.png'
+const PRODUCT_OPTION_BEDGE_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/alerta-best-seller-bedge.png'
 
 const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVariantItemId, addItem, changeItem}) =>{
     const [ variants, setVariants ] = useState([])
@@ -21,7 +22,7 @@ const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVa
             }
             :
             {
-                opacity: '0.7'
+                opacity: '0.6'
             }
         )
     }
@@ -59,13 +60,22 @@ const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVa
                 }
             )
     }
-    const addInitialVariantItemToCartHandelr = (initialVariantID) => {
-            const productStage = 
-            {
-                id: initialVariantID,
-                quantity: 1
-            }
-
+    const addInitialVariantItemToCartHandelr = (initialVariantID) => {        
+            let productStage;
+            ProductRelation[handle].options[0].isSubscription ?
+                productStage = 
+                {
+                    id: initialVariantID,
+                    quantity: 1
+                }
+            :
+                productStage = 
+                {
+                    id: initialVariantID,
+                    quantity: 1,
+                    properties: ProductRelation[handle].options[0].properties
+                }
+    
             addItem(productStage)
     }
 

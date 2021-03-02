@@ -547,6 +547,7 @@ $(document).ready(function(){
     })
   }
 
+  // Flash logic
   function productCustomOptionHandler(){
     var variant = $('.product__variant--single');
   

@@ -61,7 +61,8 @@ const ProductQty = ({ handle, addItem, updateItem, selectedVariantItemId }) => {
         :
         null
 
-        addItem([productStage, extraItemStage])
+
+        extraItemStage == null ? addItem([productStage]) : addItem([productStage, extraItemStage])
     }
 
     const updateItemToCartHandler = (qty) => {
