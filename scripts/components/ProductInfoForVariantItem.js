@@ -93,7 +93,7 @@ const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVa
 
                         <div className="productOption__header">
                             <div className="productOption__wrap productOption__wrap--option">
-                                { index == 0 ? <img className="productOption__bedge" src={PRODUCT_OPTION_BEDGE_ICON_URL}/> : null}
+                                { index == 0 && ProductRelation[handle].options[0].hasIcon ? <img className="productOption__bedge" src={PRODUCT_OPTION_BEDGE_ICON_URL}/> : null}
                                 <h3 className="productOption__name">{variant.title}</h3>
                             </div>
                         </div>

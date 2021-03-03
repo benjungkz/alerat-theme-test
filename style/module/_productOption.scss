@@ -5,12 +5,21 @@
     border-radius: 25px;
     margin-bottom: $margin-small;
     cursor: pointer;
+
+    @include breakpoint(xs){
+        grid-template-columns: unset;
+        grid-template-rows: 0.5fr 1.75fr;
+    }
     &__container{
         padding: $padding-small;
         display: none;
         &--active{
             padding: $padding-small;
             display: block;
+
+            @include breakpoint(xs){
+                padding: 0;
+            }
         }
     }
     &__header{
@@ -20,32 +29,40 @@
         align-items: center;
         background-color:color(gray);
         border-radius: 25px 0 0 25px;
+        @include breakpoint(xs){
+            border-radius: 25px 25px 0 0;
+        }
     }
-
     &__body{
         display: grid;
         grid-template-columns: 1fr 2fr;
         justify-items: center;
         align-items: center;
         border-radius: 0 25px 25px 0;
-        &--custom{
-            grid-template-columns: 1fr;
+        @include breakpoint(xs){
+            border-radius: 0 0 25px 25px;
         }
+        &--custom{
+            grid-template-columns: 1fr;    
+        }
+        
     }
-
     &__price{
         color: color(red);
         line-height: 1em;
         font-family: $font-secondary;
+        @include breakpoint(xs){
+            grid-row: 2;
+            grid-column: 3;
+            justify-self: start;
+        }
     }
-
     &__suffix{
         color: color(black-light);
         font-size: 18px;
         font-weight: $font-weight-light;
         font-family: $font-secondary;
     }
-    
     &__wrap{
         
         &--option{
@@ -60,6 +77,10 @@
            
             padding: $padding-medium;
             border-radius: 0 25px 25px 0;
+
+            @include breakpoint(xs){
+                align-items: center;
+            }
         }
         &--image{
             padding: $padding-xxsmall;
@@ -78,20 +99,34 @@
     }
     &__additional{
         display: grid;
-        grid-template-columns: auto 70px 1.5fr 1fr 1fr;
+        grid-template-columns: auto 70px 2fr 1fr 1fr;
         align-items: center;
         justify-items: center;
         margin-bottom: $margin-small;
+
+        @include breakpoint(xs){
+           grid-template-columns: auto 70px 1fr 1fr;
+        }
     }
     &__label{
         font-family: $font-secondary;
         font-weight: $font-weight-light;
+        @include breakpoint(xs){
+            grid-column: span 2;
+            justify-self: start;
+        }
     }
     &__checkbox{
         transform: scale(1.5);
+        @include breakpoint(xs){
+            grid-row: span 2;
+        }
     }
     &__name{
         text-align: center;
+        @include breakpoint(xs){
+            padding: 0.5rem 0;
+        }
     }
     &__image{
         width: 75px;
@@ -100,6 +135,10 @@
             width: 50px;
             height: 50px;
             border-radius: 50px;
+
+            @include breakpoint(xs){
+                grid-row: span 2;
+            }
         }
     }
     &__bedge{

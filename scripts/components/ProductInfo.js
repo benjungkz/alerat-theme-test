@@ -20,11 +20,12 @@ const ProductInfo = () => {
     },[])
     
     const productUrlHandler = () =>{
-        let path = window.location.pathname
-        let pathNames = path.split('/')
-        console.log(path.search('products'));
-        console.log(pathNames[2])
-        path.search('products') != -1 ? setProductHandle(pathNames[2]) : null
+        // let path = window.location.pathname
+        // let pathNames = path.split('/')
+        // path.search('products') != -1 ? setProductHandle(pathNames[2]) : null
+
+        //TEST
+        setProductHandle('alerta-find-subscription')
     }
 
     const openOptionHandelr = () =>{

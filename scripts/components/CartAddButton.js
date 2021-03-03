@@ -22,12 +22,15 @@ const CartAddButton = ({cartItem}) =>{
     }
 
     return(
+        total != '$0.00'?
         <input 
             className="cart__checkout btn btn--checkout" 
             type="submit" 
             name="checkout" 
             value={
                 total + ' - CHECKOUT'}/>
+        :
+        null
     )
 
 

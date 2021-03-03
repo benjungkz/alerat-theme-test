@@ -128,7 +128,15 @@
   {% endif %}
 
    {% endcomment %}
+ 
+  {% comment %}---Cart initaiation---{% endcomment %}
+  {% if template contains 'product' %}
+    <p style="display: none;">template is {{template}}</p>
+  {% else %}
+    <div id="newcart"></div>
+    {{ "cart.bundle.js" | asset_url | script_tag }}
+  {% endif %}
+  {% comment %}----------------------- {% endcomment %}   
 
-  
 </body>
 </html>

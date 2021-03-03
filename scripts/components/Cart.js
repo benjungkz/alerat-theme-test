@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import GetCartAPI from '../api/GetCartAPI';
-import CartCardList from '../components/CartCardList';
-import CartAddButton from '../components/CartAddButton'
+import CartCardList from './CartCardList';
+import CartAddButton from './CartAddButton'
 import { openCart, closeCart } from '../store/CartStore';
 import { connect } from "react-redux"
 
@@ -17,10 +17,15 @@ const Cart = ({isOpen, cartOpen, cartClose}) => {
 
     // Event Handler
     const clickCartMenuHandler = () =>{
-        let cartButton = document.getElementsByClassName('header__menu--cart')
-        let cartIcon = document.getElementsByClassName('icon__cart')
+        // let cartButton = document.getElementsByClassName('header__menu--cart')
+        // let cartIcon = document.getElementsByClassName('icon__cart')
+        // cartButton[0].addEventListener('click', slideHandler)
+        // cartIcon[1].addEventListener('click', slideHandler)
+        
+        //TEST
+        let cartButton = document.getElementsByClassName('cart-btn-test')
+        console.log(cartButton)
         cartButton[0].addEventListener('click', slideHandler)
-        cartIcon[1].addEventListener('click', slideHandler)
     }
 
     // Slide Animation Handler

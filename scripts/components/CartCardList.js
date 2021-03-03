@@ -1,15 +1,14 @@
 import React, { useEffect } from 'react'
-import CartCardForItem from '../components/CartCardForItem';
+import CartCardForItem from './CartCardForItem';
 import ItemsRelation from '../static/ItemsRelation';
-import CartCardForNote from '../components/CartCardForNote';
+import CartCardForNote from './CartCardForNote';
 import { connect } from "react-redux"
 
 const CartCardList = ({cartItem}) => {
 
     return(
-        
+        cartItem.length > 0 ?
         cartItem.map( (item, index) => {
-            console.log(item)
             return(
                 <div key={index} className="cart__group">
                     <CartCardForItem item={item}/>            
@@ -21,11 +20,13 @@ const CartCardList = ({cartItem}) => {
                         null
                         
                     }
-                       
-                    
                 </div>
             )
-        })        
+        }) 
+        :
+        
+        <h1 className="cart__empty">Cart is empty 🛒</h1>
+       
     )
 }
 

@@ -23,8 +23,9 @@ const ProductInfoForAdditionalItem = ({item, properties, addItem, removeItem}) =
 
 
     //Handeler
-    const checkedHandler= (e) => {
-        setChecked(e.target.checked)
+    const checkedHandler= () => {
+        checked? setChecked(false) : setChecked(true)
+        //setChecked(e.target.checked)
     }
 
     const addItemToCartHandler = (item)=>{
@@ -79,12 +80,15 @@ const ProductInfoForAdditionalItem = ({item, properties, addItem, removeItem}) =
               
             <img className="productOption__image productOption__image--small lazyload" 
                 src={imgURL} 
-                alt=""
+                onClick={()=>{checkedHandler()}}
 
             />
             
-            <label className="productOption__label" htmlFor={item.type}>{item.name}</label>
-            <p className="productOption__price productOption__price--small">{MoneyFilter(item.price)}</p>
+            <label className="productOption__label" 
+                htmlFor={item.type}
+                onClick={()=>{checkedHandler()}}>{item.name}</label>
+            <p className="productOption__price productOption__price--small"
+                onClick={()=>{checkedHandler()}}>{MoneyFilter(item.price)}</p>
             <ProductInfoExtraQty
                 id={item.variantId}
                 quantity={1}
