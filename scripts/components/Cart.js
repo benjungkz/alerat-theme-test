@@ -17,15 +17,15 @@ const Cart = ({isOpen, cartOpen, cartClose}) => {
 
     // Event Handler
     const clickCartMenuHandler = () =>{
-        // let cartButton = document.getElementsByClassName('header__menu--cart')
-        // let cartIcon = document.getElementsByClassName('icon__cart')
-        // cartButton[0].addEventListener('click', slideHandler)
-        // cartIcon[1].addEventListener('click', slideHandler)
-        
-        //TEST
-        let cartButton = document.getElementsByClassName('cart-btn-test')
-        console.log(cartButton)
+        let cartButton = document.getElementsByClassName('header__menu--cart')
+        let cartIcon = document.getElementsByClassName('icon__cart')
         cartButton[0].addEventListener('click', slideHandler)
+        cartIcon[1].addEventListener('click', slideHandler)
+        
+        // TEST
+        // let cartButton = document.getElementsByClassName('cart-btn-test')
+        // console.log(cartButton)
+        // cartButton[0].addEventListener('click', slideHandler)
     }
 
     // Slide Animation Handler

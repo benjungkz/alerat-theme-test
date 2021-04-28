@@ -21,13 +21,22 @@
         </div>
         
         <!-- Logo  -->       
-        <img class="product__logo" src="{{section.settings.product_logo | img_url: 'master' }}" alt="Logo of {{product.title}}">    
+        {% if section.settings.product_logo != nil %}
+            <img class="product__logo" src="{{section.settings.product_logo | img_url: 'master' }}" alt="Logo of {{product.title}}">    
+        {% endif %}
         
         <!-- Title -->
         {% if section.settings.product_title != '' %}
             <h1 class="product__title product__title--single">{{section.settings.product_title}}</h1>
         {% else %}
             <h1 class="product__title product__title--single">{{product.title}}</h1>
+        {% endif %}
+
+        <!-- Title Suffix -->
+        {% if section.settings.product_suffix %}
+            <h2 class="product__title product__title--suffix">
+                {{section.settings.product_title_suffix}}
+            </h2>
         {% endif %}
 
         <!-- Description or Summary -->
@@ -66,8 +75,9 @@
             {% endif %}    
         {% endif %}
 
+        <!-- Product info & Cart -->
         <div id="newcart"></div>
- 
+        
         <!-- Event -->
         <div class="product__event">
             {% for block in section.blocks %}
@@ -83,5 +93,4 @@
         
     </div>
 </div>
-
-{{ "cart.bundle.js" | asset_url | script_tag }}
+ 

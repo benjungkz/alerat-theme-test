@@ -48,15 +48,15 @@
         }
 
         @include breakpoint(lg){
-            width: 200px;
+            width: 180px;
         }
         
         @include breakpoint(xl){
-            width: 250px;
+            width: 200px;
         }
 
         @include breakpoint(xxl){
-            width: 350px;
+            width: 250px;
         }
 
 
@@ -135,7 +135,7 @@
     &__tag{
         position: absolute;
         top: 20px;
-        left: 80%;
+        left: 10%;
         color: color(red);
         font-weight: $font-weight-bold;
         z-index: 3;
@@ -234,7 +234,7 @@
         width: 100%;
         padding: $padding-xxsmall;
         display: grid;
-        grid-template-rows: 1fr 1.5fr auto auto;
+        grid-template-rows: 15vh 2fr 1fr;
         justify-items: center;
         align-items: center;
     }

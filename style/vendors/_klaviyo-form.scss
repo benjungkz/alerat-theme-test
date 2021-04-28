@@ -1,0 +1,36 @@
+.post{
+    &__body{
+        form{
+            padding: $padding-xlarge !important;
+
+            @include breakpoint(xs){
+                padding: $padding-xsmall !important;
+            }
+
+            p{
+                line-height: 2em !important;
+
+                @include breakpoint(xs){
+                    line-height: 1.5em !important;
+                    font-size: calc( 0.9em * 1.3225)!important;
+                    strong{
+                        font-size: inherit !important
+                    }
+                    span{
+                        font-size: calc( 0.75em * 1.3225)!important;
+                    }
+                }
+            }
+            input[type="email"]{
+                padding: $padding-small !important;
+                border-radius: 50px !important;
+            }
+        }
+        button{
+            padding: $padding-xsmall !important;
+            box-shadow: $box-shadow-primary !important;
+                
+        }
+       
+    }
+}

@@ -27,7 +27,7 @@ const ProductRelation = {
                             +'<p class="productOption__description">Customer Center Access</p>'
                             +'<p class="productOption__description">24 months contract</p>',
                 extraItem: {
-                    variantId: 6539087052897,
+                    variantId: 39254725558369,
                     name: 'Find Activation Fee',
                     price: 9900,
                     description: '(one-time)'
@@ -49,17 +49,18 @@ const ProductRelation = {
                 isExtraItem: false,
                 isAdditionalItmes: true,
                 hasIcon: false,
-                variantId: 3871203426338,
+                variantId: 29359236120610,
                 handle: 'alerta-find',
                 properties: null,
                 name: '2-Year Service',
                 price: 25900,
                 priceSuffix: '',
                 description :
-                            '<p class="productOption__description">No Activation Fee</p>'
-                            +'<p class="productOption__description">Alerta Find App</p>'
-                            +'<p class="productOption__description">Activation Service</p>'
-                            +'<p class="productOption__description">Customer Center Access</p>',
+                        '<p class="productOption__description">No Monthly Fee</p>'
+                        +'<p class="productOption__description">No Activation Fee</p>'
+                        +'<p class="productOption__description">Alerta Find App</p>'
+                        +'<p class="productOption__description">Activation Service</p>'
+                        +'<p class="productOption__description">Customer Center Access</p>',
                 extraItem: null,
                 additionalItems:[
                     {
@@ -118,7 +119,7 @@ const ProductRelation = {
                             +'<p class="productOption__description">Customer Center Access</p>'
                             +'<p class="productOption__description">24 months contract</p>',
                 extraItem: {
-                    variantId: 6539087052897,
+                    variantId: 39254725558369,
                     name: 'Find Activation Fee',
                     price: 9900,
                     description: '(one-time)'
@@ -140,14 +141,15 @@ const ProductRelation = {
                 isExtraItem: false,
                 isAdditionalItmes: true,
                 hasIcon: false,
-                variantId: 3871203426338,
+                variantId: 29359236120610,
                 handle: 'alerta-find',
                 properties: null,
                 name: '2-Year Service',
                 price: 25900,
                 priceSuffix: '',
                 description :
-                            '<p class="productOption__description">No Activation Fee</p>'
+                            '<p class="productOption__description">No Monthly Fee</p>'
+                            +'<p class="productOption__description">No Activation Fee</p>'
                             +'<p class="productOption__description">Alerta Find App</p>'
                             +'<p class="productOption__description">Activation Service</p>'
                             +'<p class="productOption__description">Customer Center Access</p>',
@@ -202,6 +204,7 @@ const ProductRelation = {
                         handle: 'alerta-patch-refill-kit-subscription-3-months',
                         price: 10900,
                         isSubscription: true,
+                        suffix:'',
                         properties:{
                             'frequency_num': 3,
                             'frequency_type': 3,
@@ -215,6 +218,7 @@ const ProductRelation = {
                         handle: 'alerta-patch-refill-kit-subscription-1-months',
                         price: 3800,
                         isSubscription: true,
+                        suffix:'',
                         properties:{
                             'frequency_num': 1,
                             'frequency_type': 3,
@@ -228,6 +232,7 @@ const ProductRelation = {
                         handle: 'alerta-patch-refill-kit-subscription-6-months',
                         price: 20100,
                         isSubscription: true,
+                        suffix:'',
                         properties:{
                             'frequency_num': 6,
                             'frequency_type': 3,
@@ -310,7 +315,40 @@ const ProductRelation = {
                 additionalItems: null
             }
         ]
-    }
+    },
+    'ablelife-autocane':
+    {
+        optionType: 'normal',
+        hasAdditionalItem: true,
+        options: [
+            {
+                isSubscription: false,
+                isTermAndConditions: true,
+                isExtraItem: false,
+                isAdditionalItmes: true,
+                hasIcon: false,
+                priceSuffix: '',
+                description :'',
+                extraItem: null,
+                additionalItems:[
+                    {
+                        variantId: 32768584253537,
+                        name: 'Alerta Find GPS Car Tracker (Subscription)',
+                        handle: 'alerta-find-subscription',
+                        price: 990,
+                        isSubscription: true,
+                        suffix:'/m',
+                        properties:{
+                            'frequency_num': 1,
+                            'frequency_type': 3,
+                            'frequency_type_text': 'Month(s)',
+                            'group_id': 159695
+                        }
+                    }
+                ]
+            }
+        ]
+    },
 
 }
 

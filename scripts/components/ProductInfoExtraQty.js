@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import ItemsRelation from '../Static/ItemsRelation'
 import { updateItem } from '../store/CartStore'
 import { connect } from "react-redux"
 
-const ProductInfoExtraQty = ({id, quantity, updateItem }) => {
+const ProductInfoExtraQty = ({id, quantity, handle, properties, updateItem }) => {
     const [ qty, setQty ] = useState(0);  
 
     useEffect(()=>{
@@ -13,12 +14,7 @@ const ProductInfoExtraQty = ({id, quantity, updateItem }) => {
     const plusHandler = () => {
         // Change qty
         setQty(qty + 1) 
-        
-        console.log(qty)
-
-        // Update Cart
-        updateItemFromCartHandelr(true);
-
+        updateItemFromCartHandelr(true)
     }
 
     // Minus handler
@@ -26,7 +22,7 @@ const ProductInfoExtraQty = ({id, quantity, updateItem }) => {
         if( qty > 1){
             // Minus qty
             setQty(qty - 1)
-            updateItemFromCartHandelr(false);
+            updateItemFromCartHandelr(false)
         }
     }
 
@@ -34,11 +30,28 @@ const ProductInfoExtraQty = ({id, quantity, updateItem }) => {
     const updateItemFromCartHandelr = (isPlus)=>{
         let quantity;
         isPlus ?  quantity = qty + 1 : quantity = qty - 1
-        const setItem = {
-            id: id,
-            quantity: quantity
-        }
-        updateItem(setItem);
+        
+        properties == null?
+                updateItem({
+                    id: id,
+                    quantity: quantity
+                })
+            :
+                updateItem({
+                    id: id,
+                    quantity: quantity,
+                    properties: properties
+                })
+
+
+        // Update the extra Item
+        ItemsRelation[handle].hasExtraItem ?
+                updateItem({
+                    id: ItemsRelation[handle].extraItem.variantId,
+                    quantity: quantity
+                })
+            :
+                null
     }
   
     return(

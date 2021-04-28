@@ -8,7 +8,7 @@ import parse from 'html-react-parser';
 const PRODUCT_URL = 'alerta-find-subscription';
 ///////////////////////////////////////////////
 
-const PRODUCT_PAGE_URL = 'https://benkzdevshop.myshopify.com/products/'
+const PRODUCT_PAGE_URL = 'https://www.alertafamily.com/products/'
 const PRODUCT_OPTION_BEDGE_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/alerta-best-seller-bedge.png'
 
 const ProductInfoForOptionItem = ({handle}) =>{
@@ -62,10 +62,8 @@ const ProductInfoForOptionItem = ({handle}) =>{
                                 
                                 {option.isExtraItem ?
                                     <>
-                                        <p className="productOption__extra">
-                                                + {option.extraItem.name} : {MoneyFilter(option.extraItem.price)} 
-                                        </p>
-                                        <p className="productOption__extra productOption__extra--last">{option.extraItem.description}</p>
+                                        <p className="productOption__extra">+ {option.extraItem.name} : </p>
+                                        <p className="productOption__extra productOption__extra--last"> {MoneyFilter(option.extraItem.price)} {option.extraItem.description}</p>
                                     </>  
                                     :
                                     null

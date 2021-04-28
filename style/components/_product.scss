@@ -116,16 +116,21 @@
         &--pricing{
             text-align: center;
         }
+
         &--single{
             padding:0;
             font-family: $font-secondary;
             font-weight: 1000;
-            text-transform: uppercase;
             margin: $margin-xsmall 0;
             @include breakpoint(xs){
                 font-size: calc( 1.2em * 1.3225) !important;
             }
+        }
 
+        &--suffix{
+            padding:0;
+            margin-bottom: $margin-xsmall;
+            font-family: $font-secondary;
         }
     }
     &__image{
@@ -418,6 +423,21 @@
         align-items: flex-start;
         padding: 0 $padding-xxlarge;
         margin-bottom: $margin-xxlarge;       
+    }
+    &__app{
+       @include flexbox-row;
+       justify-content: flex-start;
+       width: 100%;
+       column-gap: 5rem;
+       padding: 0 5rem;
+       margin-bottom: 5rem;
+
+       
+       @include breakpoint(xs){
+            flex-direction: column;
+            column-gap: 0;
+            row-gap: 2rem;
+       }
     }
     &__video{
         width: 100%;

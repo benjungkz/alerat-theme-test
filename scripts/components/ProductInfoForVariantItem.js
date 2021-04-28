@@ -28,9 +28,7 @@ const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVa
     }
 
     useEffect(()=>{
-        console.log("useEffect!!")
         getProductHandler(handle)     
-
     },[handle])
    
     // Handler
@@ -46,6 +44,9 @@ const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVa
             .then( res => res.json())
             .then(
                 (result)=>{
+                    // Log
+                    console.log(result.variants);
+
                     // Add initial value to the stage
                     addInitialVariantItemToCartHandelr(result.variants[0].id)
                     
@@ -89,7 +90,14 @@ const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVa
                         className="productOption" 
                         style={style(variant.id)}
                         key={index}
-                        onClick={()=>{ variantHandler(variant.id)} }>
+                        onClick={
+                            ()=>{ 
+                                    variant.inventory_quantity > 0 ?
+                                        variantHandler(variant.id)
+                                    :
+                                        null
+                                } 
+                        }>
 
                         <div className="productOption__header">
                             <div className="productOption__wrap productOption__wrap--option">
@@ -100,12 +108,22 @@ const ProductInfoForVariantItem = ({handle, selectedVariantItemId, setSelectedVa
 
                         <div className="productOption__body"> 
                             <div className="productOption__wrap productOption__wrap--image">
-                                <img className="productOption__image" src={variant.featured_image.src} alt={variant.title} />
+                                <img 
+                                        className="productOption__image" 
+                                        src={variant.featured_image.src} alt={variant.title} />
                             </div>
                             <div className="productOption__wrap productOption__wrap--price">
-                                <h1 className="productOption__price">
-                                    {MoneyFilter(variant.price)}
-                                </h1>
+                                    {
+                                        variant.inventory_quantity > 0 ?
+                                                <h1 className="productOption__price">
+                                                    {MoneyFilter(variant.price)}
+                                                </h1>
+                                            :
+                                                <p className="productOption__price productOption__price--outofstock">
+                                                    Currently Unavailable
+                                                </p>
+                                    
+                                    }
                             </div>
                             
                         </div>

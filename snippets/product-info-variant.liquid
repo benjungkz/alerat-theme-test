@@ -1,22 +1,4 @@
-{% assign is_custom_option = section.settings.product_option %}
-{% assign is_image_change = section.settings.product_option_image_change %}
 {% assign exception_product_handle = 'get-started-kit' %}
-
-<!-- Select Options Template -->
-{% if is_custom_option != true %}
-    {% if product.variants.size > 1 %}
-        {% assign is_single_variant = "" %}    
-    {% else %}
-        {% assign is_single_variant = "product__wrap--hidden" %}    
-    {% endif %}    
-{% endif %}
-
- {% assign product_frequency_number = "" %}
-{% for tag in product.tags %}
-    {% if tag contains "Frequency" %}
-        {% assign product_frequency_number = tag | slice: 0 %}
-    {% endif %}          
-{% endfor %}
 
 <!-- Product Infomation -->
 <div class="grid__col-xxl--6 grid__col-xl--6 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 
@@ -45,14 +27,11 @@
                 <h1 class="product__title product__title--single">{{product.title}}</h1>
             {% endif %}
 
-            
-       
-       
         </div>
 
         <div class="product__content--bg">
             
-            <!-- Summary  & Description-->
+            <!-- Summary & Description-->
             {% if section.settings.product_summary %}
                 <div class="summary">
                     {% for block in section.blocks %}
@@ -77,87 +56,11 @@
                     <h5 class="product__description">{{product.description}}</h5>  
                 {% endif %}    
             {% endif %}
+            <br>
+
+            <!-- Product info & Cart -->
+            <div id="newcart"></div>
             
-            <div id="newcart"></div> 
-
-            {% comment %} <!-- Price -->
-            <h1 class="product__price">{{ product.price | money }}</h1>
-            
-            <!-- Option -->
-            <div class="product__selection">
-                <div class="product__wrap {{ is_single_variant }}">
-                    <h6 class="product__label">
-                    {% if is_custom_option %}
-                        {{ section.settings.product_option_name}}
-                    {% else %}
-                        {{ product.options[0]}}
-                    {% endif %}
-                    </h6>
-
-                    <div class="product__options">
-                    
-                    <!-- Option with vriants-->
-                    {% if is_custom_option == false %}
-                        {% for variant in product.variants %}
-                            {% if variant.inventory_quantity != 0 %}
-                                <!-- Min Vriant Price -->
-                                {% if forloop.index == 1 %}
-                                    {% assign min_variant_price = variant.price %}    
-                                {% endif %}
-                                
-                                <!-- Vriant Button -->
-                                <div class="product__option">     
-                                    <div class="product__variant product__variant--normal" 
-                                    name="{{ product.handle}}" 
-                                    value="{{ variant.id }}" 
-                                    index="{{ forloop.index }}"
-                                    price="{{ variant.price }}"
-                                    product-name="{{product.title}}({{variant.title}})"
-                                    sku="{{ variant.sku }}"
-                                    variant="{{ variant.title }}"
-                                    option=""
-                                    number="{{product_frequency_number}}"
-                                    group="{{ product.variants[0].metafields.bold_rp.rp_group_id }}"
-                                    change="{{is_image_change}}"
-                                    img_suffix="{{product.handle}}-{{variant.title | downcase }}">
-                                        <img class="product__variant--thumnail" src="{{ variant.image | img_url: '50x' }}" alt="{{ section.settings.product_desc }}">
-                                    </div>
-                                    <h6 class="product__label product__label--option">{{ variant.title }}</h6>
-                                    <h6 class="product__price--variant">{{ variant.price | money }}</h6>    
-                                </div>
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-                    </div>
-                </div>
-            </div>
-
-            <!-- QTY -->
-            <div class="product__wrap--variant">
-                <h6 class="product__label">QTY</h6>
-                <div class="product__qty">
-                    <div class="qty qty--variant">   
-                        <div class="qty__content qty__content--symbol qty__content--minus js-qty__content--minus">
-                            <h6 class="qty__symbol">-</h6>
-                        </div>
-
-                        <div class="qty__content qty__content--number"> 
-                            <h6 class="qty__number js-qty__number">1</h6>
-                        </div>
-
-                        <div class="qty__content qty__content--symbol qty__content--plus js-qty__content--plus">
-                            <h6 class="qty__symbol">+</h6>
-                        </div>
-                    
-                    </div>
-                </div>
-            </div>
-
-            <!-- Button -->
-            <a class="btn btn--pricing product__button" href="#"> 
-                <h5 class="btn__text btn__text--pricing ">ADD TO CART</h5>
-            </a> {% endcomment %}
-
             <!-- Event -->
             <div class="product__event">
                 {% for block in section.blocks %}
@@ -175,4 +78,4 @@
 
     </div>
 </div>
- {{ "cart.bundle.js" | asset_url | script_tag }}
+ 

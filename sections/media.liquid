@@ -1,0 +1,135 @@
+<!-- Slider -->
+{% render 'about-slider' with section.blocks as blocks %}
+
+<!-- Story -->
+{% render 'about-story' with section.blocks as blocks %}
+
+<!-- Bio -->
+{% render 'media-bio' with section.blocks as blocks %}
+
+<!-- Download -->
+{% render 'media-download' %}
+
+{% schema %}
+    {   
+        "blocks": [
+            {
+                "type": "team",
+                "name": "Team",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "media_team_piture",
+                        "label": "Team Picture"
+                    },
+                    {
+                        "type": "text",
+                        "id": "media_team_title",
+                        "label": "Position Title" 
+                    },
+                    {
+                        "type": "text",
+                        "id": "media_team_name",
+                        "label": "Name" 
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "media_team_bio",
+                        "label": "Bio"
+                    }
+                ]
+            },
+            {
+                "type": "story",
+                "name": "Story",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "about_story_pic",
+                        "label": "Picture"
+                    },
+                    {
+                        "type": "text",
+                        "id": "about_story_title",
+                        "label": "Position Title" 
+                    },
+                    {
+                        "type": "text",
+                        "id": "about_story_name",
+                        "label": "Name" 
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "about_story_content",
+                        "label": "Story"
+                    }
+                ]
+            },
+            {
+                "type": "slider",
+                "name": "Media Slider",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "about_slider_image",
+                        "label": "Slider Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "about_slider_image_tablet",
+                        "label": "Slider Image (for tablet)"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "about_slider_image_mobile",
+                        "label": "Slider Image (for Mobile)"
+                    },
+                    {
+                       "id": "about_slider_image_alt",
+                       "type": "text",
+                       "label": "Slider Image Alt"
+                    },
+                    {
+                       "id": "about_slider_title",
+                       "type": "textarea",
+                       "label": "Slider Title"
+                    },
+                    {
+                       "id": "about_slider_desc",
+                       "type": "textarea",
+                       "label": "Slider Description"
+                    },
+                    {
+                        "type": "color",
+                        "id": "about_slider_top_color",
+                        "label": "Slider Top Color"
+                    },
+                    {
+                        "type": "color",
+                        "id": "about_slider_bottom_color",
+                        "label": "Slider Bottom Color"
+                    }
+                ]
+            }
+        ],
+
+        "name" : "Media Kit Page",
+        "settings": [
+           {
+              "type": "image_picker",
+              "id": "media_download_image",
+              "label": "Download Image"
+          },
+          {
+              "type": "text",
+              "id": "media_download_title",
+              "label": "Download Title"
+          },
+          {
+              "type": "text",
+              "id": "media_download_subtitle",
+              "label": "Download Subtitle"
+          }
+        ] 
+    }
+{% endschema %}

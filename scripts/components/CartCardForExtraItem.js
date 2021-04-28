@@ -17,14 +17,12 @@ const CartCardForExtraItem  = ({ mainItemHandle, extraItemHandle}) => {
                 .then( res => res.json())
                 .then(
                     (result)=>{
-                        console.log(result)
                         setExtraItemInfo(result);
                     },
                     (error)=>{
                         console.log(error)
                     })
         }else{
-            console.log("No extra item")
             setExtraItemInfo(null);
         }
     }

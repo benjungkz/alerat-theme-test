@@ -8,7 +8,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
- 
   <link rel="canonical" href="{{ canonical_url }}">
   
   {%- if settings.favicon != blank -%}
@@ -37,6 +36,7 @@
 
   <!-- Jquery -->
   {{ 'jquery-3.5.1.min.js'| asset_url | script_tag }}
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.9/swiper-bundle.min.js"></script>
 
   <!-- SEO & Tracking -->
   {% render 'seo-init' %}
@@ -53,7 +53,7 @@
     
 
   <!-- Chat box -->
-  {% comment %} {% render 'element-chatbox' %}  {% endcomment %}
+  {% render 'element-chatbox' %} 
   
   {{ content_for_header }}
   
@@ -62,7 +62,7 @@
   <script type="text/javascript" src="{{ 'lazysizes.min.js'| asset_url }}" defer></script> 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.min.js" defer></script>
   {{ 'bold-subscriptions-js.min.js'| asset_url | script_tag }}
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ 
   {{ 'slick.min.js'| asset_url | script_tag }}
 
   
@@ -97,8 +97,17 @@
   {% if handle contains 'dev' %}
     <meta name="robots" content="noindex">
   {% endif %}
+
+  {% if handle contains 'media-kit' %}
+    <meta name="robots" content="noindex">
+  {% endif %}
+  
   
   {% if product and product.type contains 'dev' %}
+    <meta name="robots" content="noindex">
+  {% endif %}
+
+  {% if product and product.type contains 'test' %}
     <meta name="robots" content="noindex">
   {% endif %}
 
@@ -109,34 +118,22 @@
 <body class="body">
   
 
-  {% comment %} {% render 'ajax-cart' %} {% endcomment %}
   {% render 'seo-google-tag-noscript' %}
 
   {% section 'header' %}
 
   {{ content_for_layout }}
 
-  {{ 'theme.js' | asset_url | script_tag }}
-  {{ 'page-util.js' | asset_url | script_tag }}
-  {{ 'ajax-cart.js' | asset_url | script_tag }}
   
+
   {% section 'footer' %}
   
-  {% comment %} {% if handle contains 'dev' %}
-  {% else %}
-      {% section 'footer' %}      
-  {% endif %}
-
-   {% endcomment %}
- 
   {% comment %}---Cart initaiation---{% endcomment %}
-  {% if template contains 'product' %}
-    <p style="display: none;">template is {{template}}</p>
-  {% else %}
-    <div id="newcart"></div>
-    {{ "cart.bundle.js" | asset_url | script_tag }}
-  {% endif %}
+  <div id="newcart"></div>
+  {{ "cart.bundle.js" | asset_url | script_tag }}
   {% comment %}----------------------- {% endcomment %}   
-
-</body>
+  
+  {{ 'theme.js' | asset_url | script_tag }}
+  {{ 'page-util.js' | asset_url | script_tag }}
+{% include 'social-login' %}</body>
 </html>

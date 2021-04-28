@@ -9,8 +9,7 @@
         display: none;
     }
     &--team{
-        width: 300px;
-        margin-bottom: $margin-small;
+        width: 250px;
     }
     &--product{
         position: relative;
@@ -72,9 +71,7 @@
         @include flexbox-row;
         grid-column: 2;
         grid-row: 2; 
-        &--team{
-            justify-content: flex-start;
-        }
+
         &--cart{
             grid-column: 1;
             grid-row: 1;
@@ -86,9 +83,6 @@
         grid-column: 2;
         grid-row: 3;
 
-        &--team{
-            justify-content: flex-start;
-        }
         &--cart{
             flex-direction: column;
             grid-column: 1;
@@ -132,8 +126,14 @@
 
         &--team{
             opacity: 0.95;
-            width: 300px;
-            height: 300px;
+            width: 100%;
+            height: 250px;
+
+            @include breakpoint(xs){
+                width: 200px;
+                height: 200px;
+            }
+            
         }
     }
     &__video{

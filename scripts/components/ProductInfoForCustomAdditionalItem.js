@@ -5,10 +5,6 @@ import ProductRelation from '../static/ProductRelation';
 
 const ProductInfoForCustomAdditionalItem = ({handle}) => {
 
-    useEffect(()=>{
-        let test =  ProductRelation[handle].options.filter(option=>option.handle == handle)[0].additionalItems;
-        console.log(ProductRelation[handle].hasAdditionalItem);
-    })
     const { additionalItems } =  ProductRelation[handle].options.filter(option=>option.handle == handle)[0]
     const { hasAdditionalItem } = ProductRelation[handle]
    
@@ -20,6 +16,7 @@ const ProductInfoForCustomAdditionalItem = ({handle}) => {
                         key={index}
                         item={item}
                         properties={item.properties}
+                        suffix={item.isSubscription? item.suffix : ''}
                     />
                 )
             })

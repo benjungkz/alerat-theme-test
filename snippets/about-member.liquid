@@ -1,17 +1,34 @@
-{% for block in blocks %}
-    {% if block.type == "team" %}
-        <div class="card card--team">
-           <img class="card__image card__image--team" src="{{block.settings.about_team_piture | img_url: 'master'}}" alt="">
-           <div class="card__container card__container--team">
-                <div class="card__header card__header--team">
-                    <h4 class="card__title">{{block.settings.about_team_name}}</h4>
+
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">    
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <div class="about__menu">
+                    <h5>MANAGEMENT TEAM</h5>
                 </div>
-                <div class="card__body card__body--team">
-                    <h6 class="card__subtitle">{{block.settings.about_team_title}} </h6>
+                
+                
+                <div class="about__wrap about__wrap--team">
+                {% for block in blocks %}
+                    {% if block.type == "team" %}
+                    <div class="card card--team">
+                        <img class="card__image card__image--team" src="{{block.settings.about_team_piture | img_url: 'master'}}" alt="">
+                        <div class="card__container card__container--team">
+                                <div class="card__header card__header--team">
+                                    <h4 class="card__title">{{block.settings.about_team_name}}</h4>
+                                </div>
+                                <div class="card__body card__body--team">
+                                    <h6 class="card__subtitle">{{block.settings.about_team_title}} </h6>
+                                </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
                 </div>
             </div>
-        </div>          
-    {% endif %}
-{% endfor %}
+        </div>
+    </div>
+</section>   
+
 
 

@@ -47,15 +47,15 @@
           "footer_first_menu": "footer-menu-shop",
           "footer_second_menu": "footer-menu-support",
           "footer_third_menu": "footer-menu-company",
-          "footer_address": "134 N Battlefield Blvd, \nChesapeake, VA 23320",
-          "footer_email": "Alerta@trackpatch.com",
+          "footer_address": "Alerta Family, Inc.<br>\n134 N Battlefield Blvd\nChesapeake VA 23320",
+          "footer_email": "alerta@trackpatch.com",
           "footer_phone_number": "(833) 325-3782",
-          "footer_social_facebook_url": "https:\/\/www.facebook.com\/AlertaByTrackPatch",
-          "footer_social_instagram_url": "https:\/\/www.instagram.com\/alertabytrackpatch\/",
+          "footer_social_facebook_url": "https:\/\/www.facebook.com\/AlertaFamily",
+          "footer_social_instagram_url": "https:\/\/www.instagram.com\/alertafamily\/",
           "footer_social_youtube_url": "https:\/\/www.youtube.com\/channel\/UCMZ9jCBNkJAoZ1xfoXPhljA",
-          "footer_social_twitter_url": "https:\/\/twitter.com\/alertapatch",
+          "footer_social_twitter_url": "https:\/\/twitter.com\/alertafamily",
           "footer_social_linkedin_url": "https:\/\/www.linkedin.com\/company\/track-patch-1-corporation\/",
-          "footer_copyright": "Copyright © 2021 Track Patch 1 Corporation, All Rights Reserved"
+          "footer_copyright": "Copyright © 2021 Alerta Family, Inc., All Rights Reserved"
         }
       },
       "collection": {
@@ -64,8 +64,6 @@
           "1598902396503": {
             "type": "collection-left",
             "settings": {
-              "collection_product_logo": "shopify:\/\/shop_images\/logo-find-type.png",
-              "collection_product_image": "shopify:\/\/shop_images\/product-image-find-with-phone.png",
               "collection_product_title": "GPS Vehicle Tracker",
               "collection_button_text": "Learn More",
               "collection_button_link": "\/products\/alerta-find-subscription",
@@ -77,7 +75,6 @@
             "type": "collection-right",
             "settings": {
               "collection_product_logo": "shopify:\/\/shop_images\/logo-kit-type.png",
-              "collection_product_image": "shopify:\/\/shop_images\/kit-none-option.png",
               "collection_product_title": "Wearable Proximity Monitor",
               "collection_button_text": "Learn More",
               "collection_button_link": "\/products\/get-started-kit",
@@ -301,7 +298,6 @@
               "dropdown_sub_button_text": "",
               "dropdown_sub_button_url": "",
               "dropdown_product": "get-started-kit",
-              "dropdown_product_image": "shopify:\/\/shop_images\/kit-none-option.png",
               "dropdown_product_image_alt": "Alerta Patch & Kit",
               "dropdown_tag": false,
               "dropdown_tag_text": ""
@@ -318,10 +314,9 @@
               "dropdown_sub_button_text": "",
               "dropdown_sub_button_url": "",
               "dropdown_product": "alerta-find-subscription",
-              "dropdown_product_image": "shopify:\/\/shop_images\/product-image-find-with-phone.png",
               "dropdown_product_image_alt": "Alerta Find : GPS car Tracker for dementia, seniors and Alzheimer's",
-              "dropdown_tag": false,
-              "dropdown_tag_text": ""
+              "dropdown_tag": true,
+              "dropdown_tag_text": "PRICE DOWN"
             }
           },
           "8aae0962-c88e-48b9-927b-812ecdb4f10a": {
@@ -335,10 +330,9 @@
               "dropdown_sub_button_text": "",
               "dropdown_sub_button_url": "",
               "dropdown_product": "alerta-flash",
-              "dropdown_product_image": "shopify:\/\/shop_images\/alerta-flash-wihte-front.png",
               "dropdown_product_image_alt": "Talking Touchscreen Calendar Clock",
-              "dropdown_tag": true,
-              "dropdown_tag_text": "New"
+              "dropdown_tag": false,
+              "dropdown_tag_text": ""
             }
           },
           "b8008f88-9173-454a-a518-aceff6a34712": {
@@ -354,8 +348,8 @@
               "dropdown_product": "alerta-voice",
               "dropdown_product_image": "shopify:\/\/shop_images\/alerta-voice-front.png",
               "dropdown_product_image_alt": "",
-              "dropdown_tag": true,
-              "dropdown_tag_text": "New"
+              "dropdown_tag": false,
+              "dropdown_tag_text": ""
             }
           },
           "3684dd99-40fc-4503-94b9-f98cdb17aa10": {
@@ -372,7 +366,23 @@
               "dropdown_product_image": "shopify:\/\/shop_images\/product-chime-front.png",
               "dropdown_product_image_alt": "",
               "dropdown_tag": true,
-              "dropdown_tag_text": "New"
+              "dropdown_tag_text": "HIT"
+            }
+          },
+          "1550ab8a-1385-456c-8bac-0fe508c3c929": {
+            "type": "dropdown",
+            "settings": {
+              "dropdown_title": "able life<br>auto cane™",
+              "dropdown_sub_title": "Vehicle Ingress\/Egress<br>Assistance Device",
+              "dropdown_main_button_text": "",
+              "dropdown_main_button_url": "\/products\/ablelife-autocane",
+              "dropdown_sub_button": false,
+              "dropdown_sub_button_text": "",
+              "dropdown_sub_button_url": "",
+              "dropdown_product": "ablelife-autocane",
+              "dropdown_product_image_alt": "",
+              "dropdown_tag": true,
+              "dropdown_tag_text": "NEW"
             }
           }
         },
@@ -381,14 +391,15 @@
           "90a01f55-018b-49ea-871b-0dde8b04dcb8",
           "8aae0962-c88e-48b9-927b-812ecdb4f10a",
           "b8008f88-9173-454a-a518-aceff6a34712",
-          "3684dd99-40fc-4503-94b9-f98cdb17aa10"
+          "3684dd99-40fc-4503-94b9-f98cdb17aa10",
+          "1550ab8a-1385-456c-8bac-0fe508c3c929"
         ],
         "settings": {
-          "header_primary_menu": "primary-menu",
-          "header_sub_menu": "sub-menu",
+          "header_primary_menu": "header-main-menu",
+          "header_sub_menu": "main-menu",
           "header_mobile_menu": "mobile-menu",
           "header_notification": true,
-          "header_notification_title": "Alerta Find - Activation Fee :  \t<strike>$19.99<\/strike> $0",
+          "header_notification_title": "Free Shipping - Over $150\n<br>\nAlerta Find (Subscription) : Only $9.99\/month",
           "header_notification_action": "SHOP NOW",
           "header_notification_link": "\/products\/alerta-find-subscription"
         }
@@ -471,7 +482,7 @@
               "support_resource_only_image": false,
               "support_resource_primary": false,
               "support_resource_button_text": "User Guide",
-              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide.pdf?v=1602164340",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/4523-9863-02-02_User_Guide_v9_210201.pdf?v=1617241786",
               "support_product_for_resource": "get-started-kit"
             }
           },
@@ -556,6 +567,17 @@
               "support_resource_image": "shopify:\/\/shop_images\/icon-pdf_6cb0d657-3454-4fb2-9814-2a7b13fd13f1.png",
               "support_resource_only_image": false,
               "support_resource_primary": true,
+              "support_resource_button_text": "Setup Guide",
+              "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Alerta_Find_Setup_Instructions.pdf?v=1614223779",
+              "support_product_for_resource": "alerta-find"
+            }
+          },
+          "97db6726-5292-49ee-8d7c-546354588b79": {
+            "type": "resource",
+            "settings": {
+              "support_resource_image": "shopify:\/\/shop_images\/icon-pdf_6cb0d657-3454-4fb2-9814-2a7b13fd13f1.png",
+              "support_resource_only_image": false,
+              "support_resource_primary": false,
               "support_resource_button_text": "User Guide",
               "support_resource_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Find_User_Guide_R4.pdf?v=1611010688",
               "support_product_for_resource": "alerta-find"
@@ -638,6 +660,7 @@
           "1600399576148",
           "1600399661889",
           "d32d369c-da14-4336-a5e0-07524870172e",
+          "97db6726-5292-49ee-8d7c-546354588b79",
           "18c68d1b-f27a-4b6c-8161-e3fe6c8df2a0",
           "19be0c95-56ef-4b3a-a36d-a44ca47b1961",
           "0717a8a9-9941-4d8a-9392-cea34427eb4e",
@@ -658,18 +681,10 @@
               "about_slider_image_tablet": "shopify:\/\/shop_images\/about-us-image-tablet.jpg",
               "about_slider_image_mobile": "shopify:\/\/shop_images\/about-us-image-mobile.jpg",
               "about_slider_image_alt": "grandmother showing her family album to her granddaughter while they sitting outdoors with Alerta patch",
-              "about_slider_title": "The mission of Track Patch 1\nCorporation is <br> to help enable\naging‑in‑place with dignity.",
+              "about_slider_title": "The mission of Track Patch 1\nCorporation is to help enable\naging‑in‑place with <strong>dignity<\/strong>.",
               "about_slider_desc": "We strive to offer innovative products for the family caregiver and for the care recipient suffering from dementia. Our offering allows the caregiver to tend to the demands of family and a busy household, with the assurance that his\/her loved one is safe, nearby, and able to do normal activities.",
               "about_slider_top_color": "#ffffff",
-              "about_slider_bottom_color": "#ececec"
-            }
-          },
-          "1600710479042": {
-            "type": "team",
-            "settings": {
-              "about_team_piture": "shopify:\/\/shop_images\/ceo-john.jpg",
-              "about_team_title": "Chairman, Founder",
-              "about_team_name": "John Reese"
+              "about_slider_bottom_color": "#ffffff"
             }
           },
           "1600715362147": {
@@ -703,18 +718,28 @@
               "about_team_title": "Web Development",
               "about_team_name": "Ben Jung"
             }
+          },
+          "47cb3baf-e91b-4a56-9fee-12b289a1f628": {
+            "type": "story",
+            "settings": {
+              "about_story_pic": "shopify:\/\/shop_images\/ceo-john_83227466-c508-423f-9612-c38456d1e169.jpg",
+              "about_story_title": "Chairman & Founder",
+              "about_story_name": "John Reese",
+              "about_story_content": "Track Patch 1 Corp was founded by John Reese, motivated by his experiences of caring for a family member who suffered from dementia and wandered. John envisioned a wearable device worn comfortably on the body, that would alarm when the wandering distance became too great. After years of development, the unique Alerta Patch & Wedge system was realized. \n\nToday, the company operates under the name Alerta Family, and our product portfolio focuses on the family caregiving situation to enable aging-in-place at home. Our goal is to help the caregiver and care recipient on the caregiving journey, by bringing the family caregiver peace-of-mind and by keeping his\/her loved one safe and comfortable."
+            }
           }
         },
         "block_order": [
           "1600453127197",
-          "1600710479042",
           "1600715362147",
           "1600714023231",
           "1600714105115",
-          "1600714162505"
+          "1600714162505",
+          "47cb3baf-e91b-4a56-9fee-12b289a1f628"
         ],
         "settings": {
-          "about-title": "our team"
+          "about-title": "our team",
+          "about-inquiries-image": "shopify:\/\/shop_images\/about-tagline-large.png"
         }
       },
       "product": {
@@ -1176,7 +1201,7 @@
               "benefit_desc_1": "No worries about or time wasted charging battery: Find's battery lasts for up to two years.",
               "benefit_desc_2": "No expense on special tools or technician time to install– just place the Find where you want it.",
               "benefit_desc_3": "No maintenance costs.",
-              "benefit_desc_4": "",
+              "benefit_desc_4": "Two payment options: “no monthly fee” and “low monthly fee”",
               "benefit_is_video": false,
               "benefit_video": "",
               "benefit_order": "2"
@@ -1199,7 +1224,7 @@
             "type": "benefit",
             "settings": {
               "benefit_title": "<span class=\"list__bold\">Reduce<\/span> STRESS: EASY AND FLEXIBLE TO USE",
-              "benefit_desc_1": "Alerta Find is easily hidden in vehicle.  It is smaller than a credit card.",
+              "benefit_desc_1": "Alerta Find is easily hidden in vehicle.  It is smaller than a credit card (smallest size category).",
               "benefit_desc_2": "Alerta Find weighs less than three pennies. It can be placed anywhere in vehicle and used in different vehicles.",
               "benefit_desc_3": "Alerta Find is ready to use out of the box– just turn it on.",
               "benefit_desc_4": "",
@@ -1244,7 +1269,7 @@
               "spec_desc": "Package: 5 x 2.8 x 1.5 (in)"
             }
           },
-          "77a80cfc-9dc9-473e-8ec5-d897d9c6fca9": {
+          "f963cb5d-9b01-4d2e-a20b-eef5c5596f34": {
             "type": "resource",
             "settings": {
               "resource_desc": "Download - User Guide (PDF)",
@@ -1258,18 +1283,11 @@
               "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Find_Warranty_R3.pdf?v=1605028788"
             }
           },
-          "13ab3162-415c-4e69-9a09-42a368e85621": {
+          "77a80cfc-9dc9-473e-8ec5-d897d9c6fca9": {
             "type": "resource",
             "settings": {
-              "resource_desc": "Download - Alerta Find App (iOS)",
-              "resource_link": "https:\/\/apps.apple.com\/us\/app\/alertafind\/id1482777322"
-            }
-          },
-          "785f9355-9e2e-4989-899a-7b4237ea3ff9": {
-            "type": "resource",
-            "settings": {
-              "resource_desc": "Download - Alerta Find App (Android)",
-              "resource_link": "https:\/\/play.google.com\/store\/apps\/details?id=com.passtimeusa.AlertaFind&hl=en_US&gl=US"
+              "resource_desc": "Download - Setup Instructions (PDF)",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/Alerta_Find_Setup_Instructions.pdf?v=1614223779"
             }
           },
           "192fd713-be98-4454-8d37-ee388390b353": {
@@ -1321,7 +1339,7 @@
           "a7fd03ac-bd23-4d19-aadc-0aba01178896": {
             "type": "summary",
             "settings": {
-              "summary": "Concealable device"
+              "summary": "Small size, concealable"
             }
           },
           "acf5682d-b671-4a20-829c-e7ec91f2609f": {
@@ -1347,6 +1365,28 @@
             "settings": {
               "summary": "Tracking reports via text message or email"
             }
+          },
+          "a1771cc9-551a-41d3-93a9-691601a12ace": {
+            "type": "summary",
+            "settings": {
+              "summary": "No monthly fee (payment option)"
+            }
+          },
+          "038c3c32-854f-4d87-b2d1-662b1a85c49d": {
+            "type": "app",
+            "settings": {
+              "app_store": "ios",
+              "app_url": "https:\/\/apps.apple.com\/us\/app\/alertafind\/id1482777322",
+              "app_qr_code": "shopify:\/\/shop_images\/alertafind-ios-qr.png"
+            }
+          },
+          "bc13d299-839c-48ce-b433-11ab54795891": {
+            "type": "app",
+            "settings": {
+              "app_store": "android",
+              "app_url": "https:\/\/play.google.com\/store\/apps\/details?id=com.passtimeusa.AlertaFind",
+              "app_qr_code": "shopify:\/\/shop_images\/alerta-find-google-play.png"
+            }
           }
         },
         "block_order": [
@@ -1361,10 +1401,9 @@
           "c915b1cd-2354-4424-bb64-426328dfee08",
           "461e4a82-6931-40e7-9c77-28d6b187712e",
           "507f31ef-cc70-4be5-9f2e-027d8c20033d",
-          "77a80cfc-9dc9-473e-8ec5-d897d9c6fca9",
+          "f963cb5d-9b01-4d2e-a20b-eef5c5596f34",
           "3ccc6a5b-b366-4dab-9c5d-375fd763e032",
-          "13ab3162-415c-4e69-9a09-42a368e85621",
-          "785f9355-9e2e-4989-899a-7b4237ea3ff9",
+          "77a80cfc-9dc9-473e-8ec5-d897d9c6fca9",
           "192fd713-be98-4454-8d37-ee388390b353",
           "042dcbc0-af8f-440a-8fd8-b618e760eaca",
           "7f94b2b5-1720-4ba3-bff2-8643cdb47b23",
@@ -1376,7 +1415,10 @@
           "acf5682d-b671-4a20-829c-e7ec91f2609f",
           "4bde3e2f-f1aa-4459-8855-03002ee7d5f8",
           "51e77cdb-4c85-4f9e-8463-f3bd35ea814d",
-          "dc87bd3a-040f-44ea-abeb-acbcb2bddb72"
+          "dc87bd3a-040f-44ea-abeb-acbcb2bddb72",
+          "a1771cc9-551a-41d3-93a9-691601a12ace",
+          "038c3c32-854f-4d87-b2d1-662b1a85c49d",
+          "bc13d299-839c-48ce-b433-11ab54795891"
         ],
         "settings": {
           "product_bedge": "HOT",
@@ -1983,7 +2025,7 @@
             "type": "resource",
             "settings": {
               "resource_desc": "Download - User Guide",
-              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/User_Guide.pdf?v=1602164340"
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/4523-9863-02-02_User_Guide_v9_210201.pdf?v=1617241786"
             }
           },
           "c6c8e13b-ce9a-4f79-8168-9b4fade323da": {
@@ -2172,6 +2214,7 @@
           "product_title": "THE WEARABLE FOR MONITORING WANDERING",
           "product_desc": "Alerta Get Started Kit includes wearable “Alerta Patch” (1-, 3-, or 6-month supply) and a handheld receiver, “Alerta Wedge.”  Patch is worn on upper back; Wedge alarms when Patch is out-of-range of Wedge.",
           "product_upsell": "kit-upsell",
+          "product_downsell": "kit-subscription",
           "product_summary": true,
           "product_option_image_change": true,
           "product_option": false,
@@ -2233,10 +2276,229 @@
       },
       "index-hero-image": {
         "type": "index-hero-image",
+        "settings": {}
+      },
+      "product-cane": {
+        "type": "product-cane",
+        "blocks": {
+          "e19604b4-1119-4062-81f3-093e540ebd36": {
+            "type": "summary",
+            "settings": {
+              "summary": "Prevents falls while standing with  ergonomic, non-slip grip."
+            }
+          },
+          "5d97c4c1-6b59-4010-ac45-2c27a3b42825": {
+            "type": "summary",
+            "settings": {
+              "summary": "Provides balance and support: supports 300 pounds ( 137 kg)."
+            }
+          },
+          "289b1640-b921-4ed3-be40-e333bf217ee0": {
+            "type": "summary",
+            "settings": {
+              "summary": "Fits universally, just insert into door latch striker."
+            }
+          },
+          "409e1336-445c-4119-b3e5-3949ff305d91": {
+            "type": "summary",
+            "settings": {
+              "summary": "Store discreetly in glove box, door, or purse: small and portable."
+            }
+          },
+          "862dd528-1cf6-48eb-92c2-e7b59b87ea8a": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "PREVENT FALLS",
+              "benefit_desc_1": "Get into and out of vehicle, while keeping your balance: handle is comfortable, ergonomically shaped, non-slip grip.",
+              "benefit_desc_2": "Use from sitting or standing positions: handle capacity is 300 pounds.",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "1"
+            }
+          },
+          "93f1a368-27c5-4876-a6d5-91163adbef9d": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "PROVIDES INDEPENDENCE",
+              "benefit_desc_1": "Perfect for the elderly, injured, or anyone needing mobility assistance.",
+              "benefit_desc_2": "Perfect for the caregiver– avoid back or muscle strains when helping others.",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "2"
+            }
+          },
+          "cd9315f7-17a9-4cfa-be88-3636f34e73b2": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "EASY TO USE",
+              "benefit_desc_1": "Compatible with most vehicles",
+              "benefit_desc_2": "Handle fits parallel to vehicle when inserted into a U-shaped door striker or latch.",
+              "benefit_desc_3": "No modifications required.",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "3"
+            }
+          },
+          "1c2a53b9-6507-4ff8-a6d8-c5c26219b857": {
+            "type": "benefit",
+            "settings": {
+              "benefit_title": "LIGHTWEIGHT AND PORTABLE",
+              "benefit_desc_1": "Store in glove box, door compartment, or purse;",
+              "benefit_desc_2": "Discreet: 1 pound, 6.5 inches long and 1.5 inches wide",
+              "benefit_desc_3": "",
+              "benefit_desc_4": "",
+              "benefit_is_video": false,
+              "benefit_video": "",
+              "benefit_order": "4"
+            }
+          },
+          "21f76f96-1c13-4ef3-b370-a64c9db9778d": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Car Type: Universal Fit"
+            }
+          },
+          "ccd93f30-8de8-4d6e-a4c5-44c65f317357": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Handle Length: 6.5″"
+            }
+          },
+          "d36d1c90-8ed6-4f7f-b402-906fbb4d58a8": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Handle Width: 1.25″"
+            }
+          },
+          "3bd53c89-daa4-42b1-a1f4-3ead44c4d884": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Made of Aluminum, Plastic, and Rubber"
+            }
+          },
+          "3cf33819-157f-4634-8646-35dd9e3c431d": {
+            "type": "spec",
+            "settings": {
+              "spec_desc": "Weight Capacity: 300 lbs"
+            }
+          },
+          "5e314c3e-db18-4935-8f99-2b9abdcd2179": {
+            "type": "resource",
+            "settings": {
+              "resource_desc": "Download - User Guide (PDF)",
+              "resource_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/1661\/6207\/files\/alac_ug_v3.pdf"
+            }
+          }
+        },
+        "block_order": [
+          "e19604b4-1119-4062-81f3-093e540ebd36",
+          "5d97c4c1-6b59-4010-ac45-2c27a3b42825",
+          "289b1640-b921-4ed3-be40-e333bf217ee0",
+          "409e1336-445c-4119-b3e5-3949ff305d91",
+          "862dd528-1cf6-48eb-92c2-e7b59b87ea8a",
+          "93f1a368-27c5-4876-a6d5-91163adbef9d",
+          "cd9315f7-17a9-4cfa-be88-3636f34e73b2",
+          "1c2a53b9-6507-4ff8-a6d8-c5c26219b857",
+          "21f76f96-1c13-4ef3-b370-a64c9db9778d",
+          "ccd93f30-8de8-4d6e-a4c5-44c65f317357",
+          "d36d1c90-8ed6-4f7f-b402-906fbb4d58a8",
+          "3bd53c89-daa4-42b1-a1f4-3ead44c4d884",
+          "3cf33819-157f-4634-8646-35dd9e3c431d",
+          "5e314c3e-db18-4935-8f99-2b9abdcd2179"
+        ],
         "settings": {
-          "hero_image": "shopify:\/\/shop_images\/tagline-desktop.jpg",
-          "hero_image_tablet": "shopify:\/\/shop_images\/tagline-tablet.jpg",
-          "hero_image_mobile": "shopify:\/\/shop_images\/tagline-mobile.jpg"
+          "product_bedge": "NEW!!",
+          "product_title": "Able Life - Auto Cane™",
+          "product_desc": "Help your loved maintain independence and avoid falls when getting into and out of a vehicle.",
+          "product_summary": true,
+          "product_summary_col": false,
+          "product_section_video": false,
+          "product_suffix": true,
+          "product_title_suffix": "(Sold by Track Patch 1 Corp)",
+          "product_tagline": "",
+          "product_slider_btn_url": "",
+          "product_slider_btn_text": ""
+        }
+      },
+      "media": {
+        "type": "media",
+        "blocks": {
+          "ae58b0a1-1430-468a-87cc-d7e8c9ca4955": {
+            "type": "story",
+            "settings": {
+              "about_story_pic": "shopify:\/\/shop_images\/ceo-john_83227466-c508-423f-9612-c38456d1e169.jpg",
+              "about_story_title": "Chairman & Founder",
+              "about_story_name": "John Reese",
+              "about_story_content": "Track Patch 1 Corporation was founded by John Reese, motivated by his experiences of caring for a family member who suffered from dementia and wandered.  John envisioned a wearable device worn comfortably on the body, that would alarm when the wandering distance became too great.  After years of development, the unique Alerta Patch & Wedge system was realized. \n\nToday, the company operates under the name Alerta Family, and our product portfolio focuses on the family caregiving situation to enable aging-in-place at home.  Our goal is to help the caregiver and care recipient on the caregiving journey, by bringing the family caregiver peace-of-mind and by keeping his\/her loved one safe and comfortable."
+            }
+          },
+          "8fb126f8-f7ac-47b4-ace7-0d5a45941e1a": {
+            "type": "slider",
+            "settings": {
+              "about_slider_image": "shopify:\/\/shop_images\/about-us-image_c99fc1b8-667c-435a-a9ce-56278fd76770.jpg",
+              "about_slider_image_tablet": "shopify:\/\/shop_images\/about-us-image-tablet_db939124-8af8-4830-af74-ffeb845cfa15.jpg",
+              "about_slider_image_mobile": "shopify:\/\/shop_images\/about-us-image-mobile_d54ffc4c-f60b-498a-a8cd-5fb01e9d1ab2.jpg",
+              "about_slider_image_alt": "",
+              "about_slider_title": "The mission of Track Patch 1 Corporation is to help enable aging‑in‑place with <strong>dignity<\/strong>.",
+              "about_slider_desc": "We strive to offer innovative products for the family caregiver and for the care recipient suffering from dementia. Our offering allows the caregiver to tend to the demands of family and a busy household, with the assurance that his\/her loved one is safe, nearby, and able to do normal activities.",
+              "about_slider_top_color": "",
+              "about_slider_bottom_color": ""
+            }
+          },
+          "94b2d8a9-d463-4a41-bab1-487722798be6": {
+            "type": "team",
+            "settings": {
+              "media_team_piture": "shopify:\/\/shop_images\/ceo-john_83227466-c508-423f-9612-c38456d1e169.jpg",
+              "media_team_title": "Chairman & Founder",
+              "media_team_name": "John Reese",
+              "media_team_bio": "John founded Track Patch 1 Corp in 2014, with the concept of developing a wearable device to monitor dementia-sufferers who wander.  John is the founder and principal of Aberdeen Partners, a real estate and construction management firm.  Before his entrepreneurial pursuits, John was Vice President of Reid Associates and Managing General Partner of Garden Homes LLC."
+            }
+          },
+          "7e71a61e-228e-4bb5-acc4-72dc18dbf670": {
+            "type": "team",
+            "settings": {
+              "media_team_piture": "shopify:\/\/shop_images\/team-justin.jpg",
+              "media_team_title": "Chief Executive",
+              "media_team_name": "Justin Beres",
+              "media_team_bio": "Justin formally joined Track Patch in August 2020, after having worked as a vendor to Track Patch since mid-2018.  Justin is the principal of Allazo Electronics, Inc., an engineering and manufacturing firm based in Dallas, Texas.  Prior to this, Justin worked at Air Liquide SA for fifteen years, in various operational and leadership positions, including expatriate assignments."
+            }
+          },
+          "e6d65f0b-40dc-4b06-b4eb-0137b6800bcc": {
+            "type": "team",
+            "settings": {
+              "media_team_piture": "shopify:\/\/shop_images\/team-jeff.jpg",
+              "media_team_title": "Operations Manager",
+              "media_team_name": "Jeff Seeley",
+              "media_team_bio": "Jeff is a founding member of Track Patch 1 Corp and has been an operations manager in the retail sector for over 30 years.  Jeff worked at Sam’s Club for two decades, ascending to responsibility for a $150 million revenue store in Virginia, with over 260 employees.  Jeff has partnered with John Reese on various business ventures."
+            }
+          },
+          "1df7dd91-fddf-48dc-8503-e40fa51c07e2": {
+            "type": "team",
+            "settings": {
+              "media_team_piture": "shopify:\/\/shop_images\/team-ken.jpg",
+              "media_team_title": "Chief Engineer",
+              "media_team_name": "Ken Campbell",
+              "media_team_bio": "Ken joined Track Patch 1 Corp in September 2015 and has led several product developments, including the Alerta Patch & Wedge.  His career spans 40 years, with experiences in engineering, manufacturing, and general management.  He was formerly Vice President of Xerox Printing Division, and CEO of two start-up companies.  Ken was a consultant in the medical equipment industry for over ten years, working on the introduction of new technologies with multinational firms, such as Panasonic Healthcare of Japan."
+            }
+          }
+        },
+        "block_order": [
+          "ae58b0a1-1430-468a-87cc-d7e8c9ca4955",
+          "8fb126f8-f7ac-47b4-ace7-0d5a45941e1a",
+          "94b2d8a9-d463-4a41-bab1-487722798be6",
+          "7e71a61e-228e-4bb5-acc4-72dc18dbf670",
+          "e6d65f0b-40dc-4b06-b4eb-0137b6800bcc",
+          "1df7dd91-fddf-48dc-8503-e40fa51c07e2"
+        ],
+        "settings": {
+          "media_download_image": "shopify:\/\/shop_images\/Asset_5_3x_6e2e8786-e55a-44a1-a38c-ae407adda589.png",
+          "media_download_title": "Alerta Family - Resource",
+          "media_download_subtitle": "Please download the resource zip file which has product images, logos, etc."
         }
       }
     },

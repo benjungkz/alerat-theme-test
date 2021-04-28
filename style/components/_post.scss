@@ -1,13 +1,16 @@
 .post{
     p{
         @include font-size(0.75em);
-        font-family: $font-primary;
+        font-family: $font-fifth;
         color: color(black-dark);
-        line-height: 2rem;
+        line-height: 1.75em;
+        font-weight: $font-weight-light;
     }
-    a{
-        color:#0E48E5 !important;
+    h2{
+        font-family: $font-fifth;
+        font-weight: 400;
     }
+    
     blockquote{
         display: grid;
         grid-template-rows: auto 1ft auto;
@@ -33,17 +36,22 @@
             width: 125px;
         }
     }
-    ul{
+    ul, ol{
         display: grid;
         grid-template-columns: 1fr;
         padding: 0 $padding-medium;
     }
     li{
         @include font-size(0.75em);
-        font-family: $font-primary;
+        font-family: $font-fifth;
         color: color(black-dark);
-        line-height: 2rem; 
+        line-height: 1.75em;
+        margin-bottom: 10px; 
         
+    }
+    figcaption{
+        font-size: 1rem;
+        opacity: 0.8;
     }
     
     &__body{
@@ -53,6 +61,10 @@
             @include breakpoint(xs){
                 width: 100%;
             }
+        }
+        a{
+            color:#0E48E5 !important;
+            text-decoration: underline;
         }
     }
     &__small{
@@ -78,7 +90,7 @@
     &__title{
         @include font-size(2.2em);
         letter-spacing: -2px;
-        font-weight: 1000;
+        font-weight: $font-weight-bold;
         margin-bottom: $margin-large;
     }
     &__header{
@@ -190,11 +202,11 @@
     &__tag{
         padding: $padding-xxsmall $padding-xsmall;
         border-radius: 3px;
-        background-color: color(gray-light);
+        background-color: #f8f8f8;
         margin-right: $margin-xxsmall;
-        font-family: $font-secondary !important;
-        font-weight: $font-weight-light !important;
+        @include font-size(0.55em);
     }
+
     &__wrap{
         width: 100%;
         flex-wrap: wrap;
@@ -212,5 +224,11 @@
     }
     &__loading{
         @include flexbox-row;
+    }
+    &__bar{
+        opacity: 0.8; 
+        border: 5px solid color(red); 
+        padding: $padding-medium; 
+        background-color: #FAF9F7;
     }
 }

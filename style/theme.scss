@@ -40,10 +40,12 @@
 @import 'components/post';
 @import 'components/postCard';
 @import 'components/blog';
+@import 'components/ProductPolicy';
+@import 'components/ProductModal';
+
 
 @import 'module/productOption';
 @import 'module/productInfo';
-@import 'module/login';
 @import 'module/cart';
 @import 'module/faq';
 @import 'module/newsletter';
@@ -51,6 +53,9 @@
 @import 'module/feature';
 @import 'module/slider';
 @import 'module/login';
+@import 'module/about';
+@import 'module/media';
+
 
 
 @import 'vendors/bold-subscription';
@@ -61,3 +66,4 @@
 @import 'vendors/social-login';
 @import 'vendors/shopify-dynamic-checkout';
 @import 'vendors/plyr';
+@import 'vendors/klaviyo-form';

@@ -107,14 +107,6 @@ const ProductQty = ({ handle, addItem, updateItem, selectedVariantItemId }) => {
             })
         }
     }
-
-
-
-    const updateVariantItemToCartHandler = () => {
-
-    }
-
-
   
     return(
         <div className="cart__input cart__input--info">

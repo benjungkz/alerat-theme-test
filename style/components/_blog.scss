@@ -29,17 +29,15 @@
     }
     &__card{
         display: grid;
-        grid-template-columns: 1.618fr 1fr;
+        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         img{
             height: 100%;
             @include breakpoint(xs){
                 height: auto;
             }
         }
-        @include breakpoint(xs){
-            grid-template-rows: auto auto;
-            grid-template-columns: auto;
-        }
+    
         &--hero{
             margin: $margin-medium 0;
         }

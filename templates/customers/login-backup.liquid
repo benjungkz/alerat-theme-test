@@ -1,0 +1,128 @@
+{% comment %} {% layout settings.customer_layout %} {% endcomment %}
+
+<div class="alerta-login-container flex-row" id="template">
+
+  <!-- Login -->
+  <div class="alerta-login-box flex-col" id="customer">
+
+    <!-- Login Header -->
+    <div class="flex-row">
+      <h2 class="title card-title">LOGIN</h2>
+      <h1>{{handle}}</h1>
+    </div>
+    
+    <!-- Login form -->
+    {% form 'customer_login', class: "alerta-login-form flex-col width height" %}
+
+      {{ form.errors | default_errors }}
+      
+
+      <div id="login_email" class="card-text flex-row">
+        <label for="customer_email" class="login text-align-center">Email Address</label>
+        <input type="email" value="" name="customer[email]" id="customer_email" class="large" size="30" />
+      </div>
+
+      {% if form.password_needed %}
+
+        {% comment %}
+          Customer Account Login
+        {% endcomment %}
+
+        <div id="login_password" class="card-text flex-row">
+          <label for="customer_password" class="login text-align-center">Password</label>
+          <input type="password" value="" name="customer[password]" id="customer_password" class="large password" size="16" />
+        </div>
+      {% endif %}
+
+      <div id="forgot_password" class="card-title">
+        <a href="#" onclick="showRecoverPasswordForm();return false;">Forgot your password?</a>
+        <span class="card-text">or</span>
+        <a class="card-title" href="/account/register">Create Account</a>
+      </div>
+
+      <div class="action_bottom flex-row">
+        <input class="login-action-button sign-in-button card-title" type="submit" value="Sign In" />
+      </div>
+
+    {% endform %}
+
+      
+     
+      
+  </div>
+
+  {% comment %} <div class="one-click-social-login"></div> {% endcomment %}
+  
+
+  {% comment %}
+    Recover Password Form
+  {% endcomment %}
+
+  <!-- Recover Password -->
+  <div id="recover-password" class="flex-col" style='display:none'>
+
+    <!-- Recover Password Header -->  
+    <div class="template_header flex-col">
+      <h2 class="card-title">Reset Password</h2>
+      <p class="card-text">We will send you an email to reset your password.</p>
+    </div>
+
+    <!-- Recover Password Form -->  
+    {% form 'recover_customer_password' %}
+      {{ form.errors | default_errors }}
+
+      <div id="recover_email" class="flex-row">
+        <label for="email" class="card-text text-align-center">Email</label>
+        <input type="email" value="" size="30" name="email" id="recover-email" class="large" />
+      </div>
+
+      <div class="action_bottom flex-row">
+        <input class="login-action-button pwr-submit-btn card-title" type="submit" value="Submit" />
+        <span class="card-text">or</span>
+        <a href="#" class="login-action-button pwr-cancel-btn card-title flex-row" onclick="hideRecoverPasswordForm();return false;">
+          <div>Cancel</div>
+        </a>
+      </div>
+
+    {% endform %}
+
+  </div>
+
+
+  {% comment %}
+    Guest Login form for shops with optional customer accounts. This form is displayed only when users click on the checkout link
+    on the cart page.
+  {% endcomment %}
+
+  <!-- Gusest Login -->
+  {% if shop.checkout.guest_login %}
+  <div id="guest">
+    <!-- Gusest Login Title -->
+    <div class="template_header">
+      <h3 class="title">Guest Login</h3>
+    </div>
+
+    <!-- Gusest Login Form-->
+    {% form 'guest_login' %}
+      <input class="btn" type="submit" value="Continue as Guest" />
+    {% endform %}
+
+  </div>
+  {% endif %}
+</div>
+
+
+
+<script type="text/javascript">
+  function showRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'flex';
+    document.getElementById('customer').style.display='none';
+  }
+
+  function hideRecoverPasswordForm() {
+    document.getElementById('recover-password').style.display = 'none';
+    document.getElementById('customer').style.display = 'flex';
+  }
+
+  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+</script>

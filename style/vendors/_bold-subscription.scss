@@ -146,3 +146,10 @@
         display: none;
     }
 }
+
+/* Show edit button for card */
+.subscription-content-block:nth-child(2){
+    .text-button{
+        display: block !important;
+    }
+}

@@ -48,6 +48,8 @@
                                         <h2 class="dropdown__title dropdown__title--m">{{ title_words[1] | downcase }}</h2>
                                     {% elsif product.title == exceptional_product_name %}
                                         <h2 class="dropdown__title dropdown__title--m">patch & wedge</h2>
+                                    {% elsif product.title contains 'Able' %}
+                                        <h2 class="dropdown__title dropdown__title--m">able life<br>auto cane™</h2>    
                                     {% endif %}
                                
                                     <!-- Sub title -->

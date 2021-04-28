@@ -1,0 +1,40 @@
+{% for block in blocks %}
+    {% if block.type == "story" %}
+    <!-- Story Section -->
+    <section class="section">
+        <div class="grid__container">
+            <div class="grid__row">    
+                <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+
+                    <div class="about__menu">
+                        <h5>Our Story</h5>
+                    </div>
+
+                    <div class="about__wrap about__wrap--primary">
+
+                        <h5 class="about__content">{{block.settings.about_story_content}}</h5>                   
+                        <div class="card card--team">
+                            <img class="card__image card__image--team" 
+                                src="{{block.settings.about_story_pic | img_url: 'master'}}" 
+                                alt="">
+                            <div class="card__container card__container--team">
+                                <div class="card__header">
+                                    <h4 class="card__title">{{block.settings.about_story_name}}</h4>
+                                </div>
+                                <div class="card__body">
+                                    <h6 class="card__subtitle">{{block.settings.about_story_title}} </h6>
+                                </div>
+                            </div>
+                        </div>          
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+{% endfor %}
+
+
+
+

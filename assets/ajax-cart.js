@@ -158,11 +158,9 @@ $(document).ready(function(){
             
             productMsg =    
             '<h6 class="ajax-cart-drawer__msg--title">Terms and Condition (Subscription)</h6>' +
-            '<p class="ajax-cart-drawer__msg--desc">Customer acknowledges and agrees to enter into a binding <strong>24-month agreement</strong>, where a payment will be paid each month for twenty-four months.</p>' +
-            '<p class="ajax-cart-drawer__msg--desc">Per this agreement, Customer authorizes Track Patch 1 Corporation to charge customer’s credit card each month for the amount due.</p>'+
-            '<p class="ajax-cart-drawer__msg--desc">Purchaser may cancel the agreement before the 24-month period ends, after having paid a $40.00 cancellation fee and returned the product with a return material authorization number, which number can be obtained by calling Track Patch 1 customer service at 1-833-325-3782. Monthly charges will stop during the billing period which follows receipt of returned product.</p>'+
-            '<p class="ajax-cart-drawer__msg--desc"><strong>This plan is not Month-to-Month.</strong></p>';
-
+            '<p class="ajax-cart-drawer__msg--desc">Customer acknowledges and agrees to enter into a binding <strong>24-month agreement</strong>, where a payment will be paid each month for twenty-four months (<strong>This is not a month-to-month agreement</strong>).' +
+            '<p class="ajax-cart-drawer__msg--desc">Per this agreement, Customer authorizes Track Patch 1 Corporation to charge customer’s credit card each month for the amount due. <strong>PREPAID CARDS ARE NOT ACCEPTED</strong>. If a prepaid card payment is processed, the purchase amount will be refunded minus an 8% processing fee.'+
+            '<p class="ajax-cart-drawer__msg--desc">Purchaser may cancel the agreement before the 24-month period ends, after having paid a $40.00 cancellation fee and returned the product with a return material authorization number, which number can be obtained by calling Track Patch 1 customer service at 1-833-325-3782. Monthly charges will stop during the billing period which follows receipt of returned product.</p>';
             // Render
             var drawerItem = template.item.attr('product-id',product.id);
             var drawerbutton = template.button;

@@ -56,6 +56,11 @@
             grid-column: 3;
             justify-self: start;
         }
+
+        &--outofstock{
+            color: color(black-light);
+            text-align: center;
+        }
     }
     &__suffix{
         color: color(black-light);
@@ -111,9 +116,9 @@
     &__label{
         font-family: $font-secondary;
         font-weight: $font-weight-light;
+        justify-self: start;
         @include breakpoint(xs){
             grid-column: span 2;
-            justify-self: start;
         }
     }
     &__checkbox{
@@ -131,10 +136,10 @@
     &__image{
         width: 75px;
         height: 75px;
+        object-fit: contain;
         &--small{
             width: 50px;
             height: 50px;
-            border-radius: 50px;
 
             @include breakpoint(xs){
                 grid-row: span 2;
@@ -154,5 +159,6 @@
             
         }
     }
+    
   
 }

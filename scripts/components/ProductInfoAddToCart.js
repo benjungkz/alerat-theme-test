@@ -3,7 +3,7 @@ import AddCartAPI from '../api/AddCartAPI'
 import { connect } from 'react-redux';
 import { openCart } from '../store/CartStore';
 
-const ProductInfoAddToCart = ({addCartItems, isOpen, cartOpen}) => {
+const ProductInfoAddToCart = ({addCartItems, cartOpen}) => {
    
     const [checkout, setCheckout] = useState(false)
     

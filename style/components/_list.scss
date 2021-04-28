@@ -6,6 +6,12 @@
     &--single{
         width: 50%;
     }
+    &--app{
+        display: grid;
+        grid-template-rows: 1fr auto 200px;
+        padding: $padding-small;
+        border: 1px solid color(gray-light);
+    }
     &--small{
         margin-bottom: $margin-xxsmall; 
     }
@@ -63,5 +69,17 @@
     &__image{
         width: 100%;
         object-fit: contain;
+        &--app{
+
+        }
+        &--qr{
+            width: 200px;
+        }
+    }
+
+    &__or{
+        margin: $margin-small 0;
+        widows: 100%;
+        text-align: center;
     }
 }

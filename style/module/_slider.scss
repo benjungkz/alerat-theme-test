@@ -73,12 +73,14 @@
         padding: $padding-xxlarge;
 
         &--about{
+            padding: $padding-xxlarge 7rem;
+
             @include breakpoint(md-lg){
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, 1fr);
             }
             @include breakpoint(xs){
-                grid-template-columns: 1;
                 grid-template-rows: 0.5fr 1fr;
+                padding: $padding-small;
             }
         }
         &--product{
@@ -117,6 +119,14 @@
             font-family: $font-primary;
             margin-bottom: 0;
         }
+        &--about{
+            @include breakpoint(xs){
+                text-align: center;
+            }
+        }
+        strong{
+            color: color(red);
+        }
     }
     &__subtitle{
         &--product{
@@ -137,9 +147,13 @@
         font-family: $font-secondary;
         font-weight: $font-weight-light;
         white-space: pre;
+
         &--about{
             grid-column: 1;
-            color: color(red);     
+            @include font-size(0.7em);
+            @include breakpoint(xs){
+                text-align: center;
+            }
         }
        
     }

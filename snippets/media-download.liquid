@@ -1,0 +1,24 @@
+
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">    
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <div class="media__menu">
+                    <h5>MEDIA RESOURCE</h5>
+                </div>
+                <div class="media__wrap media__wrap--download">
+                    <div class="media__download">
+                        <h4 class="card__title media__title">{{section.settings.media_download_title}}</h4>
+                        <h6 class="card__subtitle media__subtitle--resource ">{{section.settings.media_download_subtitle}} </h6>
+                        <a class="btn btn--media" 
+                            href="https://cdn.shopify.com/s/files/1/1661/6207/files/Alerta_Media_KIt.zip?v=1617939821">
+                             <h5 class="btn--cart">Get Resource</h5>
+                        </a>
+                    </div>
+                    <img class="media__image"
+                        src="{{section.settings.media_download_image | img_url: 'master'}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>   

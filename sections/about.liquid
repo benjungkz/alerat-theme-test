@@ -1,18 +1,14 @@
 <!-- Slider -->
 {% render 'about-slider' with section.blocks as blocks %}
 
+<!-- Story -->
+{% render 'about-story' with section.blocks as blocks %}
 
 <!-- Team -->
-<section class="section section--bg section--padding">
-    <div class="grid__container">
-        <div class="grid__row">    
-            <div class="grid__col-xxl--8 grid__col-xl--8 grid__col-lg--8 grid__col-md--12 grid__col-xs--12 grid__col--flex-row grid__col--team">
-                {% render 'about-member' with section.blocks as blocks %}
-            </div>
-        </div>
-    </div>
-</section>
+{% render 'about-member' with section.blocks as blocks %}
 
+<!-- Inquiries -->
+{% render 'about-query' %}
 
 {% schema %}
     {   
@@ -35,6 +31,32 @@
                         "type": "text",
                         "id": "about_team_name",
                         "label": "Name" 
+                    }
+                ]
+            },
+            {
+                "type": "story",
+                "name": "Story",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "about_story_pic",
+                        "label": "Picture"
+                    },
+                    {
+                        "type": "text",
+                        "id": "about_story_title",
+                        "label": "Position Title" 
+                    },
+                    {
+                        "type": "text",
+                        "id": "about_story_name",
+                        "label": "Name" 
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "about_story_content",
+                        "label": "Story"
                     }
                 ]
             },
@@ -92,6 +114,11 @@
               "type": "text",
               "id": "about-title",
               "label": "Team Section Title"
+          },
+          {
+              "type": "image_picker",
+              "id": "about-inquiries-image",
+              "label": "Inquires Image"
           }
         ] 
     }

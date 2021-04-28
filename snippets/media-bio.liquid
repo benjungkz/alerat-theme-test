@@ -1,0 +1,37 @@
+
+    <!-- Story Section -->
+    <section class="section">
+        <div class="grid__container">
+            <div class="grid__row">    
+                <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+
+                    <div class="media__menu">
+                        <h5>Management Team Biographies</h5>
+                    </div>
+                    {% for block in blocks %}
+                        {% if block.type == "team" %}
+                        <div class="media__wrap media__wrap--primary">
+                            <div>
+                                <div class="media__bio">
+                                    <h4 class="card__title">{{block.settings.media_team_name}}</h4>
+                                    <h6 class="card__subtitle media__subtitle">{{block.settings.media_team_title}} </h6>
+                                </div>
+                                <h5 class="media__content">{{block.settings.media_team_bio}}</h5>                   
+                            </div>
+
+                            <div class="card card--team">
+                                <img class="card__image card__image--team" 
+                                    src="{{block.settings.media_team_piture | img_url: 'master'}}" 
+                                    alt="">
+                            </div>          
+                        </div>
+                            {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+

@@ -1,0 +1,28 @@
+.ProductPolicy{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: $padding-xsmall;
+    border-top: 1px solid color(gray);
+    border-bottom: 1px solid color(gray);
+    margin-bottom: $margin-xsmall;
+
+    @include breakpoint(xs){
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
+    &__card{
+        display: grid;
+        grid-template-columns: 30px auto;
+        column-gap: 1rem;
+    }
+    &__icon{
+        width: 100%;
+    }
+    &__description{
+        text-decoration: underline;
+        font-weight: $font-weight-light;
+        cursor: pointer;
+    }
+}

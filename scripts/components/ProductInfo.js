@@ -6,6 +6,7 @@ import ProductInfoForCustomAdditionalItem from './ProductInfoForCustomAdditional
 import ProductInfoForNormalAdditionalItem from './ProductInfoForNormalAdditionalItem'
 import ProductInfoQty from './ProductInfoQty';
 import ProductInfoAddToCart from './ProductInfoAddToCart';
+import ProductInfoPolicy from './ProductInfoPolicy';
 import ProductRelation from '../static/ProductRelation'
 
 const CART_ARROW_ICON_URL = 'https://cdn.shopify.com/s/files/1/1661/6207/files/cart-arrow-down.png'
@@ -20,12 +21,12 @@ const ProductInfo = () => {
     },[])
     
     const productUrlHandler = () =>{
-        // let path = window.location.pathname
-        // let pathNames = path.split('/')
-        // path.search('products') != -1 ? setProductHandle(pathNames[2]) : null
+        let path = window.location.pathname
+        let pathNames = path.split('/')
+        path.search('products') != -1 ? setProductHandle(pathNames[2]) : null
 
         //TEST
-        setProductHandle('alerta-find-subscription')
+        //setProductHandle('alerta-voice')
     }
 
     const openOptionHandelr = () =>{
@@ -49,7 +50,7 @@ const ProductInfo = () => {
     }
 
     const renderAdditionalItemInfo = (productHandle) =>{
-        console.log(ProductRelation[productHandle].optionType)
+        console.log('[Alerta Family] Product Type is ' + ProductRelation[productHandle].optionType + '.')
         switch(ProductRelation[productHandle].optionType){
             case 'custom':
                 return <ProductInfoForCustomAdditionalItem handle={productHandle}/>
@@ -110,6 +111,8 @@ const ProductInfo = () => {
                             renderAdditionalItemInfo(productHandle)
                         }
                     </div>
+                    
+                    {/* <ProductInfoPolicy/> */}
                     <ProductInfoAddToCart/>
                 </>
             :

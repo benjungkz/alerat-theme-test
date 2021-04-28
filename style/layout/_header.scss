@@ -58,7 +58,7 @@ header{
             ul{
                 display: grid;
                 grid-template-columns: auto;
-                grid-template-rows:  repeat(5, 1fr) auto;
+                grid-template-rows:  repeat(7, 1fr)
             }
             h5{
                 font-family: $font-secondary;  

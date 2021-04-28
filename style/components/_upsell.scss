@@ -1,17 +1,17 @@
 .upsell{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(250px,340px));
     column-gap: $margin-small;
     margin-bottom: $margin-xlarge;
 
     @include breakpoint(md-lg){
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(250px, 340px));
         row-gap: $margin-small;
 
     }
 
     @include breakpoint(xs){
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(250px,340px);
         row-gap: $margin-small;
         padding: $padding-xsmall;
         margin-bottom: $margin-medium;

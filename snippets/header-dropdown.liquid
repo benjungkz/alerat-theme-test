@@ -20,21 +20,6 @@
                                             src="{{block.settings.dropdown_product_image | img_url: 'master' }}" 
                                             alt="{{block.settings.dropdown_product_image_alt}}">       
                                         
-                                        {% comment %} <!-- Button -->
-                                        <div class="dropdown__buttons dropdown__buttons--inactive js-dropdown__buttons">
-                                             <a class="btn btn--flexible dropdown__button dropdown__button--more" 
-                                                href="{{block.settings.dropdown_main_button_url}}">
-                                                <p class="dropdown__text dropdown__text--white">{{block.settings.dropdown_main_button_text}}</p>
-                                            </a>
-                                            {% if block.settings.dropdown_sub_button %}
-                                            <a class="btn btn--flexible btn--sub dropdown__button dropdown__button--shop" 
-                                                href="{{block.settings.dropdown_sub_button_url}}">
-                                                <p class="dropdown__text">{{block.settings.dropdown_sub_button_text}}</p>
-                                            </a>
-                                            {% endif %}       
-                                        </div> 
-                                         {% endcomment %}
-
                                         <!-- Tag -->   
                                         {% if block.settings.dropdown_tag %}
                                             <p class="dropdown__tag">{{block.settings.dropdown_tag_text}}</p>

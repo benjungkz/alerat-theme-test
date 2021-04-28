@@ -15,22 +15,13 @@ const ItemsRelation = {
             priceSuffix: null
         },
         hasNote: false,
-        note : {
-            title: "Terms and Conditions",
-            description: '<p class="cart__description">Customer acknowledges and agrees to enter into a binding <span class="cart__red">24-month agreement</span>,' 
-                         + ' where a payment will be paid each month for twenty-four months.</p><br>'
-                         + '<p class="cart__description cart__red">This plan is NOT Month-to-Month.</p><br>',
-            hasExpansion: true,
-            expansion: '<p class="cart__description"> Per this agreement, Customer authorizes Track Patch 1 Corporation to charge customer’s credit card each month for the amount due.</p><br>'
-                        + '<p class="cart__description cart__red">PREPAID CARDS ARE NOT ACCEPTED.</p><br>'
-                        +'<p class="cart__description">If a prepaid card payment is processed, the purchase amount will be refunded minus an 8% processing fee.</p><br>'
-                        +'<p class="cart__description">Purchaser may cancel the agreement before the 24-month period ends, after having paid a $40.00 cancellation fee and returned the product with a return material authorization number, which number can be obtained by calling Track Patch 1 customer service at 1-833-325-3782. Monthly charges will stop during the billing period which follows receipt of returned product.</p>'
-        }
+        note : null
     },
     'alerta-patch-refill-kit-subscription-1-months': 
     {
         isSubscription: true,
         subscriptionType: 'normal',
+        subscriptionDuration: 1,
         isExtraItem:false,
         hasExtraItem: false,
         hasMessage: false,
@@ -42,14 +33,10 @@ const ItemsRelation = {
         hasNote: true,
         note : {
             title: "Terms and Conditions",
-            description: '<p class="cart__description">Customer acknowledges and agrees to enter into a binding <span class="cart__red">24-month agreement</span>,' 
-                         + ' where a payment will be paid each month for twenty-four months.</p><br>'
-                         + '<p class="cart__description cart__red">This plan is NOT Month-to-Month.</p><br>',
+            description: '<p class="cart__description"> Customer acknowledges and agrees to pay Track Patch 1 Corporation each month for twelve months and authorizes Track Patch 1 Corporation ' 
+                         + 'to charge buyer’s credit card each month for this amount.</p><br>',
             hasExpansion: true,
-            expansion: '<p class="cart__description"> Per this agreement, Customer authorizes Track Patch 1 Corporation to charge customer’s credit card each month for the amount due.</p><br>'
-                        + '<p class="cart__description cart__red">PREPAID CARDS ARE NOT ACCEPTED.</p><br>'
-                        +'<p class="cart__description">If a prepaid card payment is processed, the purchase amount will be refunded minus an 8% processing fee.</p><br>'
-                        +'<p class="cart__description">Purchaser may cancel the agreement before the 24-month period ends, after having paid a $40.00 cancellation fee and returned the product with a return material authorization number, which number can be obtained by calling Track Patch 1 customer service at 1-833-325-3782. Monthly charges will stop during the billing period which follows receipt of returned product.</p>'
+            expansion: '<p class="cart__description"> Alerta Patch Refill Kits will be delivered to customer per the frequency of the initial refill kit order (monthly, quarterly, semi-annually).</p><br>'
         },
         priceSuffix: '/month'
     },
@@ -57,6 +44,7 @@ const ItemsRelation = {
     {
         isSubscription: true,
         subscriptionType: 'normal',
+        subscriptionDuration: 3,
         isExtraItem:false,
         hasExtraItem: false,
         hasMessage: false,
@@ -68,14 +56,10 @@ const ItemsRelation = {
         hasNote: true,
         note : {
             title: "Terms and Conditions",
-            description: '<p class="cart__description">Customer acknowledges and agrees to enter into a binding <span class="cart__red">24-month agreement</span>,' 
-                         + ' where a payment will be paid each month for twenty-four months.</p><br>'
-                         + '<p class="cart__description cart__red">This plan is NOT Month-to-Month.</p><br>',
+            description: '<p class="cart__description"> Customer acknowledges and agrees to pay Track Patch 1 Corporation each month for twelve months and authorizes Track Patch 1 Corporation ' 
+                         + 'to charge buyer’s credit card each month for this amount.</p><br>',
             hasExpansion: true,
-            expansion: '<p class="cart__description"> Per this agreement, Customer authorizes Track Patch 1 Corporation to charge customer’s credit card each month for the amount due.</p><br>'
-                        + '<p class="cart__description cart__red">PREPAID CARDS ARE NOT ACCEPTED.</p><br>'
-                        +'<p class="cart__description">If a prepaid card payment is processed, the purchase amount will be refunded minus an 8% processing fee.</p><br>'
-                        +'<p class="cart__description">Purchaser may cancel the agreement before the 24-month period ends, after having paid a $40.00 cancellation fee and returned the product with a return material authorization number, which number can be obtained by calling Track Patch 1 customer service at 1-833-325-3782. Monthly charges will stop during the billing period which follows receipt of returned product.</p>'
+            expansion: '<p class="cart__description"> Alerta Patch Refill Kits will be delivered to customer per the frequency of the initial refill kit order (monthly, quarterly, semi-annually).</p><br>'
         },
         priceSuffix: '/month'
     },
@@ -83,6 +67,7 @@ const ItemsRelation = {
     {
         isSubscription: true,
         subscriptionType: 'normal',
+        subscriptionDuration: 6,
         isExtraItem:false,
         hasExtraItem: false,
         hasMessage: false,
@@ -94,14 +79,10 @@ const ItemsRelation = {
         hasNote: true,
         note : {
             title: "Terms and Conditions",
-            description: '<p class="cart__description">Customer acknowledges and agrees to enter into a binding <span class="cart__red">24-month agreement</span>,' 
-                         + ' where a payment will be paid each month for twenty-four months.</p><br>'
-                         + '<p class="cart__description cart__red">This plan is NOT Month-to-Month.</p><br>',
+            description: '<p class="cart__description"> Customer acknowledges and agrees to pay Track Patch 1 Corporation each month for twelve months and authorizes Track Patch 1 Corporation ' 
+                         + 'to charge buyer’s credit card each month for this amount.</p><br>',
             hasExpansion: true,
-            expansion: '<p class="cart__description"> Per this agreement, Customer authorizes Track Patch 1 Corporation to charge customer’s credit card each month for the amount due.</p><br>'
-                        + '<p class="cart__description cart__red">PREPAID CARDS ARE NOT ACCEPTED.</p><br>'
-                        +'<p class="cart__description">If a prepaid card payment is processed, the purchase amount will be refunded minus an 8% processing fee.</p><br>'
-                        +'<p class="cart__description">Purchaser may cancel the agreement before the 24-month period ends, after having paid a $40.00 cancellation fee and returned the product with a return material authorization number, which number can be obtained by calling Track Patch 1 customer service at 1-833-325-3782. Monthly charges will stop during the billing period which follows receipt of returned product.</p>'
+            expansion: '<p class="cart__description"> Alerta Patch Refill Kits will be delivered to customer per the frequency of the initial refill kit order (monthly, quarterly, semi-annually).</p><br>'
         },
         priceSuffix: '/month'
     },
@@ -110,6 +91,7 @@ const ItemsRelation = {
         isSubscription: true,
         isExtraItem: false,
         subscriptionType: 'normal',
+        subscriptionDuration: 1,
         priceSuffix: '/month',
         hasMessage: true,
         message :   '<p class="cart__description cart__description--msg">This is for the next 23 months.</p>',
@@ -117,7 +99,8 @@ const ItemsRelation = {
         extraItem : {
             variantId : 39254725558369,
             handle: 'find-activation-fee',
-            priceSuffix: '(one-time charge)'
+            priceSuffix: '(one-time charge)',
+            properties: null
         },
         hasNote: true,
         note : {
@@ -281,6 +264,27 @@ const ItemsRelation = {
         priceSuffix: null
     },
     'alerta-voice': 
+    {
+        isSubscription: false,
+        subscriptionType: null,
+        isExtraItem:false,
+        hasExtraItem: false,
+        hasMessage: false,
+        message: null,
+        extraItem : {
+            id: null,
+            priceSuffix: null
+        },
+        hasNote: false,
+        note : {
+            title: null,
+            description: null,
+            hasExpansion: null,
+            expansion: null,
+        },
+        priceSuffix: null
+    },
+    'ablelife-autocane': 
     {
         isSubscription: false,
         subscriptionType: null,

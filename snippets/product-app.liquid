@@ -1,0 +1,40 @@
+<section class="section">
+    <div class="grid__container">
+        <div class="grid__row">
+            <div class="grid__col-xxl--12 grid__col-xl--12 grid__col-lg--12 grid__col-md--12 grid__col-xs--12 grid__col--flex-col">
+                <div class="list__wrap list__wrap--box">
+                    {% render 'icon-up' %}
+                    <h2 class="list__title list__title--product">Download Alerta Find App</h2>
+                </div>
+                <div class="product__app">
+                    {% for block in section.blocks %}
+                        {% if block.type == 'app' %}
+                        
+                            {% if block.settings.app_store == 'ios' %}
+                                {% assign app_icon_url = 'https://cdn.shopify.com/s/files/1/1661/6207/files/app-store_4x_32dc0b56-03c1-4170-8da4-998325e91188.png?v=1617240096' %}
+                            {% else %}
+                                {% assign app_icon_url = 'https://cdn.shopify.com/s/files/1/1661/6207/files/google-play_4x_6ab6e8f8-850e-46f0-9746-82058db1f2d5.png?v=1617240096' %}
+                            {% endif %}
+
+                            <div class="list--app">
+                                <a href="{{block.settings.app_url}}">
+                                    <img 
+                                        class="list__image list__image--app"
+                                        src="{{ app_icon_url }}" 
+                                        alt="app store or google play">
+                                </a>
+                                <p class="list__or">OR</p>
+                                <img
+                                    class="list__image list__image--qr" 
+                                    src="{{block.settings.app_qr_code | img_url: 'master' }}" 
+                                    alt="alerta find app qr code">
+                            </div>
+                        {% endif %}
+                     {% endfor %}
+                </div>
+                
+            </div>
+        </div>
+    </div>    
+</section>
+

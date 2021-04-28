@@ -15,6 +15,8 @@
 
 {% render 'product-spec' %}
 
+{% render 'product-app' %}
+
 {% render 'product-resource' %}
 
 {% render 'page-help' %}
@@ -118,6 +120,31 @@
                         "type": "text",
                         "id": "resource_link",
                         "label": "Resource link(URL)"
+                    }
+                ]
+            },
+            {
+                "type": "app",
+                "name": "App",
+                "settings": [
+                    {
+                        "type": "radio",
+                        "id": "app_store",
+                        "label": "Platform",
+                        "options": [
+                            { "value": "ios", "label": "iOS" },
+                            { "value": "android", "label": "Android" }
+                        ]
+                    },
+                    {
+                        "type": "text",
+                        "id": "app_url",
+                        "label": "Download URL"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "app_qr_code",
+                        "label": "QR Code"
                     }
                 ]
             },

@@ -2,15 +2,14 @@
     {% if block.type == "slider" %}
     <section class="section section--padding"
                 style="background: -webkit-linear-gradient(top, {{block.settings.about_slider_top_color}} 50%, {{block.settings.about_slider_bottom_color}}  50%);">
+        
         <div class="grid__container">
             <div class="grid__row grid__row--shadow slider slider--about">          
                 <!-- Content -->    
                 <div class="grid__col-xxl--5 grid__col-xl--5 grid__col-lg--5 grid__col-md--12 grid__col-xs--12 grid__col--flex-row">
                     <div class="slider__content slider__content--about">
-                        <h2 class="slider__title slider__no-pre">{{block.settings.about_slider_title}}</h2>
-                        <a class="slider__container slider__container--about">
-                            <h3 class="slider__description slider__description--about slider__no-pre">{{block.settings.about_slider_desc}}</h3>
-                        </a>  
+                        <h3 class="slider__title slider__title--about slider__no-pre">{{block.settings.about_slider_title}}</h3>
+                        <h5 class="slider__description slider__description--about slider__no-pre">{{block.settings.about_slider_desc}}</h5>
                     </div>
                 </div>
 

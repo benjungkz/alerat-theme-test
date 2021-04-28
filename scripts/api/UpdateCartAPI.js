@@ -20,13 +20,9 @@ const UpdateCartAPI = ({ getItems, itemStage}) => {
         fetch( UPDATE_URL, updateCartOption )
             .then( res => res.json())
             .then(
-                (result)=>{
-                    console.log(result.items);
-                    
+                (result)=>{                    
                     // State(redux)
                     getItems(result.items)
-                   
-
                 },
 
                 (error)=>{

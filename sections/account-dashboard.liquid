@@ -84,10 +84,13 @@
 
                 </table>
 
-                <a class="customer__link customer__link--primary customer__link--subscription"
+                {% comment %} Modification {% endcomment %}
+                <a class="btn customer__link--primary customer__link--subscription"
                     href="{{shop.secure_url}}/tools/checkout/front_end/login">
-                  <h5 class="customer__text customer__text--primary">Go To Manage Subscription Page</h5>
-                </a>
+                  
+                  <p class="customer__text customer__text--third">Go To Manage Subscription Page</p>
+                </a>  
+                {% comment %}--------------------------- {% endcomment %}
 
             </div>
             <div class="grid__col-xxl--1 grid__col-xl--1 grid__col-lg--1 grid__col-md--0 grid__col-xs--0 grid__col--flex-col"></div>

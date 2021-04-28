@@ -57,8 +57,6 @@ function openQusetionList(){
 }
 function setPolicyClass(){
     var policy = $('.policy');
-    console.log("setPolicyClass()");
-
     policy.each(function(index, item){   
         $(item).find('.policy__content h3').addClass("policy__index");
         $(item).find('.policy__content h6').addClass("policy__desc");

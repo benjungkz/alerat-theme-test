@@ -150,8 +150,10 @@
         margin-left: 1.5rem;
 
         &--subscription{
-            align-self: flex-start;
+            border-radius: 50px;
+            width: 100%;
         }
+
         &--address{
             margin-bottom: 1rem;
         }
@@ -165,6 +167,9 @@
         &--secondary{
             color: color(gray-dark);
             opacity: 0.5;
+        }
+        &--third{
+            color: color(white)
         }
     }
 }

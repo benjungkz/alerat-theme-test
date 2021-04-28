@@ -2,7 +2,7 @@
     <div class="grid__container">
         <div class="grid__row grid__row--product-single">
             {% render 'product-slider-single' %}            
-            {% render 'product-info-single' %}
+            {% render 'product-info-variant' %}
         </div>
 </section>
 
@@ -13,6 +13,8 @@
 {% render 'product-benefit-single-with-image' %}
 
 {% render 'product-upsell' %}
+
+{% comment %} {% render 'product-downsell' %} {% endcomment %}
 
 {% render 'product-box' %}
 
@@ -242,6 +244,11 @@
                 "type": "collection",
                 "id": "product_upsell",
                 "label": "Upsell Collection"
+            },
+            {
+                "type": "collection",
+                "id": "product_downsell",
+                "label": "Downsell Collection"
             },
             {
                 "type": "checkbox",

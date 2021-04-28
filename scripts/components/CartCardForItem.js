@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import CartQty from './CartQty';
+import CartCardForRecurringDate from './CartCardForRecurringDate'
 import ItemsRelation from '../static/ItemsRelation';
 import MoneyFilter from '../utils/MoneyFilter';
 import PriceSuffixFilter from '../utils/PriceSuffixFilter';
@@ -32,10 +33,7 @@ const CardCardForItem = ({item}) => {
         ItemsRelation[item.handle].isExtraItem?
             itemClass = '--extra'
         :
-            itemClass = '--normal'
-
-        console.log(itemClass);
-        
+            itemClass = '--normal'        
         return itemClass
     }
 
@@ -71,7 +69,10 @@ const CardCardForItem = ({item}) => {
                     :
                     null
                 }
-                
+                <CartCardForRecurringDate
+                        isSubscription={ItemsRelation[item.handle].isSubscription}
+                        subscriptionDuration={ItemsRelation[item.handle].subscriptionDuration}
+                    />
                 {
                     // Qty
                     !ItemsRelation[item.handle].isExtraItem?

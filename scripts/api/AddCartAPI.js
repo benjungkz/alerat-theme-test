@@ -16,7 +16,6 @@ const AddCartAPI = ({ itemStage, getItems }) => {
             .then( res => res.json())
             .then(
                 (result)=>{
-                    console.log("Get is complete from Add") 
                     getItems(result.items)
 
                 },

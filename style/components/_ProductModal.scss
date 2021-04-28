@@ -1,0 +1,118 @@
+.ProductModal{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    padding: $padding-medium;
+    width: 100%;
+
+    @include breakpoint(xs){
+        padding: $padding-xsmall;
+    }
+   
+
+    &__header{
+        @include flexbox-row;
+        justify-content: space-between;
+        margin-bottom: $margin-medium;
+
+        @include breakpoint(xs){
+            justify-content: space-evenly;
+        }
+    }
+    &__body{
+        @include flexbox-col;  
+        margin-bottom: $margin-small;
+       
+    }
+    &__footer{
+        @include flexbox-row;  
+        justify-self: flex-start;
+        @include breakpoint(xs){
+          justify-self: unset;
+        }
+    }
+
+    &__row{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0.8fr 2fr;
+        align-items: center;
+
+        @include breakpoint(xs){
+            grid-template-columns: unset;
+            grid-template-rows: 0.8fr auto;
+
+            p{
+                &:nth-child(1){
+                    width: 100%;
+                    border-bottom: 1px solid color(black);
+                }
+            }
+            margin-bottom: 20px;
+        }
+
+        &:nth-child(1n){
+            background-color: color(white);
+
+        }
+
+        &:nth-child(2n){
+            background-color: color(gray-light);
+        }
+       
+    }
+
+    &__desc{
+        @include breakpoint(xs){
+            text-align: center;
+        }
+        &--title{
+            justify-self: center;
+            padding: $padding-small;
+            text-align: center;
+        }
+        &--content{
+            padding: $padding-small;
+            line-height: 1.3em;
+        }
+    }
+
+    &__note{
+        font-weight: $font-weight-light;
+        @include breakpoint(xs){
+            text-align: center;
+        }
+    }
+    &__link{
+        text-decoration: underline;
+    }
+    &__icon{
+        cursor: pointer;
+        @include breakpoint(xs){
+            width: 25px;
+        }     
+    }
+}
+
+.ReactModal{
+    &__Content{
+        &--after{
+            &-open{
+                width: 800px;
+                inset:unset !important;
+                top: 50% !important;
+                left: 50% !important;
+                border:0 !important;
+                transform: translate(-50%, -50%);
+                box-shadow: $box-shadow-secondary;
+                
+                @include breakpoint(md-lg){
+                    width: 700px;
+                }
+                @include breakpoint(xs){
+                    width: 100vw;
+                    height: 100vh;
+                }
+            }
+        }
+    }
+}

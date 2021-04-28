@@ -7,12 +7,12 @@
     &__title{
         align-self: center;
         font-family: $font-primary;
-        line-height: 2.5rem;
+        line-height: 1.5em;
         color:color(black-dark);
         &--hero{
             align-self: start;
-            line-height: 4rem;
-            @include font-size(1.8em);
+            line-height: 1.25em;
+            @include font-size(1.5em);
         }
     }
     &__tag{
@@ -27,6 +27,9 @@
         justify-content: flex-end;
     }
     &__content{
+        font-family: $font-fifth;
+        line-height: 1.5em;
         margin-bottom: $margin-xsmall;
+        margin-top: $margin-xsmall;
     }
 }
